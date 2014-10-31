@@ -1,0 +1,3 @@
+[submodule "current_etc"]
+	path = current_etc
+	url = git@localhost:current_etc
