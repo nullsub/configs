@@ -21507,3 +21507,47 @@ Oct 31 17:56:51 headnode sshd[10393]: Accepted publickey for git from ::1 port 5
 Oct 31 17:56:51 headnode sshd[10393]: pam_unix(sshd:session): session opened for user git by (uid=0)
 Oct 31 17:56:51 headnode sshd[10395]: Received disconnect from ::1: 11: disconnected by user
 Oct 31 17:56:51 headnode sshd[10393]: pam_unix(sshd:session): session closed for user git
+Oct 31 17:56:52 headnode sshd[10409]: Accepted publickey for git from ::1 port 51168 ssh2
+Oct 31 17:56:52 headnode sshd[10409]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 17:56:54 headnode sshd[10411]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 17:56:54 headnode sshd[10409]: pam_unix(sshd:session): session closed for user git
+Oct 31 17:57:06 headnode su[10233]: pam_unix(su:session): session closed for user root
+Oct 31 17:57:06 headnode sudo: pam_unix(sudo:session): session closed for user root
+Oct 31 17:57:16 headnode sudo: christian : TTY=pts/1 ; PWD=/home/christian/configs/logs ; USER=root ; COMMAND=/bin/su
+Oct 31 17:57:16 headnode sudo: pam_unix(sudo:session): session opened for user root by christian(uid=0)
+Oct 31 17:57:16 headnode su[10422]: Successful su for root by root
+Oct 31 17:57:16 headnode su[10422]: + /dev/pts/1 root:root
+Oct 31 17:57:16 headnode su[10422]: pam_unix(su:session): session opened for user root by christian(uid=0)
+Oct 31 17:58:01 headnode su[10422]: pam_unix(su:session): session closed for user root
+Oct 31 17:58:01 headnode sudo: pam_unix(sudo:session): session closed for user root
+Oct 31 17:58:08 headnode sshd[10451]: Accepted publickey for git from ::1 port 51169 ssh2
+Oct 31 17:58:08 headnode sshd[10451]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 17:58:10 headnode sshd[10453]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 17:58:10 headnode sshd[10451]: pam_unix(sshd:session): session closed for user git
+Oct 31 17:58:22 headnode sshd[10493]: Accepted publickey for git from ::1 port 51170 ssh2
+Oct 31 17:58:22 headnode sshd[10493]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 17:58:22 headnode sshd[10495]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 17:58:22 headnode sshd[10493]: pam_unix(sshd:session): session closed for user git
+Oct 31 18:00:01 headnode CRON[10508]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 31 18:00:01 headnode CRON[10508]: pam_unix(cron:session): session closed for user root
+Oct 31 18:00:02 headnode sshd[10511]: Connection closed by 141.76.90.5 [preauth]
+Oct 31 18:01:18 headnode sshd[10534]: Accepted publickey for git from ::1 port 51171 ssh2
+Oct 31 18:01:18 headnode sshd[10534]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 18:01:18 headnode sshd[10536]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 18:01:18 headnode sshd[10534]: pam_unix(sshd:session): session closed for user git
+Oct 31 18:01:23 headnode sshd[10571]: Accepted publickey for git from ::1 port 51172 ssh2
+Oct 31 18:01:23 headnode sshd[10571]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 18:01:23 headnode sshd[10573]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 18:01:23 headnode sshd[10571]: pam_unix(sshd:session): session closed for user git
+Oct 31 18:02:55 headnode sudo: christian : TTY=pts/1 ; PWD=/home/christian/configs ; USER=root ; COMMAND=/bin/su
+Oct 31 18:02:55 headnode sudo: pam_unix(sudo:session): session opened for user root by christian(uid=0)
+Oct 31 18:02:55 headnode su[10590]: Successful su for root by root
+Oct 31 18:02:55 headnode su[10590]: + /dev/pts/1 root:root
+Oct 31 18:02:55 headnode su[10590]: pam_unix(su:session): session opened for user root by christian(uid=0)
+Oct 31 18:04:14 headnode su[10590]: pam_unix(su:session): session closed for user root
+Oct 31 18:04:14 headnode sudo: pam_unix(sudo:session): session closed for user root
+Oct 31 18:05:01 headnode CRON[10597]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 31 18:05:01 headnode sshd[10619]: Accepted publickey for git from ::1 port 51173 ssh2
+Oct 31 18:05:01 headnode sshd[10619]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 18:05:01 headnode sshd[10621]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 18:05:01 headnode sshd[10619]: pam_unix(sshd:session): session closed for user git
