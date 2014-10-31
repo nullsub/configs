@@ -21499,3 +21499,11 @@ Oct 31 17:56:13 headnode sshd[10345]: Accepted publickey for git from ::1 port 5
 Oct 31 17:56:13 headnode sshd[10345]: pam_unix(sshd:session): session opened for user git by (uid=0)
 Oct 31 17:56:13 headnode sshd[10347]: Received disconnect from ::1: 11: disconnected by user
 Oct 31 17:56:13 headnode sshd[10345]: pam_unix(sshd:session): session closed for user git
+Oct 31 17:56:14 headnode sshd[10361]: Accepted publickey for git from ::1 port 51166 ssh2
+Oct 31 17:56:14 headnode sshd[10361]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 17:56:14 headnode sshd[10363]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 17:56:14 headnode sshd[10361]: pam_unix(sshd:session): session closed for user git
+Oct 31 17:56:51 headnode sshd[10393]: Accepted publickey for git from ::1 port 51167 ssh2
+Oct 31 17:56:51 headnode sshd[10393]: pam_unix(sshd:session): session opened for user git by (uid=0)
+Oct 31 17:56:51 headnode sshd[10395]: Received disconnect from ::1: 11: disconnected by user
+Oct 31 17:56:51 headnode sshd[10393]: pam_unix(sshd:session): session closed for user git

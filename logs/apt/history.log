@@ -1,0 +1,184 @@
+
+Start-Date: 2014-10-23  14:08:32
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install locales
+Install: locales:amd64 (2.13-38+deb7u2)
+End-Date: 2014-10-23  14:08:34
+
+Start-Date: 2014-10-23  16:08:36
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install busybox
+Install: busybox:amd64 (1.20.0-7)
+End-Date: 2014-10-23  16:08:36
+
+Start-Date: 2014-10-23  16:08:37
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install initramfs-tools
+Install: libklibc:amd64 (2.0.1-3.1, automatic), klibc-utils:amd64 (2.0.1-3.1, automatic), initramfs-tools:amd64 (0.109.1)
+End-Date: 2014-10-23  16:08:38
+
+Start-Date: 2014-10-23  16:08:41
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install linux-image-amd64
+Install: libuuid-perl:amd64 (0.02-5, automatic), linux-image-3.2.0-4-amd64:amd64 (3.2.57-3, automatic), linux-base:amd64 (3.5, automatic), linux-image-amd64:amd64 (3.2+46)
+End-Date: 2014-10-23  16:08:50
+
+Start-Date: 2014-10-23  16:08:51
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install pciutils
+Install: libpci3:amd64 (3.1.9-6, automatic), pciutils:amd64 (3.1.9-6)
+End-Date: 2014-10-23  16:08:52
+
+Start-Date: 2014-10-23  16:08:52
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install usbutils
+Install: usbutils:amd64 (005-3), libusb-1.0-0:amd64 (1.0.11-1, automatic)
+End-Date: 2014-10-23  16:08:53
+
+Start-Date: 2014-10-23  16:08:54
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install acpi
+Install: acpi:amd64 (1.6-1)
+End-Date: 2014-10-23  16:08:54
+
+Start-Date: 2014-10-23  16:08:55
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install acpid
+Install: acpid:amd64 (2.0.16-1+deb7u1), module-init-tools:amd64 (9-3, automatic)
+End-Date: 2014-10-23  16:08:56
+
+Start-Date: 2014-10-23  16:08:56
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install acpi-support-base
+Install: acpi-support-base:amd64 (0.140-5)
+End-Date: 2014-10-23  16:08:56
+
+Start-Date: 2014-10-23  16:08:58
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install keyboard-configuration
+Install: keyboard-configuration:amd64 (1.88)
+End-Date: 2014-10-23  16:08:59
+
+Start-Date: 2014-10-23  16:09:00
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install console-setup
+Install: console-setup:amd64 (1.88), console-setup-linux:amd64 (1.88, automatic), xkb-data:amd64 (2.5.1-3, automatic), kbd:amd64 (1.15.3-9, automatic)
+End-Date: 2014-10-23  16:09:03
+
+Start-Date: 2014-10-23  16:09:58
+Upgrade: libc-bin:amd64 (2.13-38+deb7u2, 2.13-38+deb7u6), base-files:amd64 (7.1wheezy6, 7.1wheezy7), acpi-support-base:amd64 (0.140-5, 0.140-5+deb7u3), perl-base:amd64 (5.14.2-21+deb7u1, 5.14.2-21+deb7u2), bash:amd64 (4.2+dfsg-0.1, 4.2+dfsg-0.1+deb7u3), libapt-inst1.5:amd64 (0.9.7.9+deb7u2, 0.9.7.9+deb7u6), linux-image-3.2.0-4-amd64:amd64 (3.2.57-3, 3.2.63-2), apt-utils:amd64 (0.9.7.9+deb7u2, 0.9.7.9+deb7u6), debian-archive-keyring:amd64 (2012.4, 2014.1~deb7u1), apt:amd64 (0.9.7.9+deb7u2, 0.9.7.9+deb7u6), locales:amd64 (2.13-38+deb7u2, 2.13-38+deb7u6), multiarch-support:amd64 (2.13-38+deb7u2, 2.13-38+deb7u6), libapt-pkg4.12:amd64 (0.9.7.9+deb7u2, 0.9.7.9+deb7u6), tzdata:amd64 (2014e-0wheezy1, 2014h-0wheezy1), gpgv:amd64 (1.4.12-7+deb7u4, 1.4.12-7+deb7u6), rsyslog:amd64 (5.8.11-3, 5.8.11-3+deb7u2), libc6:amd64 (2.13-38+deb7u2, 2.13-38+deb7u6), libssl1.0.0:amd64 (1.0.1e-2+deb7u11, 1.0.1e-2+deb7u13), gnupg:amd64 (1.4.12-7+deb7u4, 1.4.12-7+deb7u6)
+End-Date: 2014-10-23  16:10:21
+
+Start-Date: 2014-10-23  16:10:23
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install laptop-detect
+Install: laptop-detect:amd64 (0.13.7)
+End-Date: 2014-10-23  16:10:23
+
+Start-Date: 2014-10-23  16:10:25
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install discover
+Install: discover-data:amd64 (2.2010.10.18, automatic), discover:amd64 (2.1.2-5.2), libexpat1:amd64 (2.1.0-1+deb7u1, automatic), libdiscover2:amd64 (2.1.2-5.2, automatic)
+End-Date: 2014-10-23  16:10:26
+
+Start-Date: 2014-10-23  16:10:28
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove -o APT::Install-Recommends=false install installation-report
+Install: installation-report:amd64 (2.49)
+End-Date: 2014-10-23  16:10:29
+
+Start-Date: 2014-10-23  16:10:36
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove -o APT::Install-Recommends=false install popularity-contest
+Install: popularity-contest:amd64 (1.56)
+End-Date: 2014-10-23  16:10:37
+
+Start-Date: 2014-10-23  16:10:57
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y -o APT::Install-Recommends=true -o APT::Get::AutomaticRemove=true install task-english
+Install: ispell:amd64 (3.3.02-6, automatic), ibritish:amd64 (3.3.02-6, automatic), wamerican:amd64 (7.1-1, automatic), ienglish-common:amd64 (3.3.02-6, automatic), task-english:amd64 (3.14.1), dictionaries-common:amd64 (1.12.11, automatic), iamerican:amd64 (3.3.02-6, automatic), util-linux-locales:amd64 (2.20.1-5.3, automatic)
+End-Date: 2014-10-23  16:11:02
+
+Start-Date: 2014-10-23  16:11:04
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install grub-common
+Install: dmsetup:amd64 (1.02.74-8, automatic), libdevmapper1.02.1:amd64 (1.02.74-8, automatic), gettext-base:amd64 (0.18.1.1-9, automatic), libfreetype6:amd64 (2.4.9-1.1, automatic), libfuse2:amd64 (2.9.0-2+deb7u1, automatic), os-prober:amd64 (1.58, automatic), libasprintf0c2:amd64 (0.18.1.1-9, automatic), grub-common:amd64 (1.99-27+deb7u2)
+End-Date: 2014-10-23  16:11:11
+
+Start-Date: 2014-10-23  16:11:14
+Commandline: apt-get -o APT::Status-Fd=4 -o APT::Keep-Fds::=5 -o APT::Keep-Fds::=6 -q -y --no-remove install grub-pc
+Install: grub-pc:amd64 (1.99-27+deb7u2), ucf:amd64 (3.0025+nmu3, automatic), grub-pc-bin:amd64 (1.99-27+deb7u2, automatic), grub2-common:amd64 (1.99-27+deb7u2, automatic)
+End-Date: 2014-10-23  16:11:16
+
+Start-Date: 2014-10-23  16:22:23
+Commandline: apt-get install openssh-server
+Install: libedit2:amd64 (2.11-20080614-5, automatic), libkrb5-3:amd64 (1.10.1+dfsg-5+deb7u2, automatic), libk5crypto3:amd64 (1.10.1+dfsg-5+deb7u2, automatic), openssh-server:amd64 (6.0p1-4+deb7u2), libwrap0:amd64 (7.6.q-24, automatic), libx11-data:amd64 (1.5.0-1+deb7u1, automatic), xauth:amd64 (1.0.7-1, automatic), libbsd0:amd64 (0.4.2-1, automatic), libxmuu1:amd64 (1.1.1-1, automatic), tcpd:amd64 (7.6.q-24, automatic), libxcb1:amd64 (1.8.1-2+deb7u1, automatic), libxau6:amd64 (1.0.7-1, automatic), libkrb5support0:amd64 (1.10.1+dfsg-5+deb7u2, automatic), openssh-client:amd64 (6.0p1-4+deb7u2, automatic), libxdmcp6:amd64 (1.1.1-1, automatic), libkeyutils1:amd64 (1.5.5-3+deb7u1, automatic), openssh-blacklist-extra:amd64 (0.4.1+nmu1, automatic), krb5-locales:amd64 (1.10.1+dfsg-5+deb7u2, automatic), libx11-6:amd64 (1.5.0-1+deb7u1, automatic), libgssapi-krb5-2:amd64 (1.10.1+dfsg-5+deb7u2, automatic), libxext6:amd64 (1.3.1-2+deb7u1, automatic), ncurses-term:amd64 (5.9-10, automatic), openssh-blacklist:amd64 (0.4.1+nmu1, automatic)
+End-Date: 2014-10-23  16:22:31
+
+Start-Date: 2014-10-23  16:22:43
+Commandline: apt-get install sudo
+Install: sudo:amd64 (1.8.5p2-1+nmu1)
+End-Date: 2014-10-23  16:22:46
+
+Start-Date: 2014-10-23  16:26:38
+Commandline: apt-get install less
+Install: less:amd64 (444-4)
+End-Date: 2014-10-23  16:26:40
+
+Start-Date: 2014-10-23  16:26:49
+Commandline: apt-get install vim
+Install: libgpm2:amd64 (1.20.4-6, automatic), vim:amd64 (7.3.547-7), vim-runtime:amd64 (7.3.547-7, automatic)
+End-Date: 2014-10-23  16:26:53
+
+Start-Date: 2014-10-30  13:26:45
+Commandline: apt-get install git
+Install: libldap-2.4-2:amd64 (2.4.31-1+nmu2, automatic), perl:amd64 (5.14.2-21+deb7u2, automatic), git-man:amd64 (1.7.10.4-1+wheezy1, automatic), perl-modules:amd64 (5.14.2-21+deb7u2, automatic), libclass-isa-perl:amd64 (0.36-3, automatic), git:amd64 (1.7.10.4-1+wheezy1), libssh2-1:amd64 (1.4.2-1.1, automatic), rsync:amd64 (3.0.9-4, automatic), liberror-perl:amd64 (0.17-1, automatic), libswitch-perl:amd64 (2.16-2, automatic), libsasl2-2:amd64 (2.1.25.dfsg1-6+deb7u1, automatic), openssl:amd64 (1.0.1e-2+deb7u13, automatic), libcurl3-gnutls:amd64 (7.26.0-1+wheezy10, automatic), patch:amd64 (2.6.1-3, automatic), librtmp0:amd64 (2.4+20111222.git4e06e21-1, automatic), libsasl2-modules:amd64 (2.1.25.dfsg1-6+deb7u1, automatic), ca-certificates:amd64 (20130119+deb7u1, automatic)
+End-Date: 2014-10-30  13:27:00
+
+Start-Date: 2014-10-30  13:27:35
+Commandline: apt-get install git-core
+Install: git-core:amd64 (1.7.10.4-1+wheezy1)
+End-Date: 2014-10-30  13:27:37
+
+Start-Date: 2014-10-30  13:43:56
+Commandline: apt-get install etckeeper
+Install: etckeeper:amd64 (0.63)
+End-Date: 2014-10-30  13:44:00
+
+Start-Date: 2014-10-30  13:59:34
+Commandline: apt-get install pdsh
+Install: pdsh:amd64 (2.27-2), genders:amd64 (1.18-1, automatic), libgenders0:amd64 (1.18-1, automatic), libltdl7:amd64 (2.4.2-1.1, automatic)
+End-Date: 2014-10-30  13:59:37
+
+Start-Date: 2014-10-30  15:41:32
+Commandline: apt-get remove pdsh
+Remove: pdsh:amd64 (2.27-2)
+End-Date: 2014-10-30  15:41:34
+
+Start-Date: 2014-10-30  15:41:43
+Commandline: apt-get install pdsh
+Install: pdsh:amd64 (2.27-2)
+End-Date: 2014-10-30  15:41:45
+
+Start-Date: 2014-10-30  16:01:34
+Commandline: apt-get remove pdsh
+Remove: pdsh:amd64 (2.27-2)
+End-Date: 2014-10-30  16:01:36
+
+Start-Date: 2014-10-30  16:01:44
+Commandline: apt-get install pdsh
+Install: pdsh:amd64 (2.27-2)
+End-Date: 2014-10-30  16:01:46
+
+Start-Date: 2014-10-30  16:12:27
+Commandline: apt-get remove pdsh
+Remove: pdsh:amd64 (2.27-2)
+End-Date: 2014-10-30  16:12:29
+
+Start-Date: 2014-10-30  16:12:46
+Commandline: apt-get install pdsh
+Install: pdsh:amd64 (2.27-2)
+End-Date: 2014-10-30  16:12:48
+
+Start-Date: 2014-10-30  16:13:51
+Commandline: apt-get install cowsay
+Install: cowsay:amd64 (3.03+dfsg1-4)
+End-Date: 2014-10-30  16:13:52
+
+Start-Date: 2014-10-31  17:07:11
+Commandline: apt-get remove cowsay
+Remove: cowsay:amd64 (3.03+dfsg1-4)
+End-Date: 2014-10-31  17:07:12
+
+Start-Date: 2014-10-31  17:07:16
+Commandline: apt-get install cowsay
+Install: cowsay:amd64 (3.03+dfsg1-4)
+End-Date: 2014-10-31  17:07:18
+
+Start-Date: 2014-10-31  17:20:10
+Commandline: apt-get upgrade
+Upgrade: libtasn1-3:amd64 (2.13-2, 2.13-2+deb7u1), linux-image-3.2.0-4-amd64:amd64 (3.2.63-2, 3.2.63-2+deb7u1)
+End-Date: 2014-10-31  17:20:27

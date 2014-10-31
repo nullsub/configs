@@ -1,0 +1,1418 @@
+
+Log started: 2014-10-23  14:08:32
+Log ended: 2014-10-23  14:08:34
+
+Log started: 2014-10-23  16:08:36
+Log ended: 2014-10-23  16:08:36
+
+Log started: 2014-10-23  16:08:37
+Log ended: 2014-10-23  16:08:38
+
+Log started: 2014-10-23  16:08:41
+Log ended: 2014-10-23  16:08:50
+
+Log started: 2014-10-23  16:08:51
+Log ended: 2014-10-23  16:08:52
+
+Log started: 2014-10-23  16:08:52
+Log ended: 2014-10-23  16:08:53
+
+Log started: 2014-10-23  16:08:54
+Log ended: 2014-10-23  16:08:54
+
+Log started: 2014-10-23  16:08:55
+Log ended: 2014-10-23  16:08:56
+
+Log started: 2014-10-23  16:08:56
+Log ended: 2014-10-23  16:08:56
+
+Log started: 2014-10-23  16:08:58
+Log ended: 2014-10-23  16:08:59
+
+Log started: 2014-10-23  16:09:00
+Log ended: 2014-10-23  16:09:03
+
+Log started: 2014-10-23  16:09:58
+Log ended: 2014-10-23  16:10:21
+
+Log started: 2014-10-23  16:10:23
+Log ended: 2014-10-23  16:10:23
+
+Log started: 2014-10-23  16:10:25
+Log ended: 2014-10-23  16:10:26
+
+Log started: 2014-10-23  16:10:28
+Log ended: 2014-10-23  16:10:29
+
+Log started: 2014-10-23  16:10:36
+Log ended: 2014-10-23  16:10:37
+
+Log started: 2014-10-23  16:10:57
+Log ended: 2014-10-23  16:11:02
+
+Log started: 2014-10-23  16:11:04
+Log ended: 2014-10-23  16:11:11
+
+Log started: 2014-10-23  16:11:14
+Log ended: 2014-10-23  16:11:16
+
+Log started: 2014-10-23  16:22:23
+Selecting previously unselected package libbsd0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15271 files and directories currently installed.)
+Unpacking libbsd0:amd64 (from .../libbsd0_0.4.2-1_amd64.deb) ...
+Selecting previously unselected package libedit2:amd64.
+Unpacking libedit2:amd64 (from .../libedit2_2.11-20080614-5_amd64.deb) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Unpacking libkeyutils1:amd64 (from .../libkeyutils1_1.5.5-3+deb7u1_amd64.deb) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Unpacking libkrb5support0:amd64 (from .../libkrb5support0_1.10.1+dfsg-5+deb7u2_amd64.deb) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Unpacking libk5crypto3:amd64 (from .../libk5crypto3_1.10.1+dfsg-5+deb7u2_amd64.deb) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Unpacking libkrb5-3:amd64 (from .../libkrb5-3_1.10.1+dfsg-5+deb7u2_amd64.deb) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Unpacking libgssapi-krb5-2:amd64 (from .../libgssapi-krb5-2_1.10.1+dfsg-5+deb7u2_amd64.deb) ...
+Selecting previously unselected package libwrap0:amd64.
+Unpacking libwrap0:amd64 (from .../libwrap0_7.6.q-24_amd64.deb) ...
+Selecting previously unselected package libxau6:amd64.
+Unpacking libxau6:amd64 (from .../libxau6_1%3a1.0.7-1_amd64.deb) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Unpacking libxdmcp6:amd64 (from .../libxdmcp6_1%3a1.1.1-1_amd64.deb) ...
+Selecting previously unselected package libxcb1:amd64.
+Unpacking libxcb1:amd64 (from .../libxcb1_1.8.1-2+deb7u1_amd64.deb) ...
+Selecting previously unselected package libx11-data.
+Unpacking libx11-data (from .../libx11-data_2%3a1.5.0-1+deb7u1_all.deb) ...
+Selecting previously unselected package libx11-6:amd64.
+Unpacking libx11-6:amd64 (from .../libx11-6_2%3a1.5.0-1+deb7u1_amd64.deb) ...
+Selecting previously unselected package libxext6:amd64.
+Unpacking libxext6:amd64 (from .../libxext6_2%3a1.3.1-2+deb7u1_amd64.deb) ...
+Selecting previously unselected package libxmuu1:amd64.
+Unpacking libxmuu1:amd64 (from .../libxmuu1_2%3a1.1.1-1_amd64.deb) ...
+Selecting previously unselected package openssh-blacklist.
+Unpacking openssh-blacklist (from .../openssh-blacklist_0.4.1+nmu1_all.deb) ...
+Selecting previously unselected package openssh-blacklist-extra.
+Unpacking openssh-blacklist-extra (from .../openssh-blacklist-extra_0.4.1+nmu1_all.deb) ...
+Selecting previously unselected package krb5-locales.
+Unpacking krb5-locales (from .../krb5-locales_1.10.1+dfsg-5+deb7u2_all.deb) ...
+Selecting previously unselected package ncurses-term.
+Unpacking ncurses-term (from .../ncurses-term_5.9-10_all.deb) ...
+Selecting previously unselected package openssh-client.
+Unpacking openssh-client (from .../openssh-client_1%3a6.0p1-4+deb7u2_amd64.deb) ...
+Selecting previously unselected package openssh-server.
+Unpacking openssh-server (from .../openssh-server_1%3a6.0p1-4+deb7u2_amd64.deb) ...
+Selecting previously unselected package tcpd.
+Unpacking tcpd (from .../tcpd_7.6.q-24_amd64.deb) ...
+Selecting previously unselected package xauth.
+Unpacking xauth (from .../xauth_1%3a1.0.7-1_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up libbsd0:amd64 (0.4.2-1) ...
+Setting up libedit2:amd64 (2.11-20080614-5) ...
+Setting up libkeyutils1:amd64 (1.5.5-3+deb7u1) ...
+Setting up libkrb5support0:amd64 (1.10.1+dfsg-5+deb7u2) ...
+Setting up libk5crypto3:amd64 (1.10.1+dfsg-5+deb7u2) ...
+Setting up libkrb5-3:amd64 (1.10.1+dfsg-5+deb7u2) ...
+Setting up libgssapi-krb5-2:amd64 (1.10.1+dfsg-5+deb7u2) ...
+Setting up libwrap0:amd64 (7.6.q-24) ...
+Setting up libxau6:amd64 (1:1.0.7-1) ...
+Setting up libxdmcp6:amd64 (1:1.1.1-1) ...
+Setting up libxcb1:amd64 (1.8.1-2+deb7u1) ...
+Setting up libx11-data (2:1.5.0-1+deb7u1) ...
+Setting up libx11-6:amd64 (2:1.5.0-1+deb7u1) ...
+Setting up libxext6:amd64 (2:1.3.1-2+deb7u1) ...
+Setting up libxmuu1:amd64 (2:1.1.1-1) ...
+Setting up openssh-blacklist (0.4.1+nmu1) ...
+Setting up openssh-blacklist-extra (0.4.1+nmu1) ...
+Setting up krb5-locales (1.10.1+dfsg-5+deb7u2) ...
+Setting up ncurses-term (5.9-10) ...
+Setting up openssh-client (1:6.0p1-4+deb7u2) ...
+Setting up openssh-server (1:6.0p1-4+deb7u2) ...
+Creating SSH2 RSA key; this may take some time ...
+Creating SSH2 DSA key; this may take some time ...
+Creating SSH2 ECDSA key; this may take some time ...
+[....] Restarting OpenBSD Secure Shell server: sshd[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0c.
+Setting up tcpd (7.6.q-24) ...
+Setting up xauth (1:1.0.7-1) ...
+Log ended: 2014-10-23  16:22:31
+
+Log started: 2014-10-23  16:22:43
+Selecting previously unselected package sudo.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18393 files and directories currently installed.)
+Unpacking sudo (from .../sudo_1.8.5p2-1+nmu1_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up sudo (1.8.5p2-1+nmu1) ...
+Log ended: 2014-10-23  16:22:46
+
+Log started: 2014-10-23  16:26:38
+Selecting previously unselected package less.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18462 files and directories currently installed.)
+Unpacking less (from .../archives/less_444-4_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up less (444-4) ...
+Log ended: 2014-10-23  16:26:40
+
+Log started: 2014-10-23  16:26:49
+Selecting previously unselected package libgpm2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18484 files and directories currently installed.)
+Unpacking libgpm2:amd64 (from .../libgpm2_1.20.4-6_amd64.deb) ...
+Selecting previously unselected package vim-runtime.
+Unpacking vim-runtime (from .../vim-runtime_2%3a7.3.547-7_all.deb) ...
+Adding 'diversion of /usr/share/vim/vim73/doc/help.txt to /usr/share/vim/vim73/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim73/doc/tags to /usr/share/vim/vim73/doc/tags.vim-tiny by vim-runtime'
+Selecting previously unselected package vim.
+Unpacking vim (from .../vim_2%3a7.3.547-7_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up libgpm2:amd64 (1.20.4-6) ...
+Setting up vim-runtime (2:7.3.547-7) ...
+Processing /usr/share/vim/addons/doc
+Setting up vim (2:7.3.547-7) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+Log ended: 2014-10-23  16:26:53
+
+Log started: 2014-10-30  13:26:45
+Selecting previously unselected package libsasl2-2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 20043 files and directories currently installed.)
+Unpacking libsasl2-2:amd64 (from .../libsasl2-2_2.1.25.dfsg1-6+deb7u1_amd64.deb) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Unpacking libldap-2.4-2:amd64 (from .../libldap-2.4-2_2.4.31-1+nmu2_amd64.deb) ...
+Selecting previously unselected package librtmp0:amd64.
+Unpacking librtmp0:amd64 (from .../librtmp0_2.4+20111222.git4e06e21-1_amd64.deb) ...
+Selecting previously unselected package libssh2-1:amd64.
+Unpacking libssh2-1:amd64 (from .../libssh2-1_1.4.2-1.1_amd64.deb) ...
+Selecting previously unselected package libcurl3-gnutls:amd64.
+Unpacking libcurl3-gnutls:amd64 (from .../libcurl3-gnutls_7.26.0-1+wheezy10_amd64.deb) ...
+Selecting previously unselected package libclass-isa-perl.
+Unpacking libclass-isa-perl (from .../libclass-isa-perl_0.36-3_all.deb) ...
+Selecting previously unselected package perl-modules.
+Unpacking perl-modules (from .../perl-modules_5.14.2-21+deb7u2_all.deb) ...
+Selecting previously unselected package perl.
+Unpacking perl (from .../perl_5.14.2-21+deb7u2_amd64.deb) ...
+Selecting previously unselected package libswitch-perl.
+Unpacking libswitch-perl (from .../libswitch-perl_2.16-2_all.deb) ...
+Selecting previously unselected package patch.
+Unpacking patch (from .../patch_2.6.1-3_amd64.deb) ...
+Selecting previously unselected package openssl.
+Unpacking openssl (from .../openssl_1.0.1e-2+deb7u13_amd64.deb) ...
+Selecting previously unselected package ca-certificates.
+Unpacking ca-certificates (from .../ca-certificates_20130119+deb7u1_all.deb) ...
+Selecting previously unselected package liberror-perl.
+Unpacking liberror-perl (from .../liberror-perl_0.17-1_all.deb) ...
+Selecting previously unselected package git-man.
+Unpacking git-man (from .../git-man_1%3a1.7.10.4-1+wheezy1_all.deb) ...
+Selecting previously unselected package git.
+Unpacking git (from .../git_1%3a1.7.10.4-1+wheezy1_amd64.deb) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Unpacking libsasl2-modules:amd64 (from .../libsasl2-modules_2.1.25.dfsg1-6+deb7u1_amd64.deb) ...
+Selecting previously unselected package rsync.
+Unpacking rsync (from .../rsync_3.0.9-4_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up libsasl2-2:amd64 (2.1.25.dfsg1-6+deb7u1) ...
+Setting up libldap-2.4-2:amd64 (2.4.31-1+nmu2) ...
+Setting up librtmp0:amd64 (2.4+20111222.git4e06e21-1) ...
+Setting up libssh2-1:amd64 (1.4.2-1.1) ...
+Setting up libcurl3-gnutls:amd64 (7.26.0-1+wheezy10) ...
+Setting up libclass-isa-perl (0.36-3) ...
+Setting up patch (2.6.1-3) ...
+Setting up openssl (1.0.1e-2+deb7u13) ...
+Setting up ca-certificates (20130119+deb7u1) ...
+Setting up git-man (1:1.7.10.4-1+wheezy1) ...
+Setting up libsasl2-modules:amd64 (2.1.25.dfsg1-6+deb7u1) ...
+Setting up rsync (3.0.9-4) ...
+update-rc.d: using dependency based boot sequencing
+Setting up perl-modules (5.14.2-21+deb7u2) ...
+Setting up perl (5.14.2-21+deb7u2) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up liberror-perl (0.17-1) ...
+Setting up git (1:1.7.10.4-1+wheezy1) ...
+Setting up libswitch-perl (2.16-2) ...
+Processing triggers for ca-certificates ...
+Updating certificates in /etc/ssl/certs... 171 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d....done.
+Log ended: 2014-10-30  13:27:00
+
+Log started: 2014-10-30  13:27:35
+Selecting previously unselected package git-core.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22538 files and directories currently installed.)
+Unpacking git-core (from .../git-core_1%3a1.7.10.4-1+wheezy1_all.deb) ...
+Setting up git-core (1:1.7.10.4-1+wheezy1) ...
+Log ended: 2014-10-30  13:27:37
+
+Log started: 2014-10-30  13:43:56
+Selecting previously unselected package etckeeper.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22539 files and directories currently installed.)
+Unpacking etckeeper (from .../etckeeper_0.63_all.deb) ...
+Processing triggers for man-db ...
+Setting up etckeeper (0.63) ...
+Initialized empty Git repository in /etc/.git/
+[master (root-commit) 22c7aa5] Initial commit
+ Author: christian <christian@headnode>
+ 1049 files changed, 25647 insertions(+)
+ create mode 100755 .etckeeper
+ create mode 100644 .gitignore
+ create mode 100644 acpi/events/powerbtn-acpi-support
+ create mode 100755 acpi/powerbtn-acpi-support.sh
+ create mode 100644 adduser.conf
+ create mode 100644 alternatives/README
+ create mode 120000 alternatives/aptitude
+ create mode 120000 alternatives/aptitude.8.gz
+ create mode 120000 alternatives/aptitude.cs.8.gz
+ create mode 120000 alternatives/aptitude.de.8.gz
+ create mode 120000 alternatives/aptitude.es.8.gz
+ create mode 120000 alternatives/aptitude.fi.8.gz
+ create mode 120000 alternatives/aptitude.fr.8.gz
+ create mode 120000 alternatives/aptitude.gl.8.gz
+ create mode 120000 alternatives/aptitude.it.8.gz
+ create mode 120000 alternatives/aptitude.ja.8.gz
+ create mode 120000 alternatives/aptitude.pl.8.gz
+ create mode 120000 alternatives/awk
+ create mode 120000 alternatives/awk.1.gz
+ create mode 120000 alternatives/builtins.7.gz
+ create mode 120000 alternatives/editor
+ create mode 120000 alternatives/editor.1.gz
+ create mode 120000 alternatives/ex
+ create mode 120000 alternatives/ex.1.gz
+ create mode 120000 alternatives/ex.fr.1.gz
+ create mode 120000 alternatives/ex.it.1.gz
+ create mode 120000 alternatives/ex.pl.1.gz
+ create mode 120000 alternatives/ex.ru.1.gz
+ create mode 120000 alternatives/from
+ create mode 120000 alternatives/from.1.gz
+ create mode 120000 alternatives/infobrowser
+ create mode 120000 alternatives/infobrowser.1.gz
+ create mode 120000 alternatives/lft
+ create mode 120000 alternatives/lft.1.gz
+ create mode 120000 alternatives/lzcat
+ create mode 120000 alternatives/lzcat.1.gz
+ create mode 120000 alternatives/lzcmp
+ create mode 120000 alternatives/lzcmp.1.gz
+ create mode 120000 alternatives/lzdiff
+ create mode 120000 alternatives/lzdiff.1.gz
+ create mode 120000 alternatives/lzegrep
+ create mode 120000 alternatives/lzegrep.1.gz
+ create mode 120000 alternatives/lzfgrep
+ create mode 120000 alternatives/lzfgrep.1.gz
+ create mode 120000 alternatives/lzgrep
+ create mode 120000 alternatives/lzgrep.1.gz
+ create mode 120000 alternatives/lzless
+ create mode 120000 alternatives/lzless.1.gz
+ create mode 120000 alternatives/lzma
+ create mode 120000 alternatives/lzma.1.gz
+ create mode 120000 alternatives/lzmore
+ create mode 120000 alternatives/lzmore.1.gz
+ create mode 120000 alternatives/mt
+ create mode 120000 alternatives/mt.1.gz
+ create mode 120000 alternatives/nawk
+ create mode 120000 alternatives/nawk.1.gz
+ create mode 120000 alternatives/nc
+ create mode 120000 alternatives/nc.1.gz
+ create mode 120000 alternatives/netcat
+ create mode 120000 alternatives/netcat.1.gz
+ create mode 120000 alternatives/pager
+ create mode 120000 alternatives/pager.1.gz
+ create mode 120000 alternatives/pico
+ create mode 120000 alternatives/pico.1.gz
+ create mode 120000 alternatives/rcp
+ create mode 120000 alternatives/rcp.1.gz
+ create mode 120000 alternatives/rename
+ create mode 120000 alternatives/rename.1.gz
+ create mode 120000 alternatives/rlogin
+ create mode 120000 alternatives/rlogin.1.gz
+ create mode 120000 alternatives/rmt
+ create mode 120000 alternatives/rmt.8.gz
+ create mode 120000 alternatives/rsh
+ create mode 120000 alternatives/rsh.1.gz
+ create mode 120000 alternatives/rview
+ create mode 120000 alternatives/rvim
+ create mode 120000 alternatives/tcptraceroute
+ create mode 120000 alternatives/tcptraceroute.8.gz
+ create mode 120000 alternatives/traceproto
+ create mode 120000 alternatives/traceproto.1.gz
+ create mode 120000 alternatives/traceroute
+ create mode 120000 alternatives/traceroute.1.gz
+ create mode 120000 alternatives/traceroute.sbin
+ create mode 120000 alternatives/traceroute6
+ create mode 120000 alternatives/traceroute6.1.gz
+ create mode 120000 alternatives/unlzma
+ create mode 120000 alternatives/unlzma.1.gz
+ create mode 120000 alternatives/vi
+ create mode 120000 alternatives/vi.1.gz
+ create mode 120000 alternatives/vi.fr.1.gz
+ create mode 120000 alternatives/vi.it.1.gz
+ create mode 120000 alternatives/vi.pl.1.gz
+ create mode 120000 alternatives/vi.ru.1.gz
+ create mode 120000 alternatives/view
+ create mode 120000 alternatives/view.1.gz
+ create mode 120000 alternatives/view.fr.1.gz
+ create mode 120000 alternatives/view.it.1.gz
+ create mode 120000 alternatives/view.pl.1.gz
+ create mode 120000 alternatives/view.ru.1.gz
+ create mode 120000 alternatives/vim
+ create mode 120000 alternatives/vimdiff
+ create mode 120000 alternatives/w
+ create mode 120000 alternatives/w.1.gz
+ create mode 120000 alternatives/write
+ create mode 120000 alternatives/write.1.gz
+ create mode 100644 apt/apt.conf.d/00CDMountPoint
+ create mode 100644 apt/apt.conf.d/00trustcdrom
+ create mode 100644 apt/apt.conf.d/01autoremove
+ create mode 100644 apt/apt.conf.d/05etckeeper
+ create mode 100644 apt/apt.conf.d/70debconf
+ create mode 100644 apt/sources.list
+ create mode 100644 apt/trustdb.gpg
+ create mode 100644 apt/trusted.gpg
+ create mode 100644 apt/trusted.gpg.d/debian-archive-jessie-stable.gpg
+ create mode 100644 apt/trusted.gpg.d/debian-archive-squeeze-automatic.gpg
+ create mode 100644 apt/trusted.gpg.d/debian-archive-squeeze-stable.gpg
+ create mode 100644 apt/trusted.gpg.d/debian-archive-wheezy-automatic.gpg
+ create mode 100644 apt/trusted.gpg.d/debian-archive-wheezy-stable.gpg
+ create mode 100644 bash.bashrc
+ create mode 100644 bash_completion.d/debconf
+ create mode 100644 bash_completion.d/etckeeper
+ create mode 100644 bash_completion.d/git
+ create mode 100644 bash_completion.d/grub
+ create mode 100644 bash_completion.d/initramfs-tools
+ create mode 100644 bash_completion.d/insserv
+ create mode 100644 bindresvport.blacklist
+ create mode 100644 ca-certificates.conf
+ create mode 100644 calendar/default
+ create mode 100644 console-setup/Lat15-Fixed16.psf.gz
+ create mode 100644 console-setup/cached_UTF-8_del.kmap.gz
+ create mode 100644 console-setup/compose.ARMSCII-8.inc
+ create mode 100644 console-setup/compose.CP1251.inc
+ create mode 100644 console-setup/compose.CP1255.inc
+ create mode 100644 console-setup/compose.CP1256.inc
+ create mode 100644 console-setup/compose.GEORGIAN-ACADEMY.inc
+ create mode 100644 console-setup/compose.GEORGIAN-PS.inc
+ create mode 100644 console-setup/compose.IBM1133.inc
+ create mode 100644 console-setup/compose.ISIRI-3342.inc
+ create mode 100644 console-setup/compose.ISO-8859-1.inc
+ create mode 100644 console-setup/compose.ISO-8859-10.inc
+ create mode 100644 console-setup/compose.ISO-8859-11.inc
+ create mode 100644 console-setup/compose.ISO-8859-13.inc
+ create mode 100644 console-setup/compose.ISO-8859-14.inc
+ create mode 100644 console-setup/compose.ISO-8859-15.inc
+ create mode 100644 console-setup/compose.ISO-8859-16.inc
+ create mode 100644 console-setup/compose.ISO-8859-2.inc
+ create mode 100644 console-setup/compose.ISO-8859-3.inc
+ create mode 100644 console-setup/compose.ISO-8859-4.inc
+ create mode 100644 console-setup/compose.ISO-8859-5.inc
+ create mode 100644 console-setup/compose.ISO-8859-6.inc
+ create mode 100644 console-setup/compose.ISO-8859-7.inc
+ create mode 100644 console-setup/compose.ISO-8859-8.inc
+ create mode 100644 console-setup/compose.ISO-8859-9.inc
+ create mode 100644 console-setup/compose.KOI8-R.inc
+ create mode 100644 console-setup/compose.KOI8-U.inc
+ create mode 100644 console-setup/compose.TIS-620.inc
+ create mode 100644 console-setup/compose.VISCII.inc
+ create mode 100644 console-setup/remap.inc
+ create mode 100644 cron.d/.placeholder
+ create mode 100644 cron.daily/.placeholder
+ create mode 100755 cron.daily/apt
+ create mode 100755 cron.daily/aptitude
+ create mode 100755 cron.daily/bsdmainutils
+ create mode 100755 cron.daily/dpkg
+ create mode 100755 cron.daily/etckeeper
+ create mode 100755 cron.daily/logrotate
+ create mode 100755 cron.daily/man-db
+ create mode 100755 cron.daily/passwd
+ create mode 100644 cron.hourly/.placeholder
+ create mode 100644 cron.monthly/.placeholder
+ create mode 100644 cron.weekly/.placeholder
+ create mode 100755 cron.weekly/man-db
+ create mode 100644 crontab
+ create mode 100644 cruft/filters-unex/etckeeper
+ create mode 100644 debconf.conf
+ create mode 100644 debian_version
+ create mode 100644 default/acpid
+ create mode 100644 default/bsdmainutils
+ create mode 100644 default/console-setup
+ create mode 100644 default/cron
+ create mode 100644 default/devpts
+ create mode 100644 default/grub
+ create mode 100644 default/halt
+ create mode 100644 default/hwclock
+ create mode 100644 default/keyboard
+ create mode 100644 default/locale
+ create mode 100644 default/networking
+ create mode 100644 default/nss
+ create mode 100644 default/rcS
+ create mode 100644 default/rsync
+ create mode 100644 default/rsyslog
+ create mode 100644 default/ssh
+ create mode 100644 default/tmpfs
+ create mode 100644 default/useradd
+ create mode 100644 deluser.conf
+ create mode 100644 dhcp/dhclient-enter-hooks.d/debug
+ create mode 100644 dhcp/dhclient-exit-hooks.d/debug
+ create mode 100644 dhcp/dhclient-exit-hooks.d/rfc3442-classless-routes
+ create mode 100644 dhcp/dhclient.conf
+ create mode 120000 dictionaries-common/default.aff
+ create mode 120000 dictionaries-common/default.hash
+ create mode 100644 dictionaries-common/ispell-default
+ create mode 100644 discover-modprobe.conf
+ create mode 100644 discover.conf.d/00discover
+ create mode 100644 dpkg/dpkg.cfg
+ create mode 100644 dpkg/origins/debian
+ create mode 120000 dpkg/origins/default
+ create mode 100644 emacs/site-start.d/50dictionaries-common.el
+ create mode 100644 environment
+ create mode 100755 etckeeper/commit.d/10vcs-test
+ create mode 100755 etckeeper/commit.d/30bzr-add
+ create mode 100755 etckeeper/commit.d/30darcs-add
+ create mode 100755 etckeeper/commit.d/30git-add
+ create mode 100755 etckeeper/commit.d/30hg-addremove
+ create mode 100755 etckeeper/commit.d/50vcs-commit
+ create mode 100644 etckeeper/commit.d/README
+ create mode 100644 etckeeper/etckeeper.conf
+ create mode 100755 etckeeper/init.d/10restore-metadata
+ create mode 100755 etckeeper/init.d/20restore-etckeeper
+ create mode 100755 etckeeper/init.d/40vcs-init
+ create mode 100755 etckeeper/init.d/50vcs-ignore
+ create mode 100755 etckeeper/init.d/50vcs-perm
+ create mode 100755 etckeeper/init.d/50vcs-pre-commit-hook
+ create mode 100755 etckeeper/init.d/60darcs-deleted-symlinks
+ create mode 100755 etckeeper/init.d/70vcs-add
+ create mode 100644 etckeeper/init.d/README
+ create mode 100755 etckeeper/list-installed.d/50list-installed
+ create mode 100755 etckeeper/post-install.d/50vcs-commit
+ create mode 100644 etckeeper/post-install.d/README
+ create mode 100755 etckeeper/pre-commit.d/20warn-problem-files
+ create mode 100755 etckeeper/pre-commit.d/30store-metadata
+ create mode 100644 etckeeper/pre-commit.d/README
+ create mode 100755 etckeeper/pre-install.d/10packagelist
+ create mode 100755 etckeeper/pre-install.d/50uncommitted-changes
+ create mode 100644 etckeeper/pre-install.d/README
+ create mode 100755 etckeeper/unclean.d/50test
+ create mode 100644 etckeeper/unclean.d/README
+ create mode 100755 etckeeper/uninit.d/01prompt
+ create mode 100755 etckeeper/uninit.d/50remove-metadata
+ create mode 100755 etckeeper/uninit.d/50vcs-uninit
+ create mode 100644 etckeeper/uninit.d/README
+ create mode 100755 etckeeper/update-ignore.d/01update-ignore
+ create mode 100644 etckeeper/update-ignore.d/README
+ create mode 100755 etckeeper/vcs.d/50vcs-cmd
+ create mode 100644 fstab
+ create mode 100644 gai.conf
+ create mode 100644 groff/man.local
+ create mode 100644 groff/mdoc.local
+ create mode 100644 group
+ create mode 100644 group-
+ create mode 100755 grub.d/00_header
+ create mode 100755 grub.d/05_debian_theme
+ create mode 100755 grub.d/10_linux
+ create mode 100755 grub.d/20_linux_xen
+ create mode 100755 grub.d/30_os-prober
+ create mode 100755 grub.d/40_custom
+ create mode 100755 grub.d/41_custom
+ create mode 100644 grub.d/README
+ create mode 100644 gshadow
+ create mode 100644 gshadow-
+ create mode 100644 host.conf
+ create mode 100644 hostname
+ create mode 100644 hosts
+ create mode 100644 hosts.allow
+ create mode 100644 hosts.deny
+ create mode 100644 init.d/README
+ create mode 100755 init.d/acpid
+ create mode 100755 init.d/bootlogs
+ create mode 100755 init.d/bootmisc.sh
+ create mode 100755 init.d/checkfs.sh
+ create mode 100755 init.d/checkroot-bootclean.sh
+ create mode 100755 init.d/checkroot.sh
+ create mode 100755 init.d/console-setup
+ create mode 100755 init.d/cron
+ create mode 100755 init.d/halt
+ create mode 100755 init.d/hostname.sh
+ create mode 100755 init.d/hwclock.sh
+ create mode 100755 init.d/kbd
+ create mode 100755 init.d/keyboard-setup
+ create mode 100755 init.d/killprocs
+ create mode 100755 init.d/kmod
+ create mode 100755 init.d/motd
+ create mode 100755 init.d/mountall-bootclean.sh
+ create mode 100755 init.d/mountall.sh
+ create mode 100755 init.d/mountdevsubfs.sh
+ create mode 100755 init.d/mountkernfs.sh
+ create mode 100755 init.d/mountnfs-bootclean.sh
+ create mode 100755 init.d/mountnfs.sh
+ create mode 100755 init.d/mtab.sh
+ create mode 100755 init.d/networking
+ create mode 100755 init.d/procps
+ create mode 100755 init.d/rc
+ create mode 100755 init.d/rc.local
+ create mode 100755 init.d/rcS
+ create mode 100755 init.d/reboot
+ create mode 100755 init.d/rmnologin
+ create mode 100755 init.d/rsync
+ create mode 100755 init.d/rsyslog
+ create mode 100755 init.d/sendsigs
+ create mode 100755 init.d/single
+ create mode 100644 init.d/skeleton
+ create mode 100755 init.d/ssh
+ create mode 100755 init.d/sudo
+ create mode 100755 init.d/udev
+ create mode 100755 init.d/udev-mtab
+ create mode 100755 init.d/umountfs
+ create mode 100755 init.d/umountnfs.sh
+ create mode 100755 init.d/umountroot
+ create mode 100755 init.d/urandom
+ create mode 100644 init/network-interface-container.conf
+ create mode 100644 init/network-interface-security.conf
+ create mode 100644 init/network-interface.conf
+ create mode 100644 init/networking.conf
+ create mode 100644 init/startpar-bridge.conf
+ create mode 100644 init/udev-fallback-graphics.conf
+ create mode 100644 init/udev-finish.conf
+ create mode 100644 init/udev.conf
+ create mode 100644 init/udevmonitor.conf
+ create mode 100644 init/udevtrigger.conf
+ create mode 100644 initramfs-tools/conf.d/resume
+ create mode 100644 initramfs-tools/initramfs.conf
+ create mode 100644 initramfs-tools/modules
+ create mode 100644 initramfs-tools/update-initramfs.conf
+ create mode 100644 inittab
+ create mode 100644 inputrc
+ create mode 100644 insserv.conf
+ create mode 100644 iproute2/ematch_map
+ create mode 100644 iproute2/group
+ create mode 100644 iproute2/rt_dsfield
+ create mode 100644 iproute2/rt_protos
+ create mode 100644 iproute2/rt_realms
+ create mode 100644 iproute2/rt_scopes
+ create mode 100644 iproute2/rt_tables
+ create mode 100644 issue
+ create mode 100644 issue.net
+ create mode 100644 kbd/config
+ create mode 100644 kbd/remap
+ create mode 100644 kernel-img.conf
+ create mode 100755 kernel/postinst.d/initramfs-tools
+ create mode 100755 kernel/postinst.d/zz-update-grub
+ create mode 100755 kernel/postrm.d/initramfs-tools
+ create mode 100755 kernel/postrm.d/zz-update-grub
+ create mode 100644 ld.so.conf
+ create mode 100644 ld.so.conf.d/libc.conf
+ create mode 100644 ld.so.conf.d/x86_64-linux-gnu.conf
+ create mode 100644 ldap/ldap.conf
+ create mode 100644 locale.alias
+ create mode 100644 locale.gen
+ create mode 100644 localtime
+ create mode 100644 logcheck/ignore.d.server/rsyslog
+ create mode 100644 login.defs
+ create mode 100644 logrotate.conf
+ create mode 100644 logrotate.d/apt
+ create mode 100644 logrotate.d/aptitude
+ create mode 100644 logrotate.d/dpkg
+ create mode 100644 logrotate.d/rsyslog
+ create mode 100644 manpath.config
+ create mode 100644 mke2fs.conf
+ create mode 100644 modprobe.d/fbdev-blacklist.conf
+ create mode 100644 modules
+ create mode 100644 motd
+ create mode 100644 nanorc
+ create mode 100755 network/if-down.d/upstart
+ create mode 100755 network/if-up.d/mountnfs
+ create mode 100755 network/if-up.d/openssh-server
+ create mode 100755 network/if-up.d/upstart
+ create mode 100644 network/interfaces
+ create mode 100644 networks
+ create mode 100644 nsswitch.conf
+ create mode 100644 os-release
+ create mode 100644 pam.conf
+ create mode 100644 pam.d/chfn
+ create mode 100644 pam.d/chpasswd
+ create mode 100644 pam.d/chsh
+ create mode 100644 pam.d/common-account
+ create mode 100644 pam.d/common-auth
+ create mode 100644 pam.d/common-password
+ create mode 100644 pam.d/common-session
+ create mode 100644 pam.d/common-session-noninteractive
+ create mode 100644 pam.d/cron
+ create mode 100644 pam.d/login
+ create mode 100644 pam.d/newusers
+ create mode 100644 pam.d/other
+ create mode 100644 pam.d/passwd
+ create mode 100644 pam.d/sshd
+ create mode 100644 pam.d/su
+ create mode 100644 pam.d/sudo
+ create mode 100644 passwd
+ create mode 100644 passwd-
+ create mode 100644 perl/Net/libnet.cfg
+ create mode 100644 profile
+ create mode 100644 protocols
+ create mode 100755 rc.local
+ create mode 120000 rc0.d/K01sendsigs
+ create mode 120000 rc0.d/K01urandom
+ create mode 120000 rc0.d/K02rsyslog
+ create mode 120000 rc0.d/K03hwclock.sh
+ create mode 120000 rc0.d/K03umountnfs.sh
+ create mode 120000 rc0.d/K04networking
+ create mode 120000 rc0.d/K05umountfs
+ create mode 120000 rc0.d/K06umountroot
+ create mode 120000 rc0.d/K07halt
+ create mode 100644 rc0.d/README
+ create mode 120000 rc1.d/K02rsyslog
+ create mode 100644 rc1.d/README
+ create mode 120000 rc1.d/S01killprocs
+ create mode 120000 rc1.d/S01motd
+ create mode 120000 rc1.d/S03bootlogs
+ create mode 120000 rc1.d/S04single
+ create mode 100644 rc2.d/README
+ create mode 120000 rc2.d/S01motd
+ create mode 120000 rc2.d/S01rsyslog
+ create mode 120000 rc2.d/S01sudo
+ create mode 120000 rc2.d/S02acpid
+ create mode 120000 rc2.d/S02cron
+ create mode 120000 rc2.d/S02rsync
+ create mode 120000 rc2.d/S02ssh
+ create mode 120000 rc2.d/S03bootlogs
+ create mode 120000 rc2.d/S04rc.local
+ create mode 120000 rc2.d/S04rmnologin
+ create mode 100644 rc3.d/README
+ create mode 120000 rc3.d/S01motd
+ create mode 120000 rc3.d/S01rsyslog
+ create mode 120000 rc3.d/S01sudo
+ create mode 120000 rc3.d/S02acpid
+ create mode 120000 rc3.d/S02cron
+ create mode 120000 rc3.d/S02rsync
+ create mode 120000 rc3.d/S02ssh
+ create mode 120000 rc3.d/S03bootlogs
+ create mode 120000 rc3.d/S04rc.local
+ create mode 120000 rc3.d/S04rmnologin
+ create mode 100644 rc4.d/README
+ create mode 120000 rc4.d/S01motd
+ create mode 120000 rc4.d/S01rsyslog
+ create mode 120000 rc4.d/S01sudo
+ create mode 120000 rc4.d/S02acpid
+ create mode 120000 rc4.d/S02cron
+ create mode 120000 rc4.d/S02rsync
+ create mode 120000 rc4.d/S02ssh
+ create mode 120000 rc4.d/S03bootlogs
+ create mode 120000 rc4.d/S04rc.local
+ create mode 120000 rc4.d/S04rmnologin
+ create mode 100644 rc5.d/README
+ create mode 120000 rc5.d/S01motd
+ create mode 120000 rc5.d/S01rsyslog
+ create mode 120000 rc5.d/S01sudo
+ create mode 120000 rc5.d/S02acpid
+ create mode 120000 rc5.d/S02cron
+ create mode 120000 rc5.d/S02rsync
+ create mode 120000 rc5.d/S02ssh
+ create mode 120000 rc5.d/S03bootlogs
+ create mode 120000 rc5.d/S04rc.local
+ create mode 120000 rc5.d/S04rmnologin
+ create mode 120000 rc6.d/K01sendsigs
+ create mode 120000 rc6.d/K01urandom
+ create mode 120000 rc6.d/K02rsyslog
+ create mode 120000 rc6.d/K03hwclock.sh
+ create mode 120000 rc6.d/K03umountnfs.sh
+ create mode 120000 rc6.d/K04networking
+ create mode 120000 rc6.d/K05umountfs
+ create mode 120000 rc6.d/K06umountroot
+ create mode 120000 rc6.d/K07reboot
+ create mode 100644 rc6.d/README
+ create mode 100644 rcS.d/README
+ create mode 120000 rcS.d/S01hostname.sh
+ create mode 120000 rcS.d/S01mountkernfs.sh
+ create mode 120000 rcS.d/S02udev
+ create mode 120000 rcS.d/S03keyboard-setup
+ create mode 120000 rcS.d/S04mountdevsubfs.sh
+ create mode 120000 rcS.d/S05hwclock.sh
+ create mode 120000 rcS.d/S06checkroot.sh
+ create mode 120000 rcS.d/S07checkroot-bootclean.sh
+ create mode 120000 rcS.d/S07kmod
+ create mode 120000 rcS.d/S07mtab.sh
+ create mode 120000 rcS.d/S08checkfs.sh
+ create mode 120000 rcS.d/S09mountall.sh
+ create mode 120000 rcS.d/S10mountall-bootclean.sh
+ create mode 120000 rcS.d/S11procps
+ create mode 120000 rcS.d/S11udev-mtab
+ create mode 120000 rcS.d/S11urandom
+ create mode 120000 rcS.d/S12networking
+ create mode 120000 rcS.d/S13mountnfs.sh
+ create mode 120000 rcS.d/S14mountnfs-bootclean.sh
+ create mode 120000 rcS.d/S15kbd
+ create mode 120000 rcS.d/S16console-setup
+ create mode 120000 rcS.d/S17bootmisc.sh
+ create mode 100644 resolv.conf
+ create mode 100755 rmt
+ create mode 100644 rpc
+ create mode 100644 rsyslog.conf
+ create mode 100644 securetty
+ create mode 100644 security/access.conf
+ create mode 100644 security/group.conf
+ create mode 100644 security/limits.conf
+ create mode 100644 security/namespace.conf
+ create mode 100755 security/namespace.init
+ create mode 100644 security/opasswd
+ create mode 100644 security/pam_env.conf
+ create mode 100644 security/sepermit.conf
+ create mode 100644 security/time.conf
+ create mode 100644 selinux/semanage.conf
+ create mode 100644 services
+ create mode 100644 shadow
+ create mode 100644 shadow-
+ create mode 100644 shells
+ create mode 100644 skel/.bash_logout
+ create mode 100644 skel/.bashrc
+ create mode 100644 skel/.profile
+ create mode 100644 ssh/moduli
+ create mode 100644 ssh/ssh_config
+ create mode 100644 ssh/ssh_host_dsa_key
+ create mode 100644 ssh/ssh_host_dsa_key.pub
+ create mode 100644 ssh/ssh_host_ecdsa_key
+ create mode 100644 ssh/ssh_host_ecdsa_key.pub
+ create mode 100644 ssh/ssh_host_rsa_key
+ create mode 100644 ssh/ssh_host_rsa_key.pub
+ create mode 100644 ssh/sshd_config
+ create mode 120000 ssl/certs/00673b5b.0
+ create mode 120000 ssl/certs/024dc131.0
+ create mode 120000 ssl/certs/02b73561.0
+ create mode 120000 ssl/certs/034868d6.0
+ create mode 120000 ssl/certs/039c618a.0
+ create mode 120000 ssl/certs/052e396b.0
+ create mode 120000 ssl/certs/062cdee6.0
+ create mode 120000 ssl/certs/080911ac.0
+ create mode 120000 ssl/certs/0810ba98.0
+ create mode 120000 ssl/certs/08aef7bb.0
+ create mode 120000 ssl/certs/09789157.0
+ create mode 120000 ssl/certs/0b759015.0
+ create mode 120000 ssl/certs/0ba01d19.0
+ create mode 120000 ssl/certs/0c4c9b6c.0
+ create mode 120000 ssl/certs/0d188d89.0
+ create mode 120000 ssl/certs/0d1b923b.0
+ create mode 120000 ssl/certs/0dad9736.0
+ create mode 120000 ssl/certs/10531352.0
+ create mode 120000 ssl/certs/111e6273.0
+ create mode 120000 ssl/certs/116bf586.0
+ create mode 120000 ssl/certs/119afc2e.0
+ create mode 120000 ssl/certs/11f154d6.0
+ create mode 120000 ssl/certs/124bbd54.0
+ create mode 120000 ssl/certs/128805a3.0
+ create mode 120000 ssl/certs/12d55845.0
+ create mode 120000 ssl/certs/157753a5.0
+ create mode 120000 ssl/certs/1636090b.0
+ create mode 120000 ssl/certs/1676090a.0
+ create mode 120000 ssl/certs/17b51fe6.0
+ create mode 120000 ssl/certs/1874d4aa.0
+ create mode 120000 ssl/certs/18856ac4.0
+ create mode 120000 ssl/certs/1dac3003.0
+ create mode 120000 ssl/certs/1dcd6f4c.0
+ create mode 120000 ssl/certs/1df5a75f.0
+ create mode 120000 ssl/certs/1e09d511.0
+ create mode 120000 ssl/certs/1e1eab7c.0
+ create mode 120000 ssl/certs/1e8e7201.0
+ create mode 120000 ssl/certs/1eb37bdf.0
+ create mode 120000 ssl/certs/1ec4d31a.0
+ create mode 120000 ssl/certs/201cada0.0
+ create mode 120000 ssl/certs/20d096ba.0
+ create mode 120000 ssl/certs/21855f49.0
+ create mode 120000 ssl/certs/219d9499.0
+ create mode 120000 ssl/certs/2251b13a.0
+ create mode 120000 ssl/certs/23f4c490.0
+ create mode 120000 ssl/certs/244b5494.0
+ create mode 120000 ssl/certs/24ad0b63.0
+ create mode 120000 ssl/certs/27af790d.0
+ create mode 120000 ssl/certs/2ab3b959.0
+ create mode 120000 ssl/certs/2ae6433e.0
+ create mode 120000 ssl/certs/2afc57aa.0
+ create mode 120000 ssl/certs/2b349938.0
+ create mode 120000 ssl/certs/2c543cd1.0
+ create mode 120000 ssl/certs/2d9dafe4.0
+ create mode 120000 ssl/certs/2e4eed3c.0
+ create mode 120000 ssl/certs/2e5ac55d.0
+ create mode 120000 ssl/certs/2edf7016.0
+ create mode 120000 ssl/certs/2fa87019.0
+ create mode 120000 ssl/certs/2fb1850a.0
+ create mode 120000 ssl/certs/33815e15.0
+ create mode 120000 ssl/certs/33815e15.1
+ create mode 120000 ssl/certs/343eb6cb.0
+ create mode 120000 ssl/certs/349f2832.0
+ create mode 120000 ssl/certs/3513523f.0
+ create mode 120000 ssl/certs/381ce4dd.0
+ create mode 120000 ssl/certs/399e7759.0
+ create mode 120000 ssl/certs/3a3b02ce.0
+ create mode 120000 ssl/certs/3ad48a91.0
+ create mode 120000 ssl/certs/3b2716e5.0
+ create mode 120000 ssl/certs/3bde41ac.0
+ create mode 120000 ssl/certs/3c58f906.0
+ create mode 120000 ssl/certs/3c860d51.0
+ create mode 120000 ssl/certs/3c9a4d3b.0
+ create mode 120000 ssl/certs/3d441de8.0
+ create mode 120000 ssl/certs/3e45d192.0
+ create mode 120000 ssl/certs/3e7271e8.0
+ create mode 120000 ssl/certs/3ee7e181.0
+ create mode 120000 ssl/certs/3efd4dc0.0
+ create mode 120000 ssl/certs/40547a79.0
+ create mode 120000 ssl/certs/408e388a.0
+ create mode 120000 ssl/certs/40dc992e.0
+ create mode 120000 ssl/certs/415660c1.0
+ create mode 120000 ssl/certs/415660c1.1
+ create mode 120000 ssl/certs/418595b9.0
+ create mode 120000 ssl/certs/4304c5e5.0
+ create mode 120000 ssl/certs/442adcac.0
+ create mode 120000 ssl/certs/450c6e38.0
+ create mode 120000 ssl/certs/46b2fd3b.0
+ create mode 120000 ssl/certs/480720ec.0
+ create mode 120000 ssl/certs/48a195d8.0
+ create mode 120000 ssl/certs/48bec511.0
+ create mode 120000 ssl/certs/4a6481c9.0
+ create mode 120000 ssl/certs/4bfab552.0
+ create mode 120000 ssl/certs/4d654d1d.0
+ create mode 120000 ssl/certs/4e18c148.0
+ create mode 120000 ssl/certs/4f316efb.0
+ create mode 120000 ssl/certs/4fbd6bfa.0
+ create mode 120000 ssl/certs/5021a0a2.0
+ create mode 120000 ssl/certs/5046c355.0
+ create mode 120000 ssl/certs/524d9b43.0
+ create mode 120000 ssl/certs/5273a94c.0
+ create mode 120000 ssl/certs/5443e9e3.0
+ create mode 120000 ssl/certs/54657681.0
+ create mode 120000 ssl/certs/55a10908.0
+ create mode 120000 ssl/certs/5620c4aa.0
+ create mode 120000 ssl/certs/56657bde.0
+ create mode 120000 ssl/certs/56b8a0b6.0
+ create mode 120000 ssl/certs/56e29e75.0
+ create mode 120000 ssl/certs/57692373.0
+ create mode 120000 ssl/certs/578d5c04.0
+ create mode 120000 ssl/certs/57bbd831.0
+ create mode 120000 ssl/certs/57bcb2da.0
+ create mode 120000 ssl/certs/58a44af1.0
+ create mode 120000 ssl/certs/590d426f.0
+ create mode 120000 ssl/certs/592c0a9a.0
+ create mode 120000 ssl/certs/594f1775.0
+ create mode 120000 ssl/certs/5a3f0ff8.0
+ create mode 120000 ssl/certs/5a5372fc.0
+ create mode 120000 ssl/certs/5ad8a5d6.0
+ create mode 120000 ssl/certs/5c44d531.0
+ create mode 120000 ssl/certs/5cd81ad7.0
+ create mode 120000 ssl/certs/5cf9d536.0
+ create mode 120000 ssl/certs/5e4e69e7.0
+ create mode 120000 ssl/certs/5ed36f99.0
+ create mode 120000 ssl/certs/5f15c80c.0
+ create mode 120000 ssl/certs/5f267794.0
+ create mode 120000 ssl/certs/5f47b495.0
+ create mode 120000 ssl/certs/60afe812.0
+ create mode 120000 ssl/certs/635ccfd5.0
+ create mode 120000 ssl/certs/63a2c897.0
+ create mode 120000 ssl/certs/6410666e.0
+ create mode 120000 ssl/certs/653b494a.0
+ create mode 120000 ssl/certs/656b3e35.0
+ create mode 120000 ssl/certs/65b876bd.0
+ create mode 120000 ssl/certs/667c66d4.0
+ create mode 120000 ssl/certs/67495436.0
+ create mode 120000 ssl/certs/67d559d1.0
+ create mode 120000 ssl/certs/69105f4f.0
+ create mode 120000 ssl/certs/6b99d060.0
+ create mode 120000 ssl/certs/6cc3c4c3.0
+ create mode 120000 ssl/certs/6e52cc39.0
+ create mode 120000 ssl/certs/6e8bf996.0
+ create mode 120000 ssl/certs/6f2c1157.0
+ create mode 120000 ssl/certs/6fcc125d.0
+ create mode 120000 ssl/certs/706f604c.0
+ create mode 120000 ssl/certs/72f369af.0
+ create mode 120000 ssl/certs/72fa7371.0
+ create mode 120000 ssl/certs/74c26bd0.0
+ create mode 120000 ssl/certs/755f7420.0
+ create mode 120000 ssl/certs/75680d2e.0
+ create mode 120000 ssl/certs/7651b327.0
+ create mode 120000 ssl/certs/7651b327.1
+ create mode 120000 ssl/certs/76579174.0
+ create mode 120000 ssl/certs/7672ac4b.0
+ create mode 120000 ssl/certs/76cb8f92.0
+ create mode 120000 ssl/certs/76faf6c0.0
+ create mode 120000 ssl/certs/778e3cb0.0
+ create mode 120000 ssl/certs/790a7190.0
+ create mode 120000 ssl/certs/7999be0d.0
+ create mode 120000 ssl/certs/79ad8b43.0
+ create mode 120000 ssl/certs/7a481e66.0
+ create mode 120000 ssl/certs/7a819ef2.0
+ create mode 120000 ssl/certs/7d0b38bd.0
+ create mode 120000 ssl/certs/7d3cd826.0
+ create mode 120000 ssl/certs/7d453d8f.0
+ create mode 120000 ssl/certs/7d5a75e4.0
+ create mode 120000 ssl/certs/812e17de.0
+ create mode 120000 ssl/certs/8160b96c.0
+ create mode 120000 ssl/certs/81b9768f.0
+ create mode 120000 ssl/certs/82223c44.0
+ create mode 120000 ssl/certs/8317b10c.0
+ create mode 120000 ssl/certs/8470719d.0
+ create mode 120000 ssl/certs/84cba82f.0
+ create mode 120000 ssl/certs/85cde254.0
+ create mode 120000 ssl/certs/861a399d.0
+ create mode 120000 ssl/certs/861e0100.0
+ create mode 120000 ssl/certs/86212b19.0
+ create mode 120000 ssl/certs/876f1e28.0
+ create mode 120000 ssl/certs/87753b0d.0
+ create mode 120000 ssl/certs/882de061.0
+ create mode 120000 ssl/certs/8867006a.0
+ create mode 120000 ssl/certs/88f89ea7.0
+ create mode 120000 ssl/certs/895cad1a.0
+ create mode 120000 ssl/certs/89c02a45.0
+ create mode 120000 ssl/certs/8b59b1ad.0
+ create mode 120000 ssl/certs/8c24b137.0
+ create mode 120000 ssl/certs/8d86cdd1.0
+ create mode 120000 ssl/certs/8e52d3cd.0
+ create mode 120000 ssl/certs/9007ae68.0
+ create mode 120000 ssl/certs/91739615.0
+ create mode 120000 ssl/certs/930ac5d2.0
+ create mode 120000 ssl/certs/9339512a.0
+ create mode 120000 ssl/certs/93bc0acc.0
+ create mode 120000 ssl/certs/9576d26b.0
+ create mode 120000 ssl/certs/95aff9e3.0
+ create mode 120000 ssl/certs/9685a493.0
+ create mode 120000 ssl/certs/9772ca32.0
+ create mode 120000 ssl/certs/988a38cb.0
+ create mode 120000 ssl/certs/98ec67f0.0
+ create mode 120000 ssl/certs/99d0fa06.0
+ create mode 120000 ssl/certs/9ab62355.0
+ create mode 120000 ssl/certs/9af9f759.0
+ create mode 120000 ssl/certs/9b353c9a.0
+ create mode 120000 ssl/certs/9c2e7d30.0
+ create mode 120000 ssl/certs/9c472bf7.0
+ create mode 120000 ssl/certs/9c8dfbd4.0
+ create mode 120000 ssl/certs/9d520b32.0
+ create mode 120000 ssl/certs/9d6523ce.0
+ create mode 120000 ssl/certs/9dbefe7b.0
+ create mode 120000 ssl/certs/9ec3a561.0
+ create mode 120000 ssl/certs/9f533518.0
+ create mode 120000 ssl/certs/9f541fb4.0
+ create mode 120000 ssl/certs/A-Trust-nQual-03.pem
+ create mode 120000 ssl/certs/ACCVRAIZ1.pem
+ create mode 120000 ssl/certs/ACEDICOM_Root.pem
+ create mode 120000 "ssl/certs/AC_Ra\303\255z_Certic\303\241mara_S.A..pem"
+ create mode 120000 ssl/certs/Actalis_Authentication_Root_CA.pem
+ create mode 120000 ssl/certs/AddTrust_External_Root.pem
+ create mode 120000 ssl/certs/AddTrust_Low-Value_Services_Root.pem
+ create mode 120000 ssl/certs/AddTrust_Public_Services_Root.pem
+ create mode 120000 ssl/certs/AddTrust_Qualified_Certificates_Root.pem
+ create mode 120000 ssl/certs/AffirmTrust_Commercial.pem
+ create mode 120000 ssl/certs/AffirmTrust_Networking.pem
+ create mode 120000 ssl/certs/AffirmTrust_Premium.pem
+ create mode 120000 ssl/certs/AffirmTrust_Premium_ECC.pem
+ create mode 120000 ssl/certs/America_Online_Root_Certification_Authority_1.pem
+ create mode 120000 ssl/certs/America_Online_Root_Certification_Authority_2.pem
+ create mode 120000 ssl/certs/ApplicationCA_-_Japanese_Government.pem
+ create mode 120000 ssl/certs/Atos_TrustedRoot_2011.pem
+ create mode 120000 ssl/certs/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+ create mode 120000 ssl/certs/Baltimore_CyberTrust_Root.pem
+ create mode 120000 ssl/certs/Buypass_Class_2_CA_1.pem
+ create mode 120000 ssl/certs/Buypass_Class_2_Root_CA.pem
+ create mode 120000 ssl/certs/Buypass_Class_3_CA_1.pem
+ create mode 120000 ssl/certs/Buypass_Class_3_Root_CA.pem
+ create mode 120000 ssl/certs/CA_Disig.pem
+ create mode 120000 ssl/certs/CA_Disig_Root_R1.pem
+ create mode 120000 ssl/certs/CA_Disig_Root_R2.pem
+ create mode 120000 ssl/certs/CNNIC_ROOT.pem
+ create mode 120000 ssl/certs/COMODO_Certification_Authority.pem
+ create mode 120000 ssl/certs/COMODO_ECC_Certification_Authority.pem
+ create mode 120000 ssl/certs/Camerfirma_Chambers_of_Commerce_Root.pem
+ create mode 120000 ssl/certs/Camerfirma_Global_Chambersign_Root.pem
+ create mode 120000 ssl/certs/Certigna.pem
+ create mode 120000 "ssl/certs/Certinomis_-_Autorit\303\251_Racine.pem"
+ create mode 120000 ssl/certs/Certplus_Class_2_Primary_CA.pem
+ create mode 120000 ssl/certs/Certum_Root_CA.pem
+ create mode 120000 ssl/certs/Certum_Trusted_Network_CA.pem
+ create mode 120000 ssl/certs/Chambers_of_Commerce_Root_-_2008.pem
+ create mode 120000 ssl/certs/China_Internet_Network_Information_Center_EV_Certificates_Root.pem
+ create mode 120000 ssl/certs/ComSign_CA.pem
+ create mode 120000 ssl/certs/ComSign_Secured_CA.pem
+ create mode 120000 ssl/certs/Comodo_AAA_Services_root.pem
+ create mode 120000 ssl/certs/Comodo_Secure_Services_root.pem
+ create mode 120000 ssl/certs/Comodo_Trusted_Services_root.pem
+ create mode 120000 ssl/certs/Cybertrust_Global_Root.pem
+ create mode 120000 ssl/certs/D-TRUST_Root_Class_3_CA_2_2009.pem
+ create mode 120000 ssl/certs/D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+ create mode 120000 ssl/certs/DST_ACES_CA_X6.pem
+ create mode 120000 ssl/certs/DST_Root_CA_X3.pem
+ create mode 120000 ssl/certs/Deutsche_Telekom_Root_CA_2.pem
+ create mode 120000 ssl/certs/DigiCert_Assured_ID_Root_CA.pem
+ create mode 120000 ssl/certs/DigiCert_Global_Root_CA.pem
+ create mode 120000 ssl/certs/DigiCert_High_Assurance_EV_Root_CA.pem
+ create mode 120000 ssl/certs/Digital_Signature_Trust_Co._Global_CA_1.pem
+ create mode 120000 ssl/certs/Digital_Signature_Trust_Co._Global_CA_3.pem
+ create mode 120000 ssl/certs/E-Guven_Kok_Elektronik_Sertifika_Hizmet_Saglayicisi.pem
+ create mode 120000 ssl/certs/E-Tugra_Certification_Authority.pem
+ create mode 120000 "ssl/certs/EBG_Elektronik_Sertifika_Hizmet_Sa\304\237lay\304\261c\304\261s\304\261.pem"
+ create mode 120000 ssl/certs/EC-ACC.pem
+ create mode 120000 ssl/certs/EE_Certification_Centre_Root_CA.pem
+ create mode 120000 ssl/certs/Entrust.net_Premium_2048_Secure_Server_CA.pem
+ create mode 120000 ssl/certs/Entrust.net_Secure_Server_CA.pem
+ create mode 120000 ssl/certs/Entrust_Root_Certification_Authority.pem
+ create mode 120000 ssl/certs/Equifax_Secure_CA.pem
+ create mode 120000 ssl/certs/Equifax_Secure_Global_eBusiness_CA.pem
+ create mode 120000 ssl/certs/Equifax_Secure_eBusiness_CA_1.pem
+ create mode 120000 ssl/certs/GTE_CyberTrust_Global_Root.pem
+ create mode 120000 ssl/certs/GeoTrust_Global_CA.pem
+ create mode 120000 ssl/certs/GeoTrust_Global_CA_2.pem
+ create mode 120000 ssl/certs/GeoTrust_Primary_Certification_Authority.pem
+ create mode 120000 ssl/certs/GeoTrust_Primary_Certification_Authority_-_G2.pem
+ create mode 120000 ssl/certs/GeoTrust_Primary_Certification_Authority_-_G3.pem
+ create mode 120000 ssl/certs/GeoTrust_Universal_CA.pem
+ create mode 120000 ssl/certs/GeoTrust_Universal_CA_2.pem
+ create mode 120000 ssl/certs/GlobalSign_Root_CA.pem
+ create mode 120000 ssl/certs/GlobalSign_Root_CA_-_R2.pem
+ create mode 120000 ssl/certs/GlobalSign_Root_CA_-_R3.pem
+ create mode 120000 ssl/certs/Global_Chambersign_Root_-_2008.pem
+ create mode 120000 ssl/certs/Go_Daddy_Class_2_CA.pem
+ create mode 120000 ssl/certs/Go_Daddy_Root_Certificate_Authority_-_G2.pem
+ create mode 120000 ssl/certs/Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+ create mode 120000 ssl/certs/Hongkong_Post_Root_CA_1.pem
+ create mode 120000 ssl/certs/IGC_A.pem
+ create mode 120000 ssl/certs/Izenpe.com.pem
+ create mode 120000 ssl/certs/Juur-SK.pem
+ create mode 120000 ssl/certs/Microsec_e-Szigno_Root_CA.pem
+ create mode 120000 ssl/certs/Microsec_e-Szigno_Root_CA_2009.pem
+ create mode 120000 "ssl/certs/NetLock_Arany_=Class_Gold=_F\305\221tan\303\272s\303\255tv\303\241ny.pem"
+ create mode 120000 ssl/certs/NetLock_Business_=Class_B=_Root.pem
+ create mode 120000 ssl/certs/NetLock_Express_=Class_C=_Root.pem
+ create mode 120000 ssl/certs/NetLock_Notary_=Class_A=_Root.pem
+ create mode 120000 ssl/certs/NetLock_Qualified_=Class_QA=_Root.pem
+ create mode 120000 ssl/certs/Network_Solutions_Certificate_Authority.pem
+ create mode 120000 ssl/certs/OISTE_WISeKey_Global_Root_GA_CA.pem
+ create mode 120000 ssl/certs/PSCProcert.pem
+ create mode 120000 ssl/certs/QuoVadis_Root_CA.pem
+ create mode 120000 ssl/certs/QuoVadis_Root_CA_2.pem
+ create mode 120000 ssl/certs/QuoVadis_Root_CA_3.pem
+ create mode 120000 ssl/certs/RSA_Root_Certificate_1.pem
+ create mode 120000 ssl/certs/RSA_Security_2048_v3.pem
+ create mode 120000 ssl/certs/Root_CA_Generalitat_Valenciana.pem
+ create mode 120000 ssl/certs/S-TRUST_Authentication_and_Encryption_Root_CA_2005_PN.pem
+ create mode 120000 ssl/certs/SG_TRUST_SERVICES_RACINE.pem
+ create mode 120000 ssl/certs/SecureSign_RootCA11.pem
+ create mode 120000 ssl/certs/SecureTrust_CA.pem
+ create mode 120000 ssl/certs/Secure_Global_CA.pem
+ create mode 120000 ssl/certs/Security_Communication_EV_RootCA1.pem
+ create mode 120000 ssl/certs/Security_Communication_RootCA2.pem
+ create mode 120000 ssl/certs/Security_Communication_Root_CA.pem
+ create mode 120000 ssl/certs/Sonera_Class_1_Root_CA.pem
+ create mode 120000 ssl/certs/Sonera_Class_2_Root_CA.pem
+ create mode 120000 ssl/certs/Staat_der_Nederlanden_Root_CA.pem
+ create mode 120000 ssl/certs/Staat_der_Nederlanden_Root_CA_-_G2.pem
+ create mode 120000 ssl/certs/Starfield_Class_2_CA.pem
+ create mode 120000 ssl/certs/Starfield_Root_Certificate_Authority_-_G2.pem
+ create mode 120000 ssl/certs/Starfield_Services_Root_Certificate_Authority_-_G2.pem
+ create mode 120000 ssl/certs/StartCom_Certification_Authority.pem
+ create mode 120000 ssl/certs/StartCom_Certification_Authority_2.pem
+ create mode 120000 ssl/certs/StartCom_Certification_Authority_G2.pem
+ create mode 120000 ssl/certs/SwissSign_Gold_CA_-_G2.pem
+ create mode 120000 ssl/certs/SwissSign_Platinum_CA_-_G2.pem
+ create mode 120000 ssl/certs/SwissSign_Silver_CA_-_G2.pem
+ create mode 120000 ssl/certs/Swisscom_Root_CA_1.pem
+ create mode 120000 ssl/certs/Swisscom_Root_CA_2.pem
+ create mode 120000 ssl/certs/Swisscom_Root_EV_CA_2.pem
+ create mode 120000 ssl/certs/T-TeleSec_GlobalRoot_Class_2.pem
+ create mode 120000 ssl/certs/T-TeleSec_GlobalRoot_Class_3.pem
+ create mode 120000 ssl/certs/TC_TrustCenter_Class_2_CA_II.pem
+ create mode 120000 ssl/certs/TC_TrustCenter_Class_3_CA_II.pem
+ create mode 120000 ssl/certs/TC_TrustCenter_Universal_CA_I.pem
+ create mode 120000 ssl/certs/TDC_Internet_Root_CA.pem
+ create mode 120000 ssl/certs/TURKTRUST_Certificate_Services_Provider_Root_1.pem
+ create mode 120000 ssl/certs/TURKTRUST_Certificate_Services_Provider_Root_2.pem
+ create mode 120000 ssl/certs/TURKTRUST_Certificate_Services_Provider_Root_2007.pem
+ create mode 120000 ssl/certs/TWCA_Global_Root_CA.pem
+ create mode 120000 ssl/certs/TWCA_Root_Certification_Authority.pem
+ create mode 120000 ssl/certs/Taiwan_GRCA.pem
+ create mode 120000 ssl/certs/TeliaSonera_Root_CA_v1.pem
+ create mode 120000 ssl/certs/Thawte_Premium_Server_CA.pem
+ create mode 120000 ssl/certs/Thawte_Server_CA.pem
+ create mode 120000 ssl/certs/Trustis_FPS_Root_CA.pem
+ create mode 120000 "ssl/certs/T\303\234B\304\260TAK_UEKAE_K\303\266k_Sertifika_Hizmet_Sa\304\237lay\304\261c\304\261s\304\261_-_S\303\274r\303\274m_3.pem"
+ create mode 120000 ssl/certs/UTN_DATACorp_SGC_Root_CA.pem
+ create mode 120000 ssl/certs/UTN_USERFirst_Email_Root_CA.pem
+ create mode 120000 ssl/certs/UTN_USERFirst_Hardware_Root_CA.pem
+ create mode 120000 ssl/certs/ValiCert_Class_1_VA.pem
+ create mode 120000 ssl/certs/ValiCert_Class_2_VA.pem
+ create mode 120000 ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
+ create mode 120000 ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
+ create mode 120000 ssl/certs/VeriSign_Universal_Root_Certification_Authority.pem
+ create mode 120000 ssl/certs/Verisign_Class_1_Public_Primary_Certification_Authority.pem
+ create mode 120000 ssl/certs/Verisign_Class_1_Public_Primary_Certification_Authority_-_G2.pem
+ create mode 120000 ssl/certs/Verisign_Class_1_Public_Primary_Certification_Authority_-_G3.pem
+ create mode 120000 ssl/certs/Verisign_Class_2_Public_Primary_Certification_Authority_-_G2.pem
+ create mode 120000 ssl/certs/Verisign_Class_2_Public_Primary_Certification_Authority_-_G3.pem
+ create mode 120000 ssl/certs/Verisign_Class_3_Public_Primary_Certification_Authority.pem
+ create mode 120000 ssl/certs/Verisign_Class_3_Public_Primary_Certification_Authority_-_G2.pem
+ create mode 120000 ssl/certs/Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+ create mode 120000 ssl/certs/Verisign_Class_3_Public_Primary_Certification_Authority_2.pem
+ create mode 120000 ssl/certs/Verisign_Class_4_Public_Primary_Certification_Authority_-_G3.pem
+ create mode 120000 ssl/certs/Visa_eCommerce_Root.pem
+ create mode 120000 ssl/certs/WellsSecure_Public_Root_Certificate_Authority.pem
+ create mode 120000 ssl/certs/XRamp_Global_CA_Root.pem
+ create mode 120000 ssl/certs/a0bc6fbb.0
+ create mode 120000 ssl/certs/a15b3b6b.0
+ create mode 120000 ssl/certs/a2df7ad7.0
+ create mode 120000 ssl/certs/a3896b44.0
+ create mode 120000 ssl/certs/a5fd78f0.0
+ create mode 120000 ssl/certs/a6a593ba.0
+ create mode 120000 ssl/certs/a7605362.0
+ create mode 120000 ssl/certs/a760e1bd.0
+ create mode 120000 ssl/certs/a7d2cf64.0
+ create mode 120000 ssl/certs/a8dee976.0
+ create mode 120000 ssl/certs/a94d09e5.0
+ create mode 120000 ssl/certs/ab5346f4.0
+ create mode 120000 ssl/certs/ad088e1d.0
+ create mode 120000 ssl/certs/add67345.0
+ create mode 120000 ssl/certs/ae8153b9.0
+ create mode 120000 ssl/certs/ae8153b9.1
+ create mode 120000 ssl/certs/aeb67534.0
+ create mode 120000 ssl/certs/aee5f10d.0
+ create mode 120000 ssl/certs/b097d71d.0
+ create mode 120000 ssl/certs/b0ed035a.0
+ create mode 120000 ssl/certs/b0f3e76e.0
+ create mode 120000 ssl/certs/b1159c4c.0
+ create mode 120000 ssl/certs/b13cc6df.0
+ create mode 120000 ssl/certs/b1b8a7f3.0
+ create mode 120000 ssl/certs/b204d74a.0
+ create mode 120000 ssl/certs/b42ff584.0
+ create mode 120000 ssl/certs/b66938e9.0
+ create mode 120000 ssl/certs/b6c5745d.0
+ create mode 120000 ssl/certs/b727005e.0
+ create mode 120000 ssl/certs/b7a5b843.0
+ create mode 120000 ssl/certs/b7db1890.0
+ create mode 120000 ssl/certs/b7e7231a.0
+ create mode 120000 ssl/certs/b872f2b4.0
+ create mode 120000 ssl/certs/b8e83700.0
+ create mode 120000 ssl/certs/ba89ed3b.0
+ create mode 120000 ssl/certs/bad35b78.0
+ create mode 120000 ssl/certs/bb2d49a0.0
+ create mode 120000 ssl/certs/bc3f2570.0
+ create mode 120000 ssl/certs/bcdd5959.0
+ create mode 120000 ssl/certs/bd1910d4.0
+ create mode 120000 ssl/certs/bda4cc84.0
+ create mode 120000 ssl/certs/bdacca6f.0
+ create mode 120000 ssl/certs/bf64f35b.0
+ create mode 120000 ssl/certs/c01cdfa2.0
+ create mode 120000 ssl/certs/c089bbbd.0
+ create mode 120000 ssl/certs/c0ff1f52.0
+ create mode 120000 ssl/certs/c19d42c7.0
+ create mode 120000 ssl/certs/c215bc69.0
+ create mode 120000 ssl/certs/c28a8a30.0
+ create mode 120000 ssl/certs/c33a80d4.0
+ create mode 120000 ssl/certs/c3a6a9ad.0
+ create mode 120000 ssl/certs/c47d9980.0
+ create mode 120000 ssl/certs/c51c224c.0
+ create mode 120000 ssl/certs/c527e4ab.0
+ create mode 120000 ssl/certs/c5d3212a.0
+ create mode 120000 ssl/certs/c5e082db.0
+ create mode 120000 ssl/certs/c692a373.0
+ create mode 120000 ssl/certs/c7e2a638.0
+ create mode 120000 ssl/certs/c8763593.0
+ create mode 120000 ssl/certs/c8841d13.0
+ create mode 120000 ssl/certs/c99398f3.0
+ create mode 120000 ssl/certs/c9f83a1c.0
+ create mode 100644 ssl/certs/ca-certificates.crt
+ create mode 120000 ssl/certs/ca.pem
+ create mode 120000 ssl/certs/ca6e4ad9.0
+ create mode 120000 ssl/certs/cacert.org.pem
+ create mode 120000 ssl/certs/cb156124.0
+ create mode 120000 ssl/certs/cb357862.0
+ create mode 120000 ssl/certs/cb59f961.0
+ create mode 120000 ssl/certs/cbeee9e2.0
+ create mode 120000 ssl/certs/cbf06781.0
+ create mode 120000 ssl/certs/cc450945.0
+ create mode 120000 ssl/certs/ccc52f49.0
+ create mode 120000 ssl/certs/cd58d51e.0
+ create mode 120000 ssl/certs/cdaebb72.0
+ create mode 120000 ssl/certs/certSIGN_ROOT_CA.pem
+ create mode 120000 ssl/certs/cf701eeb.0
+ create mode 120000 ssl/certs/cfa1c2ee.0
+ create mode 120000 ssl/certs/d06393bb.0
+ create mode 120000 ssl/certs/d16a5865.0
+ create mode 120000 ssl/certs/d4dae3dd.0
+ create mode 120000 ssl/certs/d537fba6.0
+ create mode 120000 ssl/certs/d59297b8.0
+ create mode 120000 ssl/certs/d64f06f3.0
+ create mode 120000 ssl/certs/d66b55d9.0
+ create mode 120000 ssl/certs/d7746a63.0
+ create mode 120000 ssl/certs/d78a75c7.0
+ create mode 120000 ssl/certs/d7e8dc79.0
+ create mode 120000 ssl/certs/d853d49e.0
+ create mode 120000 ssl/certs/d957f522.0
+ create mode 120000 ssl/certs/d9d12c58.0
+ create mode 120000 ssl/certs/dbc54cab.0
+ create mode 120000 ssl/certs/dc45b0bd.0
+ create mode 120000 ssl/certs/ddc328ff.0
+ create mode 120000 ssl/certs/e113c810.0
+ create mode 120000 ssl/certs/e268a4c5.0
+ create mode 120000 ssl/certs/e2799e36.0
+ create mode 120000 ssl/certs/e36a6752.0
+ create mode 120000 ssl/certs/e48193cf.0
+ create mode 120000 ssl/certs/e536d871.0
+ create mode 120000 ssl/certs/e5662767.0
+ create mode 120000 ssl/certs/e60bf0c0.0
+ create mode 120000 ssl/certs/e775ed2d.0
+ create mode 120000 ssl/certs/e7b8d656.0
+ create mode 120000 ssl/certs/e8651083.0
+ create mode 120000 ssl/certs/e8de2f56.0
+ create mode 120000 ssl/certs/ePKI_Root_Certification_Authority.pem
+ create mode 120000 ssl/certs/ea169617.0
+ create mode 120000 ssl/certs/eacdeb40.0
+ create mode 120000 ssl/certs/eb375c3e.0
+ create mode 120000 ssl/certs/ec87c655.0
+ create mode 120000 ssl/certs/ed524cf5.0
+ create mode 120000 ssl/certs/ed62f4e3.0
+ create mode 120000 ssl/certs/ee1365c0.0
+ create mode 120000 ssl/certs/ee64a828.0
+ create mode 120000 ssl/certs/ee7cd6fb.0
+ create mode 120000 ssl/certs/ee90b008.0
+ create mode 120000 ssl/certs/eed8c118.0
+ create mode 120000 ssl/certs/ef2f636c.0
+ create mode 120000 ssl/certs/f060240e.0
+ create mode 120000 ssl/certs/f081611a.0
+ create mode 120000 ssl/certs/f3377b1b.0
+ create mode 120000 ssl/certs/f387163d.0
+ create mode 120000 ssl/certs/f39fc864.0
+ create mode 120000 ssl/certs/f4996e82.0
+ create mode 120000 ssl/certs/f559733c.0
+ create mode 120000 ssl/certs/f58a60fe.0
+ create mode 120000 ssl/certs/f61bff45.0
+ create mode 120000 ssl/certs/f80cc7f6.0
+ create mode 120000 ssl/certs/f90208f7.0
+ create mode 120000 ssl/certs/fac084d7.0
+ create mode 120000 ssl/certs/facacbc6.0
+ create mode 120000 ssl/certs/fb126c6d.0
+ create mode 120000 ssl/certs/fcac10e3.0
+ create mode 120000 ssl/certs/fde84897.0
+ create mode 120000 ssl/certs/ff588423.0
+ create mode 120000 ssl/certs/ff783690.0
+ create mode 120000 ssl/certs/spi-ca-2003.pem
+ create mode 120000 ssl/certs/spi-cacert-2008.pem
+ create mode 120000 ssl/certs/thawte_Primary_Root_CA.pem
+ create mode 120000 ssl/certs/thawte_Primary_Root_CA_-_G2.pem
+ create mode 120000 ssl/certs/thawte_Primary_Root_CA_-_G3.pem
+ create mode 100644 ssl/openssl.cnf
+ create mode 100644 staff-group-for-usr-local
+ create mode 100644 sudoers
+ create mode 100644 sudoers.d/README
+ create mode 100644 sysctl.conf
+ create mode 100644 sysctl.d/README.sysctl
+ create mode 120000 systemd/system/multi-user.target.wants/rsyslog.service
+ create mode 120000 systemd/system/sockets.target.wants/acpid.socket
+ create mode 120000 systemd/system/syslog.service
+ create mode 100644 terminfo/README
+ create mode 100644 timezone
+ create mode 100644 ucf.conf
+ create mode 100644 udev/links.conf
+ create mode 100644 udev/rules.d/70-persistent-net.rules
+ create mode 100644 udev/udev.conf
+ create mode 100644 ufw/applications.d/openssh-server
+ create mode 100644 vim/vimrc
+ create mode 100644 vim/vimrc.tiny
+ create mode 100644 wgetrc
+Log ended: 2014-10-30  13:44:00
+
+Log started: 2014-10-30  13:59:34
+Selecting previously unselected package libltdl7:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22614 files and directories currently installed.)
+Unpacking libltdl7:amd64 (from .../libltdl7_2.4.2-1.1_amd64.deb) ...
+Selecting previously unselected package libgenders0.
+Unpacking libgenders0 (from .../libgenders0_1.18-1_amd64.deb) ...
+Selecting previously unselected package genders.
+Unpacking genders (from .../genders_1.18-1_amd64.deb) ...
+Selecting previously unselected package pdsh.
+Unpacking pdsh (from .../archives/pdsh_2.27-2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up libltdl7:amd64 (2.4.2-1.1) ...
+Setting up libgenders0 (1.18-1) ...
+Setting up genders (1.18-1) ...
+Setting up pdsh (2.27-2) ...
+Log ended: 2014-10-30  13:59:37
+
+Log started: 2014-10-30  15:41:32
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22681 files and directories currently installed.)
+Removing pdsh ...
+Processing triggers for man-db ...
+Log ended: 2014-10-30  15:41:34
+
+Log started: 2014-10-30  15:41:43
+Selecting previously unselected package pdsh.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22654 files and directories currently installed.)
+Unpacking pdsh (from .../archives/pdsh_2.27-2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up pdsh (2.27-2) ...
+Log ended: 2014-10-30  15:41:45
+
+Log started: 2014-10-30  16:01:34
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22681 files and directories currently installed.)
+Removing pdsh ...
+Processing triggers for man-db ...
+Log ended: 2014-10-30  16:01:36
+
+Log started: 2014-10-30  16:01:44
+Selecting previously unselected package pdsh.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22654 files and directories currently installed.)
+Unpacking pdsh (from .../archives/pdsh_2.27-2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up pdsh (2.27-2) ...
+Log ended: 2014-10-30  16:01:46
+
+Log started: 2014-10-30  16:12:27
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22681 files and directories currently installed.)
+Removing pdsh ...
+Processing triggers for man-db ...
+Log ended: 2014-10-30  16:12:29
+
+Log started: 2014-10-30  16:12:46
+Selecting previously unselected package pdsh.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22654 files and directories currently installed.)
+Unpacking pdsh (from .../archives/pdsh_2.27-2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up pdsh (2.27-2) ...
+Log ended: 2014-10-30  16:12:48
+
+Log started: 2014-10-30  16:13:51
+Selecting previously unselected package cowsay.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22681 files and directories currently installed.)
+Unpacking cowsay (from .../cowsay_3.03+dfsg1-4_all.deb) ...
+Processing triggers for man-db ...
+Setting up cowsay (3.03+dfsg1-4) ...
+Log ended: 2014-10-30  16:13:52
+
+Log started: 2014-10-31  17:07:11
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22746 files and directories currently installed.)
+Removing cowsay ...
+Processing triggers for man-db ...
+Log ended: 2014-10-31  17:07:12
+
+Log started: 2014-10-31  17:07:16
+Selecting previously unselected package cowsay.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22681 files and directories currently installed.)
+Unpacking cowsay (from .../cowsay_3.03+dfsg1-4_all.deb) ...
+Processing triggers for man-db ...
+Setting up cowsay (3.03+dfsg1-4) ...
+Log ended: 2014-10-31  17:07:18
+
+Log started: 2014-10-31  17:20:10
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22746 files and directories currently installed.)
+Preparing to replace libtasn1-3:amd64 2.13-2 (using .../libtasn1-3_2.13-2+deb7u1_amd64.deb) ...
+Unpacking replacement libtasn1-3:amd64 ...
+Preparing to replace linux-image-3.2.0-4-amd64 3.2.63-2 (using .../linux-image-3.2.0-4-amd64_3.2.63-2+deb7u1_amd64.deb) ...
+Unpacking replacement linux-image-3.2.0-4-amd64 ...
+Examining /etc/kernel/postrm.d .
+run-parts: executing /etc/kernel/postrm.d/initramfs-tools 3.2.0-4-amd64 /boot/vmlinuz-3.2.0-4-amd64
+run-parts: executing /etc/kernel/postrm.d/zz-update-grub 3.2.0-4-amd64 /boot/vmlinuz-3.2.0-4-amd64
+Setting up libtasn1-3:amd64 (2.13-2+deb7u1) ...
+Setting up linux-image-3.2.0-4-amd64 (3.2.63-2+deb7u1) ...
+Running depmod.
+Examining /etc/kernel/postinst.d.
+run-parts: executing /etc/kernel/postinst.d/initramfs-tools 3.2.0-4-amd64 /boot/vmlinuz-3.2.0-4-amd64
+update-initramfs: Generating /boot/initrd.img-3.2.0-4-amd64
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168f-2.fw for module r8169
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168f-1.fw for module r8169
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8105e-1.fw for module r8169
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168e-3.fw for module r8169
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168e-2.fw for module r8169
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168e-1.fw for module r8169
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168d-2.fw for module r8169
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168d-1.fw for module r8169
+run-parts: executing /etc/kernel/postinst.d/zz-update-grub 3.2.0-4-amd64 /boot/vmlinuz-3.2.0-4-amd64
+Generating grub.cfg ...
+Found linux image: /boot/vmlinuz-3.2.0-4-amd64
+Found initrd image: /boot/initrd.img-3.2.0-4-amd64
+done
+Log ended: 2014-10-31  17:20:27
