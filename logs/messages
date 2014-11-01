@@ -3405,3 +3405,4 @@ Oct 31 17:20:27 headnode kernel: [93672.807244] QNX4 filesystem 0.2.3 registered
 Oct 31 17:20:27 headnode kernel: [93672.822696] Btrfs loaded
 Oct 31 17:20:27 headnode kernel: [93672.827159] fuse init (API version 7.17)
 Oct 31 17:20:27 headnode os-prober: debug: /dev/sda2: is active swap
+Nov  1 06:25:02 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="1932" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
