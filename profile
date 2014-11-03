@@ -35,3 +35,5 @@ if [ -d /etc/profile.d ]; then
   done
   unset i
 fi
+
+export PDSH_RCMD_TYPE='ssh'

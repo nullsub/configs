@@ -5,3 +5,6 @@
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
+
+192.168.2.10 node0
+192.168.2.11 node1
