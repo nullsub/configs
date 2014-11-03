@@ -4,3 +4,21 @@ Nov  2 10:28:21 headnode dhclient: bound to 141.76.90.101 -- renewal in 15384 se
 Nov  2 14:44:45 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
 Nov  2 14:44:45 headnode dhclient: DHCPACK from 141.76.90.2
 Nov  2 14:44:45 headnode dhclient: bound to 141.76.90.101 -- renewal in 15235 seconds.
+Nov  2 18:58:40 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  2 18:58:40 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  2 18:58:40 headnode dhclient: bound to 141.76.90.101 -- renewal in 13926 seconds.
+Nov  2 22:50:46 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  2 22:50:46 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  2 22:50:46 headnode dhclient: bound to 141.76.90.101 -- renewal in 15426 seconds.
+Nov  3 03:07:52 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  3 03:07:52 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  3 03:07:52 headnode dhclient: bound to 141.76.90.101 -- renewal in 14325 seconds.
+Nov  3 07:06:37 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  3 07:06:37 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  3 07:06:37 headnode dhclient: bound to 141.76.90.101 -- renewal in 17034 seconds.
+Nov  3 11:50:31 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  3 11:50:31 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  3 11:50:31 headnode dhclient: bound to 141.76.90.101 -- renewal in 16115 seconds.
+Nov  3 16:19:06 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  3 16:19:06 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  3 16:19:06 headnode dhclient: bound to 141.76.90.101 -- renewal in 14295 seconds.

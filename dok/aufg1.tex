@@ -1,0 +1,19 @@
+\chapter{Aufgabe 1 - Installation des Betriebssystem}
+\section{SSH-Server}
+
+Install SSH-Server
+\begin{lstlisting}[style=Bash]
+# apt-get install openssh-server 
+\end{lstlisting}
+
+SSH-Server in /etc/ssh/sshd\_config konfigureren:
+\begin{lstlisting}[style=Bash]
+...
+PermitRootLogin no
+RSAAuthentication yes
+PubkeyAuthentication yes
+...
+AllowUsers *@141.76.*.*
+AllowUsers *@141.30.*.*
+AllowUsers *@localhost
+\end{lstlisting}
