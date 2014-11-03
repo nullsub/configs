@@ -1,0 +1,8 @@
+stresstest:
+zeit anpassen in stresstest.sh
+ausführen mit 
+	screen -dm  `stresstest.sh > sensors.txt`
+plot erstellen mit 
+	./plot > png
+download your png with
+	scp user@headnode:path/png  .
