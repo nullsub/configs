@@ -1,1 +1,5 @@
 Nov  2 06:25:02 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="1932" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Nov  3 06:25:02 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="1932" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Nov  3 08:41:03 headnode kernel: [321636.103393] i2c /dev entries driver
+Nov  3 15:43:59 headnode kernel: [347004.599903] r8169 0000:02:00.0: eth1: link down
+Nov  3 15:59:40 headnode kernel: [347945.493705] r8169 0000:02:00.0: eth1: link up
