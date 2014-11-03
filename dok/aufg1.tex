@@ -1,6 +1,46 @@
 \chapter{Aufgabe 1 - Installation des Betriebssystem}
-\section{SSH-Server}
+\section{Cluster-Layout}
+headnode
+141.70.96.101
+192.168.2.1
+/ - 37.3GB
+/swap - 3.7GB
+\\
+node0
+192.168.2.10
+/ - 37.3GB
+/swap - 3.7GB
+\\
+node1
+192.168.2.11
+/ - 37.3GB
+/swap - 3.7GB
 
+\section{Betriebssysteminstallation}
+\begin{lstlisting}[style=Bash]
+# apt-get update 
+# apt-get upgrade 
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+# adduser --geco GECO <username>
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+# apt-get install sudo
+\end{lstlisting}
+Sudoers-File in /etc/sudoers konfigureren:
+(für alle user)
+\begin{lstlisting}[style=Bash]
+...
+<username> ALL=(ALL)NOPASSWD:ALL
+...
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+$ wget http://lctp.zih.tu-dresden.de/key/<username>.key
+$ cat <username>.key >> ~.ssh/authorized_keys
+\end{lstlisting}
+
+
+\section{SSH-Server}
 Install SSH-Server
 \begin{lstlisting}[style=Bash]
 # apt-get install openssh-server 
@@ -17,3 +57,12 @@ AllowUsers *@141.76.*.*
 AllowUsers *@141.30.*.*
 AllowUsers *@localhost
 \end{lstlisting}
+
+Für jeden User
+\begin{lstlisting}[style=Bash]
+$ ssh-keygen -b 1024 -N ''
+$ cat ~.ssh/id_rsa.pub >> ~./ssh/authorized_keys
+\end{lstlisting}
+
+Ein Sscript zur automatischen Nutzererstellung:
+\lstinputlisting[style=Bash]{../aufgabe1/adduser.sh}
