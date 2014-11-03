@@ -24,4 +24,5 @@ christian:x:1003:1003:,,,:/home/christian:/bin/bash
 william:x:1004:1004:,,,:/home/william:/bin/bash
 mheyde:x:1005:1005:,,,:/home/mheyde:/bin/bash
 hoehlig:x:1006:1006:,,,:/home/hoehlig:/bin/bash
-git:x:1000:1000::/home/git:/bin/bash
+git:x:1000:1000:,,,:/home/git:/bin/bash
+messagebus:x:102:104::/var/run/dbus:/bin/false
