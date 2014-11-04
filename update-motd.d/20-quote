@@ -1,0 +1,6 @@
+#!/bin/bash
+
+quote=`fortune`
+
+echo "$quote"
+echo
