@@ -38,3 +38,13 @@ Start-Date: 2014-11-03  19:55:08
 Commandline: apt-get install gcc
 Install: libgmp10:amd64 (5.0.5+dfsg-2, automatic), libmpfr4:amd64 (3.1.0-5, automatic), gcc-4.7:amd64 (4.7.2-5, automatic), libquadmath0:amd64 (4.7.2-5, automatic), cpp:amd64 (4.7.2-1, automatic), gcc:amd64 (4.7.2-1), libc6-dev:amd64 (2.13-38+deb7u6, automatic), libitm1:amd64 (4.7.2-5, automatic), cpp-4.7:amd64 (4.7.2-5, automatic), linux-libc-dev:amd64 (3.2.63-2+deb7u1, automatic), manpages-dev:amd64 (3.44-1, automatic), libc-dev-bin:amd64 (2.13-38+deb7u6, automatic), binutils:amd64 (2.22-8, automatic), libmpc2:amd64 (0.9-4, automatic)
 End-Date: 2014-11-03  19:55:15
+
+Start-Date: 2014-11-04  23:21:44
+Commandline: apt-get install figlet
+Install: figlet:amd64 (2.2.5-2)
+End-Date: 2014-11-04  23:21:46
+
+Start-Date: 2014-11-04  23:45:01
+Commandline: apt-get install fortune
+Install: fortune-mod:amd64 (1.99.1-4), librecode0:amd64 (3.6-20, automatic), fortunes-min:amd64 (1.99.1-4, automatic)
+End-Date: 2014-11-04  23:45:03

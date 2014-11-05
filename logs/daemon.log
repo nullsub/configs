@@ -47,3 +47,18 @@ Nov  4 15:45:57 headnode acpid: exiting
 Nov  4 16:19:00 headnode acpid: starting up with netlink and the input layer
 Nov  4 16:19:00 headnode acpid: 1 rule loaded
 Nov  4 16:19:00 headnode acpid: waiting for events: event logging is off
+Nov  4 20:49:58 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  4 20:49:58 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  4 20:49:58 headnode dhclient: bound to 141.76.90.101 -- renewal in 14676 seconds.
+Nov  5 00:54:34 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  5 00:54:34 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  5 00:54:34 headnode dhclient: bound to 141.76.90.101 -- renewal in 17953 seconds.
+Nov  5 05:53:47 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  5 05:53:47 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  5 05:53:47 headnode dhclient: bound to 141.76.90.101 -- renewal in 15356 seconds.
+Nov  5 10:09:43 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  5 10:09:43 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  5 10:09:43 headnode dhclient: bound to 141.76.90.101 -- renewal in 15749 seconds.
+Nov  5 14:32:12 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  5 14:32:12 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  5 14:32:12 headnode dhclient: bound to 141.76.90.101 -- renewal in 15877 seconds.

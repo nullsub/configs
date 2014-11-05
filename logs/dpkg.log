@@ -1039,3 +1039,49 @@
 2014-11-03 19:55:15 status unpacked manpages-dev:all 3.44-1
 2014-11-03 19:55:15 status half-configured manpages-dev:all 3.44-1
 2014-11-03 19:55:15 status installed manpages-dev:all 3.44-1
+2014-11-04 23:21:44 startup archives unpack
+2014-11-04 23:21:44 install figlet:amd64 <none> 2.2.5-2
+2014-11-04 23:21:44 status half-installed figlet:amd64 2.2.5-2
+2014-11-04 23:21:44 status triggers-pending man-db:amd64 2.6.2-1
+2014-11-04 23:21:44 status half-installed figlet:amd64 2.2.5-2
+2014-11-04 23:21:44 status unpacked figlet:amd64 2.2.5-2
+2014-11-04 23:21:44 status unpacked figlet:amd64 2.2.5-2
+2014-11-04 23:21:44 trigproc man-db:amd64 2.6.2-1 2.6.2-1
+2014-11-04 23:21:44 status half-configured man-db:amd64 2.6.2-1
+2014-11-04 23:21:45 status installed man-db:amd64 2.6.2-1
+2014-11-04 23:21:45 startup packages configure
+2014-11-04 23:21:45 configure figlet:amd64 2.2.5-2 <none>
+2014-11-04 23:21:45 status unpacked figlet:amd64 2.2.5-2
+2014-11-04 23:21:45 status half-configured figlet:amd64 2.2.5-2
+2014-11-04 23:21:45 status installed figlet:amd64 2.2.5-2
+2014-11-04 23:45:01 startup archives unpack
+2014-11-04 23:45:01 install librecode0:amd64 <none> 3.6-20
+2014-11-04 23:45:01 status half-installed librecode0:amd64 3.6-20
+2014-11-04 23:45:01 status unpacked librecode0:amd64 3.6-20
+2014-11-04 23:45:01 status unpacked librecode0:amd64 3.6-20
+2014-11-04 23:45:01 install fortune-mod:amd64 <none> 1:1.99.1-4
+2014-11-04 23:45:01 status half-installed fortune-mod:amd64 1:1.99.1-4
+2014-11-04 23:45:01 status triggers-pending man-db:amd64 2.6.2-1
+2014-11-04 23:45:01 status half-installed fortune-mod:amd64 1:1.99.1-4
+2014-11-04 23:45:01 status unpacked fortune-mod:amd64 1:1.99.1-4
+2014-11-04 23:45:01 status unpacked fortune-mod:amd64 1:1.99.1-4
+2014-11-04 23:45:02 install fortunes-min:all <none> 1:1.99.1-4
+2014-11-04 23:45:02 status half-installed fortunes-min:all 1:1.99.1-4
+2014-11-04 23:45:02 status unpacked fortunes-min:all 1:1.99.1-4
+2014-11-04 23:45:02 status unpacked fortunes-min:all 1:1.99.1-4
+2014-11-04 23:45:02 trigproc man-db:amd64 2.6.2-1 2.6.2-1
+2014-11-04 23:45:02 status half-configured man-db:amd64 2.6.2-1
+2014-11-04 23:45:02 status installed man-db:amd64 2.6.2-1
+2014-11-04 23:45:03 startup packages configure
+2014-11-04 23:45:03 configure librecode0:amd64 3.6-20 <none>
+2014-11-04 23:45:03 status unpacked librecode0:amd64 3.6-20
+2014-11-04 23:45:03 status half-configured librecode0:amd64 3.6-20
+2014-11-04 23:45:03 status installed librecode0:amd64 3.6-20
+2014-11-04 23:45:03 configure fortune-mod:amd64 1:1.99.1-4 <none>
+2014-11-04 23:45:03 status unpacked fortune-mod:amd64 1:1.99.1-4
+2014-11-04 23:45:03 status half-configured fortune-mod:amd64 1:1.99.1-4
+2014-11-04 23:45:03 status installed fortune-mod:amd64 1:1.99.1-4
+2014-11-04 23:45:03 configure fortunes-min:all 1:1.99.1-4 <none>
+2014-11-04 23:45:03 status unpacked fortunes-min:all 1:1.99.1-4
+2014-11-04 23:45:03 status half-configured fortunes-min:all 1:1.99.1-4
+2014-11-04 23:45:03 status installed fortunes-min:all 1:1.99.1-4

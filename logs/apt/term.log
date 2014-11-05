@@ -384,3 +384,26 @@ Setting up linux-libc-dev:amd64 (3.2.63-2+deb7u1) ...
 Setting up libc6-dev:amd64 (2.13-38+deb7u6) ...
 Setting up manpages-dev (3.44-1) ...
 Log ended: 2014-11-03  19:55:15
+
+Log started: 2014-11-04  23:21:44
+Selecting previously unselected package figlet.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30572 files and directories currently installed.)
+Unpacking figlet (from .../figlet_2.2.5-2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up figlet (2.2.5-2) ...
+update-alternatives: using /usr/bin/figlet-figlet to provide /usr/bin/figlet (figlet) in auto mode
+Log ended: 2014-11-04  23:21:46
+
+Log started: 2014-11-04  23:45:01
+Selecting previously unselected package librecode0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30647 files and directories currently installed.)
+Unpacking librecode0:amd64 (from .../librecode0_3.6-20_amd64.deb) ...
+Selecting previously unselected package fortune-mod.
+Unpacking fortune-mod (from .../fortune-mod_1%3a1.99.1-4_amd64.deb) ...
+Selecting previously unselected package fortunes-min.
+Unpacking fortunes-min (from .../fortunes-min_1%3a1.99.1-4_all.deb) ...
+Processing triggers for man-db ...
+Setting up librecode0:amd64 (3.6-20) ...
+Setting up fortune-mod (1:1.99.1-4) ...
+Setting up fortunes-min (1:1.99.1-4) ...
+Log ended: 2014-11-04  23:45:03
