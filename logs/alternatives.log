@@ -20,3 +20,11 @@ update-alternatives 2014-11-03 14:06:12: run with --install /usr/bin/montage mon
 update-alternatives 2014-11-03 14:06:12: link group montage updated to point to /usr/bin/montage.im6
 update-alternatives 2014-11-03 14:06:12: run with --install /usr/bin/mogrify mogrify /usr/bin/mogrify.im6 100 --slave /usr/share/man/man1/mogrify.1.gz mogrify.1.gz /usr/share/man/man1/mogrify.im6.1.gz
 update-alternatives 2014-11-03 14:06:12: link group mogrify updated to point to /usr/bin/mogrify.im6
+update-alternatives 2014-11-03 19:55:14: run with --quiet --install /lib/cpp cpp /usr/bin/cpp 10
+update-alternatives 2014-11-03 19:55:14: link group cpp updated to point to /usr/bin/cpp
+update-alternatives 2014-11-03 19:55:15: run with --quiet --install /usr/bin/cc cc /usr/bin/gcc 20
+update-alternatives 2014-11-03 19:55:15: link group cc updated to point to /usr/bin/gcc
+update-alternatives 2014-11-03 19:55:15: run with --quiet --install /usr/bin/c89 c89 /usr/bin/c89-gcc 20 --slave /usr/share/man/man1/c89.1.gz c89.1.gz /usr/share/man/man1/c89-gcc.1.gz
+update-alternatives 2014-11-03 19:55:15: link group c89 updated to point to /usr/bin/c89-gcc
+update-alternatives 2014-11-03 19:55:15: run with --quiet --install /usr/bin/c99 c99 /usr/bin/c99-gcc 20 --slave /usr/share/man/man1/c99.1.gz c99.1.gz /usr/share/man/man1/c99-gcc.1.gz
+update-alternatives 2014-11-03 19:55:15: link group c99 updated to point to /usr/bin/c99-gcc

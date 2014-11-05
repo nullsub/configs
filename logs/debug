@@ -1,0 +1,666 @@
+Nov  4 10:19:16 headnode kernel: [    0.000000] DMI: Gigabyte Technology Co., Ltd. To be filled by O.E.M./C1037UN, BIOS F2 12/03/2013
+Nov  4 10:19:16 headnode kernel: [    0.000000] e820 update range: 0000000000000000 - 0000000000010000 (usable) ==> (reserved)
+Nov  4 10:19:16 headnode kernel: [    0.000000] e820 remove range: 00000000000a0000 - 0000000000100000 (usable)
+Nov  4 10:19:16 headnode kernel: [    0.000000] MTRR default type: uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000] MTRR fixed ranges enabled:
+Nov  4 10:19:16 headnode kernel: [    0.000000]   00000-9FFFF write-back
+Nov  4 10:19:16 headnode kernel: [    0.000000]   A0000-BFFFF uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000]   C0000-CFFFF write-protect
+Nov  4 10:19:16 headnode kernel: [    0.000000]   D0000-E7FFF uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000]   E8000-FFFFF write-protect
+Nov  4 10:19:16 headnode kernel: [    0.000000] MTRR variable ranges enabled:
+Nov  4 10:19:16 headnode kernel: [    0.000000]   0 base 000000000 mask E00000000 write-back
+Nov  4 10:19:16 headnode kernel: [    0.000000]   1 base 200000000 mask FE0000000 write-back
+Nov  4 10:19:16 headnode kernel: [    0.000000]   2 base 0E0000000 mask FE0000000 uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000]   3 base 0DE000000 mask FFE000000 uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000]   4 base 0DD800000 mask FFF800000 uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000]   5 base 21F800000 mask FFF800000 uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000]   6 base 21F600000 mask FFFE00000 uncachable
+Nov  4 10:19:16 headnode kernel: [    0.000000]   7 disabled
+Nov  4 10:19:16 headnode kernel: [    0.000000]   8 disabled
+Nov  4 10:19:16 headnode kernel: [    0.000000]   9 disabled
+Nov  4 10:19:16 headnode kernel: [    0.000000] e820 update range: 00000000dd800000 - 0000000100000000 (usable) ==> (reserved)
+Nov  4 10:19:16 headnode kernel: [    0.000000] initial memory mapped : 0 - 20000000
+Nov  4 10:19:16 headnode kernel: [    0.000000] Base memory trampoline at [ffff880000098000] 98000 size 20480
+Nov  4 10:19:16 headnode kernel: [    0.000000]  0000000000 - 00dd000000 page 2M
+Nov  4 10:19:16 headnode kernel: [    0.000000] kernel direct mapping tables up to dd000000 @ 1fffb000-20000000
+Nov  4 10:19:16 headnode kernel: [    0.000000]  0100000000 - 021f600000 page 2M
+Nov  4 10:19:16 headnode kernel: [    0.000000] kernel direct mapping tables up to 21f600000 @ dcffa000-dd000000
+Nov  4 10:19:16 headnode kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Nov  4 10:19:16 headnode kernel: [    0.000000]  [ffffea0000000000-ffffea00077fffff] PMD -> [ffff880216c00000-ffff88021ddfffff] on node 0
+Nov  4 10:19:16 headnode kernel: [    0.000000] On node 0 totalpages: 2077570
+Nov  4 10:19:16 headnode kernel: [    0.000000]   DMA zone: 56 pages used for memmap
+Nov  4 10:19:16 headnode kernel: [    0.000000]   DMA zone: 5 pages reserved
+Nov  4 10:19:16 headnode kernel: [    0.000000]   DMA zone: 3920 pages, LIFO batch:0
+Nov  4 10:19:16 headnode kernel: [    0.000000]   DMA32 zone: 14280 pages used for memmap
+Nov  4 10:19:16 headnode kernel: [    0.000000]   DMA32 zone: 882221 pages, LIFO batch:31
+Nov  4 10:19:16 headnode kernel: [    0.000000]   Normal zone: 16093 pages used for memmap
+Nov  4 10:19:16 headnode kernel: [    0.000000]   Normal zone: 1160995 pages, LIFO batch:31
+Nov  4 10:19:16 headnode kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Nov  4 10:19:16 headnode kernel: [    0.000000] ACPI: IRQ0 used by override.
+Nov  4 10:19:16 headnode kernel: [    0.000000] ACPI: IRQ2 used by override.
+Nov  4 10:19:16 headnode kernel: [    0.000000] ACPI: IRQ9 used by override.
+Nov  4 10:19:16 headnode kernel: [    0.000000] nr_irqs_gsi: 40
+Nov  4 10:19:16 headnode kernel: [    0.000000] pcpu-alloc: s82944 r8192 d23552 u1048576 alloc=1*2097152
+Nov  4 10:19:16 headnode kernel: [    0.000000] pcpu-alloc: [0] 0 1 
+Nov  4 10:19:16 headnode kernel: [    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+Nov  4 10:19:16 headnode kernel: [    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+Nov  4 10:19:16 headnode kernel: [    0.000000] hpet clockevent registered
+Nov  4 10:19:16 headnode kernel: [    0.159931] smpboot cpu 1: start_ip = 98000
+Nov  4 10:19:16 headnode kernel: [    0.281955] ACPI: EC: Look up EC in DSDT
+Nov  4 10:19:16 headnode kernel: [    0.347400] pci 0000:00:00.0: [8086:0154] type 0 class 0x000600
+Nov  4 10:19:16 headnode kernel: [    0.347444] pci 0000:00:02.0: [8086:0156] type 0 class 0x000300
+Nov  4 10:19:16 headnode kernel: [    0.347457] pci 0000:00:02.0: reg 10: [mem 0xf7800000-0xf7bfffff 64bit]
+Nov  4 10:19:16 headnode kernel: [    0.347464] pci 0000:00:02.0: reg 18: [mem 0xe0000000-0xefffffff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.347470] pci 0000:00:02.0: reg 20: [io  0xf000-0xf03f]
+Nov  4 10:19:16 headnode kernel: [    0.347533] pci 0000:00:16.0: [8086:1e3a] type 0 class 0x000780
+Nov  4 10:19:16 headnode kernel: [    0.347558] pci 0000:00:16.0: reg 10: [mem 0xf7e0a000-0xf7e0a00f 64bit]
+Nov  4 10:19:16 headnode kernel: [    0.347647] pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.347685] pci 0000:00:1a.0: [8086:1e2d] type 0 class 0x000c03
+Nov  4 10:19:16 headnode kernel: [    0.347709] pci 0000:00:1a.0: reg 10: [mem 0xf7e08000-0xf7e083ff]
+Nov  4 10:19:16 headnode kernel: [    0.347809] pci 0000:00:1a.0: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.347838] pci 0000:00:1b.0: [8086:1e20] type 0 class 0x000403
+Nov  4 10:19:16 headnode kernel: [    0.347855] pci 0000:00:1b.0: reg 10: [mem 0xf7e00000-0xf7e03fff 64bit]
+Nov  4 10:19:16 headnode kernel: [    0.347931] pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.347957] pci 0000:00:1c.0: [8086:1e10] type 1 class 0x000604
+Nov  4 10:19:16 headnode kernel: [    0.348046] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.348074] pci 0000:00:1c.1: [8086:1e12] type 1 class 0x000604
+Nov  4 10:19:16 headnode kernel: [    0.348162] pci 0000:00:1c.1: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.348190] pci 0000:00:1c.2: [8086:2448] type 1 class 0x000604
+Nov  4 10:19:16 headnode kernel: [    0.348279] pci 0000:00:1c.2: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.348307] pci 0000:00:1c.3: [8086:1e16] type 1 class 0x000604
+Nov  4 10:19:16 headnode kernel: [    0.348395] pci 0000:00:1c.3: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.348432] pci 0000:00:1d.0: [8086:1e26] type 0 class 0x000c03
+Nov  4 10:19:16 headnode kernel: [    0.348455] pci 0000:00:1d.0: reg 10: [mem 0xf7e07000-0xf7e073ff]
+Nov  4 10:19:16 headnode kernel: [    0.348555] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.348583] pci 0000:00:1f.0: [8086:1e5f] type 0 class 0x000601
+Nov  4 10:19:16 headnode kernel: [    0.348719] pci 0000:00:1f.2: [8086:1e03] type 0 class 0x000106
+Nov  4 10:19:16 headnode kernel: [    0.348739] pci 0000:00:1f.2: reg 10: [io  0xf0b0-0xf0b7]
+Nov  4 10:19:16 headnode kernel: [    0.348748] pci 0000:00:1f.2: reg 14: [io  0xf0a0-0xf0a3]
+Nov  4 10:19:16 headnode kernel: [    0.348757] pci 0000:00:1f.2: reg 18: [io  0xf090-0xf097]
+Nov  4 10:19:16 headnode kernel: [    0.348765] pci 0000:00:1f.2: reg 1c: [io  0xf080-0xf083]
+Nov  4 10:19:16 headnode kernel: [    0.348774] pci 0000:00:1f.2: reg 20: [io  0xf060-0xf07f]
+Nov  4 10:19:16 headnode kernel: [    0.348783] pci 0000:00:1f.2: reg 24: [mem 0xf7e06000-0xf7e067ff]
+Nov  4 10:19:16 headnode kernel: [    0.348833] pci 0000:00:1f.2: PME# supported from D3hot
+Nov  4 10:19:16 headnode kernel: [    0.348855] pci 0000:00:1f.3: [8086:1e22] type 0 class 0x000c05
+Nov  4 10:19:16 headnode kernel: [    0.348872] pci 0000:00:1f.3: reg 10: [mem 0xf7e05000-0xf7e050ff 64bit]
+Nov  4 10:19:16 headnode kernel: [    0.348896] pci 0000:00:1f.3: reg 20: [io  0xf040-0xf05f]
+Nov  4 10:19:16 headnode kernel: [    0.348997] pci 0000:01:00.0: [10ec:8168] type 0 class 0x000200
+Nov  4 10:19:16 headnode kernel: [    0.349019] pci 0000:01:00.0: reg 10: [io  0xe000-0xe0ff]
+Nov  4 10:19:16 headnode kernel: [    0.349055] pci 0000:01:00.0: reg 18: [mem 0xf7d00000-0xf7d00fff 64bit]
+Nov  4 10:19:16 headnode kernel: [    0.349079] pci 0000:01:00.0: reg 20: [mem 0xf0100000-0xf0103fff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.349177] pci 0000:01:00.0: supports D1 D2
+Nov  4 10:19:16 headnode kernel: [    0.349179] pci 0000:01:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.355672] pci 0000:00:1c.0:   bridge window [io  0xe000-0xefff]
+Nov  4 10:19:16 headnode kernel: [    0.355676] pci 0000:00:1c.0:   bridge window [mem 0xf7d00000-0xf7dfffff]
+Nov  4 10:19:16 headnode kernel: [    0.355683] pci 0000:00:1c.0:   bridge window [mem 0xf0100000-0xf01fffff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.355758] pci 0000:02:00.0: [10ec:8168] type 0 class 0x000200
+Nov  4 10:19:16 headnode kernel: [    0.355779] pci 0000:02:00.0: reg 10: [io  0xd000-0xd0ff]
+Nov  4 10:19:16 headnode kernel: [    0.355816] pci 0000:02:00.0: reg 18: [mem 0xf0004000-0xf0004fff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.355840] pci 0000:02:00.0: reg 20: [mem 0xf0000000-0xf0003fff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.355939] pci 0000:02:00.0: supports D1 D2
+Nov  4 10:19:16 headnode kernel: [    0.355941] pci 0000:02:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.363654] pci 0000:00:1c.1:   bridge window [io  0xd000-0xdfff]
+Nov  4 10:19:16 headnode kernel: [    0.363675] pci 0000:00:1c.1:   bridge window [mem 0xf0000000-0xf00fffff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.363748] pci 0000:03:00.0: [8086:244e] type 1 class 0x000604
+Nov  4 10:19:16 headnode kernel: [    0.363910] pci 0000:03:00.0: supports D1 D2
+Nov  4 10:19:16 headnode kernel: [    0.363912] pci 0000:03:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov  4 10:19:16 headnode kernel: [    0.363954] pci 0000:00:1c.2:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363957] pci 0000:00:1c.2:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363959] pci 0000:00:1c.2:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363962] pci 0000:00:1c.2:   bridge window [mem 0x000d0000-0x000d3fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363964] pci 0000:00:1c.2:   bridge window [mem 0x000d4000-0x000d7fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363967] pci 0000:00:1c.2:   bridge window [mem 0x000d8000-0x000dbfff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363970] pci 0000:00:1c.2:   bridge window [mem 0x000dc000-0x000dffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363972] pci 0000:00:1c.2:   bridge window [mem 0x000e0000-0x000e3fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363975] pci 0000:00:1c.2:   bridge window [mem 0x000e4000-0x000e7fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.363978] pci 0000:00:1c.2:   bridge window [mem 0xdfa00000-0xfeafffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364162] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364165] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364167] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364170] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364173] pci 0000:03:00.0:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364175] pci 0000:03:00.0:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364178] pci 0000:03:00.0:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364180] pci 0000:03:00.0:   bridge window [mem 0x000d0000-0x000d3fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364183] pci 0000:03:00.0:   bridge window [mem 0x000d4000-0x000d7fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364185] pci 0000:03:00.0:   bridge window [mem 0x000d8000-0x000dbfff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364188] pci 0000:03:00.0:   bridge window [mem 0x000dc000-0x000dffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364191] pci 0000:03:00.0:   bridge window [mem 0x000e0000-0x000e3fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364193] pci 0000:03:00.0:   bridge window [mem 0x000e4000-0x000e7fff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364196] pci 0000:03:00.0:   bridge window [mem 0xdfa00000-0xfeafffff] (subtractive decode)
+Nov  4 10:19:16 headnode kernel: [    0.364281] pci 0000:05:00.0: [197b:2368] type 0 class 0x000101
+Nov  4 10:19:16 headnode kernel: [    0.364318] pci 0000:05:00.0: reg 10: [io  0xc040-0xc047]
+Nov  4 10:19:16 headnode kernel: [    0.364335] pci 0000:05:00.0: reg 14: [io  0xc030-0xc033]
+Nov  4 10:19:16 headnode kernel: [    0.364353] pci 0000:05:00.0: reg 18: [io  0xc020-0xc027]
+Nov  4 10:19:16 headnode kernel: [    0.364370] pci 0000:05:00.0: reg 1c: [io  0xc010-0xc013]
+Nov  4 10:19:16 headnode kernel: [    0.364387] pci 0000:05:00.0: reg 20: [io  0xc000-0xc00f]
+Nov  4 10:19:16 headnode kernel: [    0.364420] pci 0000:05:00.0: reg 30: [mem 0xf7c00000-0xf7c0ffff pref]
+Nov  4 10:19:16 headnode kernel: [    0.371650] pci 0000:00:1c.3:   bridge window [io  0xc000-0xcfff]
+Nov  4 10:19:16 headnode kernel: [    0.371667] pci 0000:00:1c.3:   bridge window [mem 0xf7c00000-0xf7cfffff]
+Nov  4 10:19:16 headnode kernel: [    0.371696] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+Nov  4 10:19:16 headnode kernel: [    0.371915] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP01._PRT]
+Nov  4 10:19:16 headnode kernel: [    0.371963] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP02._PRT]
+Nov  4 10:19:16 headnode kernel: [    0.372009] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP03._PRT]
+Nov  4 10:19:16 headnode kernel: [    0.372055] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP04._PRT]
+Nov  4 10:19:16 headnode kernel: [    0.380127] PCI: pci_cache_line_size set to 64 bytes
+Nov  4 10:19:16 headnode kernel: [    0.380201] reserve RAM buffer: 000000000009d800 - 000000000009ffff 
+Nov  4 10:19:16 headnode kernel: [    0.380204] reserve RAM buffer: 0000000040004000 - 0000000043ffffff 
+Nov  4 10:19:16 headnode kernel: [    0.380206] reserve RAM buffer: 00000000db7e4000 - 00000000dbffffff 
+Nov  4 10:19:16 headnode kernel: [    0.380209] reserve RAM buffer: 00000000dbb8f000 - 00000000dbffffff 
+Nov  4 10:19:16 headnode kernel: [    0.380211] reserve RAM buffer: 00000000dc602000 - 00000000dfffffff 
+Nov  4 10:19:16 headnode kernel: [    0.380214] reserve RAM buffer: 00000000dcdb1000 - 00000000dfffffff 
+Nov  4 10:19:16 headnode kernel: [    0.380217] reserve RAM buffer: 00000000dd000000 - 00000000dfffffff 
+Nov  4 10:19:16 headnode kernel: [    0.380220] reserve RAM buffer: 000000021f600000 - 000000021fffffff 
+Nov  4 10:19:16 headnode kernel: [    0.384456] pnp 00:00: [bus 00-3e]
+Nov  4 10:19:16 headnode kernel: [    0.384459] pnp 00:00: [io  0x0000-0x0cf7 window]
+Nov  4 10:19:16 headnode kernel: [    0.384461] pnp 00:00: [io  0x0cf8-0x0cff]
+Nov  4 10:19:16 headnode kernel: [    0.384463] pnp 00:00: [io  0x0d00-0xffff window]
+Nov  4 10:19:16 headnode kernel: [    0.384465] pnp 00:00: [mem 0x000a0000-0x000bffff window]
+Nov  4 10:19:16 headnode kernel: [    0.384468] pnp 00:00: [mem 0x000c0000-0x000c3fff window]
+Nov  4 10:19:16 headnode kernel: [    0.384470] pnp 00:00: [mem 0x000c4000-0x000c7fff window]
+Nov  4 10:19:16 headnode kernel: [    0.384472] pnp 00:00: [mem 0x000c8000-0x000cbfff window]
+Nov  4 10:19:16 headnode kernel: [    0.384474] pnp 00:00: [mem 0x000cc000-0x000cffff window]
+Nov  4 10:19:16 headnode kernel: [    0.384476] pnp 00:00: [mem 0x000d0000-0x000d3fff window]
+Nov  4 10:19:16 headnode kernel: [    0.384479] pnp 00:00: [mem 0x000d4000-0x000d7fff window]
+Nov  4 10:19:16 headnode kernel: [    0.384481] pnp 00:00: [mem 0x000d8000-0x000dbfff window]
+Nov  4 10:19:16 headnode kernel: [    0.384483] pnp 00:00: [mem 0x000dc000-0x000dffff window]
+Nov  4 10:19:16 headnode kernel: [    0.384485] pnp 00:00: [mem 0x000e0000-0x000e3fff window]
+Nov  4 10:19:16 headnode kernel: [    0.384487] pnp 00:00: [mem 0x000e4000-0x000e7fff window]
+Nov  4 10:19:16 headnode kernel: [    0.384491] pnp 00:00: [mem 0x000e8000-0x000ebfff window]
+Nov  4 10:19:16 headnode kernel: [    0.384493] pnp 00:00: [mem 0x000ec000-0x000effff window]
+Nov  4 10:19:16 headnode kernel: [    0.384495] pnp 00:00: [mem 0x000f0000-0x000fffff window]
+Nov  4 10:19:16 headnode kernel: [    0.384498] pnp 00:00: [mem 0xdfa00000-0xfeafffff window]
+Nov  4 10:19:16 headnode kernel: [    0.384500] pnp 00:00: [mem 0x00010000-0x0001ffff window]
+Nov  4 10:19:16 headnode kernel: [    0.384570] pnp 00:00: Plug and Play ACPI device, IDs PNP0a08 PNP0a03 (active)
+Nov  4 10:19:16 headnode kernel: [    0.384602] pnp 00:01: [mem 0xfed40000-0xfed44fff]
+Nov  4 10:19:16 headnode kernel: [    0.384646] system 00:01: Plug and Play ACPI device, IDs PNP0c01 (active)
+Nov  4 10:19:16 headnode kernel: [    0.384661] pnp 00:02: [io  0x0000-0x001f]
+Nov  4 10:19:16 headnode kernel: [    0.384663] pnp 00:02: [io  0x0081-0x0091]
+Nov  4 10:19:16 headnode kernel: [    0.384665] pnp 00:02: [io  0x0093-0x009f]
+Nov  4 10:19:16 headnode kernel: [    0.384667] pnp 00:02: [io  0x00c0-0x00df]
+Nov  4 10:19:16 headnode kernel: [    0.384669] pnp 00:02: [dma 4]
+Nov  4 10:19:16 headnode kernel: [    0.384693] pnp 00:02: Plug and Play ACPI device, IDs PNP0200 (active)
+Nov  4 10:19:16 headnode kernel: [    0.384702] pnp 00:03: [mem 0xff000000-0xffffffff]
+Nov  4 10:19:16 headnode kernel: [    0.384725] pnp 00:03: Plug and Play ACPI device, IDs INT0800 (active)
+Nov  4 10:19:16 headnode kernel: [    0.384810] pnp 00:04: [mem 0xfed00000-0xfed003ff]
+Nov  4 10:19:16 headnode kernel: [    0.384835] pnp 00:04: Plug and Play ACPI device, IDs PNP0103 (active)
+Nov  4 10:19:16 headnode kernel: [    0.384848] pnp 00:05: [io  0x002e-0x002f]
+Nov  4 10:19:16 headnode kernel: [    0.384850] pnp 00:05: [io  0x004e-0x004f]
+Nov  4 10:19:16 headnode kernel: [    0.384852] pnp 00:05: [io  0x0061]
+Nov  4 10:19:16 headnode kernel: [    0.384853] pnp 00:05: [io  0x0063]
+Nov  4 10:19:16 headnode kernel: [    0.384855] pnp 00:05: [io  0x0065]
+Nov  4 10:19:16 headnode kernel: [    0.384857] pnp 00:05: [io  0x0067]
+Nov  4 10:19:16 headnode kernel: [    0.384859] pnp 00:05: [io  0x0070]
+Nov  4 10:19:16 headnode kernel: [    0.384860] pnp 00:05: [io  0x0080]
+Nov  4 10:19:16 headnode kernel: [    0.384862] pnp 00:05: [io  0x0092]
+Nov  4 10:19:16 headnode kernel: [    0.384864] pnp 00:05: [io  0x00b2-0x00b3]
+Nov  4 10:19:16 headnode kernel: [    0.384866] pnp 00:05: [io  0x0680-0x069f]
+Nov  4 10:19:16 headnode kernel: [    0.384867] pnp 00:05: [io  0x0200-0x020f]
+Nov  4 10:19:16 headnode kernel: [    0.384869] pnp 00:05: [io  0xffff]
+Nov  4 10:19:16 headnode kernel: [    0.384871] pnp 00:05: [io  0xffff]
+Nov  4 10:19:16 headnode kernel: [    0.384873] pnp 00:05: [io  0x0400-0x0453]
+Nov  4 10:19:16 headnode kernel: [    0.384875] pnp 00:05: [io  0x0458-0x047f]
+Nov  4 10:19:16 headnode kernel: [    0.384876] pnp 00:05: [io  0x0500-0x057f]
+Nov  4 10:19:16 headnode kernel: [    0.384942] system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 10:19:16 headnode kernel: [    0.384953] pnp 00:06: [io  0x0070-0x0077]
+Nov  4 10:19:16 headnode kernel: [    0.384961] pnp 00:06: [irq 8]
+Nov  4 10:19:16 headnode kernel: [    0.384986] pnp 00:06: Plug and Play ACPI device, IDs PNP0b00 (active)
+Nov  4 10:19:16 headnode kernel: [    0.385017] pnp 00:07: [io  0x0454-0x0457]
+Nov  4 10:19:16 headnode kernel: [    0.385060] system 00:07: Plug and Play ACPI device, IDs INT3f0d PNP0c02 (active)
+Nov  4 10:19:16 headnode kernel: [    0.385188] pnp 00:08: [io  0x0000-0xffffffffffffffff disabled]
+Nov  4 10:19:16 headnode kernel: [    0.385190] pnp 00:08: [io  0x0a00-0x0a0f]
+Nov  4 10:19:16 headnode kernel: [    0.385192] pnp 00:08: [io  0x0a30-0x0a3f]
+Nov  4 10:19:16 headnode kernel: [    0.385194] pnp 00:08: [io  0x0a20-0x0a2f]
+Nov  4 10:19:16 headnode kernel: [    0.385243] system 00:08: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 10:19:16 headnode kernel: [    0.385573] pnp 00:09: [io  0x03f8-0x03ff]
+Nov  4 10:19:16 headnode kernel: [    0.385579] pnp 00:09: [irq 4]
+Nov  4 10:19:16 headnode kernel: [    0.385582] pnp 00:09: [dma 0 disabled]
+Nov  4 10:19:16 headnode kernel: [    0.385647] pnp 00:09: Plug and Play ACPI device, IDs PNP0501 (active)
+Nov  4 10:19:16 headnode kernel: [    0.385936] pnp 00:0a: [io  0x02f8-0x02ff]
+Nov  4 10:19:16 headnode kernel: [    0.385941] pnp 00:0a: [irq 3]
+Nov  4 10:19:16 headnode kernel: [    0.385943] pnp 00:0a: [dma 0 disabled]
+Nov  4 10:19:16 headnode kernel: [    0.386007] pnp 00:0a: Plug and Play ACPI device, IDs PNP0501 (active)
+Nov  4 10:19:16 headnode kernel: [    0.386401] pnp 00:0b: [io  0x0378-0x037f]
+Nov  4 10:19:16 headnode kernel: [    0.386406] pnp 00:0b: [irq 5]
+Nov  4 10:19:16 headnode kernel: [    0.386408] pnp 00:0b: [dma 0 disabled]
+Nov  4 10:19:16 headnode kernel: [    0.386570] pnp 00:0b: Plug and Play ACPI device, IDs PNP0400 (active)
+Nov  4 10:19:16 headnode kernel: [    0.386596] pnp 00:0c: [io  0x0010-0x001f]
+Nov  4 10:19:16 headnode kernel: [    0.386598] pnp 00:0c: [io  0x0022-0x003f]
+Nov  4 10:19:16 headnode kernel: [    0.386600] pnp 00:0c: [io  0x0044-0x005f]
+Nov  4 10:19:16 headnode kernel: [    0.386602] pnp 00:0c: [io  0x0062-0x0063]
+Nov  4 10:19:16 headnode kernel: [    0.386604] pnp 00:0c: [io  0x0065-0x006f]
+Nov  4 10:19:16 headnode kernel: [    0.386606] pnp 00:0c: [io  0x0072-0x007f]
+Nov  4 10:19:16 headnode kernel: [    0.386608] pnp 00:0c: [io  0x0080]
+Nov  4 10:19:16 headnode kernel: [    0.386609] pnp 00:0c: [io  0x0084-0x0086]
+Nov  4 10:19:16 headnode kernel: [    0.386611] pnp 00:0c: [io  0x0088]
+Nov  4 10:19:16 headnode kernel: [    0.386613] pnp 00:0c: [io  0x008c-0x008e]
+Nov  4 10:19:16 headnode kernel: [    0.386615] pnp 00:0c: [io  0x0090-0x009f]
+Nov  4 10:19:16 headnode kernel: [    0.386617] pnp 00:0c: [io  0x00a2-0x00bf]
+Nov  4 10:19:16 headnode kernel: [    0.386618] pnp 00:0c: [io  0x00e0-0x00ef]
+Nov  4 10:19:16 headnode kernel: [    0.386620] pnp 00:0c: [io  0x04d0-0x04d1]
+Nov  4 10:19:16 headnode kernel: [    0.386671] system 00:0c: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 10:19:16 headnode kernel: [    0.386681] pnp 00:0d: [io  0x00f0-0x00ff]
+Nov  4 10:19:16 headnode kernel: [    0.386686] pnp 00:0d: [irq 13]
+Nov  4 10:19:16 headnode kernel: [    0.386714] pnp 00:0d: Plug and Play ACPI device, IDs PNP0c04 (active)
+Nov  4 10:19:16 headnode kernel: [    0.386990] pnp 00:0e: [mem 0xfed1c000-0xfed1ffff]
+Nov  4 10:19:16 headnode kernel: [    0.386993] pnp 00:0e: [mem 0xfed10000-0xfed17fff]
+Nov  4 10:19:16 headnode kernel: [    0.386995] pnp 00:0e: [mem 0xfed18000-0xfed18fff]
+Nov  4 10:19:16 headnode kernel: [    0.386997] pnp 00:0e: [mem 0xfed19000-0xfed19fff]
+Nov  4 10:19:16 headnode kernel: [    0.386999] pnp 00:0e: [mem 0xf8000000-0xfbffffff]
+Nov  4 10:19:16 headnode kernel: [    0.387001] pnp 00:0e: [mem 0xfed20000-0xfed3ffff]
+Nov  4 10:19:16 headnode kernel: [    0.387003] pnp 00:0e: [mem 0xfed90000-0xfed93fff]
+Nov  4 10:19:16 headnode kernel: [    0.387005] pnp 00:0e: [mem 0xfed45000-0xfed8ffff]
+Nov  4 10:19:16 headnode kernel: [    0.387007] pnp 00:0e: [mem 0xff000000-0xffffffff]
+Nov  4 10:19:16 headnode kernel: [    0.387009] pnp 00:0e: [mem 0xfee00000-0xfeefffff]
+Nov  4 10:19:16 headnode kernel: [    0.387011] pnp 00:0e: [mem 0xdfa00000-0xdfa00fff]
+Nov  4 10:19:16 headnode kernel: [    0.387116] system 00:0e: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 10:19:16 headnode kernel: [    0.387274] pnp 00:0f: [mem 0x20000000-0x201fffff]
+Nov  4 10:19:16 headnode kernel: [    0.387277] pnp 00:0f: [mem 0x40004000-0x40004fff]
+Nov  4 10:19:16 headnode kernel: [    0.387351] system 00:0f: Plug and Play ACPI device, IDs PNP0c01 (active)
+Nov  4 10:19:16 headnode kernel: [    0.393979] PCI: max bus depth: 2 pci_try_num: 3
+Nov  4 10:19:16 headnode kernel: [    0.394141] pci 0000:00:1c.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.394155] pci 0000:00:1c.1: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.394169] pci 0000:00:1c.2: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.394188] pci 0000:03:00.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.394202] pci 0000:00:1c.3: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.394206] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+Nov  4 10:19:16 headnode kernel: [    0.394209] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+Nov  4 10:19:16 headnode kernel: [    0.394211] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+Nov  4 10:19:16 headnode kernel: [    0.394213] pci_bus 0000:00: resource 7 [mem 0x000d0000-0x000d3fff]
+Nov  4 10:19:16 headnode kernel: [    0.394215] pci_bus 0000:00: resource 8 [mem 0x000d4000-0x000d7fff]
+Nov  4 10:19:16 headnode kernel: [    0.394218] pci_bus 0000:00: resource 9 [mem 0x000d8000-0x000dbfff]
+Nov  4 10:19:16 headnode kernel: [    0.394220] pci_bus 0000:00: resource 10 [mem 0x000dc000-0x000dffff]
+Nov  4 10:19:16 headnode kernel: [    0.394222] pci_bus 0000:00: resource 11 [mem 0x000e0000-0x000e3fff]
+Nov  4 10:19:16 headnode kernel: [    0.394224] pci_bus 0000:00: resource 12 [mem 0x000e4000-0x000e7fff]
+Nov  4 10:19:16 headnode kernel: [    0.394227] pci_bus 0000:00: resource 13 [mem 0xdfa00000-0xfeafffff]
+Nov  4 10:19:16 headnode kernel: [    0.394229] pci_bus 0000:01: resource 0 [io  0xe000-0xefff]
+Nov  4 10:19:16 headnode kernel: [    0.394231] pci_bus 0000:01: resource 1 [mem 0xf7d00000-0xf7dfffff]
+Nov  4 10:19:16 headnode kernel: [    0.394234] pci_bus 0000:01: resource 2 [mem 0xf0100000-0xf01fffff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.394236] pci_bus 0000:02: resource 0 [io  0xd000-0xdfff]
+Nov  4 10:19:16 headnode kernel: [    0.394238] pci_bus 0000:02: resource 2 [mem 0xf0000000-0xf00fffff 64bit pref]
+Nov  4 10:19:16 headnode kernel: [    0.394241] pci_bus 0000:03: resource 4 [io  0x0000-0x0cf7]
+Nov  4 10:19:16 headnode kernel: [    0.394243] pci_bus 0000:03: resource 5 [io  0x0d00-0xffff]
+Nov  4 10:19:16 headnode kernel: [    0.394245] pci_bus 0000:03: resource 6 [mem 0x000a0000-0x000bffff]
+Nov  4 10:19:16 headnode kernel: [    0.394247] pci_bus 0000:03: resource 7 [mem 0x000d0000-0x000d3fff]
+Nov  4 10:19:16 headnode kernel: [    0.394249] pci_bus 0000:03: resource 8 [mem 0x000d4000-0x000d7fff]
+Nov  4 10:19:16 headnode kernel: [    0.394252] pci_bus 0000:03: resource 9 [mem 0x000d8000-0x000dbfff]
+Nov  4 10:19:16 headnode kernel: [    0.394254] pci_bus 0000:03: resource 10 [mem 0x000dc000-0x000dffff]
+Nov  4 10:19:16 headnode kernel: [    0.394256] pci_bus 0000:03: resource 11 [mem 0x000e0000-0x000e3fff]
+Nov  4 10:19:16 headnode kernel: [    0.394258] pci_bus 0000:03: resource 12 [mem 0x000e4000-0x000e7fff]
+Nov  4 10:19:16 headnode kernel: [    0.394261] pci_bus 0000:03: resource 13 [mem 0xdfa00000-0xfeafffff]
+Nov  4 10:19:16 headnode kernel: [    0.394263] pci_bus 0000:04: resource 8 [io  0x0000-0x0cf7]
+Nov  4 10:19:16 headnode kernel: [    0.394265] pci_bus 0000:04: resource 9 [io  0x0d00-0xffff]
+Nov  4 10:19:16 headnode kernel: [    0.394267] pci_bus 0000:04: resource 10 [mem 0x000a0000-0x000bffff]
+Nov  4 10:19:16 headnode kernel: [    0.394270] pci_bus 0000:04: resource 11 [mem 0x000d0000-0x000d3fff]
+Nov  4 10:19:16 headnode kernel: [    0.394272] pci_bus 0000:04: resource 12 [mem 0x000d4000-0x000d7fff]
+Nov  4 10:19:16 headnode kernel: [    0.394274] pci_bus 0000:04: resource 13 [mem 0x000d8000-0x000dbfff]
+Nov  4 10:19:16 headnode kernel: [    0.394276] pci_bus 0000:04: resource 14 [mem 0x000dc000-0x000dffff]
+Nov  4 10:19:16 headnode kernel: [    0.394279] pci_bus 0000:04: resource 15 [mem 0x000e0000-0x000e3fff]
+Nov  4 10:19:16 headnode kernel: [    0.394281] pci_bus 0000:04: resource 16 [mem 0x000e4000-0x000e7fff]
+Nov  4 10:19:16 headnode kernel: [    0.394283] pci_bus 0000:04: resource 17 [mem 0xdfa00000-0xfeafffff]
+Nov  4 10:19:16 headnode kernel: [    0.394285] pci_bus 0000:05: resource 0 [io  0xc000-0xcfff]
+Nov  4 10:19:16 headnode kernel: [    0.394288] pci_bus 0000:05: resource 1 [mem 0xf7c00000-0xf7cfffff]
+Nov  4 10:19:16 headnode kernel: [    0.398925] pci 0000:00:02.0: Boot video device
+Nov  4 10:19:16 headnode kernel: [    0.438392] PCI: CLS 64 bytes, default 64
+Nov  4 10:19:16 headnode kernel: [    0.710358] intel_idle: MWAIT substates: 0x21120
+Nov  4 10:19:16 headnode kernel: [    0.710359] intel_idle: v0.4 model 0x3A
+Nov  4 10:19:16 headnode kernel: [    0.710361] intel_idle: lapic_timer_reliable_states 0xffffffff
+Nov  4 10:19:16 headnode kernel: [    0.830785] PM: Hibernation image not present or could not be loaded.
+Nov  4 10:19:16 headnode kernel: [    0.880733] r8169 0000:01:00.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.880825] r8169 0000:01:00.0: irq 40 for MSI/MSI-X
+Nov  4 10:19:16 headnode kernel: [    0.892908] ehci_hcd 0000:00:1a.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.893105] r8169 0000:02:00.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.893207] r8169 0000:02:00.0: irq 41 for MSI/MSI-X
+Nov  4 10:19:16 headnode kernel: [    0.896856] ehci_hcd 0000:00:1a.0: cache line size of 64 is not supported
+Nov  4 10:19:16 headnode kernel: [    0.911506] libata version 3.00 loaded.
+Nov  4 10:19:16 headnode kernel: [    0.911758] pata_jmicron 0000:05:00.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.914450] ehci_hcd 0000:00:1d.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    0.918364] ehci_hcd 0000:00:1d.0: cache line size of 64 is not supported
+Nov  4 10:19:16 headnode kernel: [    0.950517] ahci 0000:00:1f.2: version 3.0
+Nov  4 10:19:16 headnode kernel: [    0.950583] ahci 0000:00:1f.2: irq 42 for MSI/MSI-X
+Nov  4 10:19:16 headnode kernel: [    0.950640] ahci 0000:00:1f.2: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    1.276872] sd 2:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Nov  4 10:19:16 headnode kernel: [    1.527764] PM: Hibernation image partition 8:2 present
+Nov  4 10:19:16 headnode kernel: [    1.527766] PM: Looking for hibernation image.
+Nov  4 10:19:16 headnode kernel: [    1.527968] PM: Image not found (code -22)
+Nov  4 10:19:16 headnode kernel: [    1.527970] PM: Hibernation image not present or could not be loaded.
+Nov  4 10:19:16 headnode kernel: [    1.848634] snd_hda_intel 0000:00:1b.0: irq 43 for MSI/MSI-X
+Nov  4 10:19:16 headnode kernel: [    1.848664] snd_hda_intel 0000:00:1b.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    2.415124] i915 0000:00:02.0: setting latency timer to 64
+Nov  4 10:19:16 headnode kernel: [    2.446795] i915 0000:00:02.0: irq 44 for MSI/MSI-X
+Nov  4 10:19:21 headnode kernel: [   17.708923] eth0: no IPv6 routers present
+Nov  4 10:19:22 headnode kernel: [   18.572622] eth1: no IPv6 routers present
+Nov  4 16:19:00 headnode kernel: [    0.000000] DMI: Gigabyte Technology Co., Ltd. To be filled by O.E.M./C1037UN, BIOS F2 12/03/2013
+Nov  4 16:19:00 headnode kernel: [    0.000000] e820 update range: 0000000000000000 - 0000000000010000 (usable) ==> (reserved)
+Nov  4 16:19:00 headnode kernel: [    0.000000] e820 remove range: 00000000000a0000 - 0000000000100000 (usable)
+Nov  4 16:19:00 headnode kernel: [    0.000000] MTRR default type: uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000] MTRR fixed ranges enabled:
+Nov  4 16:19:00 headnode kernel: [    0.000000]   00000-9FFFF write-back
+Nov  4 16:19:00 headnode kernel: [    0.000000]   A0000-BFFFF uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000]   C0000-CFFFF write-protect
+Nov  4 16:19:00 headnode kernel: [    0.000000]   D0000-E7FFF uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000]   E8000-FFFFF write-protect
+Nov  4 16:19:00 headnode kernel: [    0.000000] MTRR variable ranges enabled:
+Nov  4 16:19:00 headnode kernel: [    0.000000]   0 base 000000000 mask E00000000 write-back
+Nov  4 16:19:00 headnode kernel: [    0.000000]   1 base 200000000 mask FE0000000 write-back
+Nov  4 16:19:00 headnode kernel: [    0.000000]   2 base 0E0000000 mask FE0000000 uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000]   3 base 0DE000000 mask FFE000000 uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000]   4 base 0DD800000 mask FFF800000 uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000]   5 base 21F800000 mask FFF800000 uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000]   6 base 21F600000 mask FFFE00000 uncachable
+Nov  4 16:19:00 headnode kernel: [    0.000000]   7 disabled
+Nov  4 16:19:00 headnode kernel: [    0.000000]   8 disabled
+Nov  4 16:19:00 headnode kernel: [    0.000000]   9 disabled
+Nov  4 16:19:00 headnode kernel: [    0.000000] e820 update range: 00000000dd800000 - 0000000100000000 (usable) ==> (reserved)
+Nov  4 16:19:00 headnode kernel: [    0.000000] initial memory mapped : 0 - 20000000
+Nov  4 16:19:00 headnode kernel: [    0.000000] Base memory trampoline at [ffff880000098000] 98000 size 20480
+Nov  4 16:19:00 headnode kernel: [    0.000000]  0000000000 - 00dd000000 page 2M
+Nov  4 16:19:00 headnode kernel: [    0.000000] kernel direct mapping tables up to dd000000 @ 1fffb000-20000000
+Nov  4 16:19:00 headnode kernel: [    0.000000]  0100000000 - 021f600000 page 2M
+Nov  4 16:19:00 headnode kernel: [    0.000000] kernel direct mapping tables up to 21f600000 @ dcffa000-dd000000
+Nov  4 16:19:00 headnode kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Nov  4 16:19:00 headnode kernel: [    0.000000]  [ffffea0000000000-ffffea00077fffff] PMD -> [ffff880216c00000-ffff88021ddfffff] on node 0
+Nov  4 16:19:00 headnode kernel: [    0.000000] On node 0 totalpages: 2077570
+Nov  4 16:19:00 headnode kernel: [    0.000000]   DMA zone: 56 pages used for memmap
+Nov  4 16:19:00 headnode kernel: [    0.000000]   DMA zone: 5 pages reserved
+Nov  4 16:19:00 headnode kernel: [    0.000000]   DMA zone: 3920 pages, LIFO batch:0
+Nov  4 16:19:00 headnode kernel: [    0.000000]   DMA32 zone: 14280 pages used for memmap
+Nov  4 16:19:00 headnode kernel: [    0.000000]   DMA32 zone: 882221 pages, LIFO batch:31
+Nov  4 16:19:00 headnode kernel: [    0.000000]   Normal zone: 16093 pages used for memmap
+Nov  4 16:19:00 headnode kernel: [    0.000000]   Normal zone: 1160995 pages, LIFO batch:31
+Nov  4 16:19:00 headnode kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Nov  4 16:19:00 headnode kernel: [    0.000000] ACPI: IRQ0 used by override.
+Nov  4 16:19:00 headnode kernel: [    0.000000] ACPI: IRQ2 used by override.
+Nov  4 16:19:00 headnode kernel: [    0.000000] ACPI: IRQ9 used by override.
+Nov  4 16:19:00 headnode kernel: [    0.000000] nr_irqs_gsi: 40
+Nov  4 16:19:00 headnode kernel: [    0.000000] pcpu-alloc: s82944 r8192 d23552 u1048576 alloc=1*2097152
+Nov  4 16:19:00 headnode kernel: [    0.000000] pcpu-alloc: [0] 0 1 
+Nov  4 16:19:00 headnode kernel: [    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+Nov  4 16:19:00 headnode kernel: [    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+Nov  4 16:19:00 headnode kernel: [    0.000000] hpet clockevent registered
+Nov  4 16:19:00 headnode kernel: [    0.159931] smpboot cpu 1: start_ip = 98000
+Nov  4 16:19:00 headnode kernel: [    0.281944] ACPI: EC: Look up EC in DSDT
+Nov  4 16:19:00 headnode kernel: [    0.347396] pci 0000:00:00.0: [8086:0154] type 0 class 0x000600
+Nov  4 16:19:00 headnode kernel: [    0.347440] pci 0000:00:02.0: [8086:0156] type 0 class 0x000300
+Nov  4 16:19:00 headnode kernel: [    0.347453] pci 0000:00:02.0: reg 10: [mem 0xf7800000-0xf7bfffff 64bit]
+Nov  4 16:19:00 headnode kernel: [    0.347461] pci 0000:00:02.0: reg 18: [mem 0xe0000000-0xefffffff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.347467] pci 0000:00:02.0: reg 20: [io  0xf000-0xf03f]
+Nov  4 16:19:00 headnode kernel: [    0.347529] pci 0000:00:16.0: [8086:1e3a] type 0 class 0x000780
+Nov  4 16:19:00 headnode kernel: [    0.347554] pci 0000:00:16.0: reg 10: [mem 0xf7e0a000-0xf7e0a00f 64bit]
+Nov  4 16:19:00 headnode kernel: [    0.347643] pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.347682] pci 0000:00:1a.0: [8086:1e2d] type 0 class 0x000c03
+Nov  4 16:19:00 headnode kernel: [    0.347705] pci 0000:00:1a.0: reg 10: [mem 0xf7e08000-0xf7e083ff]
+Nov  4 16:19:00 headnode kernel: [    0.347805] pci 0000:00:1a.0: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.347834] pci 0000:00:1b.0: [8086:1e20] type 0 class 0x000403
+Nov  4 16:19:00 headnode kernel: [    0.347851] pci 0000:00:1b.0: reg 10: [mem 0xf7e00000-0xf7e03fff 64bit]
+Nov  4 16:19:00 headnode kernel: [    0.347928] pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.347954] pci 0000:00:1c.0: [8086:1e10] type 1 class 0x000604
+Nov  4 16:19:00 headnode kernel: [    0.348043] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.348071] pci 0000:00:1c.1: [8086:1e12] type 1 class 0x000604
+Nov  4 16:19:00 headnode kernel: [    0.348159] pci 0000:00:1c.1: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.348187] pci 0000:00:1c.2: [8086:2448] type 1 class 0x000604
+Nov  4 16:19:00 headnode kernel: [    0.348276] pci 0000:00:1c.2: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.348304] pci 0000:00:1c.3: [8086:1e16] type 1 class 0x000604
+Nov  4 16:19:00 headnode kernel: [    0.348393] pci 0000:00:1c.3: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.348430] pci 0000:00:1d.0: [8086:1e26] type 0 class 0x000c03
+Nov  4 16:19:00 headnode kernel: [    0.348453] pci 0000:00:1d.0: reg 10: [mem 0xf7e07000-0xf7e073ff]
+Nov  4 16:19:00 headnode kernel: [    0.348553] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.348581] pci 0000:00:1f.0: [8086:1e5f] type 0 class 0x000601
+Nov  4 16:19:00 headnode kernel: [    0.348717] pci 0000:00:1f.2: [8086:1e03] type 0 class 0x000106
+Nov  4 16:19:00 headnode kernel: [    0.348737] pci 0000:00:1f.2: reg 10: [io  0xf0b0-0xf0b7]
+Nov  4 16:19:00 headnode kernel: [    0.348746] pci 0000:00:1f.2: reg 14: [io  0xf0a0-0xf0a3]
+Nov  4 16:19:00 headnode kernel: [    0.348755] pci 0000:00:1f.2: reg 18: [io  0xf090-0xf097]
+Nov  4 16:19:00 headnode kernel: [    0.348763] pci 0000:00:1f.2: reg 1c: [io  0xf080-0xf083]
+Nov  4 16:19:00 headnode kernel: [    0.348772] pci 0000:00:1f.2: reg 20: [io  0xf060-0xf07f]
+Nov  4 16:19:00 headnode kernel: [    0.348781] pci 0000:00:1f.2: reg 24: [mem 0xf7e06000-0xf7e067ff]
+Nov  4 16:19:00 headnode kernel: [    0.348832] pci 0000:00:1f.2: PME# supported from D3hot
+Nov  4 16:19:00 headnode kernel: [    0.348854] pci 0000:00:1f.3: [8086:1e22] type 0 class 0x000c05
+Nov  4 16:19:00 headnode kernel: [    0.348871] pci 0000:00:1f.3: reg 10: [mem 0xf7e05000-0xf7e050ff 64bit]
+Nov  4 16:19:00 headnode kernel: [    0.348895] pci 0000:00:1f.3: reg 20: [io  0xf040-0xf05f]
+Nov  4 16:19:00 headnode kernel: [    0.348997] pci 0000:01:00.0: [10ec:8168] type 0 class 0x000200
+Nov  4 16:19:00 headnode kernel: [    0.349019] pci 0000:01:00.0: reg 10: [io  0xe000-0xe0ff]
+Nov  4 16:19:00 headnode kernel: [    0.349056] pci 0000:01:00.0: reg 18: [mem 0xf7d00000-0xf7d00fff 64bit]
+Nov  4 16:19:00 headnode kernel: [    0.349079] pci 0000:01:00.0: reg 20: [mem 0xf0100000-0xf0103fff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.349178] pci 0000:01:00.0: supports D1 D2
+Nov  4 16:19:00 headnode kernel: [    0.349180] pci 0000:01:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.355665] pci 0000:00:1c.0:   bridge window [io  0xe000-0xefff]
+Nov  4 16:19:00 headnode kernel: [    0.355669] pci 0000:00:1c.0:   bridge window [mem 0xf7d00000-0xf7dfffff]
+Nov  4 16:19:00 headnode kernel: [    0.355676] pci 0000:00:1c.0:   bridge window [mem 0xf0100000-0xf01fffff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.355750] pci 0000:02:00.0: [10ec:8168] type 0 class 0x000200
+Nov  4 16:19:00 headnode kernel: [    0.355772] pci 0000:02:00.0: reg 10: [io  0xd000-0xd0ff]
+Nov  4 16:19:00 headnode kernel: [    0.355808] pci 0000:02:00.0: reg 18: [mem 0xf0004000-0xf0004fff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.355832] pci 0000:02:00.0: reg 20: [mem 0xf0000000-0xf0003fff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.355931] pci 0000:02:00.0: supports D1 D2
+Nov  4 16:19:00 headnode kernel: [    0.355933] pci 0000:02:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.363647] pci 0000:00:1c.1:   bridge window [io  0xd000-0xdfff]
+Nov  4 16:19:00 headnode kernel: [    0.363667] pci 0000:00:1c.1:   bridge window [mem 0xf0000000-0xf00fffff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.363740] pci 0000:03:00.0: [8086:244e] type 1 class 0x000604
+Nov  4 16:19:00 headnode kernel: [    0.363901] pci 0000:03:00.0: supports D1 D2
+Nov  4 16:19:00 headnode kernel: [    0.363903] pci 0000:03:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov  4 16:19:00 headnode kernel: [    0.363945] pci 0000:00:1c.2:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363948] pci 0000:00:1c.2:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363950] pci 0000:00:1c.2:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363953] pci 0000:00:1c.2:   bridge window [mem 0x000d0000-0x000d3fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363956] pci 0000:00:1c.2:   bridge window [mem 0x000d4000-0x000d7fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363958] pci 0000:00:1c.2:   bridge window [mem 0x000d8000-0x000dbfff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363961] pci 0000:00:1c.2:   bridge window [mem 0x000dc000-0x000dffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363964] pci 0000:00:1c.2:   bridge window [mem 0x000e0000-0x000e3fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363966] pci 0000:00:1c.2:   bridge window [mem 0x000e4000-0x000e7fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.363969] pci 0000:00:1c.2:   bridge window [mem 0xdfa00000-0xfeafffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364155] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364157] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364160] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364162] pci 0000:03:00.0:   bridge window [??? 0x00000000 flags 0x0] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364165] pci 0000:03:00.0:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364168] pci 0000:03:00.0:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364170] pci 0000:03:00.0:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364173] pci 0000:03:00.0:   bridge window [mem 0x000d0000-0x000d3fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364175] pci 0000:03:00.0:   bridge window [mem 0x000d4000-0x000d7fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364178] pci 0000:03:00.0:   bridge window [mem 0x000d8000-0x000dbfff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364180] pci 0000:03:00.0:   bridge window [mem 0x000dc000-0x000dffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364183] pci 0000:03:00.0:   bridge window [mem 0x000e0000-0x000e3fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364186] pci 0000:03:00.0:   bridge window [mem 0x000e4000-0x000e7fff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364188] pci 0000:03:00.0:   bridge window [mem 0xdfa00000-0xfeafffff] (subtractive decode)
+Nov  4 16:19:00 headnode kernel: [    0.364273] pci 0000:05:00.0: [197b:2368] type 0 class 0x000101
+Nov  4 16:19:00 headnode kernel: [    0.364310] pci 0000:05:00.0: reg 10: [io  0xc040-0xc047]
+Nov  4 16:19:00 headnode kernel: [    0.364328] pci 0000:05:00.0: reg 14: [io  0xc030-0xc033]
+Nov  4 16:19:00 headnode kernel: [    0.364345] pci 0000:05:00.0: reg 18: [io  0xc020-0xc027]
+Nov  4 16:19:00 headnode kernel: [    0.364362] pci 0000:05:00.0: reg 1c: [io  0xc010-0xc013]
+Nov  4 16:19:00 headnode kernel: [    0.364379] pci 0000:05:00.0: reg 20: [io  0xc000-0xc00f]
+Nov  4 16:19:00 headnode kernel: [    0.364412] pci 0000:05:00.0: reg 30: [mem 0xf7c00000-0xf7c0ffff pref]
+Nov  4 16:19:00 headnode kernel: [    0.371642] pci 0000:00:1c.3:   bridge window [io  0xc000-0xcfff]
+Nov  4 16:19:00 headnode kernel: [    0.371659] pci 0000:00:1c.3:   bridge window [mem 0xf7c00000-0xf7cfffff]
+Nov  4 16:19:00 headnode kernel: [    0.371688] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+Nov  4 16:19:00 headnode kernel: [    0.371907] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP01._PRT]
+Nov  4 16:19:00 headnode kernel: [    0.371955] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP02._PRT]
+Nov  4 16:19:00 headnode kernel: [    0.372002] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP03._PRT]
+Nov  4 16:19:00 headnode kernel: [    0.372048] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP04._PRT]
+Nov  4 16:19:00 headnode kernel: [    0.380111] PCI: pci_cache_line_size set to 64 bytes
+Nov  4 16:19:00 headnode kernel: [    0.380186] reserve RAM buffer: 000000000009d800 - 000000000009ffff 
+Nov  4 16:19:00 headnode kernel: [    0.380188] reserve RAM buffer: 0000000040004000 - 0000000043ffffff 
+Nov  4 16:19:00 headnode kernel: [    0.380191] reserve RAM buffer: 00000000db7e4000 - 00000000dbffffff 
+Nov  4 16:19:00 headnode kernel: [    0.380194] reserve RAM buffer: 00000000dbb8f000 - 00000000dbffffff 
+Nov  4 16:19:00 headnode kernel: [    0.380196] reserve RAM buffer: 00000000dc602000 - 00000000dfffffff 
+Nov  4 16:19:00 headnode kernel: [    0.380199] reserve RAM buffer: 00000000dcdb1000 - 00000000dfffffff 
+Nov  4 16:19:00 headnode kernel: [    0.380202] reserve RAM buffer: 00000000dd000000 - 00000000dfffffff 
+Nov  4 16:19:00 headnode kernel: [    0.380205] reserve RAM buffer: 000000021f600000 - 000000021fffffff 
+Nov  4 16:19:00 headnode kernel: [    0.384449] pnp 00:00: [bus 00-3e]
+Nov  4 16:19:00 headnode kernel: [    0.384451] pnp 00:00: [io  0x0000-0x0cf7 window]
+Nov  4 16:19:00 headnode kernel: [    0.384454] pnp 00:00: [io  0x0cf8-0x0cff]
+Nov  4 16:19:00 headnode kernel: [    0.384456] pnp 00:00: [io  0x0d00-0xffff window]
+Nov  4 16:19:00 headnode kernel: [    0.384458] pnp 00:00: [mem 0x000a0000-0x000bffff window]
+Nov  4 16:19:00 headnode kernel: [    0.384460] pnp 00:00: [mem 0x000c0000-0x000c3fff window]
+Nov  4 16:19:00 headnode kernel: [    0.384462] pnp 00:00: [mem 0x000c4000-0x000c7fff window]
+Nov  4 16:19:00 headnode kernel: [    0.384465] pnp 00:00: [mem 0x000c8000-0x000cbfff window]
+Nov  4 16:19:00 headnode kernel: [    0.384467] pnp 00:00: [mem 0x000cc000-0x000cffff window]
+Nov  4 16:19:00 headnode kernel: [    0.384469] pnp 00:00: [mem 0x000d0000-0x000d3fff window]
+Nov  4 16:19:00 headnode kernel: [    0.384471] pnp 00:00: [mem 0x000d4000-0x000d7fff window]
+Nov  4 16:19:00 headnode kernel: [    0.384473] pnp 00:00: [mem 0x000d8000-0x000dbfff window]
+Nov  4 16:19:00 headnode kernel: [    0.384476] pnp 00:00: [mem 0x000dc000-0x000dffff window]
+Nov  4 16:19:00 headnode kernel: [    0.384478] pnp 00:00: [mem 0x000e0000-0x000e3fff window]
+Nov  4 16:19:00 headnode kernel: [    0.384480] pnp 00:00: [mem 0x000e4000-0x000e7fff window]
+Nov  4 16:19:00 headnode kernel: [    0.384484] pnp 00:00: [mem 0x000e8000-0x000ebfff window]
+Nov  4 16:19:00 headnode kernel: [    0.384486] pnp 00:00: [mem 0x000ec000-0x000effff window]
+Nov  4 16:19:00 headnode kernel: [    0.384488] pnp 00:00: [mem 0x000f0000-0x000fffff window]
+Nov  4 16:19:00 headnode kernel: [    0.384490] pnp 00:00: [mem 0xdfa00000-0xfeafffff window]
+Nov  4 16:19:00 headnode kernel: [    0.384493] pnp 00:00: [mem 0x00010000-0x0001ffff window]
+Nov  4 16:19:00 headnode kernel: [    0.384565] pnp 00:00: Plug and Play ACPI device, IDs PNP0a08 PNP0a03 (active)
+Nov  4 16:19:00 headnode kernel: [    0.384597] pnp 00:01: [mem 0xfed40000-0xfed44fff]
+Nov  4 16:19:00 headnode kernel: [    0.384642] system 00:01: Plug and Play ACPI device, IDs PNP0c01 (active)
+Nov  4 16:19:00 headnode kernel: [    0.384657] pnp 00:02: [io  0x0000-0x001f]
+Nov  4 16:19:00 headnode kernel: [    0.384659] pnp 00:02: [io  0x0081-0x0091]
+Nov  4 16:19:00 headnode kernel: [    0.384661] pnp 00:02: [io  0x0093-0x009f]
+Nov  4 16:19:00 headnode kernel: [    0.384663] pnp 00:02: [io  0x00c0-0x00df]
+Nov  4 16:19:00 headnode kernel: [    0.384665] pnp 00:02: [dma 4]
+Nov  4 16:19:00 headnode kernel: [    0.384690] pnp 00:02: Plug and Play ACPI device, IDs PNP0200 (active)
+Nov  4 16:19:00 headnode kernel: [    0.384700] pnp 00:03: [mem 0xff000000-0xffffffff]
+Nov  4 16:19:00 headnode kernel: [    0.384724] pnp 00:03: Plug and Play ACPI device, IDs INT0800 (active)
+Nov  4 16:19:00 headnode kernel: [    0.384808] pnp 00:04: [mem 0xfed00000-0xfed003ff]
+Nov  4 16:19:00 headnode kernel: [    0.384833] pnp 00:04: Plug and Play ACPI device, IDs PNP0103 (active)
+Nov  4 16:19:00 headnode kernel: [    0.384846] pnp 00:05: [io  0x002e-0x002f]
+Nov  4 16:19:00 headnode kernel: [    0.384848] pnp 00:05: [io  0x004e-0x004f]
+Nov  4 16:19:00 headnode kernel: [    0.384850] pnp 00:05: [io  0x0061]
+Nov  4 16:19:00 headnode kernel: [    0.384852] pnp 00:05: [io  0x0063]
+Nov  4 16:19:00 headnode kernel: [    0.384854] pnp 00:05: [io  0x0065]
+Nov  4 16:19:00 headnode kernel: [    0.384855] pnp 00:05: [io  0x0067]
+Nov  4 16:19:00 headnode kernel: [    0.384857] pnp 00:05: [io  0x0070]
+Nov  4 16:19:00 headnode kernel: [    0.384859] pnp 00:05: [io  0x0080]
+Nov  4 16:19:00 headnode kernel: [    0.384861] pnp 00:05: [io  0x0092]
+Nov  4 16:19:00 headnode kernel: [    0.384862] pnp 00:05: [io  0x00b2-0x00b3]
+Nov  4 16:19:00 headnode kernel: [    0.384864] pnp 00:05: [io  0x0680-0x069f]
+Nov  4 16:19:00 headnode kernel: [    0.384866] pnp 00:05: [io  0x0200-0x020f]
+Nov  4 16:19:00 headnode kernel: [    0.384868] pnp 00:05: [io  0xffff]
+Nov  4 16:19:00 headnode kernel: [    0.384870] pnp 00:05: [io  0xffff]
+Nov  4 16:19:00 headnode kernel: [    0.384872] pnp 00:05: [io  0x0400-0x0453]
+Nov  4 16:19:00 headnode kernel: [    0.384873] pnp 00:05: [io  0x0458-0x047f]
+Nov  4 16:19:00 headnode kernel: [    0.384875] pnp 00:05: [io  0x0500-0x057f]
+Nov  4 16:19:00 headnode kernel: [    0.384942] system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 16:19:00 headnode kernel: [    0.384952] pnp 00:06: [io  0x0070-0x0077]
+Nov  4 16:19:00 headnode kernel: [    0.384961] pnp 00:06: [irq 8]
+Nov  4 16:19:00 headnode kernel: [    0.384986] pnp 00:06: Plug and Play ACPI device, IDs PNP0b00 (active)
+Nov  4 16:19:00 headnode kernel: [    0.385017] pnp 00:07: [io  0x0454-0x0457]
+Nov  4 16:19:00 headnode kernel: [    0.385061] system 00:07: Plug and Play ACPI device, IDs INT3f0d PNP0c02 (active)
+Nov  4 16:19:00 headnode kernel: [    0.385190] pnp 00:08: [io  0x0000-0xffffffffffffffff disabled]
+Nov  4 16:19:00 headnode kernel: [    0.385192] pnp 00:08: [io  0x0a00-0x0a0f]
+Nov  4 16:19:00 headnode kernel: [    0.385194] pnp 00:08: [io  0x0a30-0x0a3f]
+Nov  4 16:19:00 headnode kernel: [    0.385196] pnp 00:08: [io  0x0a20-0x0a2f]
+Nov  4 16:19:00 headnode kernel: [    0.385244] system 00:08: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 16:19:00 headnode kernel: [    0.385575] pnp 00:09: [io  0x03f8-0x03ff]
+Nov  4 16:19:00 headnode kernel: [    0.385581] pnp 00:09: [irq 4]
+Nov  4 16:19:00 headnode kernel: [    0.385583] pnp 00:09: [dma 0 disabled]
+Nov  4 16:19:00 headnode kernel: [    0.385649] pnp 00:09: Plug and Play ACPI device, IDs PNP0501 (active)
+Nov  4 16:19:00 headnode kernel: [    0.385938] pnp 00:0a: [io  0x02f8-0x02ff]
+Nov  4 16:19:00 headnode kernel: [    0.385943] pnp 00:0a: [irq 3]
+Nov  4 16:19:00 headnode kernel: [    0.385945] pnp 00:0a: [dma 0 disabled]
+Nov  4 16:19:00 headnode kernel: [    0.386010] pnp 00:0a: Plug and Play ACPI device, IDs PNP0501 (active)
+Nov  4 16:19:00 headnode kernel: [    0.386402] pnp 00:0b: [io  0x0378-0x037f]
+Nov  4 16:19:00 headnode kernel: [    0.386407] pnp 00:0b: [irq 5]
+Nov  4 16:19:00 headnode kernel: [    0.386409] pnp 00:0b: [dma 0 disabled]
+Nov  4 16:19:00 headnode kernel: [    0.386571] pnp 00:0b: Plug and Play ACPI device, IDs PNP0400 (active)
+Nov  4 16:19:00 headnode kernel: [    0.386598] pnp 00:0c: [io  0x0010-0x001f]
+Nov  4 16:19:00 headnode kernel: [    0.386600] pnp 00:0c: [io  0x0022-0x003f]
+Nov  4 16:19:00 headnode kernel: [    0.386602] pnp 00:0c: [io  0x0044-0x005f]
+Nov  4 16:19:00 headnode kernel: [    0.386604] pnp 00:0c: [io  0x0062-0x0063]
+Nov  4 16:19:00 headnode kernel: [    0.386605] pnp 00:0c: [io  0x0065-0x006f]
+Nov  4 16:19:00 headnode kernel: [    0.386607] pnp 00:0c: [io  0x0072-0x007f]
+Nov  4 16:19:00 headnode kernel: [    0.386609] pnp 00:0c: [io  0x0080]
+Nov  4 16:19:00 headnode kernel: [    0.386611] pnp 00:0c: [io  0x0084-0x0086]
+Nov  4 16:19:00 headnode kernel: [    0.386612] pnp 00:0c: [io  0x0088]
+Nov  4 16:19:00 headnode kernel: [    0.386614] pnp 00:0c: [io  0x008c-0x008e]
+Nov  4 16:19:00 headnode kernel: [    0.386616] pnp 00:0c: [io  0x0090-0x009f]
+Nov  4 16:19:00 headnode kernel: [    0.386618] pnp 00:0c: [io  0x00a2-0x00bf]
+Nov  4 16:19:00 headnode kernel: [    0.386620] pnp 00:0c: [io  0x00e0-0x00ef]
+Nov  4 16:19:00 headnode kernel: [    0.386622] pnp 00:0c: [io  0x04d0-0x04d1]
+Nov  4 16:19:00 headnode kernel: [    0.386672] system 00:0c: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 16:19:00 headnode kernel: [    0.386682] pnp 00:0d: [io  0x00f0-0x00ff]
+Nov  4 16:19:00 headnode kernel: [    0.386687] pnp 00:0d: [irq 13]
+Nov  4 16:19:00 headnode kernel: [    0.386715] pnp 00:0d: Plug and Play ACPI device, IDs PNP0c04 (active)
+Nov  4 16:19:00 headnode kernel: [    0.386993] pnp 00:0e: [mem 0xfed1c000-0xfed1ffff]
+Nov  4 16:19:00 headnode kernel: [    0.386995] pnp 00:0e: [mem 0xfed10000-0xfed17fff]
+Nov  4 16:19:00 headnode kernel: [    0.386998] pnp 00:0e: [mem 0xfed18000-0xfed18fff]
+Nov  4 16:19:00 headnode kernel: [    0.387000] pnp 00:0e: [mem 0xfed19000-0xfed19fff]
+Nov  4 16:19:00 headnode kernel: [    0.387002] pnp 00:0e: [mem 0xf8000000-0xfbffffff]
+Nov  4 16:19:00 headnode kernel: [    0.387004] pnp 00:0e: [mem 0xfed20000-0xfed3ffff]
+Nov  4 16:19:00 headnode kernel: [    0.387006] pnp 00:0e: [mem 0xfed90000-0xfed93fff]
+Nov  4 16:19:00 headnode kernel: [    0.387008] pnp 00:0e: [mem 0xfed45000-0xfed8ffff]
+Nov  4 16:19:00 headnode kernel: [    0.387010] pnp 00:0e: [mem 0xff000000-0xffffffff]
+Nov  4 16:19:00 headnode kernel: [    0.387012] pnp 00:0e: [mem 0xfee00000-0xfeefffff]
+Nov  4 16:19:00 headnode kernel: [    0.387014] pnp 00:0e: [mem 0xdfa00000-0xdfa00fff]
+Nov  4 16:19:00 headnode kernel: [    0.387119] system 00:0e: Plug and Play ACPI device, IDs PNP0c02 (active)
+Nov  4 16:19:00 headnode kernel: [    0.387278] pnp 00:0f: [mem 0x20000000-0x201fffff]
+Nov  4 16:19:00 headnode kernel: [    0.387281] pnp 00:0f: [mem 0x40004000-0x40004fff]
+Nov  4 16:19:00 headnode kernel: [    0.387355] system 00:0f: Plug and Play ACPI device, IDs PNP0c01 (active)
+Nov  4 16:19:00 headnode kernel: [    0.393973] PCI: max bus depth: 2 pci_try_num: 3
+Nov  4 16:19:00 headnode kernel: [    0.394136] pci 0000:00:1c.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.394150] pci 0000:00:1c.1: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.394164] pci 0000:00:1c.2: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.394183] pci 0000:03:00.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.394197] pci 0000:00:1c.3: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.394201] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+Nov  4 16:19:00 headnode kernel: [    0.394204] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+Nov  4 16:19:00 headnode kernel: [    0.394206] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+Nov  4 16:19:00 headnode kernel: [    0.394208] pci_bus 0000:00: resource 7 [mem 0x000d0000-0x000d3fff]
+Nov  4 16:19:00 headnode kernel: [    0.394210] pci_bus 0000:00: resource 8 [mem 0x000d4000-0x000d7fff]
+Nov  4 16:19:00 headnode kernel: [    0.394213] pci_bus 0000:00: resource 9 [mem 0x000d8000-0x000dbfff]
+Nov  4 16:19:00 headnode kernel: [    0.394215] pci_bus 0000:00: resource 10 [mem 0x000dc000-0x000dffff]
+Nov  4 16:19:00 headnode kernel: [    0.394217] pci_bus 0000:00: resource 11 [mem 0x000e0000-0x000e3fff]
+Nov  4 16:19:00 headnode kernel: [    0.394219] pci_bus 0000:00: resource 12 [mem 0x000e4000-0x000e7fff]
+Nov  4 16:19:00 headnode kernel: [    0.394222] pci_bus 0000:00: resource 13 [mem 0xdfa00000-0xfeafffff]
+Nov  4 16:19:00 headnode kernel: [    0.394224] pci_bus 0000:01: resource 0 [io  0xe000-0xefff]
+Nov  4 16:19:00 headnode kernel: [    0.394226] pci_bus 0000:01: resource 1 [mem 0xf7d00000-0xf7dfffff]
+Nov  4 16:19:00 headnode kernel: [    0.394229] pci_bus 0000:01: resource 2 [mem 0xf0100000-0xf01fffff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.394231] pci_bus 0000:02: resource 0 [io  0xd000-0xdfff]
+Nov  4 16:19:00 headnode kernel: [    0.394233] pci_bus 0000:02: resource 2 [mem 0xf0000000-0xf00fffff 64bit pref]
+Nov  4 16:19:00 headnode kernel: [    0.394236] pci_bus 0000:03: resource 4 [io  0x0000-0x0cf7]
+Nov  4 16:19:00 headnode kernel: [    0.394238] pci_bus 0000:03: resource 5 [io  0x0d00-0xffff]
+Nov  4 16:19:00 headnode kernel: [    0.394240] pci_bus 0000:03: resource 6 [mem 0x000a0000-0x000bffff]
+Nov  4 16:19:00 headnode kernel: [    0.394242] pci_bus 0000:03: resource 7 [mem 0x000d0000-0x000d3fff]
+Nov  4 16:19:00 headnode kernel: [    0.394245] pci_bus 0000:03: resource 8 [mem 0x000d4000-0x000d7fff]
+Nov  4 16:19:00 headnode kernel: [    0.394247] pci_bus 0000:03: resource 9 [mem 0x000d8000-0x000dbfff]
+Nov  4 16:19:00 headnode kernel: [    0.394249] pci_bus 0000:03: resource 10 [mem 0x000dc000-0x000dffff]
+Nov  4 16:19:00 headnode kernel: [    0.394251] pci_bus 0000:03: resource 11 [mem 0x000e0000-0x000e3fff]
+Nov  4 16:19:00 headnode kernel: [    0.394253] pci_bus 0000:03: resource 12 [mem 0x000e4000-0x000e7fff]
+Nov  4 16:19:00 headnode kernel: [    0.394256] pci_bus 0000:03: resource 13 [mem 0xdfa00000-0xfeafffff]
+Nov  4 16:19:00 headnode kernel: [    0.394258] pci_bus 0000:04: resource 8 [io  0x0000-0x0cf7]
+Nov  4 16:19:00 headnode kernel: [    0.394260] pci_bus 0000:04: resource 9 [io  0x0d00-0xffff]
+Nov  4 16:19:00 headnode kernel: [    0.394262] pci_bus 0000:04: resource 10 [mem 0x000a0000-0x000bffff]
+Nov  4 16:19:00 headnode kernel: [    0.394265] pci_bus 0000:04: resource 11 [mem 0x000d0000-0x000d3fff]
+Nov  4 16:19:00 headnode kernel: [    0.394267] pci_bus 0000:04: resource 12 [mem 0x000d4000-0x000d7fff]
+Nov  4 16:19:00 headnode kernel: [    0.394269] pci_bus 0000:04: resource 13 [mem 0x000d8000-0x000dbfff]
+Nov  4 16:19:00 headnode kernel: [    0.394271] pci_bus 0000:04: resource 14 [mem 0x000dc000-0x000dffff]
+Nov  4 16:19:00 headnode kernel: [    0.394274] pci_bus 0000:04: resource 15 [mem 0x000e0000-0x000e3fff]
+Nov  4 16:19:00 headnode kernel: [    0.394276] pci_bus 0000:04: resource 16 [mem 0x000e4000-0x000e7fff]
+Nov  4 16:19:00 headnode kernel: [    0.394278] pci_bus 0000:04: resource 17 [mem 0xdfa00000-0xfeafffff]
+Nov  4 16:19:00 headnode kernel: [    0.394281] pci_bus 0000:05: resource 0 [io  0xc000-0xcfff]
+Nov  4 16:19:00 headnode kernel: [    0.394283] pci_bus 0000:05: resource 1 [mem 0xf7c00000-0xf7cfffff]
+Nov  4 16:19:00 headnode kernel: [    0.398910] pci 0000:00:02.0: Boot video device
+Nov  4 16:19:00 headnode kernel: [    0.438376] PCI: CLS 64 bytes, default 64
+Nov  4 16:19:00 headnode kernel: [    0.710344] intel_idle: MWAIT substates: 0x21120
+Nov  4 16:19:00 headnode kernel: [    0.710346] intel_idle: v0.4 model 0x3A
+Nov  4 16:19:00 headnode kernel: [    0.710348] intel_idle: lapic_timer_reliable_states 0xffffffff
+Nov  4 16:19:00 headnode kernel: [    0.830739] PM: Hibernation image not present or could not be loaded.
+Nov  4 16:19:00 headnode kernel: [    0.877586] r8169 0000:01:00.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.877678] r8169 0000:01:00.0: irq 40 for MSI/MSI-X
+Nov  4 16:19:00 headnode kernel: [    0.878254] r8169 0000:02:00.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.878333] r8169 0000:02:00.0: irq 41 for MSI/MSI-X
+Nov  4 16:19:00 headnode kernel: [    0.896213] ehci_hcd 0000:00:1a.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.900146] ehci_hcd 0000:00:1a.0: cache line size of 64 is not supported
+Nov  4 16:19:00 headnode kernel: [    0.900834] libata version 3.00 loaded.
+Nov  4 16:19:00 headnode kernel: [    0.901080] pata_jmicron 0000:05:00.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.946475] ehci_hcd 0000:00:1d.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    0.950393] ehci_hcd 0000:00:1d.0: cache line size of 64 is not supported
+Nov  4 16:19:00 headnode kernel: [    0.966611] ahci 0000:00:1f.2: version 3.0
+Nov  4 16:19:00 headnode kernel: [    0.966696] ahci 0000:00:1f.2: irq 42 for MSI/MSI-X
+Nov  4 16:19:00 headnode kernel: [    0.966770] ahci 0000:00:1f.2: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    1.292489] sd 2:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Nov  4 16:19:00 headnode kernel: [    1.627374] PM: Hibernation image partition 8:2 present
+Nov  4 16:19:00 headnode kernel: [    1.627375] PM: Looking for hibernation image.
+Nov  4 16:19:00 headnode kernel: [    1.627568] PM: Image not found (code -22)
+Nov  4 16:19:00 headnode kernel: [    1.627570] PM: Hibernation image not present or could not be loaded.
+Nov  4 16:19:00 headnode kernel: [    1.968639] snd_hda_intel 0000:00:1b.0: irq 43 for MSI/MSI-X
+Nov  4 16:19:00 headnode kernel: [    1.968667] snd_hda_intel 0000:00:1b.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    2.534913] i915 0000:00:02.0: setting latency timer to 64
+Nov  4 16:19:00 headnode kernel: [    2.566575] i915 0000:00:02.0: irq 44 for MSI/MSI-X
+Nov  4 16:19:00 headnode kernel: [   18.036791] eth0: no IPv6 routers present
+Nov  4 16:19:00 headnode kernel: [   18.940506] eth1: no IPv6 routers present
