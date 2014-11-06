@@ -407,3 +407,11 @@ Setting up librecode0:amd64 (3.6-20) ...
 Setting up fortune-mod (1:1.99.1-4) ...
 Setting up fortunes-min (1:1.99.1-4) ...
 Log ended: 2014-11-04  23:45:03
+
+Log started: 2014-11-06  15:33:22
+Selecting previously unselected package htop.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30685 files and directories currently installed.)
+Unpacking htop (from .../htop_1.0.1-1_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up htop (1.0.1-1) ...
+Log ended: 2014-11-06  15:33:24

@@ -43,6 +43,21 @@ Install SSH-Server
 # apt-get install openssh-server 
 \end{lstlisting}
 
+
+/etc/hosts.allow konfigureren:
+\begin{lstlisting}[style=Bash]
+...
+sshd: 141.76.0.0/255.255.0.0
+sshd: 141.30.0.0/255.255.0.0
+sshd: 192.168.2.0/255.255.255.0
+sshd: LOCAL 
+\end{lstlisting}
+/etc/hosts.deny konfigureren:
+\begin{lstlisting}[style=Bash]
+...
+sshd: ALL
+\end{lstlisting}
+
 SSH-Server in /etc/ssh/sshd\_config konfigureren:
 \begin{lstlisting}[style=Bash]
 ...
@@ -52,6 +67,7 @@ PubkeyAuthentication yes
 ...
 AllowUsers *@141.76.*.*
 AllowUsers *@141.30.*.*
+AllowUsers *@192.168.2.*.*
 AllowUsers *@localhost
 # SSH server auf den nodes:
 UseDNS no

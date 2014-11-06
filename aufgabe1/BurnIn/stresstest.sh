@@ -1,4 +1,6 @@
 #!/bin/sh
+#dual core, run burnP6 twice
+burnP6 &
 burnP6 &
 `sleep 24h && killall burnP6` &
 
