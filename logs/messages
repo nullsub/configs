@@ -966,3 +966,4 @@ Nov  4 16:19:00 headnode kernel: [    7.388286] r8169 0000:01:00.0: eth0: link u
 Nov  4 16:19:00 headnode kernel: [    7.389763] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
 Nov  4 16:19:00 headnode kernel: [    8.238966] r8169 0000:02:00.0: eth1: link up
 Nov  4 16:19:00 headnode kernel: [    8.240521] ADDRCONF(NETDEV_CHANGE): eth1: link becomes ready
+Nov  5 06:25:01 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2000" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
