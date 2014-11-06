@@ -326,3 +326,84 @@ Processing triggers for install-info ...
 Processing triggers for man-db ...
 Setting up wget (1.13.4-3+deb7u2) ...
 Log ended: 2014-11-03  14:25:36
+
+Log started: 2014-11-03  19:54:58
+Selecting previously unselected package make.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 27068 files and directories currently installed.)
+Unpacking make (from .../make_3.81-8.2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up make (3.81-8.2) ...
+Log ended: 2014-11-03  19:54:59
+
+Log started: 2014-11-03  19:55:08
+Selecting previously unselected package libgmp10:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 27102 files and directories currently installed.)
+Unpacking libgmp10:amd64 (from .../libgmp10_2%3a5.0.5+dfsg-2_amd64.deb) ...
+Selecting previously unselected package libitm1:amd64.
+Unpacking libitm1:amd64 (from .../libitm1_4.7.2-5_amd64.deb) ...
+Selecting previously unselected package libmpfr4:amd64.
+Unpacking libmpfr4:amd64 (from .../libmpfr4_3.1.0-5_amd64.deb) ...
+Selecting previously unselected package libquadmath0:amd64.
+Unpacking libquadmath0:amd64 (from .../libquadmath0_4.7.2-5_amd64.deb) ...
+Selecting previously unselected package libmpc2:amd64.
+Unpacking libmpc2:amd64 (from .../libmpc2_0.9-4_amd64.deb) ...
+Selecting previously unselected package binutils.
+Unpacking binutils (from .../binutils_2.22-8_amd64.deb) ...
+Selecting previously unselected package cpp-4.7.
+Unpacking cpp-4.7 (from .../cpp-4.7_4.7.2-5_amd64.deb) ...
+Selecting previously unselected package cpp.
+Unpacking cpp (from .../cpp_4%3a4.7.2-1_amd64.deb) ...
+Selecting previously unselected package gcc-4.7.
+Unpacking gcc-4.7 (from .../gcc-4.7_4.7.2-5_amd64.deb) ...
+Selecting previously unselected package gcc.
+Unpacking gcc (from .../gcc_4%3a4.7.2-1_amd64.deb) ...
+Selecting previously unselected package libc-dev-bin.
+Unpacking libc-dev-bin (from .../libc-dev-bin_2.13-38+deb7u6_amd64.deb) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Unpacking linux-libc-dev:amd64 (from .../linux-libc-dev_3.2.63-2+deb7u1_amd64.deb) ...
+Selecting previously unselected package libc6-dev:amd64.
+Unpacking libc6-dev:amd64 (from .../libc6-dev_2.13-38+deb7u6_amd64.deb) ...
+Selecting previously unselected package manpages-dev.
+Unpacking manpages-dev (from .../manpages-dev_3.44-1_all.deb) ...
+Processing triggers for man-db ...
+
+
+make
+Setting up libgmp10:amd64 (2:5.0.5+dfsg-2) ...
+Setting up libitm1:amd64 (4.7.2-5) ...
+Setting up libmpfr4:amd64 (3.1.0-5) ...
+Setting up libquadmath0:amd64 (4.7.2-5) ...
+Setting up libmpc2:amd64 (0.9-4) ...
+Setting up binutils (2.22-8) ...
+Setting up cpp-4.7 (4.7.2-5) ...
+Setting up cpp (4:4.7.2-1) ...
+Setting up gcc-4.7 (4.7.2-5) ...
+Setting up gcc (4:4.7.2-1) ...
+Setting up libc-dev-bin (2.13-38+deb7u6) ...
+Setting up linux-libc-dev:amd64 (3.2.63-2+deb7u1) ...
+Setting up libc6-dev:amd64 (2.13-38+deb7u6) ...
+Setting up manpages-dev (3.44-1) ...
+Log ended: 2014-11-03  19:55:15
+
+Log started: 2014-11-04  23:21:44
+Selecting previously unselected package figlet.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30572 files and directories currently installed.)
+Unpacking figlet (from .../figlet_2.2.5-2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up figlet (2.2.5-2) ...
+update-alternatives: using /usr/bin/figlet-figlet to provide /usr/bin/figlet (figlet) in auto mode
+Log ended: 2014-11-04  23:21:46
+
+Log started: 2014-11-04  23:45:01
+Selecting previously unselected package librecode0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30647 files and directories currently installed.)
+Unpacking librecode0:amd64 (from .../librecode0_3.6-20_amd64.deb) ...
+Selecting previously unselected package fortune-mod.
+Unpacking fortune-mod (from .../fortune-mod_1%3a1.99.1-4_amd64.deb) ...
+Selecting previously unselected package fortunes-min.
+Unpacking fortunes-min (from .../fortunes-min_1%3a1.99.1-4_all.deb) ...
+Processing triggers for man-db ...
+Setting up librecode0:amd64 (3.6-20) ...
+Setting up fortune-mod (1:1.99.1-4) ...
+Setting up fortunes-min (1:1.99.1-4) ...
+Log ended: 2014-11-04  23:45:03
