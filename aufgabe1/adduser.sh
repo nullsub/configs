@@ -1,4 +1,8 @@
 #! /bin/bash
+if [ "$EUID" -ne 0 ]
+      then echo "Please run as root"
+            exit
+        fi
 read -p "Username:" _username
 adduser --geco GECO  ${_username}
 _home=/home/${_username}
