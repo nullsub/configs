@@ -88,3 +88,4 @@ UsePAM yes
 AllowUsers *@141.76.*.*
 AllowUsers *@141.30.*.*
 AllowUsers *@localhost
+AllowUsers *@192.168.2.*

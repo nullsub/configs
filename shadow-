@@ -1,4 +1,4 @@
-root:$6$GKqD1Szs$NUp5rGjoTocR9f/JC1YjLbA6t764mxKuNnqdjIGKDRVrfji5n.YGyDRQt15xd7bACOBNxH2UMzMVPtmsfgTNJ/:16366:0:99999:7:::
+root:!$6$GKqD1Szs$NUp5rGjoTocR9f/JC1YjLbA6t764mxKuNnqdjIGKDRVrfji5n.YGyDRQt15xd7bACOBNxH2UMzMVPtmsfgTNJ/:16366:0:99999:7:::
 daemon:*:16366:0:99999:7:::
 bin:*:16366:0:99999:7:::
 sys:*:16366:0:99999:7:::
@@ -26,3 +26,4 @@ mheyde:$6$a6PMEPHK$YoiRfAmMH4ogKfnsi3FlOtfui.w2QXWiqUY3Mm.DdxzX8iFBrPiBJBp9snRyq
 hoehlig:$6$fWXKI8Sn$Q6QJ2BkL.r2cTAuCHovctHvyirYw/McTw9RrJ4Xf/SL8HvRRxD7Aa.QzOD9RVlmb/3TP5U/4H6qUwDLgxc3Ar0:16370:0:99999:7:::
 git:$6$NTO2zCs5$/vgjDlznVraxW/Nm4izReIYjU3rL0beNYIS161QDVHh0Z4MjOVpn9zIoPIEZDtpUxGJ3xktlQm9S3caEgt3yd0:16373:0:99999:7:::
 messagebus:*:16377:0:99999:7:::
+dog:!:16380:0:99999:7:::
