@@ -1,23 +1,22 @@
-Nov  6 06:25:02 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2000" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
-Nov  6 06:25:02 headnode /USR/SBIN/CRON[323]: (CRON) info (No MTA installed, discarding output)
-Nov  6 07:17:01 headnode /USR/SBIN/CRON[752]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 07:23:00 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
-Nov  6 07:23:00 headnode dhclient: DHCPACK from 141.76.90.2
-Nov  6 07:23:00 headnode dhclient: bound to 141.76.90.101 -- renewal in 16799 seconds.
-Nov  6 08:17:01 headnode /USR/SBIN/CRON[825]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 09:17:01 headnode /USR/SBIN/CRON[840]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 10:17:01 headnode /USR/SBIN/CRON[984]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 11:17:01 headnode /USR/SBIN/CRON[1409]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 12:02:59 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
-Nov  6 12:02:59 headnode dhclient: DHCPACK from 141.76.90.2
-Nov  6 12:02:59 headnode dhclient: bound to 141.76.90.101 -- renewal in 15716 seconds.
-Nov  6 12:17:01 headnode /USR/SBIN/CRON[1507]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 13:17:01 headnode /USR/SBIN/CRON[1535]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 14:17:01 headnode /USR/SBIN/CRON[1695]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 15:17:01 headnode /USR/SBIN/CRON[2116]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 16:17:01 headnode /USR/SBIN/CRON[2729]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 16:24:55 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
-Nov  6 16:24:55 headnode dhclient: DHCPACK from 141.76.90.2
-Nov  6 16:24:55 headnode dhclient: bound to 141.76.90.101 -- renewal in 15534 seconds.
-Nov  6 17:17:02 headnode /USR/SBIN/CRON[3778]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-Nov  6 18:05:01 headnode /USR/SBIN/CRON[5064]: (root) CMD (/root/checkin_logs.sh)
+Nov  7 06:25:03 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2000" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Nov  7 06:25:03 headnode /USR/SBIN/CRON[15118]: (CRON) info (No MTA installed, discarding output)
+Nov  7 07:17:01 headnode /USR/SBIN/CRON[15801]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 08:17:01 headnode /USR/SBIN/CRON[16363]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 09:17:01 headnode /USR/SBIN/CRON[16915]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 09:35:50 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  7 09:35:50 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  7 09:35:50 headnode dhclient: bound to 141.76.90.101 -- renewal in 14145 seconds.
+Nov  7 09:57:50 headnode crontab[17453]: (root) BEGIN EDIT (root)
+Nov  7 09:57:58 headnode crontab[17453]: (root) END EDIT (root)
+Nov  7 10:17:01 headnode /USR/SBIN/CRON[17636]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 11:17:01 headnode /USR/SBIN/CRON[18281]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 12:17:01 headnode /USR/SBIN/CRON[18837]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 13:17:01 headnode /USR/SBIN/CRON[19389]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 13:31:35 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  7 13:31:35 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  7 13:31:35 headnode dhclient: bound to 141.76.90.101 -- renewal in 17706 seconds.
+Nov  7 14:17:01 headnode /USR/SBIN/CRON[19947]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 15:17:01 headnode /USR/SBIN/CRON[20500]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 16:17:01 headnode /USR/SBIN/CRON[21052]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 17:17:01 headnode /USR/SBIN/CRON[21476]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  7 18:05:01 headnode /USR/SBIN/CRON[21488]: (root) CMD (/root/checkin_logs.sh)

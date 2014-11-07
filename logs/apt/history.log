@@ -53,3 +53,8 @@ Start-Date: 2014-11-06  15:33:22
 Commandline: apt-get install htop
 Install: htop:amd64 (1.0.1-1)
 End-Date: 2014-11-06  15:33:24
+
+Start-Date: 2014-11-06  18:15:55
+Commandline: apt-get install whois
+Install: whois:amd64 (5.1.1~deb7u1)
+End-Date: 2014-11-06  18:15:58

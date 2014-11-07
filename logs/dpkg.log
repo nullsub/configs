@@ -1100,3 +1100,18 @@
 2014-11-06 15:33:24 status unpacked htop:amd64 1.0.1-1
 2014-11-06 15:33:24 status half-configured htop:amd64 1.0.1-1
 2014-11-06 15:33:24 status installed htop:amd64 1.0.1-1
+2014-11-06 18:15:55 startup archives unpack
+2014-11-06 18:15:55 install whois:amd64 <none> 5.1.1~deb7u1
+2014-11-06 18:15:55 status half-installed whois:amd64 5.1.1~deb7u1
+2014-11-06 18:15:56 status triggers-pending man-db:amd64 2.6.2-1
+2014-11-06 18:15:56 status half-installed whois:amd64 5.1.1~deb7u1
+2014-11-06 18:15:56 status unpacked whois:amd64 5.1.1~deb7u1
+2014-11-06 18:15:56 status unpacked whois:amd64 5.1.1~deb7u1
+2014-11-06 18:15:56 trigproc man-db:amd64 2.6.2-1 2.6.2-1
+2014-11-06 18:15:56 status half-configured man-db:amd64 2.6.2-1
+2014-11-06 18:15:57 status installed man-db:amd64 2.6.2-1
+2014-11-06 18:15:58 startup packages configure
+2014-11-06 18:15:58 configure whois:amd64 5.1.1~deb7u1 <none>
+2014-11-06 18:15:58 status unpacked whois:amd64 5.1.1~deb7u1
+2014-11-06 18:15:58 status half-configured whois:amd64 5.1.1~deb7u1
+2014-11-06 18:15:58 status installed whois:amd64 5.1.1~deb7u1
