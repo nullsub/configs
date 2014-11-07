@@ -48,3 +48,8 @@ Start-Date: 2014-11-04  23:45:01
 Commandline: apt-get install fortune
 Install: fortune-mod:amd64 (1.99.1-4), librecode0:amd64 (3.6-20, automatic), fortunes-min:amd64 (1.99.1-4, automatic)
 End-Date: 2014-11-04  23:45:03
+
+Start-Date: 2014-11-06  15:33:22
+Commandline: apt-get install htop
+Install: htop:amd64 (1.0.1-1)
+End-Date: 2014-11-06  15:33:24
