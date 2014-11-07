@@ -97,7 +97,7 @@ Git installieren und user git anlegen
 # apt-get install git
 # adduser git
 \end{lstlisting}
-configs repo anlegen
+configs Repo anlegen
 \begin{lstlisting}[style=Bash]
 # su git
 # mkdir configs
@@ -113,7 +113,7 @@ Nun können alle user mit
 \begin{lstlisting}[style=Bash]
 # git clone git@localhost:configs
 \end{lstlisting}
-auf das repository zugreifen.\\
+auf das Repository zugreifen.\\
 Der etc Baum ist als submodule eingebunden. Nach dem clone muss
 \begin{lstlisting}[style=Bash]
 # git submodule init
@@ -134,7 +134,7 @@ git push origin master
 \end{lstlisting}
 
 \subsection{/var/log/* check in}
-/var/log/* wird mit einem script in /root/chekin\_logs.sh nach git@localhost:configs gepusht
+/var/log/* wird mit einem Script in /root/chekin\_logs.sh nach git@localhost:configs gepusht
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
 cd /root/configs
@@ -154,8 +154,8 @@ cpuburn und lm-sensors installieren
 \begin{lstlisting}[style=Bash]
 # apt-get install cpuburn lm-sensors
 \end{lstlisting}
-Der BurnIn wird mit einem script in configs/BurnIn/stresstest.sh ausgeführt.\\
-burnP6 muss für jeden Core einmal gestartet werden. In der While Schleife wird periodisch der output von sensors geparsed mit einem Zeitstempel ausgegeben.
+Der BurnIn wird mit einem Script in configs/BurnIn/stresstest.sh ausgeführt.\\
+burnP6 muss für jeden Core gestartet werden. Die While Schleife gibt periodisch den geparsden output von sensors mit einem Zeitstempel aus.
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
 burnP6 &
