@@ -26,4 +26,4 @@ mheyde:x:1005:1005:,,,:/home/mheyde:/bin/bash
 hoehlig:x:1006:1006:,,,:/home/hoehlig:/bin/bash
 git:x:1000:1000:,,,:/home/git:/bin/bash
 messagebus:x:102:104::/var/run/dbus:/bin/false
-ewand:x:1008:1008::/home/ewand:/bin/bash
+distccd:x:103:65534::/:/bin/false
