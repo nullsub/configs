@@ -6,4 +6,4 @@
 # contains a valid list of hosts.
 #
 # Add a list of hostnames in one line, seperated by spaces, here.
-+zeroconf
+localhost
