@@ -73,11 +73,12 @@ $ ssh-keygen -b 1024 -N ''
 $ cat ~.ssh/id_rsa.pub >> ~./ssh/authorized_keys
 \end{lstlisting}
 
-Ein Sscript zur automatischen Nutzererstellung:
+Ein Script zur automatischen Nutzererstellung:
 (dazu muss das paket whois installiert sein)
 \lstinputlisting[style=Bash]{../aufgabe1/addusers.sh}
 
 \section{Parallel Distributed Shell}
+pdsh installieren
 \begin{lstlisting}[style=Bash]
 # apt-get install pdsh
 \end{lstlisting}
