@@ -969,3 +969,4 @@ Nov  4 16:19:00 headnode kernel: [    8.240521] ADDRCONF(NETDEV_CHANGE): eth1: l
 Nov  5 06:25:01 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2000" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
 Nov  6 06:25:02 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2000" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
 Nov  7 06:25:03 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2000" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Nov  8 06:25:02 headnode rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2000" x-info="http://www.rsyslog.com"] rsyslogd was HUPed

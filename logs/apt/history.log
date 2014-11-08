@@ -58,3 +58,13 @@ Start-Date: 2014-11-06  18:15:55
 Commandline: apt-get install whois
 Install: whois:amd64 (5.1.1~deb7u1)
 End-Date: 2014-11-06  18:15:58
+
+Start-Date: 2014-11-08  00:22:58
+Commandline: apt-get install hdparm
+Install: hdparm:amd64 (9.39-1+b1), powermgmt-base:amd64 (1.31, automatic)
+End-Date: 2014-11-08  00:23:00
+
+Start-Date: 2014-11-08  00:26:52
+Commandline: apt-get upgrade
+Upgrade: libcurl3-gnutls:amd64 (7.26.0-1+wheezy10, 7.26.0-1+wheezy11)
+End-Date: 2014-11-08  00:26:53

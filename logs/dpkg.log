@@ -1115,3 +1115,44 @@
 2014-11-06 18:15:58 status unpacked whois:amd64 5.1.1~deb7u1
 2014-11-06 18:15:58 status half-configured whois:amd64 5.1.1~deb7u1
 2014-11-06 18:15:58 status installed whois:amd64 5.1.1~deb7u1
+2014-11-08 00:22:58 startup archives unpack
+2014-11-08 00:22:58 install hdparm:amd64 <none> 9.39-1+b1
+2014-11-08 00:22:58 status half-installed hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:58 status triggers-pending man-db:amd64 2.6.2-1
+2014-11-08 00:22:58 status half-installed hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:58 status unpacked hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:58 status unpacked hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:58 install powermgmt-base:amd64 <none> 1.31
+2014-11-08 00:22:58 status half-installed powermgmt-base:amd64 1.31
+2014-11-08 00:22:58 status half-installed powermgmt-base:amd64 1.31
+2014-11-08 00:22:58 status unpacked powermgmt-base:amd64 1.31
+2014-11-08 00:22:58 status unpacked powermgmt-base:amd64 1.31
+2014-11-08 00:22:58 trigproc man-db:amd64 2.6.2-1 2.6.2-1
+2014-11-08 00:22:58 status half-configured man-db:amd64 2.6.2-1
+2014-11-08 00:22:59 status installed man-db:amd64 2.6.2-1
+2014-11-08 00:22:59 startup packages configure
+2014-11-08 00:22:59 configure hdparm:amd64 9.39-1+b1 <none>
+2014-11-08 00:22:59 status unpacked hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:59 status unpacked hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:59 status unpacked hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:59 status unpacked hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:59 status unpacked hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:59 status half-configured hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:59 status installed hdparm:amd64 9.39-1+b1
+2014-11-08 00:22:59 configure powermgmt-base:amd64 1.31 <none>
+2014-11-08 00:22:59 status unpacked powermgmt-base:amd64 1.31
+2014-11-08 00:22:59 status half-configured powermgmt-base:amd64 1.31
+2014-11-08 00:22:59 status installed powermgmt-base:amd64 1.31
+2014-11-08 00:26:52 startup archives unpack
+2014-11-08 00:26:52 upgrade libcurl3-gnutls:amd64 7.26.0-1+wheezy10 7.26.0-1+wheezy11
+2014-11-08 00:26:52 status half-configured libcurl3-gnutls:amd64 7.26.0-1+wheezy10
+2014-11-08 00:26:52 status unpacked libcurl3-gnutls:amd64 7.26.0-1+wheezy10
+2014-11-08 00:26:52 status half-installed libcurl3-gnutls:amd64 7.26.0-1+wheezy10
+2014-11-08 00:26:52 status half-installed libcurl3-gnutls:amd64 7.26.0-1+wheezy10
+2014-11-08 00:26:52 status unpacked libcurl3-gnutls:amd64 7.26.0-1+wheezy11
+2014-11-08 00:26:52 status unpacked libcurl3-gnutls:amd64 7.26.0-1+wheezy11
+2014-11-08 00:26:52 startup packages configure
+2014-11-08 00:26:52 configure libcurl3-gnutls:amd64 7.26.0-1+wheezy11 <none>
+2014-11-08 00:26:52 status unpacked libcurl3-gnutls:amd64 7.26.0-1+wheezy11
+2014-11-08 00:26:52 status half-configured libcurl3-gnutls:amd64 7.26.0-1+wheezy11
+2014-11-08 00:26:52 status installed libcurl3-gnutls:amd64 7.26.0-1+wheezy11
