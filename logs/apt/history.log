@@ -68,3 +68,43 @@ Start-Date: 2014-11-08  00:26:52
 Commandline: apt-get upgrade
 Upgrade: libcurl3-gnutls:amd64 (7.26.0-1+wheezy10, 7.26.0-1+wheezy11)
 End-Date: 2014-11-08  00:26:53
+
+Start-Date: 2014-11-08  23:29:57
+Commandline: apt-get install distcc
+Install: distcc:amd64 (3.1-5)
+End-Date: 2014-11-08  23:30:00
+
+Start-Date: 2014-11-08  23:45:13
+Commandline: apt-get install ccache
+Install: ccache:amd64 (3.1.7-1)
+End-Date: 2014-11-08  23:45:15
+
+Start-Date: 2014-11-09  00:17:45
+Commandline: apt-get install g++
+Install: g++-4.7:amd64 (4.7.2-5, automatic), g++:amd64 (4.7.2-1), libstdc++6-4.7-dev:amd64 (4.7.2-5, automatic)
+End-Date: 2014-11-09  00:17:49
+
+Start-Date: 2014-11-09  00:32:40
+Commandline: apt-get install distcc-pump
+Install: python-minimal:amd64 (2.7.3-4+deb7u1, automatic), distcc-pump:amd64 (3.1-5), python2.7:amd64 (2.7.3-6+deb7u2, automatic), python:amd64 (2.7.3-4+deb7u1, automatic), file:amd64 (5.11-2+deb7u5, automatic), mime-support:amd64 (3.52-1, automatic), python2.7-minimal:amd64 (2.7.3-6+deb7u2, automatic), python-support:amd64 (1.0.15, automatic), libmagic1:amd64 (5.11-2+deb7u5, automatic)
+End-Date: 2014-11-09  00:32:47
+
+Start-Date: 2014-11-09  00:51:35
+Commandline: apt-get install build-essential
+Install: libdpkg-perl:amd64 (1.16.15, automatic), bzip2:amd64 (1.0.6-4, automatic), fakeroot:amd64 (1.18.4-2, automatic), libalgorithm-merge-perl:amd64 (0.08-2, automatic), libalgorithm-diff-xs-perl:amd64 (0.04-2+b1, automatic), libtimedate-perl:amd64 (1.2000-1, automatic), build-essential:amd64 (11.5), dpkg-dev:amd64 (1.16.15, automatic), libfile-fcntllock-perl:amd64 (0.14-2, automatic), libalgorithm-diff-perl:amd64 (1.19.02-2, automatic)
+End-Date: 2014-11-09  00:51:41
+
+Start-Date: 2014-11-09  00:51:50
+Commandline: apt-get install automake
+Install: m4:amd64 (1.4.16-3, automatic), autoconf:amd64 (2.69-1, automatic), automake:amd64 (1.11.6-1), autotools-dev:amd64 (20120608.1, automatic)
+End-Date: 2014-11-09  00:51:53
+
+Start-Date: 2014-11-09  00:52:29
+Commandline: apt-get install liblzo2-2 liblzo2-dev lzop
+Install: lzop:amd64 (1.03-3), liblzo2-2:amd64 (2.06-1+deb7u1), liblzo2-dev:amd64 (2.06-1+deb7u1)
+End-Date: 2014-11-09  00:52:31
+
+Start-Date: 2014-11-09  01:00:03
+Commandline: apt-get install libglib2.0-dev
+Install: pkg-config:amd64 (0.26-1, automatic), libpcrecpp0:amd64 (8.30-5, automatic), libelf1:amd64 (0.152-1+wheezy1, automatic), libglib2.0-bin:amd64 (2.33.12+really2.32.4-5, automatic), libglib2.0-dev:amd64 (2.33.12+really2.32.4-5), zlib1g-dev:amd64 (1.2.7.dfsg-13, automatic), libpcre3-dev:amd64 (8.30-5, automatic)
+End-Date: 2014-11-09  01:00:07
