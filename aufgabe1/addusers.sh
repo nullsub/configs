@@ -22,7 +22,8 @@ do
 
 
 
-    useradd ${_username} -d /home/${_username} -s /bin/bash -U -m -p `mkpasswd ${_username}`
+    useradd ${_username} -d /home/${_username} -s \
+		/bin/bash -U -m -p `mkpasswd ${_username}`
     #cp -rf /etc/skel/. /home/${_username}
     _home=/home/${_username}
     mkdir ${_home}/.ssh
