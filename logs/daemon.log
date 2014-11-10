@@ -4,3 +4,544 @@ Nov  9 09:54:09 headnode dhclient: bound to 141.76.90.101 -- renewal in 16737 se
 Nov  9 14:33:07 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
 Nov  9 14:33:07 headnode dhclient: DHCPACK from 141.76.90.2
 Nov  9 14:33:07 headnode dhclient: bound to 141.76.90.101 -- renewal in 15512 seconds.
+Nov  9 18:51:39 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  9 18:51:39 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  9 18:51:39 headnode dhclient: bound to 141.76.90.101 -- renewal in 15321 seconds.
+Nov  9 23:07:00 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov  9 23:07:00 headnode dhclient: DHCPACK from 141.76.90.2
+Nov  9 23:07:00 headnode dhclient: bound to 141.76.90.101 -- renewal in 14819 seconds.
+Nov 10 03:13:59 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov 10 03:13:59 headnode dhclient: DHCPACK from 141.76.90.2
+Nov 10 03:13:59 headnode dhclient: bound to 141.76.90.101 -- renewal in 17388 seconds.
+Nov 10 08:03:47 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov 10 08:03:47 headnode dhclient: DHCPACK from 141.76.90.2
+Nov 10 08:03:47 headnode dhclient: bound to 141.76.90.101 -- renewal in 15824 seconds.
+Nov 10 12:27:31 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov 10 12:27:31 headnode dhclient: DHCPACK from 141.76.90.2
+Nov 10 12:27:31 headnode dhclient: bound to 141.76.90.101 -- renewal in 17122 seconds.
+Nov 10 13:20:28 headnode distccd[10074]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 13:20:28 headnode distccd[10120]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 13:20:29 headnode distccd[10074]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1006ms cc linux_termios.c
+Nov 10 13:20:29 headnode distccd[10165]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 13:20:30 headnode distccd[10120]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2030ms cc serialport.c
+Nov 10 13:20:30 headnode distccd[10165]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1005ms cc linux_termios.c
+Nov 10 13:20:31 headnode distccd[10214]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 13:20:31 headnode distccd[10257]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 13:20:32 headnode distccd[10257]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1010ms cc linux.c
+Nov 10 13:20:32 headnode distccd[10304]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 13:20:33 headnode distccd[10214]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2031ms cc serialport.c
+Nov 10 13:20:33 headnode distccd[10304]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1012ms cc linux.c
+Nov 10 13:41:42 headnode distccd[10403]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 13:41:43 headnode distccd[10403]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1031ms cc scripts/mod/empty.c
+Nov 10 15:17:36 headnode distccd[10578]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:17:37 headnode distccd[10621]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:17:39 headnode distccd[10578]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:2918ms gcc-4.7 scripts/mod/empty.c
+Nov 10 15:17:39 headnode distccd[10621]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1725ms gcc-4.7 scripts/mod/devicetable-offsets.c
+Nov 10 15:21:00 headnode distccd[10797]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:00 headnode distccd[10807]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:01 headnode distccd[10797]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1033ms gcc-4.7 scripts/mod/empty.c
+Nov 10 15:21:02 headnode distccd[10807]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1042ms gcc-4.7 scripts/mod/devicetable-offsets.c
+Nov 10 15:21:05 headnode distccd[10858]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:06 headnode distccd[10858]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1075ms gcc-4.7 kernel/bounds.c
+Nov 10 15:21:07 headnode distccd[10903]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:08 headnode distccd[10903]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1829ms gcc-4.7 arch/x86/kernel/asm-offsets.c
+Nov 10 15:21:09 headnode distccd[10990]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:09 headnode distccd[10991]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:11 headnode distccd[10990]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1748ms gcc-4.7 init/main.c
+Nov 10 15:21:11 headnode distccd[10991]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1994ms gcc-4.7 init/do_mounts.c
+Nov 10 15:21:11 headnode distccd[11042]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:11 headnode distccd[11083]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:12 headnode distccd[11042]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1289ms gcc-4.7 init/do_mounts_initrd.c
+Nov 10 15:21:13 headnode distccd[11083]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1235ms gcc-4.7 init/initramfs.c
+Nov 10 15:21:13 headnode distccd[11171]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:13 headnode distccd[11175]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:14 headnode distccd[11175]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1164ms gcc-4.7 init/calibrate.c
+Nov 10 15:21:14 headnode distccd[11171]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1179ms gcc-4.7 kernel/exec_domain.c
+Nov 10 15:21:14 headnode distccd[11226]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:14 headnode distccd[11267]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:15 headnode distccd[11226]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1193ms gcc-4.7 init/init_task.c
+Nov 10 15:21:16 headnode distccd[11267]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1138ms gcc-4.7 kernel/panic.c
+Nov 10 15:21:16 headnode distccd[11350]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:16 headnode distccd[11359]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:17 headnode distccd[11350]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1111ms gcc-4.7 init/version.c
+Nov 10 15:21:17 headnode distccd[11359]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1129ms gcc-4.7 arch/x86/crypto/aes_glue.c
+Nov 10 15:21:17 headnode distccd[11410]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:17 headnode distccd[11451]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:19 headnode distccd[11410]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1235ms gcc-4.7 arch/x86/ia32/sys_ia32.c
+Nov 10 15:21:19 headnode distccd[11500]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:20 headnode distccd[11451]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2414ms gcc-4.7 kernel/fork.c
+Nov 10 15:21:20 headnode distccd[11500]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1121ms gcc-4.7 arch/x86/ia32/ia32_signal.c
+Nov 10 15:21:20 headnode distccd[11546]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:20 headnode distccd[11592]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:21 headnode distccd[11546]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1009ms gcc-4.7 arch/x86/ia32/nosyscall.c
+Nov 10 15:21:21 headnode distccd[11638]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:21 headnode distccd[11592]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1136ms gcc-4.7 kernel/cpu.c
+Nov 10 15:21:22 headnode distccd[11684]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:22 headnode distccd[11638]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1003ms gcc-4.7 arch/x86/ia32/syscall_ia32.c
+Nov 10 15:21:23 headnode distccd[11730]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:23 headnode distccd[11684]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1216ms gcc-4.7 kernel/exit.c
+Nov 10 15:21:23 headnode distccd[11776]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:24 headnode distccd[11730]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1125ms gcc-4.7 mm/mempool.c
+Nov 10 15:21:24 headnode distccd[11822]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:25 headnode distccd[11822]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1148ms gcc-4.7 arch/x86/crypto/glue_helper.c
+Nov 10 15:21:26 headnode distccd[11776]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2186ms gcc-4.7 mm/filemap.c
+Nov 10 15:21:26 headnode distccd[11868]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:26 headnode distccd[11914]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:27 headnode distccd[11868]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1229ms gcc-4.7 fs/open.c
+Nov 10 15:21:27 headnode distccd[11914]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1148ms gcc-4.7 mm/oom_kill.c
+Nov 10 15:21:27 headnode distccd[11960]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:28 headnode distccd[12003]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:29 headnode distccd[11960]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1339ms gcc-4.7 kernel/softirq.c
+Nov 10 15:21:29 headnode distccd[12003]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1226ms gcc-4.7 fs/read_write.c
+Nov 10 15:21:29 headnode distccd[12052]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:29 headnode distccd[12098]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:30 headnode distccd[12052]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1149ms gcc-4.7 arch/x86/crypto/des3_ede_glue.c
+Nov 10 15:21:30 headnode distccd[12098]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1129ms gcc-4.7 fs/file_table.c
+Nov 10 15:21:31 headnode distccd[12146]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:31 headnode distccd[12189]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:32 headnode distccd[12146]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1144ms gcc-4.7 arch/x86/crypto/camellia_glue.c
+Nov 10 15:21:32 headnode distccd[12189]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1063ms gcc-4.7 mm/maccess.c
+Nov 10 15:21:32 headnode distccd[12238]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:32 headnode distccd[12279]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:33 headnode distccd[12279]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1181ms gcc-4.7 arch/x86/crypto/blowfish_glue.c
+Nov 10 15:21:34 headnode distccd[12328]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:35 headnode distccd[12328]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1071ms gcc-4.7 arch/x86/crypto/twofish_glue.c
+Nov 10 15:21:35 headnode distccd[12374]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:35 headnode distccd[12238]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:3220ms gcc-4.7 mm/page_alloc.c
+Nov 10 15:21:36 headnode distccd[12420]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:36 headnode distccd[12374]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1157ms gcc-4.7 arch/x86/crypto/twofish_glue_3way.c
+Nov 10 15:21:37 headnode distccd[12466]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:37 headnode distccd[12420]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1178ms gcc-4.7 mm/page-writeback.c
+Nov 10 15:21:37 headnode distccd[12512]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:38 headnode distccd[12466]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1121ms gcc-4.7 arch/x86/crypto/salsa20_glue.c
+Nov 10 15:21:38 headnode distccd[12558]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:39 headnode distccd[12512]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1262ms gcc-4.7 mm/readahead.c
+Nov 10 15:21:39 headnode distccd[12604]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:39 headnode distccd[12558]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1130ms gcc-4.7 arch/x86/crypto/serpent_sse2_glue.c
+Nov 10 15:21:39 headnode distccd[12650]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:40 headnode distccd[12604]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1149ms gcc-4.7 mm/swap.c
+Nov 10 15:21:41 headnode distccd[12650]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1150ms gcc-4.7 arch/x86/crypto/aesni-intel_glue.c
+Nov 10 15:21:41 headnode distccd[12698]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:41 headnode distccd[12742]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:42 headnode distccd[12698]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1148ms gcc-4.7 mm/truncate.c
+Nov 10 15:21:42 headnode distccd[12742]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1131ms gcc-4.7 arch/x86/crypto/fpu.c
+Nov 10 15:21:42 headnode distccd[12839]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:42 headnode distccd[12878]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:43 headnode distccd[12878]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1179ms gcc-4.7 kernel/resource.c
+Nov 10 15:21:44 headnode distccd[12927]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:45 headnode distccd[12839]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2332ms gcc-4.7 mm/vmscan.c
+Nov 10 15:21:45 headnode distccd[12974]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:45 headnode distccd[12927]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1154ms gcc-4.7 fs/super.c
+Nov 10 15:21:45 headnode distccd[13020]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:46 headnode distccd[12974]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1331ms gcc-4.7 kernel/sysctl.c
+Nov 10 15:21:46 headnode distccd[13066]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:46 headnode distccd[13020]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1111ms gcc-4.7 fs/char_dev.c
+Nov 10 15:21:47 headnode distccd[13112]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:48 headnode distccd[13066]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1148ms gcc-4.7 arch/x86/crypto/ghash-clmulni-intel_glue.c
+Nov 10 15:21:48 headnode distccd[13158]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:48 headnode distccd[13112]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1144ms gcc-4.7 fs/stat.c
+Nov 10 15:21:48 headnode distccd[13204]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:49 headnode distccd[13158]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1165ms gcc-4.7 arch/x86/crypto/crc32c-intel_glue.c
+Nov 10 15:21:49 headnode distccd[13250]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:49 headnode distccd[13204]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1181ms gcc-4.7 fs/exec.c
+Nov 10 15:21:50 headnode distccd[13296]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:50 headnode distccd[13250]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1144ms gcc-4.7 arch/x86/crypto/sha1_ssse3_glue.c
+Nov 10 15:21:51 headnode distccd[13342]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:51 headnode distccd[13296]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1228ms gcc-4.7 kernel/sysctl_binary.c
+Nov 10 15:21:51 headnode distccd[13388]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:52 headnode distccd[13342]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1134ms gcc-4.7 arch/x86/crypto/crc32-pclmul_glue.c
+Nov 10 15:21:52 headnode distccd[13434]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:52 headnode distccd[13388]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1145ms gcc-4.7 kernel/capability.c
+Nov 10 15:21:52 headnode distccd[13480]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:54 headnode distccd[13480]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1147ms gcc-4.7 kernel/ptrace.c
+Nov 10 15:21:54 headnode distccd[13527]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:54 headnode distccd[13434]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2182ms gcc-4.7 mm/shmem.c
+Nov 10 15:21:55 headnode distccd[13573]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:55 headnode distccd[13527]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1087ms gcc-4.7 kernel/user.c
+Nov 10 15:21:55 headnode distccd[13619]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:56 headnode distccd[13573]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1134ms gcc-4.7 mm/util.c
+Nov 10 15:21:56 headnode distccd[13665]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:57 headnode distccd[13665]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1067ms gcc-4.7 mm/mmzone.c
+Nov 10 15:21:57 headnode distccd[13711]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:58 headnode distccd[13619]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2188ms gcc-4.7 kernel/signal.c
+Nov 10 15:21:58 headnode distccd[13757]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:58 headnode distccd[13711]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1145ms gcc-4.7 mm/vmstat.c
+Nov 10 15:21:59 headnode distccd[13803]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:21:59 headnode distccd[13757]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1131ms gcc-4.7 arch/x86/crypto/sha256_ssse3_glue.c
+Nov 10 15:22:00 headnode distccd[13849]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:00 headnode distccd[13803]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1152ms gcc-4.7 fs/pipe.c
+Nov 10 15:22:00 headnode distccd[13895]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:01 headnode distccd[13849]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1135ms gcc-4.7 arch/x86/crypto/sha512_ssse3_glue.c
+Nov 10 15:22:01 headnode distccd[13941]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:02 headnode distccd[13941]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1127ms gcc-4.7 arch/x86/crypto/crct10dif-pclmul_glue.c
+Nov 10 15:22:02 headnode distccd[13895]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2180ms gcc-4.7 fs/namei.c
+Nov 10 15:22:03 headnode distccd[13987]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:03 headnode distccd[14033]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:04 headnode distccd[13987]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1139ms gcc-4.7 arch/x86/crypto/camellia_aesni_avx_glue.c
+Nov 10 15:22:04 headnode distccd[14033]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1158ms gcc-4.7 fs/fcntl.c
+Nov 10 15:22:04 headnode distccd[14079]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:04 headnode distccd[14122]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:05 headnode distccd[14079]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1241ms gcc-4.7 kernel/sys.c
+Nov 10 15:22:05 headnode distccd[14122]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1181ms gcc-4.7 arch/x86/crypto/cast5_avx_glue.c
+Nov 10 15:22:06 headnode distccd[14173]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:06 headnode distccd[14214]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:07 headnode distccd[14173]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1203ms gcc-4.7 kernel/kmod.c
+Nov 10 15:22:07 headnode distccd[14214]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1158ms gcc-4.7 arch/x86/crypto/cast6_avx_glue.c
+Nov 10 15:22:08 headnode distccd[14305]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:08 headnode distccd[14306]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:09 headnode distccd[14305]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1303ms gcc-4.7 arch/x86/crypto/twofish_avx_glue.c
+Nov 10 15:22:09 headnode distccd[14355]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:10 headnode distccd[14306]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2270ms gcc-4.7 kernel/workqueue.c
+Nov 10 15:22:10 headnode distccd[14355]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:22:10 headnode distccd[14355]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:22:10 headnode distccd[14355]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:22:10 headnode distccd[14355]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:864ms 
+Nov 10 15:22:15 headnode distccd[14403]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:15 headnode distccd[14444]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:17 headnode distccd[14403]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1837ms gcc-4.7 arch/x86/kernel/process_64.c
+Nov 10 15:22:18 headnode distccd[14444]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:2129ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/kvm_main.c
+Nov 10 15:22:18 headnode distccd[14499]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:18 headnode distccd[14542]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:19 headnode distccd[14499]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1622ms gcc-4.7 kernel/workqueue.c
+Nov 10 15:22:19 headnode distccd[14542]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1322ms gcc-4.7 arch/x86/crypto/serpent_avx_glue.c
+Nov 10 15:22:20 headnode distccd[14596]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:20 headnode distccd[14637]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:21 headnode distccd[14596]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1129ms gcc-4.7 arch/x86/kernel/irq_64.c
+Nov 10 15:22:21 headnode distccd[14637]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1173ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/coalesced_mmio.c
+Nov 10 15:22:21 headnode distccd[14688]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:22 headnode distccd[14732]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:23 headnode distccd[14688]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1253ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/irq_comm.c
+Nov 10 15:22:23 headnode distccd[14778]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:23 headnode distccd[14732]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1241ms gcc-4.7 arch/x86/kernel/dumpstack_64.c
+Nov 10 15:22:23 headnode distccd[14824]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:24 headnode distccd[14778]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1159ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/eventfd.c
+Nov 10 15:22:24 headnode distccd[14824]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1092ms gcc-4.7 arch/x86/kernel/time.c
+Nov 10 15:22:24 headnode distccd[14872]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:25 headnode distccd[14916]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:26 headnode distccd[14872]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1162ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/irqchip.c
+Nov 10 15:22:26 headnode distccd[14916]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1129ms gcc-4.7 arch/x86/kernel/ioport.c
+Nov 10 15:22:26 headnode distccd[14995]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:26 headnode distccd[15005]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:27 headnode distccd[14995]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1214ms gcc-4.7 arch/x86/crypto/camellia_aesni_avx2_glue.c
+Nov 10 15:22:27 headnode distccd[15005]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1218ms gcc-4.7 arch/x86/kernel/ldt.c
+Nov 10 15:22:27 headnode distccd[15064]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:28 headnode distccd[15097]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:29 headnode distccd[15064]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1187ms gcc-4.7 arch/x86/kernel/dumpstack.c
+Nov 10 15:22:29 headnode distccd[15097]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1214ms gcc-4.7 arch/x86/crypto/serpent_avx2_glue.c
+Nov 10 15:22:29 headnode distccd[15169]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:29 headnode distccd[15189]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:30 headnode distccd[15169]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1220ms gcc-4.7 arch/x86/kernel/nmi.c
+Nov 10 15:22:30 headnode distccd[15189]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1272ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/vfio.c
+Nov 10 15:22:31 headnode distccd[15239]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:31 headnode distccd[15284]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:32 headnode distccd[15239]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1185ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/assigned-dev.c
+Nov 10 15:22:32 headnode distccd[15284]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1183ms gcc-4.7 arch/x86/kernel/setup.c
+Nov 10 15:22:32 headnode distccd[15330]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:32 headnode distccd[15376]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:33 headnode distccd[15330]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1179ms gcc-4.7 kernel/pid.c
+Nov 10 15:22:33 headnode distccd[15376]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1122ms gcc-4.7 arch/x86/kernel/x86_init.c
+Nov 10 15:22:34 headnode distccd[15422]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:34 headnode distccd[15468]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:35 headnode distccd[15422]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1106ms gcc-4.7 kernel/task_work.c
+Nov 10 15:22:35 headnode distccd[15468]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1121ms gcc-4.7 arch/x86/kernel/i8259.c
+Nov 10 15:22:35 headnode distccd[15514]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:35 headnode distccd[15560]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:36 headnode distccd[15514]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1131ms gcc-4.7 kernel/extable.c
+Nov 10 15:22:36 headnode distccd[15560]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1154ms gcc-4.7 arch/x86/kernel/irqinit.c
+Nov 10 15:22:36 headnode distccd[15608]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:37 headnode distccd[15652]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:38 headnode distccd[15608]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1088ms gcc-4.7 kernel/params.c
+Nov 10 15:22:38 headnode distccd[15652]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1111ms gcc-4.7 arch/x86/kernel/jump_label.c
+Nov 10 15:22:38 headnode distccd[15700]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:38 headnode distccd[15744]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:39 headnode distccd[15700]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1070ms gcc-4.7 arch/x86/kernel/irq_work.c
+Nov 10 15:22:39 headnode distccd[15744]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1094ms gcc-4.7 kernel/kthread.c
+Nov 10 15:22:39 headnode distccd[15792]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:40 headnode distccd[15836]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:41 headnode distccd[15792]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1119ms gcc-4.7 arch/x86/kernel/probe_roms.c
+Nov 10 15:22:41 headnode distccd[15836]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1005ms gcc-4.7 kernel/sys_ni.c
+Nov 10 15:22:41 headnode distccd[15884]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:41 headnode distccd[15927]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:42 headnode distccd[15884]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1167ms gcc-4.7 kernel/nsproxy.c
+Nov 10 15:22:42 headnode distccd[15927]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1141ms gcc-4.7 arch/x86/kernel/sys_x86_64.c
+Nov 10 15:22:42 headnode distccd[15990]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:42 headnode distccd[16017]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:43 headnode distccd[15990]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1141ms gcc-4.7 kernel/notifier.c
+Nov 10 15:22:43 headnode distccd[16017]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1150ms gcc-4.7 arch/x86/kernel/x8664_ksyms_64.c
+Nov 10 15:22:44 headnode distccd[16099]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:44 headnode distccd[16109]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:45 headnode distccd[16099]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1159ms gcc-4.7 kernel/ksysfs.c
+Nov 10 15:22:45 headnode distccd[16109]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1176ms gcc-4.7 arch/x86/kernel/syscall_64.c
+Nov 10 15:22:45 headnode distccd[16199]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:45 headnode distccd[16201]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:46 headnode distccd[16201]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1097ms gcc-4.7 arch/x86/kernel/vsyscall_gtod.c
+Nov 10 15:22:46 headnode distccd[16199]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1170ms gcc-4.7 mm/backing-dev.c
+Nov 10 15:22:47 headnode distccd[16251]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:47 headnode distccd[16296]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:48 headnode distccd[16251]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1148ms gcc-4.7 arch/x86/kernel/vsyscall_64.c
+Nov 10 15:22:48 headnode distccd[16296]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1093ms gcc-4.7 mm/mm_init.c
+Nov 10 15:22:48 headnode distccd[16344]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:48 headnode distccd[16385]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:49 headnode distccd[16344]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1158ms gcc-4.7 arch/x86/kernel/espfix_64.c
+Nov 10 15:22:49 headnode distccd[16385]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1176ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/iommu.c
+Nov 10 15:22:49 headnode distccd[16434]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:50 headnode distccd[16480]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:50 headnode distccd[16434]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1083ms gcc-4.7 arch/x86/kernel/ksysfs.c
+Nov 10 15:22:51 headnode distccd[16526]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:51 headnode distccd[16480]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1153ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/async_pf.c
+Nov 10 15:22:51 headnode distccd[16572]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:52 headnode distccd[16526]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1128ms gcc-4.7 arch/x86/kernel/bootflag.c
+Nov 10 15:22:52 headnode distccd[16618]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:53 headnode distccd[16618]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1138ms gcc-4.7 arch/x86/kernel/e820.c
+Nov 10 15:22:54 headnode distccd[16664]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:55 headnode distccd[16664]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1141ms gcc-4.7 arch/x86/kernel/pci-dma.c
+Nov 10 15:22:55 headnode distccd[16710]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:55 headnode distccd[16572]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:4305ms gcc-4.7 arch/x86/kvm/x86.c
+Nov 10 15:22:56 headnode distccd[16756]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:56 headnode distccd[16710]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1113ms gcc-4.7 arch/x86/kernel/quirks.c
+Nov 10 15:22:57 headnode distccd[16802]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:58 headnode distccd[16802]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1067ms gcc-4.7 arch/x86/kernel/topology.c
+Nov 10 15:22:58 headnode distccd[16848]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:22:59 headnode distccd[16848]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1099ms gcc-4.7 arch/x86/kernel/kdebugfs.c
+Nov 10 15:23:00 headnode distccd[16894]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:00 headnode distccd[16756]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:4222ms gcc-4.7 arch/x86/kvm/mmu.c
+Nov 10 15:23:00 headnode distccd[16940]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:01 headnode distccd[16894]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1115ms gcc-4.7 arch/x86/kernel/alternative.c
+Nov 10 15:23:01 headnode distccd[16986]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:01 headnode distccd[16940]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1132ms gcc-4.7 mm/mmu_context.c
+Nov 10 15:23:02 headnode distccd[17032]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:02 headnode distccd[16986]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1108ms gcc-4.7 arch/x86/kernel/i8253.c
+Nov 10 15:23:02 headnode distccd[17078]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:03 headnode distccd[17032]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1118ms gcc-4.7 mm/percpu.c
+Nov 10 15:23:03 headnode distccd[17124]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:03 headnode distccd[17078]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1089ms gcc-4.7 arch/x86/kernel/pci-nommu.c
+Nov 10 15:23:03 headnode distccd[17171]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:04 headnode distccd[17124]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1155ms gcc-4.7 mm/slab_common.c
+Nov 10 15:23:05 headnode distccd[17171]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1125ms gcc-4.7 arch/x86/kernel/hw_breakpoint.c
+Nov 10 15:23:05 headnode distccd[17217]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:05 headnode distccd[17263]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:06 headnode distccd[17217]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1172ms gcc-4.7 mm/compaction.c
+Nov 10 15:23:06 headnode distccd[17263]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1114ms gcc-4.7 arch/x86/kernel/tsc.c
+Nov 10 15:23:06 headnode distccd[17309]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:06 headnode distccd[17355]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:07 headnode distccd[17309]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1098ms gcc-4.7 mm/vmacache.c
+Nov 10 15:23:07 headnode distccd[17355]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1048ms gcc-4.7 arch/x86/kernel/tsc_msr.c
+Nov 10 15:23:08 headnode distccd[17444]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:08 headnode distccd[17443]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:09 headnode distccd[17444]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1138ms gcc-4.7 arch/x86/kernel/io_delay.c
+Nov 10 15:23:09 headnode distccd[17443]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1184ms gcc-4.7 mm/interval_tree.c
+Nov 10 15:23:09 headnode distccd[17513]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:09 headnode distccd[17536]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:10 headnode distccd[17513]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1111ms gcc-4.7 mm/list_lru.c
+Nov 10 15:23:10 headnode distccd[17536]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1170ms gcc-4.7 arch/x86/kernel/rtc.c
+Nov 10 15:23:11 headnode distccd[17618]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:11 headnode distccd[17628]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:12 headnode distccd[17628]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1157ms gcc-4.7 arch/x86/kernel/pci-iommu_table.c
+Nov 10 15:23:12 headnode distccd[17618]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1207ms gcc-4.7 mm/workingset.c
+Nov 10 15:23:12 headnode distccd[17717]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:12 headnode distccd[17720]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:13 headnode distccd[17717]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1006ms gcc-4.7 arch/x86/kernel/resource.c
+Nov 10 15:23:13 headnode distccd[17720]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1103ms gcc-4.7 mm/iov_iter.c
+Nov 10 15:23:13 headnode distccd[17771]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:13 headnode distccd[17812]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:14 headnode distccd[17771]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1205ms gcc-4.7 arch/x86/kernel/process.c
+Nov 10 15:23:15 headnode distccd[17812]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1152ms gcc-4.7 mm/debug.c
+Nov 10 15:23:15 headnode distccd[17899]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:15 headnode distccd[17904]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:16 headnode distccd[17899]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1227ms gcc-4.7 arch/x86/kernel/i387.c
+Nov 10 15:23:16 headnode distccd[17904]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1253ms gcc-4.7 mm/fremap.c
+Nov 10 15:23:16 headnode distccd[17992]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:16 headnode distccd[17996]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:18 headnode distccd[17996]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1403ms gcc-4.7 kernel/cred.c
+Nov 10 15:23:18 headnode distccd[18045]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:19 headnode distccd[17992]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2401ms gcc-4.7 arch/x86/kvm/emulate.c
+Nov 10 15:23:19 headnode distccd[18091]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:19 headnode distccd[18045]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1157ms gcc-4.7 kernel/reboot.c
+Nov 10 15:23:20 headnode distccd[18137]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:20 headnode distccd[18091]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1155ms gcc-4.7 arch/x86/kvm/i8259.c
+Nov 10 15:23:21 headnode distccd[18183]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:21 headnode distccd[18137]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1117ms gcc-4.7 arch/x86/kernel/xsave.c
+Nov 10 15:23:21 headnode distccd[18229]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:22 headnode distccd[18183]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1168ms gcc-4.7 arch/x86/kvm/irq.c
+Nov 10 15:23:22 headnode distccd[18229]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1170ms gcc-4.7 arch/x86/kernel/ptrace.c
+Nov 10 15:23:22 headnode distccd[18277]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:22 headnode distccd[18318]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:23 headnode distccd[18277]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1168ms gcc-4.7 arch/x86/kvm/lapic.c
+Nov 10 15:23:23 headnode distccd[18318]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1149ms gcc-4.7 arch/x86/kernel/tls.c
+Nov 10 15:23:24 headnode distccd[18409]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:24 headnode distccd[18410]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:25 headnode distccd[18409]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1121ms gcc-4.7 kernel/async.c
+Nov 10 15:23:25 headnode distccd[18410]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1215ms gcc-4.7 mm/gup.c
+Nov 10 15:23:25 headnode distccd[18482]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:25 headnode distccd[18505]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:26 headnode distccd[18482]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1014ms gcc-4.7 kernel/range.c
+Nov 10 15:23:26 headnode distccd[18505]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1137ms gcc-4.7 mm/highmem.c
+Nov 10 15:23:26 headnode distccd[18553]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:27 headnode distccd[18594]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:28 headnode distccd[18553]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1158ms gcc-4.7 kernel/groups.c
+Nov 10 15:23:28 headnode distccd[18643]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:29 headnode distccd[18594]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2160ms gcc-4.7 mm/memory.c
+Nov 10 15:23:29 headnode distccd[18643]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1155ms gcc-4.7 arch/x86/kvm/i8254.c
+Nov 10 15:23:29 headnode distccd[18698]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:29 headnode distccd[18732]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:30 headnode distccd[18698]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1259ms gcc-4.7 arch/x86/kvm/cpuid.c
+Nov 10 15:23:31 headnode distccd[18732]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1262ms gcc-4.7 mm/mincore.c
+Nov 10 15:23:31 headnode distccd[18781]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:31 headnode distccd[18827]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:32 headnode distccd[18781]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1179ms gcc-4.7 mm/mlock.c
+Nov 10 15:23:32 headnode distccd[18827]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1159ms gcc-4.7 arch/x86/kvm/pmu.c
+Nov 10 15:23:32 headnode distccd[18904]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:32 headnode distccd[18916]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:35 headnode distccd[18904]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2222ms gcc-4.7 mm/mmap.c
+Nov 10 15:23:35 headnode distccd[18965]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:36 headnode distccd[18916]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:3423ms gcc-4.7 arch/x86/kvm/vmx.c
+Nov 10 15:23:36 headnode distccd[19011]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:36 headnode distccd[18965]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1081ms gcc-4.7 kernel/smpboot.c
+Nov 10 15:23:36 headnode distccd[19057]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:37 headnode distccd[19057]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1131ms gcc-4.7 kernel/bpf/core.c
+Nov 10 15:23:38 headnode distccd[19103]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:38 headnode distccd[19011]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:2192ms gcc-4.7 arch/x86/kvm/svm.c
+Nov 10 15:23:38 headnode distccd[19149]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:40 headnode distccd[19149]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1093ms gcc-4.7 kernel/irq/irqdesc.c
+Nov 10 15:23:40 headnode distccd[19195]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:41 headnode distccd[19195]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1085ms gcc-4.7 kernel/irq/handle.c
+Nov 10 15:23:41 headnode distccd[19103]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:3192ms gcc-4.7 kernel/events/core.c
+Nov 10 15:23:41 headnode distccd[19241]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:42 headnode distccd[19287]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:42 headnode distccd[19241]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1106ms gcc-4.7 kernel/irq/manage.c
+Nov 10 15:23:43 headnode distccd[19287]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1121ms gcc-4.7 kernel/events/ring_buffer.c
+Nov 10 15:23:43 headnode distccd[19335]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:43 headnode distccd[19379]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:44 headnode distccd[19335]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1100ms gcc-4.7 arch/x86/kernel/step.c
+Nov 10 15:23:44 headnode distccd[19379]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1117ms gcc-4.7 kernel/events/callchain.c
+Nov 10 15:23:44 headnode distccd[19427]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:44 headnode distccd[19471]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:45 headnode distccd[19427]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1038ms gcc-4.7 arch/x86/kernel/i8237.c
+Nov 10 15:23:45 headnode distccd[19471]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1125ms gcc-4.7 kernel/events/hw_breakpoint.c
+Nov 10 15:23:45 headnode distccd[19517]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:47 headnode distccd[19517]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1100ms gcc-4.7 arch/x86/kernel/stacktrace.c
+Nov 10 15:23:47 headnode distccd[19565]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:47 headnode distccd[19609]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:48 headnode distccd[19565]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1144ms gcc-4.7 kernel/events/uprobes.c
+Nov 10 15:23:48 headnode distccd[19609]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1164ms gcc-4.7 arch/x86/kernel/acpi/boot.c
+Nov 10 15:23:48 headnode distccd[19655]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:48 headnode distccd[19701]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:49 headnode distccd[19655]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1160ms gcc-4.7 mm/mprotect.c
+Nov 10 15:23:50 headnode distccd[19701]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1126ms gcc-4.7 arch/x86/kernel/acpi/sleep.c
+Nov 10 15:23:50 headnode distccd[19748]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:50 headnode distccd[19793]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:23:50 headnode distccd[19748]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:23:50 headnode distccd[19748]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:23:50 headnode distccd[19748]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:23:50 headnode distccd[19748]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:414ms 
+Nov 10 15:23:50 headnode distccd[19793]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:23:50 headnode distccd[19793]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:23:50 headnode distccd[19793]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:23:50 headnode distccd[19793]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:199ms 
+Nov 10 15:24:13 headnode distccd[19839]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:24:13 headnode distccd[19885]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:24:14 headnode distccd[19839]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1031ms gcc-4.7 scripts/mod/empty.c
+Nov 10 15:24:15 headnode distccd[19933]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:24:15 headnode distccd[19885]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1268ms gcc-4.7 kernel/bounds.c
+Nov 10 15:24:16 headnode distccd[19933]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1041ms gcc-4.7 scripts/mod/devicetable-offsets.c
+Nov 10 15:29:51 headnode distccd[20056]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:29:51 headnode distccd[20077]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:29:53 headnode distccd[20056]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:2014ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/kvm_main.c
+Nov 10 15:29:54 headnode distccd[20077]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:2096ms gcc-4.7 arch/x86/kernel/ldt.c
+Nov 10 15:29:54 headnode distccd[20132]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:29:54 headnode distccd[20178]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:29:55 headnode distccd[20132]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1135ms gcc-4.7 arch/x86/crypto/crc32-pclmul_glue.c
+Nov 10 15:29:56 headnode distccd[20227]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:29:56 headnode distccd[20178]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1954ms gcc-4.7 kernel/sysctl.c
+Nov 10 15:29:57 headnode distccd[20227]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1133ms gcc-4.7 arch/x86/crypto/sha256_ssse3_glue.c
+Nov 10 15:29:58 headnode distccd[20273]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:29:59 headnode distccd[20319]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:29:59 headnode distccd[20273]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:29:59 headnode distccd[20273]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:29:59 headnode distccd[20273]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:29:59 headnode distccd[20273]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:848ms 
+Nov 10 15:29:59 headnode distccd[20319]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:29:59 headnode distccd[20319]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:29:59 headnode distccd[20319]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:29:59 headnode distccd[20319]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:484ms 
+Nov 10 15:30:57 headnode distccd[20419]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:30:57 headnode distccd[20460]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:30:59 headnode distccd[20419]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1806ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/coalesced_mmio.c
+Nov 10 15:30:59 headnode distccd[20460]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1861ms gcc-4.7 arch/x86/kernel/x86_init.c
+Nov 10 15:30:59 headnode distccd[20517]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:30:59 headnode distccd[20558]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:31:01 headnode distccd[20517]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1264ms gcc-4.7 kernel/sysctl_binary.c
+Nov 10 15:31:01 headnode distccd[20558]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1203ms gcc-4.7 arch/x86/crypto/sha512_ssse3_glue.c
+Nov 10 15:31:01 headnode distccd[20609]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:31:01 headnode distccd[20650]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:31:02 headnode distccd[20609]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:31:02 headnode distccd[20650]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:31:02 headnode distccd[20609]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:02 headnode distccd[20650]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:02 headnode distccd[20609]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:02 headnode distccd[20650]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:02 headnode distccd[20650]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:830ms 
+Nov 10 15:31:02 headnode distccd[20609]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:1002ms 
+Nov 10 15:31:10 headnode distccd[20733]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:31:10 headnode distccd[20742]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:31:12 headnode distccd[20742]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1925ms gcc-4.7 arch/x86/kernel/sys_x86_64.c
+Nov 10 15:31:12 headnode distccd[20733]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:2230ms gcc-4.7 arch/x86/kvm/../../../virt/kvm/iommu.c
+Nov 10 15:31:12 headnode distccd[20799]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:31:12 headnode distccd[20840]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:31:13 headnode distccd[20799]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:31:13 headnode distccd[20799]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:13 headnode distccd[20799]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:13 headnode distccd[20840]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:31:13 headnode distccd[20840]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:13 headnode distccd[20840]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:31:13 headnode distccd[20840]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:917ms 
+Nov 10 15:31:13 headnode distccd[20799]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:1086ms 
+Nov 10 15:33:00 headnode distccd[20905]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:33:00 headnode distccd[20935]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:33:02 headnode distccd[20935]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:2058ms gcc-4.7 arch/x86/kernel/espfix_64.c
+Nov 10 15:33:02 headnode distccd[20905]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:2249ms gcc-4.7 arch/x86/kvm/x86.c
+Nov 10 15:33:03 headnode distccd[20996]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:33:03 headnode distccd[21033]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:33:05 headnode distccd[20996]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1811ms gcc-4.7 kernel/capability.c
+Nov 10 15:33:05 headnode distccd[21033]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1945ms gcc-4.7 arch/x86/crypto/crct10dif-pclmul_glue.c
+Nov 10 15:35:08 headnode distccd[21172]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:35:08 headnode distccd[21177]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:35:09 headnode distccd[21177]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1301ms gcc-4.7 arch/x86/kernel/espfix_64.c
+Nov 10 15:35:09 headnode distccd[21226]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:35:10 headnode distccd[21226]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1072ms gcc-4.7 arch/x86/kernel/ksysfs.c
+Nov 10 15:35:11 headnode distccd[21272]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:35:12 headnode distccd[21272]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1117ms gcc-4.7 arch/x86/kernel/bootflag.c
+Nov 10 15:35:12 headnode distccd[21172]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:4430ms gcc-4.7 arch/x86/kvm/x86.c
+Nov 10 15:35:12 headnode distccd[21318]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:35:13 headnode distccd[21364]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:35:13 headnode distccd[21318]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1170ms gcc-4.7 arch/x86/kernel/e820.c
+Nov 10 15:35:14 headnode distccd[21410]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:35:14 headnode distccd[21364]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:35:14 headnode distccd[21364]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:35:14 headnode distccd[21364]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:35:14 headnode distccd[21364]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:1874ms 
+Nov 10 15:35:14 headnode distccd[21410]: (dcc_collect_child) ERROR: Client fd disconnected, killing job
+Nov 10 15:35:14 headnode distccd[21410]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:35:14 headnode distccd[21410]: (dcc_writex) ERROR: failed to write: Broken pipe
+Nov 10 15:35:14 headnode distccd[21410]: (dcc_job_summary) client: NOTSOCKET CLI_DISCONN exit:107 sig:0 core:0 ret:107 time:594ms 
+Nov 10 15:39:13 headnode distccd[21461]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:39:13 headnode distccd[21502]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:39:15 headnode distccd[21461]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1809ms gcc-4.7 arch/x86/kvm/mmu.c
+Nov 10 15:39:15 headnode distccd[21502]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1977ms gcc-4.7 arch/x86/kernel/pci-dma.c
+Nov 10 15:39:15 headnode distccd[21559]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:39:16 headnode distccd[21600]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:39:17 headnode distccd[21559]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1930ms gcc-4.7 kernel/capability.c
+Nov 10 15:39:18 headnode distccd[21600]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1899ms gcc-4.7 arch/x86/crypto/crct10dif-pclmul_glue.c
+Nov 10 15:40:31 headnode distccd[21726]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:40:31 headnode distccd[21744]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:40:32 headnode distccd[21726]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1029ms gcc-4.7 scripts/mod/empty.c
+Nov 10 15:40:32 headnode distccd[21744]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1043ms gcc-4.7 scripts/mod/devicetable-offsets.c
+Nov 10 15:41:45 headnode distccd[21828]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:41:45 headnode distccd[21838]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:41:46 headnode distccd[21828]: (dcc_job_summary) client: NOTSOCKET COMPILE_OK exit:0 sig:0 core:0 ret:0 time:1029ms /usr/bin/gcc-4.7 scripts/mod/empty.c
+Nov 10 15:41:46 headnode distccd[21838]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1044ms /usr/bin/gcc-4.7 scripts/mod/devicetable-offsets.c
+Nov 10 15:41:47 headnode distccd[21889]: (dcc_inetd_server) failed to get peer name: Socket operation on non-socket
+Nov 10 15:41:49 headnode distccd[21889]: (dcc_job_summary) client: NOTSOCKET COMPILE_ERROR exit:1 sig:0 core:0 ret:0 time:1268ms /usr/bin/gcc-4.7 kernel/bounds.c
+Nov 10 17:12:53 headnode dhclient: DHCPREQUEST on eth0 to 141.76.90.2 port 67
+Nov 10 17:12:53 headnode dhclient: DHCPACK from 141.76.90.2
+Nov 10 17:12:53 headnode dhclient: bound to 141.76.90.101 -- renewal in 16132 seconds.
