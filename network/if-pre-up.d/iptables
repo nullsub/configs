@@ -1,0 +1,3 @@
+#!/bin/sh
+sudo /sbin/iptables-restore < /etc/iptables.up.rules
+
