@@ -8,27 +8,24 @@
 -A INPUT -i lo -j ACCEPT
 -A OUTPUT -o lo -j ACCEPT
 
-
 # 6. Allow incoming HTTP
 -A INPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+
+# 6. Allow outghoing HTTP
+-A OUTPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
 
 # Allow incoming HTTPS
 -A INPUT -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
 
-# 10. Allow outgoing HTTPS
--A OUTPUT -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
-
-
 # 5. Allow incoming SSH only from a sepcific network
--A INPUT -p tcp -s 141.30.0.0/12 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -p tcp -s 141.76.0.0/12 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 
 # 9. Allow outgoing SSH only to a specific network
--A OUTPUT -p tcp -d 192.168.2.0/18 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 
 # 12. Ping from inside to outside
@@ -39,14 +36,21 @@
 -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
 
-
 #DNS
 -A OUTPUT -p udp --dport 53 -j ACCEPT
 -A INPUT -p udp --sport 53 -j ACCEPT
 
-
 -A INPUT -j REJECT
-#-A OUTPUT -j REJECT
--A FORWARD -j REJECT
+-A OUTPUT -j REJECT
+#-A FORWARD -j REJECT
+
+#forwarding and masquerading of nodes
+-A FORWARD -i eth0 -o eth1 -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -i eth1 -o eth0 -j ACCEPT
+
+COMMIT
+
+*nat
+-A POSTROUTING -o eth0 -j MASQUERADE
 
 COMMIT
