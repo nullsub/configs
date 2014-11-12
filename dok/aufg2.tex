@@ -1,5 +1,12 @@
 \chapter{Aufgabe 2 - Netfilter und Iptables}
 \section{Grundkonfiguration}
+in /etc/iptables.test.rules das zeug schreiben
+iptables-save>iptables.ip.rules
+
+ein script in /etc/network/if-pre-up.d/iptables
+
+iptables-save>iptables.ip.rules
+
 
 \section{Forwarding und Masquerading}
 ip  forwarding - schreibe 1 in /etc/sysctl.conf forwarding
