@@ -28,3 +28,4 @@ git:x:1000:1000:,,,:/home/git:/bin/bash
 messagebus:x:102:104::/var/run/dbus:/bin/false
 distccd:x:103:65534::/:/bin/false
 bind:x:104:105::/var/cache/bind:/bin/false
+ntp:x:105:106::/home/ntp:/bin/false
