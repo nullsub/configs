@@ -7,5 +7,10 @@ config ist in /etc/dhcp/dhcp.conf
 in den nodes ist /etc/network/interfaces angepasst worden
 
 \section{DNS}
+Domans: cluster.local. headnode.cluster.local, nodeN.cluster.local
 bind9 wird genutzt
-
+geändert wurde:
+/etc/bind/db.cluster.local
+/etc/bind/db.192
+/etc/bind/named.conf.local
+/etc/bind/named.conf.options
