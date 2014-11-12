@@ -9,39 +9,39 @@
 -A OUTPUT -o lo -j ACCEPT
 
 # 6. Allow incoming HTTP
--A INPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
--A OUTPUT -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth0 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
 
 # 6. Allow outghoing HTTP
--A OUTPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -i eth0 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
 
 # Allow incoming HTTPS
--A INPUT -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
--A OUTPUT -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth0 -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
 
 # 5. Allow incoming SSH only from a sepcific network
--A INPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
--A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 
 # 9. Allow outgoing SSH only to a specific network
--A OUTPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -i eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 
 # 12. Ping from inside to outside
--A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT
--A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+-A OUTPUT -o eth0 -p icmp --icmp-type echo-request -j ACCEPT
+-A INPUT -i eth0 -p icmp --icmp-type echo-reply -j ACCEPT
 
 # 13. Ping from outside to inside
--A INPUT -p icmp --icmp-type echo-request -j ACCEPT
--A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+-A INPUT -i eth0 -p icmp --icmp-type echo-request -j ACCEPT
+-A OUTPUT -o eth0 -p icmp --icmp-type echo-reply -j ACCEPT
 
 #DNS
--A OUTPUT -p udp --dport 53 -j ACCEPT
--A INPUT -p udp --sport 53 -j ACCEPT
+-A OUTPUT -o eth0 -p udp --dport 53 -j ACCEPT
+-A INPUT -i eth0 -p udp --sport 53 -j ACCEPT
 
--A INPUT -j REJECT
--A OUTPUT -j REJECT
+-A INPUT -i eth0 -j REJECT
+-A OUTPUT -o eth0 -j REJECT
 #-A FORWARD -j REJECT
 
 #forwarding and masquerading of nodes
