@@ -51,3 +51,5 @@ messagebus:x:104:
 bind:x:105:
 ntp:x:106:
 openldap:x:107:
+fuse:x:108:
+rdma:x:109:

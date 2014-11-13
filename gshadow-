@@ -50,3 +50,5 @@ git:!::
 messagebus:!::
 bind:!::
 ntp:!::
+openldap:!::
+fuse:!::
