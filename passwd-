@@ -29,4 +29,5 @@ messagebus:x:102:104::/var/run/dbus:/bin/false
 distccd:x:103:65534::/:/bin/false
 bind:x:104:105::/var/cache/bind:/bin/false
 ntp:x:105:106::/home/ntp:/bin/false
-openldap:x:106:107::/var/lib/ldap:/bin/false
+openldap:x:106:107:OpenLDAP Server Account,,,:/var/lib/ldap:/bin/false
+statd:x:107:65534::/var/lib/nfs:/bin/false
