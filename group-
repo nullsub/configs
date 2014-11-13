@@ -49,3 +49,4 @@ hoehlig:x:1006:
 git:x:1000:
 messagebus:x:104:
 bind:x:105:
+ntp:x:106:
