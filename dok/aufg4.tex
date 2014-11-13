@@ -3,5 +3,12 @@
 apt-get install nfs-kernel-server nfs-common
 edit /etc/exports
 tell nfs to used fixed ports. This makes iptable rules easier:
+in /etc/defaults/nfs-common
+/etc/defaults/nfs-kernel-server
+
+on the client edit /etc/fstab
+
+In /shared liegt das geteilte Tool-Verzeichnis
+Mit sudo chmod a+rwx wurde jedem user der Zugriff auf das Verzeichnis gewährt.
 
 \section{Paralleles Verteiltes Dateisystem}
