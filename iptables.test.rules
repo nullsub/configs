@@ -37,12 +37,13 @@
 -A OUTPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 
-# glusterfs
--A INPUT -m state --state NEW -p tcp --dport 24007:24047 -j ACCEPT 
--A INPUT -m state --state NEW -p tcp --dport 111 -j ACCEPT 
--A INPUT -m state --state NEW -p udp --dport 111 -j ACCEPT 
-#-A INPUT -m state --state NEW -p tcp --dport 38465:38485 -j ACCEPT
--A INPUT -m state --state NEW --dport 38465:38485 -j ACCEPT
+# GlusterFS/NFS
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 24007:24047 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 111 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p udp --dport 111 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 38465:38467 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 49152:59153 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 34865:34867 -j ACCEPT
 
 # 12. Ping from inside to outside
 -A OUTPUT -o eth0 -p icmp --icmp-type echo-request -j ACCEPT
