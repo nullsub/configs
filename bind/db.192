@@ -9,6 +9,7 @@ $TTL	604800
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-@	IN	NS	ns1.cluster.local.
-1	IN	PTR	node0.cluster.local.
-2	IN	PTR	node1.cluster.local.
+@	IN	NS	ns.cluster.local.
+1	IN	PTR	headnode.cluster.local.
+2	IN	PTR	node0.cluster.local.
+3	IN	PTR	node1.cluster.local.
