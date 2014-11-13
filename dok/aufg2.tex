@@ -9,7 +9,8 @@ das script ausführbar machen
 
 iptables-restore<iptables.ip.rules
 
- oder und mit iptables-persistent, das läd nach jedem Boot die Filterregeln aus /etc/iptables/rules.v4
+sudo apt-get install fail2ban
+Bei 3 mal wiederholtem einloggen mit falschen Zugangsdaten wird die IP für 60 Minuten gesperrt.
 
 \section{Forwarding und Masquerading}
 ip  forwarding - schreibe 1 in /etc/sysctl.conf forwarding
