@@ -12,10 +12,14 @@
 -A INPUT -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -o eth0 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
 
--A INPUT -i eth1 --dport 2049 -m state --state NEW,ESTABLISHED -j ACCEPT
--A OUTPUT -o eth1 --sport 2049 -m state --state ESTABLISHED -j ACCEPT
--A INPUT -i eth1 --dport 32764:32769 -m state --state NEW,ESTABLISHED -j ACCEPT
--A OUTPUT -o eth1 --sport 32764:32769 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -i eth1 -p tcp --dport 2049 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth1 -p tcp --sport 2049 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -i eth1 -p tcp --dport 32764:32769 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth1 -p tcp --sport 32764:32769 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -i eth1 -p udp --dport 2049 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth1 -p udp --sport 2049 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -i eth1 -p udp --dport 32764:32769 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth1 -p udp --sport 32764:32769 -m state --state ESTABLISHED -j ACCEPT
 
 # 6. Allow outgoing HTTP
 -A OUTPUT -o eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
@@ -32,6 +36,12 @@
 # 9. Allow outgoing SSH 
 -A OUTPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+
+# glusterfs
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 24007:24047 -j ACCEPT 
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 111 -j ACCEPT 
+-A INPUT -m state --state NEW -m udp -p udp --dport 111 -j ACCEPT 
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 38465:38485 -j ACCEPT
 
 # 12. Ping from inside to outside
 -A OUTPUT -o eth0 -p icmp --icmp-type echo-request -j ACCEPT
