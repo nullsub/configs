@@ -11,3 +11,5 @@ UUID=5433e205-494c-4e86-8984-fc8af8f1d419 /               ext4    errors=remount
 UUID=b622afdb-e43e-4618-992b-042f39bca9c1 none            swap    sw              0       0
 /dev/sdb1       /media/usb0     auto    rw,user,noauto  0       0
 /dev/sdb2       /media/usb1     auto    rw,user,noauto  0       0
+
+192.168.2.10:/gv0 /fastfs glusterfs defaults,_netdev 0 0
