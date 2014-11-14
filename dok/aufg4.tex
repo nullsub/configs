@@ -12,6 +12,51 @@ In /shared liegt das geteilte Tool-Verzeichnis
 Mit sudo chmod a+rwx wurde jedem user der Zugriff auf das Verzeichnis gewährt.
 
 \section{Paralleles Verteiltes Dateisystem}
+auf dem nodes(server)
 \begin{lstlisting}[style=Bash]
 # apt-get install glusterfs-server
+\end{lstlisting}
+neue partition 20gb
+\begin{lstlisting}[style=Bash]
+# fdisk /dev/sda
+---------------
+n <enter>
+<enter>
+<enter>
+w
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+# apt-get install parted
+# partprobe
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+# apt-get install xfsprogs
+\end{lstlisting}
+
+file system auf sda2 xfs
+\begin{lstlisting}[style=Bash]
+# mkfs.xfs -i size=512 /dev/sdb1
+# mkdir -p /data/brick1
+\end{lstlisting}
+fstab
+\begin{lstlisting}[style=Bash]
+/dev/sda2 /data/brick1 xfs defaults 1 2
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+mount -a && mount
+\end{lstlisting}
+nur auf einem node
+\begin{lstlisting}[style=Bash]
+# gluster volume create gv0 192.168.2.10:/data/brick1/gv0
+# gluster volume start gv0
+\end{lstlisting}
+
+auf headnode(client):
+\begin{lstlisting}[style=Bash]
+# mkdir /fastfs 
+# mount.glusterfs 192.168.2.10:/gv0 /fastfs
+\end{lstlisting}
+fstab
+\begin{lstlisting}[style=Bash]
+192.168.2.10:/gv0 /fastfs glusterfs defaults,_netdev 0 0
 \end{lstlisting}
