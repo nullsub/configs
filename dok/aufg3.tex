@@ -8,6 +8,17 @@ in /etc/default/isc-dhcp-server muss noch eth1 eingetragen werden damit der DHCP
 
 in den nodes ist /etc/network/interfaces angepasst worden
 
+Damit der Headnode den lokalen dns server nutzt, muss /etc/dhclient.conf angepasst werden.
+
+\begin{lstlisting}[style=Bash]
+prepend domain-name-servers 127.0.0.1;
+request subnet-mask, broadcast-address, time-offset, routers,
+	domain-name, domain-search, host-name,
+	dhcp6.domain-search,
+	netbios-scope, interface-mtu,
+	rfc3442-classless-static-routes, ntp-servers;
+\end{lstlisting}
+
 \section{DNS}
 Domans: cluster.local. headnode.cluster.local, nodeN.cluster.local
 bind9 wird genutzt
