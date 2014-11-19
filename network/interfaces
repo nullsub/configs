@@ -9,7 +9,6 @@ iface lo inet loopback
 allow-hotplug eth0
 auto eth0
 iface eth0 inet dhcp
-dns-nameservers localhost
 
 # The primary network interface
 allow-hotplug eth1

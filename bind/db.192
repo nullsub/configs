@@ -11,5 +11,5 @@ $TTL	604800
 ;
 @	IN	NS	ns.cluster.local.
 1	IN	PTR	headnode.cluster.local.
-2	IN	PTR	node0.cluster.local.
-3	IN	PTR	node1.cluster.local.
+10	IN	PTR	node0.cluster.local.
+11	IN	PTR	node1.cluster.local.
