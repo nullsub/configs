@@ -9,8 +9,8 @@
 -A OUTPUT -o lo -j ACCEPT
 
 # 6. Allow incoming HTTP
--A INPUT -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
--A OUTPUT -o eth0 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+-A OUTPUT -o eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 -A INPUT -i eth1 -p tcp --dport 2049 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -o eth1 -p tcp --sport 2049 -m state --state ESTABLISHED -j ACCEPT
@@ -21,13 +21,6 @@
 -A INPUT -i eth1 -p udp --dport 32764:32769 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -o eth1 -p udp --sport 32764:32769 -m state --state ESTABLISHED -j ACCEPT
 
-# 6. Allow outgoing HTTP
--A OUTPUT -o eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -i eth0 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
-
-# Allow incoming HTTPS
--A INPUT -i eth0 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
--A OUTPUT -o eth0 -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
 
 # 5. Allow incoming SSH only from a sepcific network
 -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
@@ -38,12 +31,12 @@
 -A INPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 
 # GlusterFS/NFS
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 24007:24047 -j ACCEPT
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 111 -j ACCEPT
-iptables -A INPUT -m state --state NEW -m tcp -p udp --dport 111 -j ACCEPT
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 38465:38467 -j ACCEPT
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 49152:59153 -j ACCEPT
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 34865:34867 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 24007:24047 -j ACCEPT
+-A INPUT -m state --state NEW  -p tcp --dport 111 -j ACCEPT
+-A INPUT -m state --state NEW -p udp --dport 111 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 38465:38467 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 49152:59153 -j ACCEPT
+-A INPUT -m state --state NEW  -p tcp --dport 34865:34867 -j ACCEPT
 
 # 12. Ping from inside to outside
 -A OUTPUT -o eth0 -p icmp --icmp-type echo-request -j ACCEPT
@@ -75,6 +68,7 @@ iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 34865:34867 -j ACCE
 
 #dhcp
 -I INPUT -i eth1 -p udp --dport 67:68 --sport 67:68 -j ACCEPT
+-I INPUT -i eth0 -p udp --dport 67:68 --sport 67:68 -j ACCEPT
 
 -A INPUT -i eth0 -j REJECT
 -A INPUT -i eth1 -j REJECT
@@ -82,13 +76,10 @@ iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 34865:34867 -j ACCE
 -A OUTPUT -o eth1 -j REJECT
 
 # Allow incoming HTTP stuff
--A FORWARD -i eth0 -o eth1 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
--A FORWARD -i eth0 -o eth1 -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
--A FORWARD -i eth0 -o eth1 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
--A FORWARD -i eth0 -o eth1 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A FORWARD -i eth1 -o eth0 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A FORWARD -i eth1 -o eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 -A FORWARD -i eth0 -o eth1 -m state --state RELATED,ESTABLISHED -j ACCEPT
--A FORWARD -i eth1 -o eth0 -j ACCEPT
 -A FORWARD -j REJECT
 
 #Log all dropped packets

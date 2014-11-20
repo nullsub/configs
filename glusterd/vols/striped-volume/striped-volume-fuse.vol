@@ -1,0 +1,52 @@
+volume striped-volume-client-0
+    type protocol/client
+    option remote-host 192.168.2.1
+    option remote-subvolume /data/brick0
+    option transport-type tcp
+end-volume
+
+volume striped-volume-client-1
+    type protocol/client
+    option remote-host 192.168.2.10
+    option remote-subvolume /data/brick1
+    option transport-type tcp
+end-volume
+
+volume striped-volume-stripe-0
+    type cluster/stripe
+    subvolumes striped-volume-client-0 striped-volume-client-1
+end-volume
+
+volume striped-volume-write-behind
+    type performance/write-behind
+    subvolumes striped-volume-stripe-0
+end-volume
+
+volume striped-volume-read-ahead
+    type performance/read-ahead
+    subvolumes striped-volume-write-behind
+end-volume
+
+volume striped-volume-io-cache
+    type performance/io-cache
+    option cache-size 1GB
+    subvolumes striped-volume-read-ahead
+end-volume
+
+volume striped-volume-quick-read
+    type performance/quick-read
+    option cache-size 1GB
+    subvolumes striped-volume-io-cache
+end-volume
+
+volume striped-volume-stat-prefetch
+    type performance/stat-prefetch
+    subvolumes striped-volume-quick-read
+end-volume
+
+volume striped-volume
+    type debug/io-stats
+    option latency-measurement off
+    option count-fop-hits off
+    subvolumes striped-volume-stat-prefetch
+end-volume

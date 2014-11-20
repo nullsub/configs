@@ -12,4 +12,6 @@ UUID=b622afdb-e43e-4618-992b-042f39bca9c1 none            swap    sw            
 /dev/sdb1       /media/usb0     auto    rw,user,noauto  0       0
 /dev/sdb2       /media/usb1     auto    rw,user,noauto  0       0
 
-192.168.2.10:/gv0 /fastfs glusterfs defaults,_netdev 0 0
+192.168.2.1:striped-volume /fastfs glusterfs defaults,_netdev 0 0
+
+/dev/sda3 /data/brick0 xfs defaults 1 2

@@ -1,0 +1,42 @@
+volume striped-volume-posix
+    type storage/posix
+    option directory /data/brick1
+end-volume
+
+volume striped-volume-access-control
+    type features/access-control
+    subvolumes striped-volume-posix
+end-volume
+
+volume striped-volume-locks
+    type features/locks
+    subvolumes striped-volume-access-control
+end-volume
+
+volume striped-volume-io-threads
+    type performance/io-threads
+    subvolumes striped-volume-locks
+end-volume
+
+volume striped-volume-marker
+    type features/marker
+    option volume-uuid 5c12caef-d291-4af3-b0d2-d3258c01d816
+    option timestamp-file /etc/glusterd/vols/striped-volume/marker.tstamp
+    option xtime off
+    option quota off
+    subvolumes striped-volume-io-threads
+end-volume
+
+volume /data/brick1
+    type debug/io-stats
+    option latency-measurement off
+    option count-fop-hits off
+    subvolumes striped-volume-marker
+end-volume
+
+volume striped-volume-server
+    type protocol/server
+    option transport-type tcp
+    option auth.addr./data/brick1.allow *
+    subvolumes /data/brick1
+end-volume

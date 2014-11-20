@@ -1,0 +1,10 @@
+type=1
+count=2
+status=1
+sub_count=2
+version=6
+transport-type=0
+volume-id=5c12caef-d291-4af3-b0d2-d3258c01d816
+performance.cache-size=1GB
+brick-0=192.168.2.1:-data-brick0
+brick-1=192.168.2.10:-data-brick1
