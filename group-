@@ -52,3 +52,8 @@ bind:x:105:
 ntp:x:106:
 openldap:x:107:
 fuse:x:108:
+rdma:x:109:
+scanner:x:110:
+colord:x:111:
+utempter:x:112:
+saned:x:113:
