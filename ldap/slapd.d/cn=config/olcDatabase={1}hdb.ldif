@@ -1,18 +1,19 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 3f96f7af
+# CRC32 84a46f05
 dn: olcDatabase={1}hdb
 objectClass: olcDatabaseConfig
 objectClass: olcHdbConfig
 olcDatabase: {1}hdb
 olcDbDirectory: /var/lib/ldap
-olcSuffix: dc=nodomain
+olcSuffix: dc=lctp1,dc=tud,dc=de
 olcAccess: {0}to attrs=userPassword,shadowLastChange by self write by anonymou
- s auth by dn="cn=admin,dc=nodomain" write by * none
+ s auth by dn="cn=admin,dc=lctp1,dc=tud,dc=de" write by * none
 olcAccess: {1}to dn.base="" by * read
-olcAccess: {2}to * by self write by dn="cn=admin,dc=nodomain" write by * read
+olcAccess: {2}to * by self write by dn="cn=admin,dc=lctp1,dc=tud,dc=de" write 
+ by * read
 olcLastMod: TRUE
-olcRootDN: cn=admin,dc=nodomain
-olcRootPW:: e1NTSEF9ZHFvckxXVlpMSCt3YVE5c21tKytBeXlIUFBCZ0xYRHM=
+olcRootDN: cn=admin,dc=lctp1,dc=tud,dc=de
+olcRootPW:: e1NTSEF9WURCbXJiaE82bWZSeTM1czhTa0ZhK0F1VFhxNU1VMnU=
 olcDbCheckpoint: 512 30
 olcDbConfig: {0}set_cachesize 0 2097152 0
 olcDbConfig: {1}set_lk_max_objects 1500
@@ -20,9 +21,9 @@ olcDbConfig: {2}set_lk_max_locks 1500
 olcDbConfig: {3}set_lk_max_lockers 1500
 olcDbIndex: objectClass eq
 structuralObjectClass: olcHdbConfig
-entryUUID: 1083e456-053e-1034-805d-47b9028a50c5
+entryUUID: 182672b2-0540-1034-9613-5b0e710409f2
 creatorsName: cn=admin,cn=config
-createTimestamp: 20141120201758Z
-entryCSN: 20141120201758.714443Z#000000#000#000000
+createTimestamp: 20141120203230Z
+entryCSN: 20141120203230.517281Z#000000#000#000000
 modifiersName: cn=admin,cn=config
-modifyTimestamp: 20141120201758Z
+modifyTimestamp: 20141120203230Z

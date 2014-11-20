@@ -1,5 +1,5 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 05827b72
+# CRC32 10c33565
 dn: cn={0}core
 objectClass: olcSchemaConfig
 cn: {0}core
@@ -235,9 +235,9 @@ olcObjectClasses: {25}( 1.3.6.1.4.1.1466.344 NAME 'dcObject' DESC 'RFC2247: do
 olcObjectClasses: {26}( 1.3.6.1.1.3.1 NAME 'uidObject' DESC 'RFC2377: uid obje
  ct' SUP top AUXILIARY MUST uid )
 structuralObjectClass: olcSchemaConfig
-entryUUID: 1082cd8c-053e-1034-8057-47b9028a50c5
+entryUUID: 1825cb28-0540-1034-960d-5b0e710409f2
 creatorsName: cn=admin,cn=config
-createTimestamp: 20141120201758Z
-entryCSN: 20141120201758.707301Z#000000#000#000000
+createTimestamp: 20141120203230Z
+entryCSN: 20141120203230.512991Z#000000#000#000000
 modifiersName: cn=admin,cn=config
-modifyTimestamp: 20141120201758Z
+modifyTimestamp: 20141120203230Z
