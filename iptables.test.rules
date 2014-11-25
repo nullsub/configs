@@ -21,7 +21,6 @@
 -A INPUT -i eth1 -p udp --dport 32764:32769 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -o eth1 -p udp --sport 32764:32769 -m state --state ESTABLISHED -j ACCEPT
 
-
 # 5. Allow incoming SSH only from a sepcific network
 -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
@@ -95,9 +94,9 @@
 -A FORWARD -j REJECT
 
 -A INPUT -i eth0 -j REJECT
--A INPUT -i eth1 -j REJECT
+#-A INPUT -i eth1 -j REJECT
 -A OUTPUT -o eth0 -j REJECT
--A OUTPUT -o eth1 -j REJECT
+#-A OUTPUT -o eth1 -j REJECT
 
 COMMIT
 
