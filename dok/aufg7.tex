@@ -1,4 +1,7 @@
 \chapter{LDAP}
+Ldap einrichten: \url{http://www.dn.fh-koeln.de/download/arbeiten/WS0405_LDAP.pdf}
+
+Secret sei in diesem Abschinitt das bei der Installation von slapd vergebene Passwort.\\
 ldap installieren
 \begin{lstlisting}[style=Bash]
 # apt-get install slapd
@@ -6,4 +9,172 @@ ldap installieren
 utils installieren
 \begin{lstlisting}[style=Bash]
 # apt-get install ldap-utils
+\end{lstlisting}
+ldap konfigurieren
+\begin{lstlisting}[style=Bash]
+# dpkg-reconfigure -plow slapd
+\end{lstlisting}
+\begin{tabular}{ l | l }
+ option & value\\
+ \hline
+ domain name & lctp1.tud.de\\
+ name of organization & lctp1\\
+ password & secret\\
+ database backend to use & HDB\\
+ purge remove & no\\
+ Allow LDAPv2 protocol & yes\\
+\end{tabular}
+\\
+edit /etc/adduser.conf
+\begin{lstlisting}[style=Bash]
+# The DHOME variable specifies the directory containing users' home
+# directories.
+DHOME=/home/exports
+\end{lstlisting}
+edit /etc/ldap/ldap.conf 
+\begin{lstlisting}[style=Bash]
+BASE    dc=lctp1,dc=tud,dc=de
+URI     ldap://localhost
+\end{lstlisting}
+start LDAP server:
+\begin{lstlisting}[style=Bash]
+/etc/init.d/slapd start
+\end{lstlisting}
+nss für LDAP
+\begin{lstlisting}[style=Bash]
+# apt-get install nscd
+# apt-get install libnss-ldap
+# dpkg-reconfigure -plow libnss-ldap
+\end{lstlisting}
+\begin{tabular}{ l | l }
+ option & value\\
+ \hline
+ LDAP Server & ldapi:///127.0.0.1\\
+ search base & dc=lctp1,dc=tud,dc=de\\
+ LDAP Version & 3\\
+ require login & no\\
+ LDAP priveleges for root & yes\\
+ configuration readable/writeable by owner only & yes\\
+ LDAP accout for root & cn=admin,dc=lctp1,dc=tud,dc=de\\
+ LDAP root account Password & secret\\
+\end{tabular}
+\\
+nsswitch.ldap muss editiert werden TODO??\\
+edit /etc/libnss-ldap.conf, uncomment rootbinddn:
+\begin{lstlisting}[style=Bash]
+# Use 'echo -n "mypassword" > /etc/libnss-ldap.secret' instead
+# of an editor to create the file.
+rootbinddn cn=admin,dc=lctp1,dc=tud,dc=de
+\end{lstlisting}
+write secet in /etc/libnss-ldap.secret
+\begin{lstlisting}[style=Bash]
+# chmod 600 /etc/libnss-ldap.secret 
+\end{lstlisting}
+edit /etc/nsswitch.conf:
+\begin{lstlisting}[style=Bash]
+passwd:         files ldap
+group:          files ldap
+shadow:         files ldap
+
+hosts:          files dns ldap
+networks:       files ldap
+protocols:      db files
+
+services:       db files
+ethers:         db files
+rpc:            db files
+
+netgroup:       nis
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+# apt-get install libpam-ldap
+\end{lstlisting}
+\begin{tabular}{ l | l }
+ option & value\\
+ \hline
+ LDAP Server host & 127.0.0.1\\
+ Distinguished Base Name & dc=lctp1,dc=tud,dc=de\\
+ LDAP version & 3\\
+ Make local root Database admin & Ja\\
+ Database requires logging in & Nein\\
+ Root login account & cn=admin,dc=lctp1,dc=tud,dc=de\\
+ Local crypt to use & crypt\\
+\end{tabular}
+\\
+edit /etc/pam.d/passwd:
+\begin{lstlisting}[style=Bash]
+password required pam_ldap.so ignore_unknown_user md5
+password optional pam_unix.so nullok obscure min=4 max=8 md5 try_first_pass
+
+#@include common-password
+\end{lstlisting}
+edit /etc/pam.d/common-session:
+\begin{lstlisting}[style=Bash]
+session required pam_mkhomedir.so skel=/etc/skel/ umask=0022
+session required pam_limits.so
+session required pam_unix.so
+session optional pam_ldap.so
+\end{lstlisting}
+
+\section*{Nutzer hinzufügen (funktioniert nicht)}
+\begin{lstlisting}[style=Bash]
+# ldapadd -H "ldap://127.0.0.1:389/" -cxD cn=admin,dc=lctp1,dc=tud,dc=de -f add-user.ldif -w secret
+\end{lstlisting}
+add-user.ldif:
+\begin{lstlisting}[style=Bash]
+# User primary group
+dn: cn=sheldon,dc=lctp1,dc=tud,dc=de
+cn: sheldon
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10000
+
+# User account
+dn: uid=sheldon,dc=lctp1,dc=tud,dc=de
+cn: Sheldon Cooper
+givenName: Sheldon
+sn: Cooper
+uid: sheldon
+uidNumber: 10000
+gidNumber: 10000
+homeDirectory: /home/jsmith
+mail: sheldon@dev.local
+objectClass: top
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+userPassword: {CRYPT}*
+\end{lstlisting}
+Fehler:
+\begin{lstlisting}[style=Bash]
+ldap_bind: Invalid credentials (49)
+\end{lstlisting}
+\section*{Manager hinzufügen (funktioniert nicht)}
+\begin{lstlisting}[style=Bash]
+# ldapadd -Y EXTERNAL -H "ldap://127.0.0.1:389/" -f manager.ldif
+\end{lstlisting}
+manager.ldif
+\begin{lstlisting}[style=Bash]
+dn: dc=lctp1,dc=tud,dc=de
+objectClass: dcObject
+objectclass: organization
+o: lctp1.tud.de
+dc: lctp1
+description: My LDAP Root
+
+dn: cn=manager,dc=lctp1,dc=tud,dc=de
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: manager
+userPassword: {MD5}l5j6WiBy4I1u4C0cXC6rsw==
+description: LDAP manager
+\end{lstlisting}
+Fehler:
+\begin{lstlisting}[style=Bash]
+SASL/EXTERNAL authentication started
+ldap_sasl_interactive_bind_s: Unknown authentication method (-6)
+	additional info: SASL(-4): no mechanism available: 
 \end{lstlisting}
