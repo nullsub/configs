@@ -1,55 +1,53 @@
-volume striped-volume-client-0
+volume stripVol-client-0
     type protocol/client
     option remote-host 192.168.2.1
     option remote-subvolume /data/brick0
     option transport-type tcp
 end-volume
 
-volume striped-volume-client-1
+volume stripVol-client-1
     type protocol/client
     option remote-host 192.168.2.10
     option remote-subvolume /data/brick1
     option transport-type tcp
 end-volume
 
-volume striped-volume-stripe-0
+volume stripVol-stripe-0
     type cluster/stripe
-    subvolumes striped-volume-client-0 striped-volume-client-1
+    subvolumes stripVol-client-0 stripVol-client-1
 end-volume
 
-volume striped-volume-write-behind
+volume stripVol-write-behind
     type performance/write-behind
-    subvolumes striped-volume-stripe-0
+    subvolumes stripVol-stripe-0
 end-volume
 
-volume striped-volume-read-ahead
+volume stripVol-read-ahead
     type performance/read-ahead
-    subvolumes striped-volume-write-behind
+    subvolumes stripVol-write-behind
 end-volume
 
-volume striped-volume-io-cache
+volume stripVol-io-cache
     type performance/io-cache
-    option cache-size 1GB
-    subvolumes striped-volume-read-ahead
+    subvolumes stripVol-read-ahead
 end-volume
 
-volume striped-volume-quick-read
+volume stripVol-quick-read
     type performance/quick-read
-    option cache-size 1GB
-    subvolumes striped-volume-io-cache
+    subvolumes stripVol-io-cache
 end-volume
 
-volume striped-volume
+volume stripVol
     type debug/io-stats
     option latency-measurement off
     option count-fop-hits off
-    subvolumes striped-volume-quick-read
+    subvolumes stripVol-quick-read
 end-volume
 
 volume nfs-server
     type nfs/server
     option nfs.dynamic-volumes on
-    option rpc-auth.addr.striped-volume.allow *
-    option nfs3.striped-volume.volume-id 5c12caef-d291-4af3-b0d2-d3258c01d816
-    subvolumes striped-volume
+    option rpc-auth.addr.stripVol.allow *
+    option nfs3.stripVol.volume-id 2b63e9ff-f90a-40f6-bf5e-dbe75de853da
+    subvolumes stripVol
 end-volume

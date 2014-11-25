@@ -1,4 +1,4 @@
 hostname=192.168.2.1
 path=/data/brick0
-listen-port=24009
+listen-port=24010
 rdma.listen-port=0
