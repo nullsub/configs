@@ -1,16 +1,39 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 dc8778e8
+# CRC32 04aa0948
 dn: cn=config
 objectClass: olcGlobal
 cn: config
+olcConfigFile: slapd.conf
+olcConfigDir: slapd.d
 olcArgsFile: /var/run/slapd/slapd.args
-olcLogLevel: none
+olcAttributeOptions: lang-
+olcAuthzPolicy: none
+olcConcurrency: 0
+olcConnMaxPending: 100
+olcConnMaxPendingAuth: 1000
+olcGentleHUP: FALSE
+olcIdleTimeout: 0
+olcIndexSubstrIfMaxLen: 4
+olcIndexSubstrIfMinLen: 2
+olcIndexSubstrAnyLen: 4
+olcIndexSubstrAnyStep: 2
+olcIndexIntLen: 4
+olcLocalSSF: 71
+olcLogLevel: None
 olcPidFile: /var/run/slapd/slapd.pid
+olcReadOnly: FALSE
+olcReverseLookup: FALSE
+olcSaslSecProps: noplain,noanonymous
+olcSockbufMaxIncoming: 262143
+olcSockbufMaxIncomingAuth: 16777215
+olcThreads: 16
+olcTLSVerifyClient: never
 olcToolThreads: 1
+olcWriteTimeout: 0
 structuralObjectClass: olcGlobal
-entryUUID: 5648bdce-069f-1034-9ae1-43fde6b7e7dc
+entryUUID: e85f7c8a-0b80-1034-8d18-8351fc2088db
 creatorsName: cn=config
-createTimestamp: 20141122142648Z
-entryCSN: 20141122142648.112735Z#000000#000#000000
+createTimestamp: 20141128193134Z
+entryCSN: 20141128193134.624494Z#000000#000#000000
 modifiersName: cn=config
-modifyTimestamp: 20141122142648Z
+modifyTimestamp: 20141128193134Z
