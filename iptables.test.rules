@@ -94,9 +94,9 @@
 -A FORWARD -j REJECT
 
 -A INPUT -i eth0 -j REJECT
-#-A INPUT -i eth1 -j REJECT
+-A INPUT -i eth1 -j ACCEPT
 -A OUTPUT -o eth0 -j REJECT
-#-A OUTPUT -o eth1 -j REJECT
+-A OUTPUT -o eth1 -j ACCEPT
 
 COMMIT
 
