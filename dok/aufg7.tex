@@ -1,14 +1,7 @@
 \chapter{LDAP}
-Ldap einrichten: \url{http://www.dn.fh-koeln.de/download/arbeiten/WS0405_LDAP.pdf}
-
-Secret sei in diesem Abschinitt das bei der Installation von slapd vergebene Passwort.\\
-ldap installieren
+ldap, utils und migrationstools installieren
 \begin{lstlisting}[style=Bash]
-# apt-get install slapd
-\end{lstlisting}
-utils installieren
-\begin{lstlisting}[style=Bash]
-# apt-get install ldap-utils
+# apt-get install slapd smbldap-tools ldap-utils
 \end{lstlisting}
 ldap konfigurieren
 \begin{lstlisting}[style=Bash]
@@ -17,14 +10,92 @@ ldap konfigurieren
 \begin{tabular}{ l | l }
  option & value\\
  \hline
- domain name & lctp1.tud.de\\
- name of organization & lctp1\\
+ domain name & cluster.local\\
+ name of organization & cluster\\
  password & secret\\
  database backend to use & HDB\\
  purge remove & no\\
  Allow LDAPv2 protocol & yes\\
 \end{tabular}
 \\
+
+slap über slapd.conf konfigurieren:
+\begin{lstlisting}[style=Bash]
+.....
+.....
+suffix        "dc=cluster,dc=local"
+
+rootdn "cn=admin,dc=cluster,dc=local"
+rootpw {SSHA}52g5BxB2hCwfLR846bo+8FaBsmVoSxaA
+
+# SASL DIGEST-MD5 authorisation replacement directive
+# This parameter is in the format of:
+# uid=<username>,cn=<realm>,cn=<mech>,cn=auth
+# The username is taken from sasl and inserted into the ldap search 
+# string in the place of $1. Your realm is supposed to be your FQDN 
+# (fully qualified domain name)
+authz-regexp uid=admin,cn=[^,]*,cn=auth cn=admin,dc=cluster,dc=local
+authz-regexp uid=([^,]*),cn=[^,]*,cn=auth uid=$1,ou=Users,dc=cluster,dc=local
+authz-policy      to
+# enable LDAP to help SASL to use passworts stored in LDAP database
+password-hash   {CLEARTEXT}
+\end{lstlisting}
+
+Admin user hinzufügen, base.ldif
+\begin{lstlisting}[style=Bash]
+dn:dc=cluster,dc=local
+objectClass: dcObject
+objectClass: organization
+o: cluster
+dc: cluster
+
+dn:cn=admin,dc=cluster,dc=local
+objectClass: organizationalRole
+cn: admin
+\end{lstlisting}
+ldapadd -x -h localhost -W -D cn=admin,dc=cluster,dc=local -f base.ldif 
+
+Linux Benutzeraccounts nach LDAP migrieren
+init.ldif:
+\begin{lstlisting}[style=Bash]
+dn: ou=Users,dc=cluster,dc=local
+objectClass: organizationalUnit
+ou: Users
+
+dn: ou=Groups,dc=cluster,dc=local
+objectClass: organizationalUnit
+ou: Groups
+
+dn: ou=Computers,dc=cluster,dc=local
+objectClass: organizationalUnit
+ou: Computers
+
+dn: ou=Idmap,dc=cluster,dc=local
+objectClass: organizationalUnit
+ou: Idmap
+\end{lstlisting}
+Hinzufügen
+\begin{lstlisting}[style=Bash]
+sudo ldapadd -x -h localhost -W -D cn=admin,dc=cluster,dc=local -f init.ldif
+\end{lstlisting}
+Alle Nutzer migrieren:
+\begin{lstlisting}[style=Bash]
+./smbldap-migrate-unix-accounts -P /etc/passwd -S /etc/shadow -v
+\end{lstlisting}
+Alle Gruppen migrieren:
+\begin{lstlisting}[style=Bash]
+./smbldap-migrate-unix-groups -G /etc/group -v 
+\end{lstlisting}
+Die passwörter müssen als klartext in der LDAP db gespeichert werden damit SASL funktioniert. Darum muss für jeden Nutzer noch das passwort gesetzt werden:
+\begin{lstlisting}[style=Bash]
+ldappasswd -x -D cn=admin,dc=cluster,dc=local -W -s userpwd1 uid=user1,ou=Users,dc=cluster,dc=local 
+\end{lstlisting}
+
+Die Passwörte werden i-wie noch nicht richtig als plaintext gespeichert. Also SASL funzt noch nicht.
+
+
+
+Schrott
 edit /etc/adduser.conf
 \begin{lstlisting}[style=Bash]
 # The DHOME variable specifies the directory containing users' home
@@ -118,7 +189,8 @@ session optional pam_ldap.so
 
 \section*{Nutzer hinzufügen (funktioniert nicht)}
 \begin{lstlisting}[style=Bash]
-# ldapadd -H "ldap://127.0.0.1:389/" -cxD cn=admin,dc=lctp1,dc=tud,dc=de -f add-user.ldif -w secret
+# ldapadd -H "ldap://127.0.0.1:389/" -cxD \
+cn=admin,dc=lctp1,dc=tud,dc=de -f add-user.ldif -w secret
 \end{lstlisting}
 add-user.ldif:
 \begin{lstlisting}[style=Bash]
