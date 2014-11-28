@@ -53,7 +53,7 @@ ntp:!::
 openldap:!::
 fuse:!::
 rdma:!::
-scanner:!::
+scanner:!::saned
 colord:!::
 utempter:!::
 saned:!::
