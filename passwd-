@@ -33,3 +33,4 @@ openldap:x:106:107:OpenLDAP Server Account,,,:/var/lib/ldap:/bin/false
 statd:x:107:65534::/var/lib/nfs:/bin/false
 colord:x:108:111:colord colour management daemon,,,:/var/lib/colord:/bin/false
 saned:x:109:113::/home/exports/saned:/bin/false
+nslcd:x:110:115::/var/run/nslcd/:/bin/false
