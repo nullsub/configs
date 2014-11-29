@@ -1,4 +1,5 @@
 \chapter{LDAP}
+Als Grundlage dient http://wiki.ubuntuusers.de/OpenLDAP#Konfiguration-ueber-cn-config-Datenbank-etc-ldap-slapd-d
 ldap, utils und migrationstools installieren
 \begin{lstlisting}[style=Bash]
 # apt-get install slapd smbldap-tools ldap-utils
@@ -18,7 +19,6 @@ ldap konfigurieren
  Allow LDAPv2 protocol & yes\\
 \end{tabular}
 \\
-
 slap über slapd.conf konfigurieren:
 \begin{lstlisting}[style=Bash]
 .....
@@ -86,167 +86,116 @@ Alle Gruppen migrieren:
 \begin{lstlisting}[style=Bash]
 ./smbldap-migrate-unix-groups -G /etc/group -v 
 \end{lstlisting}
-Die passwörter müssen als klartext in der LDAP db gespeichert werden damit SASL funktioniert. Darum muss für jeden Nutzer noch das passwort gesetzt werden:
+Die Passwörter müssen als Klartext in der LDAP DB gespeichert werden damit SASL funktioniert. Darum muss für jeden Nutzer noch das Passwort gesetzt werden:
 \begin{lstlisting}[style=Bash]
 ldappasswd -x -D cn=admin,dc=cluster,dc=local -W -s userpwd1 uid=user1,ou=Users,dc=cluster,dc=local 
 \end{lstlisting}
-
-Die Passwörte werden i-wie noch nicht richtig als plaintext gespeichert. Also SASL funzt noch nicht.
-
-
-
-Schrott
-edit /etc/adduser.conf
+Dann sollte SASL funktionieren. Dies man mit folgendem Befehl überprüfen
 \begin{lstlisting}[style=Bash]
-# The DHOME variable specifies the directory containing users' home
-# directories.
-DHOME=/home/exports
+ldapsearch -b dc=cluster,dc=local
 \end{lstlisting}
-edit /etc/ldap/ldap.conf 
-\begin{lstlisting}[style=Bash]
-BASE    dc=lctp1,dc=tud,dc=de
-URI     ldap://localhost
-\end{lstlisting}
-start LDAP server:
-\begin{lstlisting}[style=Bash]
-/etc/init.d/slapd start
-\end{lstlisting}
-nss für LDAP
-\begin{lstlisting}[style=Bash]
-# apt-get install nscd
-# apt-get install libnss-ldap
-# dpkg-reconfigure -plow libnss-ldap
-\end{lstlisting}
-\begin{tabular}{ l | l }
- option & value\\
- \hline
- LDAP Server & ldapi:///127.0.0.1\\
- search base & dc=lctp1,dc=tud,dc=de\\
- LDAP Version & 3\\
- require login & no\\
- LDAP priveleges for root & yes\\
- configuration readable/writeable by owner only & yes\\
- LDAP accout for root & cn=admin,dc=lctp1,dc=tud,dc=de\\
- LDAP root account Password & secret\\
-\end{tabular}
+Das Admin Passwort muss auch noch als Klartext hinterlegt werden.
 \\
-nsswitch.ldap muss editiert werden TODO??\\
-edit /etc/libnss-ldap.conf, uncomment rootbinddn:
+Nun wird TLS eingerichtet.
+Zertifikate erstellen:
+/var/ssl/ca.cfg:
 \begin{lstlisting}[style=Bash]
-# Use 'echo -n "mypassword" > /etc/libnss-ldap.secret' instead
-# of an editor to create the file.
-rootbinddn cn=admin,dc=lctp1,dc=tud,dc=de
+cn = cluster
+ca
+cert_signing_key
 \end{lstlisting}
-write secet in /etc/libnss-ldap.secret
-\begin{lstlisting}[style=Bash]
-# chmod 600 /etc/libnss-ldap.secret 
-\end{lstlisting}
-edit /etc/nsswitch.conf:
-\begin{lstlisting}[style=Bash]
-passwd:         files ldap
-group:          files ldap
-shadow:         files ldap
-
-hosts:          files dns ldap
-networks:       files ldap
-protocols:      db files
-
-services:       db files
-ethers:         db files
-rpc:            db files
-
-netgroup:       nis
-\end{lstlisting}
-\begin{lstlisting}[style=Bash]
-# apt-get install libpam-ldap
-\end{lstlisting}
-\begin{tabular}{ l | l }
- option & value\\
- \hline
- LDAP Server host & 127.0.0.1\\
- Distinguished Base Name & dc=lctp1,dc=tud,dc=de\\
- LDAP version & 3\\
- Make local root Database admin & Ja\\
- Database requires logging in & Nein\\
- Root login account & cn=admin,dc=lctp1,dc=tud,dc=de\\
- Local crypt to use & crypt\\
-\end{tabular}
 \\
-edit /etc/pam.d/passwd:
 \begin{lstlisting}[style=Bash]
-password required pam_ldap.so ignore_unknown_user md5
-password optional pam_unix.so nullok obscure min=4 max=8 md5 try_first_pass
+sudo sh -c "certtool --generate-privkey > cakey.pem" 
+sudo certtool --generate-self-signed --load-privkey cakey.pem --template ca.cfg --outfile cacert.pem 
+sudo sh -c "certtool --generate-privkey > ldap_slapd_key.pem"
+\end{lstlisting}
+/var/ssl/slapd.cfg:
+\begin{lstlisting}[style=Bash]
+organization = cluster
+cn = cluster.local
+tls_www_server
+encryption_key
+signing_key
+\end{lstlisting}
+\\
+das ldap zertifikat installieren:
+\begin{lstlisting}[style=Bash]
+organization = cluster
+sudo install -D -o openldap -g openldap -m 600 /var/ssl/ldap_slapd_key.pem  /etc/ssl/private/ldap_slapd_key.pem
+sudo install -D -o openldap -g openldap -m 600 /var/ssl/ldap_slapd_cert.pem  /etc/ssl/certs/ldap_slapd_cert.pem
+sudo install -D -o openldap -g openldap -m 600 /var/ssl/cacert.pem  /etc/ssl/certs/ldap_slapd_cacert.pem 
+\end{lstlisting}
+Nun wieder /etc/ldap/slapd.conf anpassen:
+\begin{lstlisting}[style=Bash]
+TLSCertificateFile    /etc/ssl/certs/ldap_slapd_cert.pem
+TLSCertificateKeyFile /etc/ssl/private/ldap_slapd_key.pem
+TLSCACertificateFile  /etc/ssl/certs/ldap_slapd_cacert.pem
+\end{lstlisting}
+Damit slapd nun weiterhin startet muss sichergestellt sein dass der user openldap Zugriffsrechte auf /etc/ssl/* hat.
+\\
+Der ldap client wird nun konfiguriert um auch ssl zu verwenden.
+\begin{lstlisting}[style=Bash]
+uri ldaps://cluster.local/:636
+ldap_version 3
+ssl start_tls
+tls_cacert /etc/ssl/certs/ldap_slapd_cacert.pem
+TLS_REQCERT allow
+\end{lstlisting}
+\\
+LDAP Authentication
+packete installieren:
+\begin{lstlisting}[style=Bash]
+sudo apt-get install libnss-ldapd libpam-ldapd nslcd nscd
+\end{lstlisting}
 
-#@include common-password
-\end{lstlisting}
-edit /etc/pam.d/common-session:
+Die ldap Zugangsdaten werden nun in /etc/pam_ldap.conf und in /etc/nslcd.conf geschrieben:
 \begin{lstlisting}[style=Bash]
-session required pam_mkhomedir.so skel=/etc/skel/ umask=0022
-session required pam_limits.so
-session required pam_unix.so
-session optional pam_ldap.so
+christian@headnode:~ $ sudo cat /etc/nslcd.conf 
+# /etc/nslcd.conf
+# nslcd configuration file. See nslcd.conf(5)
+# for details.
+
+# The user and group nslcd should run as.
+uid nslcd
+gid nslcd
+
+# The location at which the LDAP server(s) should be reachable.
+uri     ldaps://cluster.local/:636
+
+# The search base that will be used for all queries.
+base dc=cluster,dc=local
+
+# The LDAP protocol version to use.
+ldap_version 3
+
+# The DN to bind with for normal lookups.
+binddn cn=admin,dc=cluster,dc=local
+bindpw secret
+ssl on
+tls_reqcert allow
+tls_cacertfile /etc/ssl/certs/ldap_slapd_cacert.pem
 \end{lstlisting}
 
-\section*{Nutzer hinzufügen (funktioniert nicht)}
+Das LDAP-PAM Modul kann nun aktiviert werden. Das unix modul kann nun deaktiviert werden.
 \begin{lstlisting}[style=Bash]
-# ldapadd -H "ldap://127.0.0.1:389/" -cxD \
-cn=admin,dc=lctp1,dc=tud,dc=de -f add-user.ldif -w secret
+sudo pam-auth-update
 \end{lstlisting}
-add-user.ldif:
+\\
+Den root user kann man aus dem ldap Verzeichnis entfernen
 \begin{lstlisting}[style=Bash]
-# User primary group
-dn: cn=sheldon,dc=lctp1,dc=tud,dc=de
-cn: sheldon
-objectClass: top
-objectClass: posixGroup
-gidNumber: 10000
+ldapdelete -D "cn=admin,dc=cluster,dc=local" uid=root,ou=Users,dc=cluster,dc=local -W
+\end{lstlisting}
+\\
+LDAP-auf dem computenode einrichten:
+\begin{lstlisting}[style=Bash]
+sudo apt-get install ldap-tools libpam-ldap
+\end{lstlisting}
+{ldap.conf pam_ldap.conf pam_ldap.secret nsswitch} muss analog zum server editiert werden.
 
-# User account
-dn: uid=sheldon,dc=lctp1,dc=tud,dc=de
-cn: Sheldon Cooper
-givenName: Sheldon
-sn: Cooper
-uid: sheldon
-uidNumber: 10000
-gidNumber: 10000
-homeDirectory: /home/jsmith
-mail: sheldon@dev.local
-objectClass: top
-objectClass: posixAccount
-objectClass: shadowAccount
-objectClass: inetOrgPerson
-objectClass: organizationalPerson
-objectClass: person
-loginShell: /bin/bash
-userPassword: {CRYPT}*
-\end{lstlisting}
-Fehler:
-\begin{lstlisting}[style=Bash]
-ldap_bind: Invalid credentials (49)
-\end{lstlisting}
-\section*{Manager hinzufügen (funktioniert nicht)}
-\begin{lstlisting}[style=Bash]
-# ldapadd -Y EXTERNAL -H "ldap://127.0.0.1:389/" -f manager.ldif
-\end{lstlisting}
-manager.ldif
-\begin{lstlisting}[style=Bash]
-dn: dc=lctp1,dc=tud,dc=de
-objectClass: dcObject
-objectclass: organization
-o: lctp1.tud.de
-dc: lctp1
-description: My LDAP Root
+Damit Nutzer, welche nur im ldap Verzeichnis sind und nicht in /etc/passwd sich auch einloggen können, muss use_authtok von /etc/pam.d/common-passwd entfernt werden
 
-dn: cn=manager,dc=lctp1,dc=tud,dc=de
-objectClass: simpleSecurityObject
-objectClass: organizationalRole
-cn: manager
-userPassword: {MD5}l5j6WiBy4I1u4C0cXC6rsw==
-description: LDAP manager
-\end{lstlisting}
-Fehler:
+Nachdem die die ldap Authentication ausreichend getestet worden ist, werden die unix accounts für alle normalen User entfernt. Nicht für root!
 \begin{lstlisting}[style=Bash]
-SASL/EXTERNAL authentication started
-ldap_sasl_interactive_bind_s: Unknown authentication method (-6)
-	additional info: SASL(-4): no mechanism available: 
+sudo userdel userN
 \end{lstlisting}
