@@ -76,6 +76,7 @@
 #dhcp
 -I INPUT -i eth1 -p udp --dport 67:68 --sport 67:68 -j ACCEPT
 -I INPUT -i eth0 -p udp --dport 67:68 --sport 67:68 -j ACCEPT
+-I OUTPUT -o eth0 -p udp --sport 67:68 -j ACCEPT
 
 # Allow incoming HTTP stuff
 -A FORWARD -i eth1 -o eth0 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
