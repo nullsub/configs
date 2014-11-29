@@ -1,5 +1,5 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 43d72c77
+# CRC32 4211e91e
 dn: cn=schema
 objectClass: olcSchemaConfig
 cn: schema
@@ -607,9 +607,9 @@ olcObjectClasses: ( OLcfgDbOc:1.2 NAME 'olcHdbConfig' DESC 'HDB backend config
  $ olcDbLockDetect $ olcDbMode $ olcDbSearchStack $ olcDbShmKey $ olcDbCacheFr
  ee $ olcDbDNcacheSize $ olcDbPageSize ) )
 structuralObjectClass: olcSchemaConfig
-entryUUID: e85fa2a0-0b80-1034-8d1a-8351fc2088db
+entryUUID: edda5d60-0c48-1034-9a29-9904965cd955
 creatorsName: cn=config
-createTimestamp: 20141128193134Z
-entryCSN: 20141128193134.624494Z#000000#000#000000
+createTimestamp: 20141129192323Z
+entryCSN: 20141129192323.163342Z#000000#000#000000
 modifiersName: cn=config
-modifyTimestamp: 20141128193134Z
+modifyTimestamp: 20141129192323Z

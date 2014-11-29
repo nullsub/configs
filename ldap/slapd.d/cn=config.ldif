@@ -1,5 +1,5 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 04aa0948
+# CRC32 99dc4cda
 dn: cn=config
 objectClass: olcGlobal
 cn: config
@@ -7,7 +7,10 @@ olcConfigFile: slapd.conf
 olcConfigDir: slapd.d
 olcArgsFile: /var/run/slapd/slapd.args
 olcAttributeOptions: lang-
-olcAuthzPolicy: none
+olcAuthzPolicy: to
+olcAuthzRegexp: {0}"uid=admin,cn=[^,]*,cn=auth" "cn=admin,dc=cluster,dc=local"
+olcAuthzRegexp: {1}"uid=([^,]*),cn=[^,]*,cn=auth" "uid=$1,ou=Users,dc=cluster,
+ dc=local"
 olcConcurrency: 0
 olcConnMaxPending: 100
 olcConnMaxPendingAuth: 1000
@@ -27,13 +30,16 @@ olcSaslSecProps: noplain,noanonymous
 olcSockbufMaxIncoming: 262143
 olcSockbufMaxIncomingAuth: 16777215
 olcThreads: 16
+olcTLSCACertificateFile: /etc/ssl/certs/ldap_slapd_cacert.pem
+olcTLSCertificateFile: /etc/ssl/certs/ldap_slapd_cert.pem
+olcTLSCertificateKeyFile: /etc/ssl/private/ldap_slapd_key.pem
 olcTLSVerifyClient: never
 olcToolThreads: 1
 olcWriteTimeout: 0
 structuralObjectClass: olcGlobal
-entryUUID: e85f7c8a-0b80-1034-8d18-8351fc2088db
+entryUUID: edda375e-0c48-1034-9a27-9904965cd955
 creatorsName: cn=config
-createTimestamp: 20141128193134Z
-entryCSN: 20141128193134.624494Z#000000#000#000000
+createTimestamp: 20141129192323Z
+entryCSN: 20141129192323.163342Z#000000#000#000000
 modifiersName: cn=config
-modifyTimestamp: 20141128193134Z
+modifyTimestamp: 20141129192323Z
