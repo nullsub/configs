@@ -40,13 +40,7 @@ nogroup:*::
 libuuid:!::
 crontab:!::
 ssh:!::
-sebastian:!::
-lucas:!::
 christian:!::
-william:!::
-mheyde:!::
-hoehlig:!::
-git:!::
 messagebus:!::
 bind:!::
 ntp:!::
@@ -58,3 +52,4 @@ colord:!::
 utempter:!::
 saned:!::
 sambashare:!::
+nslcd:!::

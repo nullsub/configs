@@ -40,13 +40,7 @@ nogroup:x:65534:
 libuuid:x:101:
 crontab:x:102:
 ssh:x:103:
-sebastian:x:1001:
-lucas:x:1002:
 christian:x:1003:
-william:x:1004:
-mheyde:x:1005:
-hoehlig:x:1006:
-git:x:1000:
 messagebus:x:104:
 bind:x:105:
 ntp:x:106:
@@ -58,3 +52,4 @@ colord:x:111:
 utempter:x:112:
 saned:x:113:
 sambashare:x:114:
+nslcd:x:115:

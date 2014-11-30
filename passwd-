@@ -18,13 +18,7 @@ gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
 nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
 libuuid:x:100:101::/var/lib/libuuid:/bin/sh
 sshd:x:101:65534::/var/run/sshd:/usr/sbin/nologin
-sebastian:x:1001:1001:Sebastian Knauer,,,:/home/sebastian:/bin/bash
-lucas:x:1002:1002:,,,:/home/lucas:/bin/bash
 christian:x:1003:1003:,,,:/home/christian:/bin/bash
-william:x:1004:1004:,,,:/home/william:/bin/bash
-mheyde:x:1005:1005:,,,:/home/mheyde:/bin/bash
-hoehlig:x:1006:1006:,,,:/home/hoehlig:/bin/bash
-git:x:1000:1000:,,,:/home/git:/bin/bash
 messagebus:x:102:104::/var/run/dbus:/bin/false
 distccd:x:103:65534::/:/bin/false
 bind:x:104:105::/var/cache/bind:/bin/false
@@ -33,4 +27,4 @@ openldap:x:106:107:OpenLDAP Server Account,,,:/var/lib/ldap:/bin/false
 statd:x:107:65534::/var/lib/nfs:/bin/false
 colord:x:108:111:colord colour management daemon,,,:/var/lib/colord:/bin/false
 saned:x:109:113::/home/exports/saned:/bin/false
-nslcd:x:110:115::/var/run/nslcd/:/bin/false
+nslcd:x:110:115:nslcd name service LDAP connection daemon,,,:/var/run/nslcd/:/bin/false
