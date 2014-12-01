@@ -1,0 +1,15 @@
+# Tree root
+dn: dc=cluster,dc=local
+objectClass: dcObject
+objectClass: organization
+o: cluster
+dc: cluster
+#description: Tree root
+
+# LDAP admin
+dn: cn=admin,dc=cluster,dc=local
+#objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+#userPassword: {SSHA}52g5BxB2hCwfLR846bo+8FaBsmVoSxaA
+#description: LDAP administrator
