@@ -1,5 +1,5 @@
 \chapter{LDAP}
-Als Grundlage dient http://wiki.ubuntuusers.de/OpenLDAP#Konfiguration-ueber-cn-config-Datenbank-etc-ldap-slapd-d
+Als Grundlage dient http://wiki.ubuntuusers.de/OpenLDAP
 ldap, utils und migrationstools installieren
 \begin{lstlisting}[style=Bash]
 # apt-get install slapd smbldap-tools ldap-utils
@@ -18,8 +18,8 @@ ldap konfigurieren
  purge remove & no\\
  Allow LDAPv2 protocol & yes\\
 \end{tabular}
-\\
-slap über slapd.conf konfigurieren:
+\section{slapd.conf}
+slapd über slapd.conf konfigurieren:
 \begin{lstlisting}[style=Bash]
 .....
 .....
@@ -43,7 +43,6 @@ password-hash   {CLEARTEXT}
 
 Admin user hinzufügen, base.ldif
 \begin{lstlisting}[style=Bash]
-dn:dc=cluster,dc=local
 objectClass: dcObject
 objectClass: organization
 o: cluster
@@ -86,6 +85,7 @@ Alle Gruppen migrieren:
 \begin{lstlisting}[style=Bash]
 ./smbldap-migrate-unix-groups -G /etc/group -v 
 \end{lstlisting}
+\section{SASL}
 Die Passwörter müssen als Klartext in der LDAP DB gespeichert werden damit SASL funktioniert. Darum muss für jeden Nutzer noch das Passwort gesetzt werden:
 \begin{lstlisting}[style=Bash]
 ldappasswd -x -D cn=admin,dc=cluster,dc=local -W -s userpwd1 uid=user1,ou=Users,dc=cluster,dc=local 
@@ -104,7 +104,6 @@ cn = cluster
 ca
 cert_signing_key
 \end{lstlisting}
-\\
 \begin{lstlisting}[style=Bash]
 sudo sh -c "certtool --generate-privkey > cakey.pem" 
 sudo certtool --generate-self-signed --load-privkey cakey.pem --template ca.cfg --outfile cacert.pem 
@@ -118,7 +117,6 @@ tls_www_server
 encryption_key
 signing_key
 \end{lstlisting}
-\\
 das ldap zertifikat installieren:
 \begin{lstlisting}[style=Bash]
 organization = cluster
@@ -142,16 +140,15 @@ ssl start_tls
 tls_cacert /etc/ssl/certs/ldap_slapd_cacert.pem
 TLS_REQCERT allow
 \end{lstlisting}
-\\
 LDAP Authentication
 packete installieren:
 \begin{lstlisting}[style=Bash]
 sudo apt-get install libnss-ldapd libpam-ldapd nslcd nscd
 \end{lstlisting}
 
-Die ldap Zugangsdaten werden nun in /etc/pam_ldap.conf und in /etc/nslcd.conf geschrieben:
+Die ldap Zugangsdaten werden nun in /etc/pam\_ldap.conf und in /etc/nslcd.conf geschrieben:
 \begin{lstlisting}[style=Bash]
-christian@headnode:~ $ sudo cat /etc/nslcd.conf 
+christian@headnode:~ \$ sudo cat /etc/nslcd.conf 
 # /etc/nslcd.conf
 # nslcd configuration file. See nslcd.conf(5)
 # for details.
@@ -181,21 +178,18 @@ Das LDAP-PAM Modul kann nun aktiviert werden. Das unix modul kann nun deaktivier
 \begin{lstlisting}[style=Bash]
 sudo pam-auth-update
 \end{lstlisting}
-\\
 Den root user kann man aus dem ldap Verzeichnis entfernen
 \begin{lstlisting}[style=Bash]
 ldapdelete -D "cn=admin,dc=cluster,dc=local" uid=root,ou=Users,dc=cluster,dc=local -W
 \end{lstlisting}
-\\
-LDAP-auf dem computenode einrichten:
+\section{client}
+LDAP-auf dem Computenode einrichten:
 \begin{lstlisting}[style=Bash]
 sudo apt-get install ldap-tools libpam-ldap
 \end{lstlisting}
-{ldap.conf pam_ldap.conf pam_ldap.secret nsswitch} muss analog zum server editiert werden.
-
-Damit Nutzer, welche nur im ldap Verzeichnis sind und nicht in /etc/passwd sich auch einloggen können, muss use_authtok von /etc/pam.d/common-passwd entfernt werden
-
-Nachdem die die ldap Authentication ausreichend getestet worden ist, werden die unix accounts für alle normalen User entfernt. Nicht für root!
+{ldap.conf pam\_ldap.conf pam\_ldap.secret nsswitch} muss analog zum server editiert werden.\\
+Damit Nutzer, welche nur im ldap Verzeichnis sind und nicht in /etc/passwd sich auch einloggen können, muss use\_authtok von /etc/pam.d/common-passwd entfernt werden.\\
+Nachdem die die ldap Authentication ausreichend getestet worden ist, werden die unix accounts für alle normalen User entfernt. Nicht für root!\\
 \begin{lstlisting}[style=Bash]
 sudo userdel userN
 \end{lstlisting}
