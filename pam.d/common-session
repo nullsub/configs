@@ -21,6 +21,7 @@ session	requisite			pam_deny.so
 # since the modules above will each just jump around
 session	required			pam_permit.so
 # and here are more per-package modules (the "Additional" block)
+session	required        pam_mkhomedir.so umask=0022 skel=/etc/skel
 session	required	pam_unix.so 
 session	[success=ok default=ignore]	pam_ldap.so minimum_uid=1000
 # end of pam-auth-update config

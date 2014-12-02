@@ -1,5 +1,6 @@
 # PAM configuration for the Secure Shell service
 
+session    required     pam_mkhomedir.so skel=/etc/skel/ umask=0022
 # Read environment variables from /etc/environment and
 # /etc/security/pam_env.conf.
 auth       required     pam_env.so # [1]
@@ -40,3 +41,5 @@ session    required     pam_limits.so
 
 # Standard Un*x password updating.
 @include common-password
+
+session optional pam_exec.so seteuid log=/tmp/makessh.log /usr/local/bin/makessh.sh

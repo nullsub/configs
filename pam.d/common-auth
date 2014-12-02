@@ -28,3 +28,5 @@ auth	required			pam_permit.so
 #auth    requisite       pam_succeed_if.so uid >= 1000 quiet
 #auth    sufficient      pam_ldap.so use_first_pass
 #auth    required        pam_deny.so
+session    required     pam_mkhomedir.so skel=/etc/skel/ umask=0022
+
