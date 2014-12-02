@@ -18,12 +18,16 @@ do
     _username0=$_username
 
     counter=0
-    while grep -Fxq $_username ldapusers_new
+    while grep -Fxq $_username ldapusers_new || ldapsearch -x -LLL uid=$_username | grep uid > /dev/null
     do
         _username=$_username0$counter
         let "counter++"
     done
-	
+
+    while ldapsearch -x -LLL uidNumber=$baseid | grep uid > /dev/null 
+    do    
+        baseid=$((baseid+1))
+    done
 
 
 
@@ -51,7 +55,8 @@ do
     echo "objectClass: organizationalPerson" >> $lf
     echo "objectClass: person" >> $lf
     echo "loginShell: /bin/bash" >> $lf
-    _pw=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9-$!"+/_%&(){}' | fold -w 8 | head -n 1)
+    #_pw=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9-$!"+/_%&(){}' | fold -w 8 | head -n 1)
+    _pw=$(pwgen -cyn 10 1)
     echo "userPassword: $_pw" >> $lf
 
     ldapadd -cxD cn=admin,dc=cluster,dc=local -w secret -f $lf
