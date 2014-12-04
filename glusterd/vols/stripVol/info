@@ -1,9 +1,0 @@
-type=1
-count=2
-status=1
-sub_count=2
-version=4
-transport-type=0
-volume-id=2b63e9ff-f90a-40f6-bf5e-dbe75de853da
-brick-0=192.168.2.1:-data-brick0
-brick-1=192.168.2.10:-data-brick1
