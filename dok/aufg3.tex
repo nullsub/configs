@@ -1,0 +1,29 @@
+\chapter{Aufgabe 3 - DHCP \& DNS}
+\section{DHCP}
+restart with
+sudo /etc/init.d/isc-dhcp-server restart
+config ist in /etc/dhcp/dhcp.conf
+
+in /etc/default/isc-dhcp-server muss noch eth1 eingetragen werden damit der DHCP server nur auf eth1 läuft
+
+in den nodes ist /etc/network/interfaces angepasst worden
+
+Damit der Headnode den lokalen dns server nutzt, muss /etc/dhclient.conf angepasst werden.
+
+\begin{lstlisting}[style=Bash]
+prepend domain-name-servers 127.0.0.1;
+request subnet-mask, broadcast-address, time-offset, routers,
+	domain-name, domain-search, host-name,
+	dhcp6.domain-search,
+	netbios-scope, interface-mtu,
+	rfc3442-classless-static-routes, ntp-servers;
+\end{lstlisting}
+
+\section{DNS}
+Domans: cluster.local. headnode.cluster.local, nodeN.cluster.local
+bind9 wird genutzt
+geändert wurde:
+/etc/bind/db.cluster.local
+/etc/bind/db.192
+/etc/bind/named.conf.local
+/etc/bind/named.conf.options

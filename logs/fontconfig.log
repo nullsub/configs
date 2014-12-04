@@ -1,0 +1,17 @@
+/usr/share/fonts: caching, new cache contents: 0 fonts, 3 dirs
+/usr/share/fonts/cmap: caching, new cache contents: 0 fonts, 5 dirs
+/usr/share/fonts/cmap/adobe-cns1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-gb1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-janan2: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-korea1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/truetype: caching, new cache contents: 0 fonts, 3 dirs
+/usr/share/fonts/truetype/droid: caching, new cache contents: 18 fonts, 0 dirs
+/usr/share/fonts/truetype/liberation: caching, new cache contents: 16 fonts, 0 dirs
+/usr/share/fonts/truetype/ttf-dejavu: caching, new cache contents: 6 fonts, 0 dirs
+/usr/share/fonts/type1: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/type1/gsfonts: caching, new cache contents: 35 fonts, 0 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/var/cache/fontconfig: cleaning cache directory
+fc-cache: succeeded

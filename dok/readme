@@ -1,0 +1,8 @@
+Für alle vimuser unter euch, was ich für nützlich empfinde:
+
+in .vim/ftplugin/tex.vim
+
+:map <F5> :!clear&&pdflatex -output-directory=build  %<CR>
+
+
+Dabei muss $pwd im selben verzeichnis wie die .tex datei sein und das dir build/ existieren

@@ -1,0 +1,20 @@
+\chapter{Netfilter und Iptables}
+\section{Grundkonfiguration}
+in /etc/iptables.test.rules das zeug schreiben
+\lstinputlisting[style=Bash]{../current_etc/iptables.test.rules}
+iptables-save>iptables.ip.rules
+
+ein script in /etc/network/if-pre-up.d/iptables
+das script ausführbar machen
+
+iptables-restore<iptables.ip.rules
+
+sudo apt-get install fail2ban
+Bei 3 mal wiederholtem einloggen mit falschen Zugangsdaten wird die IP für 10 Minuten gesperrt.
+
+\section{Forwarding und Masquerading}
+ip  forwarding - schreibe 1 in /etc/sysctl.conf forwarding
+3 rules zu iptables
+
+\section{Diagnose und Logging}
+fallback cronjob script iptables -F

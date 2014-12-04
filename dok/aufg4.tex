@@ -1,0 +1,69 @@
+\chapter{Netzwerkdateisysteme}
+\section{NFS}
+apt-get install nfs-kernel-server nfs-common
+edit /etc/exports
+tell nfs to used fixed ports. This makes iptable rules easier:
+in /etc/defaults/nfs-common
+/etc/defaults/nfs-kernel-server
+
+on the client edit /etc/fstab
+
+In /shared liegt das geteilte Tool-Verzeichnis
+Mit sudo chmod a+rwx wurde jedem user der Zugriff auf das Verzeichnis gewährt.
+
+\section{Paralleles Verteiltes Dateisystem}
+auf dem jedem brick NeIN auf der partition /dev/sdaX
+\begin{lstlisting}[style=Bash]
+# apt-get install glusterfs-server
+\end{lstlisting}
+neue partition 20gb
+\begin{lstlisting}[style=Bash]
+# fdisk /dev/sda
+---------------
+n <enter>
+<enter>
+<enter>
+w
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+# apt-get install parted
+# partprobe
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+# apt-get install xfsprogs
+\end{lstlisting}
+
+file system auf sdaX xfs
+\begin{lstlisting}[style=Bash]
+# mkfs.xfs -i size=512 /dev/sdX
+# mkdir -p /data/bricki
+\end{lstlisting}
+fstab
+\begin{lstlisting}[style=Bash]
+/dev/sdaX /data/brickN xfs defaults 1 2
+\end{lstlisting}
+\begin{lstlisting}[style=Bash]
+mount -a && mount
+\end{lstlisting}
+nur auf einem node
+\begin{lstlisting}[style=Bash]
+# gluster peer probe 192.168.2.10
+# gluster volume create striped-volume stripe 2 
+    192.168.2.1:/data/brick0 192.168.2.10:/data/brick1
+# gluster volume start striped-volume
+\end{lstlisting}
+
+auf jedem node
+\begin{lstlisting}[style=Bash]
+# mkdir /fastfs 
+%# mount.glusterfs 192.168.2.10:/striped-volumefastfs
+\end{lstlisting}
+fstab
+\begin{lstlisting}[style=Bash]
+192.168.2.10:/striped-volume /fastfs glusterfs defaults,_netdev 0 0
+\end{lstlisting}
+Striped weil fast(schnell), aber wenn ein knoten kaputt, alles kaputt
+
+write speed /home: ~ 350MB/s
+write speed /fastfs: ~ 40MB/s
+write speed /shared: ~ 336MB/s
