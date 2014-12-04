@@ -40,7 +40,6 @@ nogroup:*::
 libuuid:!::
 crontab:!::
 ssh:!::
-christian:!::
 messagebus:!::
 bind:!::
 ntp:!::

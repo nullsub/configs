@@ -40,7 +40,6 @@ nogroup:x:65534:
 libuuid:x:101:
 crontab:x:102:
 ssh:x:103:
-christian:x:1003:
 messagebus:x:104:
 bind:x:105:
 ntp:x:106:

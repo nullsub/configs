@@ -18,7 +18,6 @@ gnats:*:16366:0:99999:7:::
 nobody:*:16366:0:99999:7:::
 libuuid:!:16366:0:99999:7:::
 sshd:*:16366:0:99999:7:::
-christian:$6$gFur9u29$VvFHZ1PCzOIcfgjYo4KOa9VUXMhAl3O0t88luDbkWAwAiTdLdYIdbnhmRgvO.DIvsX4C.y0AVnZ8BAJI4wpNm1:16370:0:99999:7:::
 messagebus:*:16377:0:99999:7:::
 distccd:*:16382:0:99999:7:::
 bind:*:16386:0:99999:7:::
@@ -28,3 +27,4 @@ statd:*:16387:0:99999:7:::
 colord:*:16394:0:99999:7:::
 saned:*:16394:0:99999:7:::
 nslcd:*:16403:0:99999:7:::
+mysql:!:16408:0:99999:7:::
