@@ -15,12 +15,11 @@
 \begin{lstlisting}[style=Bash]
 # apt-get install sudo
 \end{lstlisting}
-Sudoers-File in /etc/sudoers konfigureren:
-(für alle user)
+(für alle user <username>)
 \begin{lstlisting}[style=Bash]
-...
+# vim /etc/sudoers
+§\dotfill§
 <username> ALL=(ALL)NOPASSWD:ALL
-...
 \end{lstlisting}
 \begin{lstlisting}[style=Bash]
 $ wget http://lctp.zih.tu-dresden.de/key/<username>.key
@@ -37,28 +36,28 @@ Install SSH-Server
 # apt-get install openssh-server 
 \end{lstlisting}
 
-
-/etc/hosts.allow konfigureren:
 \begin{lstlisting}[style=Bash]
-...
+# vim /etc/hosts.allow
+§\dotfill§
 sshd: 141.76.0.0/255.255.0.0
 sshd: 141.30.0.0/255.255.0.0
 sshd: 192.168.2.0/255.255.255.0
 sshd: LOCAL 
 \end{lstlisting}
-/etc/hosts.deny konfigureren:
 \begin{lstlisting}[style=Bash]
-...
+# vim /etc/hosts.deny
+§\dotfill§
 sshd: ALL
 \end{lstlisting}
 
-SSH-Server in /etc/ssh/sshd\_config konfigureren:
+SSH-Server konfigureren:
 \begin{lstlisting}[style=Bash]
-...
+# vim /etc/ssh/sshd_config
+§\dotfill§
 PermitRootLogin no
 RSAAuthentication yes
 PubkeyAuthentication yes
-...
+
 AllowUsers *@141.76.*.*
 AllowUsers *@141.30.*.*
 AllowUsers *@192.168.2.*.*

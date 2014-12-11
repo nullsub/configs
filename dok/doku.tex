@@ -3,17 +3,24 @@
 \usepackage{graphicx}
 \usepackage{listings, color}
 
+\definecolor{listblue}{rgb}{.922, .945, .961}
+\definecolor{listborder}{rgb}{.788, .851, .894}
+
+
 \lstdefinestyle{Bash}
 {
     language=bash,
     frame=lrtb,
     basicstyle=\ttfamily,
     showstringspaces=false,
-    keywordstyle=\color{blue}
+    %keywordstyle=\color{blue},
+    escapechar=§,
+    rulecolor=\color{listborder},
+    backgroundcolor=\color{listblue}
 }
 
 \author{Christian, Lucas, Sebastian}
-\title{Praktiumsbericht LCTP 1}
+\title{Praktiumsbericht}
 \matno{s9284744,x6666666}
 \bibfiles{doku}
 \betreuer{William}
