@@ -188,3 +188,8 @@ Nachdem die ldap Authentication ausreichend getestet worden ist, werden die unix
 \begin{lstlisting}[style=Bash]
 sudo userdel userN
 \end{lstlisting}
+\begin{lstlisting}[style=Bash]
+@headnode:# vim /etc/pam.d/sshd
+§/dotfill/
+session optional pam_exec.so seteuid log=/tmp/makessh.log /usr/local/bin/makessh.sh
+\end{lstlisting}
