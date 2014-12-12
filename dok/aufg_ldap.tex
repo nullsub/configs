@@ -1,10 +1,10 @@
 \chapter{LDAP}
 Als Grundlage dient http://wiki.ubuntuusers.de/OpenLDAP
-ldap, utils und migrationstools installieren
+ldap, utils und migrationstools installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install slapd smbldap-tools ldap-utils
 \end{lstlisting}
-ldap konfigurieren
+ldap konfigurieren:
 \begin{lstlisting}[style=Bash]
 # dpkg-reconfigure -plow slapd
 \end{lstlisting}
@@ -40,8 +40,7 @@ authz-policy      to
 # enable LDAP to help SASL to use passworts stored in LDAP database
 password-hash   {CLEARTEXT}
 \end{lstlisting}
-
-Admin user hinzufügen, base.ldif
+Admin User hinzufügen, base.ldif
 \begin{lstlisting}[style=Bash]
 objectClass: dcObject
 objectClass: organization
@@ -52,9 +51,10 @@ dn:cn=admin,dc=cluster,dc=local
 objectClass: organizationalRole
 cn: admin
 \end{lstlisting}
+\begin{lstlisting}[style=Bash]
 ldapadd -x -h localhost -W -D cn=admin,dc=cluster,dc=local -f base.ldif 
-
-Linux Benutzeraccounts nach LDAP migrieren
+\end{lstlisting}
+Linux Benutzeraccounts nach LDAP migrieren.\\
 init.ldif:
 \begin{lstlisting}[style=Bash]
 dn: ou=Users,dc=cluster,dc=local
@@ -73,7 +73,7 @@ dn: ou=Idmap,dc=cluster,dc=local
 objectClass: organizationalUnit
 ou: Idmap
 \end{lstlisting}
-Hinzufügen
+Hinzufügen:
 \begin{lstlisting}[style=Bash]
 sudo ldapadd -x -h localhost -W -D cn=admin,dc=cluster,dc=local -f init.ldif
 \end{lstlisting}
@@ -90,15 +90,13 @@ Die Passwörter müssen als Klartext in der LDAP DB gespeichert werden damit SAS
 \begin{lstlisting}[style=Bash]
 ldappasswd -x -D cn=admin,dc=cluster,dc=local -W -s userpwd1 uid=user1,ou=Users,dc=cluster,dc=local 
 \end{lstlisting}
-Dann sollte SASL funktionieren. Dies man mit folgendem Befehl überprüfen
+Dann sollte SASL funktionieren. Dies kann man mit folgendem Befehl überprüfen:
 \begin{lstlisting}[style=Bash]
 ldapsearch -b dc=cluster,dc=local
 \end{lstlisting}
-Das Admin Passwort muss auch noch als Klartext hinterlegt werden.
-\\
-Nun wird TLS eingerichtet.
-Zertifikate erstellen:
-/var/ssl/ca.cfg:
+Das Admin Passwort muss auch noch als Klartext hinterlegt werden.\\
+Nun wird TLS eingerichtet.\\
+Zertifikate erstellen; /var/ssl/ca.cfg:
 \begin{lstlisting}[style=Bash]
 cn = cluster
 ca
@@ -117,7 +115,7 @@ tls_www_server
 encryption_key
 signing_key
 \end{lstlisting}
-das ldap zertifikat installieren:
+Das ldap Zertifikat installieren:
 \begin{lstlisting}[style=Bash]
 organization = cluster
 sudo install -D -o openldap -g openldap -m 600 /var/ssl/ldap_slapd_key.pem  /etc/ssl/private/ldap_slapd_key.pem
@@ -130,9 +128,8 @@ TLSCertificateFile    /etc/ssl/certs/ldap_slapd_cert.pem
 TLSCertificateKeyFile /etc/ssl/private/ldap_slapd_key.pem
 TLSCACertificateFile  /etc/ssl/certs/ldap_slapd_cacert.pem
 \end{lstlisting}
-Damit slapd nun weiterhin startet muss sichergestellt sein dass der user openldap Zugriffsrechte auf /etc/ssl/* hat.
-\\
-Der ldap client wird nun konfiguriert um auch ssl zu verwenden.
+Damit slapd nun weiterhin startet muss sichergestellt sein dass der User openldap Zugriffsrechte auf /etc/ssl/* hat.\\
+Der ldap Client wird nun konfiguriert um ssl zu verwenden:
 \begin{lstlisting}[style=Bash]
 uri ldaps://cluster.local/:636
 ldap_version 3
@@ -140,15 +137,14 @@ ssl start_tls
 tls_cacert /etc/ssl/certs/ldap_slapd_cacert.pem
 TLS_REQCERT allow
 \end{lstlisting}
-LDAP Authentication
-packete installieren:
+LDAP Authentication.\\
+Packete installieren:
 \begin{lstlisting}[style=Bash]
 sudo apt-get install libnss-ldapd libpam-ldapd nslcd nscd
 \end{lstlisting}
-
-Die ldap Zugangsdaten werden nun in /etc/pam\_ldap.conf und in /etc/nslcd.conf geschrieben:
+Die ldap Zugangsdaten werden in /etc/pam\_ldap.conf und in /etc/nslcd.conf geschrieben:
 \begin{lstlisting}[style=Bash]
-christian@headnode:~ \$ sudo cat /etc/nslcd.conf 
+# sudo cat /etc/nslcd.conf 
 # /etc/nslcd.conf
 # nslcd configuration file. See nslcd.conf(5)
 # for details.
@@ -173,12 +169,11 @@ ssl on
 tls_reqcert allow
 tls_cacertfile /etc/ssl/certs/ldap_slapd_cacert.pem
 \end{lstlisting}
-
-Das LDAP-PAM Modul kann nun aktiviert werden. Das unix modul kann nun deaktiviert werden.
+Das LDAP-PAM Modul kann nun aktiviert werden: 
 \begin{lstlisting}[style=Bash]
 sudo pam-auth-update
 \end{lstlisting}
-Den root user kann man aus dem ldap Verzeichnis entfernen
+Den root user kann man aus dem ldap Verzeichnis entfernen:
 \begin{lstlisting}[style=Bash]
 ldapdelete -D "cn=admin,dc=cluster,dc=local" uid=root,ou=Users,dc=cluster,dc=local -W
 \end{lstlisting}
@@ -189,7 +184,7 @@ sudo apt-get install ldap-tools libpam-ldap
 \end{lstlisting}
 {ldap.conf pam\_ldap.conf pam\_ldap.secret nsswitch} muss analog zum server editiert werden.\\
 Damit Nutzer, welche nur im ldap Verzeichnis sind und nicht in /etc/passwd sich auch einloggen können, muss use\_authtok von /etc/pam.d/common-passwd entfernt werden.\\
-Nachdem die die ldap Authentication ausreichend getestet worden ist, werden die unix accounts für alle normalen User entfernt. Nicht für root!\\
+Nachdem die ldap Authentication ausreichend getestet worden ist, werden die unix Accounts für alle normalen User entfernt: 
 \begin{lstlisting}[style=Bash]
 sudo userdel userN
 \end{lstlisting}
