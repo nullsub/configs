@@ -1,26 +1,26 @@
 \chapter{OpenMPI}
-openmpi installieren
+OpenMPI installieren:
 \begin{lstlisting}[style=Bash]
 # sudo apt-get install openmpi-bin libopenmpi-dbg libopenmpi-dev
 \end{lstlisting}
-Minimalbeispiel nach /fastfs installieren
+Minimalbeispiel nach /shared installieren:
 \begin{lstlisting}[style=Bash]
 # git clone https://github.com/freme/MatMulExamples.git
 # make
 \end{lstlisting}
-In /fastfs/mpi\_hosts werden alle mpi hosts abgelegt welche über ssh erreichbar sind.
+In /shared/mpi\_hosts werden alle MPI Hosts abgelegt welche über ssh erreichbar sind:
 \begin{lstlisting}[style=Bash]
 headnode slots=2
 node0 slots=2
 \end{lstlisting}
-Nun kann man auf dem headnode das Beispiel starten.
+Nun kann man auf dem headnode das Beispiel starten:
 \begin{lstlisting}[style=Bash]
-# cd /fastfs/MatMulExamples/MatMulMPICannon/
+# cd /shared/MatMulExamples/MatMulMPICannon/
 # make runssh
 \end{lstlisting}
-Anschaulich ist auch das helloworld beispiel:
+Anschaulich ist auch das helloworld Beispiel:
 \begin{lstlisting}[style=Bash]
-# cd /fastfs/hello_mpi/
+# cd /shared/hello_mpi/
 # mpicc hello.c -o hello 
-# mpirun -np 4 --hostfile /fastfs/mpi_hosts hello
+# mpirun -np 4 --hostfile /shared/mpi_hosts hello
 \end{lstlisting}

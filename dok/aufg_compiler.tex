@@ -1,0 +1,25 @@
+\chapter{Compiler}
+Compiler werden in /shared compiliert und nach /shared/tools installiert.
+Sourcen downloaden:
+\begin{lstlisting}[style=Bash]
+# wget http://gcc.cybermirror.org/releases/gcc-4.8.3/gcc-4.8.3.tar.bz2
+# wget http://gcc.cybermirror.org/releases/gcc-4.9.2/gcc-4.9.2.tar.bz2
+# svn checkout http://gcc.gnu.org/svn/gcc/trunk gcc-head
+# svn checkout http://llvm.org/svn/llvm-project/llvm/trunk llvm
+\end{lstlisting}
+Compiler installieren:
+\begin{lstlisting}[style=Bash]
+$ apt-get install subversion libgmp-dev libmpfr-dev libmpc-dev \
+	gcc-multilib g++ g++-multilib zip bison build-essential
+\end{lstlisting}
+Entpacken:
+\begin{lstlisting}[style=Bash]
+# tar -xf gcc-4.8.3.tar.bz2
+# tar -xf gcc-4.9.2.tar.bz2
+\end{lstlisting}
+Nach folgendem Schema werden die Compiler compiliert und installiert:
+\begin{lstlisting}[style=Bash]
+# ./configure --prefix=/shared/tools/gcc/4.x.x
+# LIBRARY_PATH=/usr/lib32:$LIBRARY_PATH make -j2
+# make install
+\end{lstlisting}
