@@ -1,9 +1,9 @@
 \chapter{NTP}
-ntp installieren
+NTP installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install ntp
 \end{lstlisting}
-headnode server /ect/ntp.conf
+headnode Server /ect/ntp.conf:
 \begin{lstlisting}[style=Bash]
 ...
 server time.zih.tu-dresden.de iburst
@@ -17,8 +17,7 @@ restrict 192.168.2.0 mask 255.255.255.0 nomodify nopeer
 \begin{lstlisting}[style=Bash]
 # service ntp restart
 \end{lstlisting}
-
-computenode client /ect/ntp.conf
+Computenode Client /ect/ntp.conf:
 \begin{lstlisting}[style=Bash]
 ...
 # Zugriff durch NTP-Server gestatten
@@ -29,7 +28,6 @@ restrict 127.0.0.1
  
 ...
 \end{lstlisting}
-
 \begin{lstlisting}[style=Bash]
 # service ntp restart
 \end{lstlisting}
