@@ -1,0 +1,6 @@
+\chapter{Environment-Modules}
+environment-modules installieren
+\begin{lstlisting}[style=Bash]
+$ pdsh -a sudo apt-get install environment-modules -y
+$ pdsh -a "echo /shared/modulefiles | sudo tee -a /usr/share/modules/init/.modulespath"
+\end{lstlisting}

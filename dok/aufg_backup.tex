@@ -1,0 +1,25 @@
+\chapter{Backup}
+Es wurde sich für rsnapshot entschieden. rsnapshot führt Snapshots mit rsync und Hardlinks durch.
+Da sich die meisten Daten der nodes selten ändern bleibt der Speicherplatzaufwand und Zeitaufwand für die Snapshots gering.
+rsnapshot installieren:
+\begin{lstlisting}[style=Bash]
+# sudo apt-get install rsnapshot
+\end{lstlisting}
+NFS mounten
+\begin{lstlisting}[style=Bash]
+141.76.90.115:/nfs/lctp1 /backup nfs rw 0 0 
+\end{lstlisting}
+In den iptables wurde der Zugriff auf die ip des nfs Nervers komplett erlaubt.
+/etc/rsnapshot.conf
+\begin{lstlisting}[style=Bash]
+exclude /proc/
+exclude /sys/
+...
+backup / headnode/
+\end{lstlisting}
+/shared und /fastfs wird von den Computenodes nicht gesichert da diese vom headnode bereits gesichert werden.
+Mit einem cronjob wird das tägliche Backup gestartet. Der headnode startet das Backup um 00:00. \\
+Die Computenodes starten ihr Backup jeweils um N:00. Node1 startet somit das Backup um 01:00 Uhr.
+\begin{lstlisting}[style=Bash]
+0 0 * * * /usr/bin/rsnapshot daily
+\end{lstlisting}
