@@ -18,6 +18,7 @@ request subnet-mask, broadcast-address, time-offset, routers,
 	netbios-scope, interface-mtu,
 	rfc3442-classless-static-routes, ntp-servers;
 \end{lstlisting}
+Der hostname der nodes wird noch nicht automatisch gesetzt. Dies kann mit einem script in /etc/dhcp/dhclient-exit-hooks.d/ gemacht werden.
 
 \section{DNS}
 Domans: cluster.local. headnode.cluster.local, nodeN.cluster.local
