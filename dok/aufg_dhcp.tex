@@ -1,15 +1,35 @@
 \chapter{Aufgabe 3 - DHCP \& DNS}
 \section{DHCP}
-restart with
-sudo /etc/init.d/isc-dhcp-server restart
 config ist in /etc/dhcp/dhcp.conf
+\begin{lstlisting}[style=Bash]
+subnet 192.168.2.0 netmask 255.255.255.0 {
+	range 192.168.2.240 192.168.2.250;
+	option routers 192.168.2.1;
+	option domain-name-servers 192.168.2.1;
+}
 
-in /etc/default/isc-dhcp-server muss noch eth1 eingetragen werden damit der DHCP server nur auf eth1 läuft
+host node0 {
+	hardware ethernet 74:d4:35:84:06:f1;
+	fixed-address 192.168.2.10;
+	option host-name "node0";
+}
 
-in den nodes ist /etc/network/interfaces angepasst worden
+host node1 {
+	hardware ethernet 74:d4:35:1d:f2:91;
+	fixed-address 192.168.2.11;
+	option host-name "node1";
+}
+\end{lstlisting}
 
-Damit der Headnode den lokalen dns server nutzt, muss /etc/dhclient.conf angepasst werden.
+In /etc/default/isc-dhcp-server muss eth1 eingetragen werden damit der DHCP Server nur auf eth1 läuft.
+DHCP Server neu starten:
+\begin{lstlisting}[style=Bash]
+# /etc/init.d/isc-dhcp-server restart
+\end{lstlisting}
 
+In den Nodes wird /etc/network/interfaces angepasst:
+
+Damit der Headnode den lokalen DNS Server nutzt, muss /etc/dhclient.conf angepasst werden.
 \begin{lstlisting}[style=Bash]
 prepend domain-name-servers 127.0.0.1;
 request subnet-mask, broadcast-address, time-offset, routers,
@@ -18,8 +38,7 @@ request subnet-mask, broadcast-address, time-offset, routers,
 	netbios-scope, interface-mtu,
 	rfc3442-classless-static-routes, ntp-servers;
 \end{lstlisting}
-Der hostname der nodes wird noch nicht automatisch gesetzt. Dies kann mit einem script in /etc/dhcp/dhclient-exit-hooks.d/ gemacht werden.
-
+Der Hostname der Nodes wird noch nicht automatisch gesetzt. Dies kann mit einem Script in /etc/dhcp/dhclient-exit-hooks.d/ gemacht werden.
 \section{DNS}
 Domans: cluster.local. headnode.cluster.local, nodeN.cluster.local
 bind9 wird genutzt
