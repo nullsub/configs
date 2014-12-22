@@ -200,4 +200,17 @@ dort werden die keys und home directory usw erzeugt
 session optional pam\_exec.so seteuid 
     log=/tmp/makessh.log /usr/local/bin/makessh.sh
 \end{lstlisting}
+script zum anelgen neuer benutzer:
+\lstinputlisting[style=BASH]{../aufgabe_ldap/addusers.sh}
+\begin{lstlisting}[style=Bash]
+# ./addusers.sh userliste.txt 
+\end{lstlisting}
+Legt datei ldapusers\_new und un\_pw an.
+In un\_pw sind username und pwasswort gespeichert. nur root kann das lesen. in ldapusers\_new sind die (falls verändert veränderten) usernamen gespeichert.
+script zum entfernen der benutzer:
+\lstinputlisting[style=BASH]{../aufgabe_ldap/delusers.sh}
+usage:
+\begin{lstlisting}[style=Bash]
+# ./delusers.sh ldapusers\_new
+\end{lstlisting}
 
