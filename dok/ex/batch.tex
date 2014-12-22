@@ -1,26 +1,5 @@
-\chapter{OpenMPI}
-OpenMPI installieren:
+\chapter{Batchsystem}
+Slurm installieren:
 \begin{lstlisting}[style=Bash]
-$ sudo apt-get install openmpi-bin libopenmpi-dbg libopenmpi-dev
-\end{lstlisting}
-Minimalbeispiel nach /shared installieren:
-\begin{lstlisting}[style=Bash]
-$ git clone https://github.com/freme/MatMulExamples.git
-$ make
-\end{lstlisting}
-In /shared/mpi\_hosts werden alle MPI Hosts abgelegt welche über ssh erreichbar sind:
-\begin{lstlisting}[style=Bash]
-headnode slots=2
-node0 slots=2
-\end{lstlisting}
-Nun kann man auf dem headnode das Beispiel starten:
-\begin{lstlisting}[style=Bash]
-$ cd /shared/MatMulExamples/MatMulMPICannon/
-$ make runssh
-\end{lstlisting}
-Anschaulich ist auch das helloworld Beispiel:
-\begin{lstlisting}[style=Bash]
-$ cd /shared/hello_mpi/
-$ mpicc hello.c -o hello 
-$ mpirun -np 4 --hostfile /shared/mpi_hosts hello
+$ sudo apt-get install slurm-llnl
 \end{lstlisting}
