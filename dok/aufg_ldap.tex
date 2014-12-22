@@ -100,42 +100,45 @@ Zertifikate erstellen; /var/ssl/ca.cfg:
 \begin{lstlisting}[style=Bash]
 cn = cluster
 ca
-cert_signing_key
+cert\_signing\_key
 \end{lstlisting}
 \begin{lstlisting}[style=Bash]
 sudo sh -c "certtool --generate-privkey > cakey.pem" 
 sudo certtool --generate-self-signed --load-privkey cakey.pem --template ca.cfg --outfile cacert.pem 
-sudo sh -c "certtool --generate-privkey > ldap_slapd_key.pem"
+sudo sh -c "certtool --generate-privkey > ldap\_slapd\_key.pem"
 \end{lstlisting}
 /var/ssl/slapd.cfg:
 \begin{lstlisting}[style=Bash]
 organization = cluster
 cn = cluster.local
-tls_www_server
-encryption_key
-signing_key
+tls\_www\_server
+encryption\_key
+signing\_key
 \end{lstlisting}
 Das ldap Zertifikat installieren:
 \begin{lstlisting}[style=Bash]
 organization = cluster
-sudo install -D -o openldap -g openldap -m 600 /var/ssl/ldap_slapd_key.pem  /etc/ssl/private/ldap_slapd_key.pem
-sudo install -D -o openldap -g openldap -m 600 /var/ssl/ldap_slapd_cert.pem  /etc/ssl/certs/ldap_slapd_cert.pem
-sudo install -D -o openldap -g openldap -m 600 /var/ssl/cacert.pem  /etc/ssl/certs/ldap_slapd_cacert.pem 
+sudo install -D -o openldap -g openldap -m 600 
+    /var/ssl/ldap\_slapd\_key.pem  /etc/ssl/private/ldap\_slapd\_key.pem
+sudo install -D -o openldap -g openldap -m 600 
+    /var/ssl/ldap\_slapd\_cert.pem  /etc/ssl/certs/ldap\_slapd\_cert.pem
+sudo install -D -o openldap -g openldap -m 
+    600 /var/ssl/cacert.pem  /etc/ssl/certs/ldap\_slapd\_cacert.pem 
 \end{lstlisting}
 Nun wieder /etc/ldap/slapd.conf anpassen:
 \begin{lstlisting}[style=Bash]
-TLSCertificateFile    /etc/ssl/certs/ldap_slapd_cert.pem
-TLSCertificateKeyFile /etc/ssl/private/ldap_slapd_key.pem
-TLSCACertificateFile  /etc/ssl/certs/ldap_slapd_cacert.pem
+TLSCertificateFile    /etc/ssl/certs/ldap\_slapd\_cert.pem
+TLSCertificateKeyFile /etc/ssl/private/ldap\_slapd\_key.pem
+TLSCACertificateFile  /etc/ssl/certs/ldap\_slapd\_cacert.pem
 \end{lstlisting}
 Damit slapd nun weiterhin startet muss sichergestellt sein dass der User openldap Zugriffsrechte auf /etc/ssl/* hat.\\
 Der ldap Client wird nun konfiguriert um ssl zu verwenden:
 \begin{lstlisting}[style=Bash]
 uri ldaps://cluster.local/:636
-ldap_version 3
-ssl start_tls
-tls_cacert /etc/ssl/certs/ldap_slapd_cacert.pem
-TLS_REQCERT allow
+ldap\_version 3
+ssl start\_tls
+tls\_cacert /etc/ssl/certs/ldap\_slapd\_cacert.pem
+TLS\_REQCERT allow
 \end{lstlisting}
 LDAP Authentication.\\
 Packete installieren:
@@ -160,14 +163,14 @@ uri     ldaps://cluster.local/:636
 base dc=cluster,dc=local
 
 # The LDAP protocol version to use.
-ldap_version 3
+ldap\_version 3
 
 # The DN to bind with for normal lookups.
 binddn cn=admin,dc=cluster,dc=local
 bindpw secret
 ssl on
-tls_reqcert allow
-tls_cacertfile /etc/ssl/certs/ldap_slapd_cacert.pem
+tls\_reqcert allow
+tls\_cacertfile /etc/ssl/certs/ldap\_slapd\_cacert.pem
 \end{lstlisting}
 Das LDAP-PAM Modul kann nun aktiviert werden: 
 \begin{lstlisting}[style=Bash]
@@ -188,8 +191,13 @@ Nachdem die ldap Authentication ausreichend getestet worden ist, werden die unix
 \begin{lstlisting}[style=Bash]
 sudo userdel userN
 \end{lstlisting}
+\section{anlegen neuer benutzer}
+hook, beim login über shh in den headnode wird das script makessh.sh aufgerufen.
+dort werden die keys und home directory usw erzeugt
 \begin{lstlisting}[style=Bash]
 @headnode:# vim /etc/pam.d/sshd
-§/dotfill/
-session optional pam\_exec.so seteuid log=/tmp/makessh.log /usr/local/bin/makessh.sh
+§\dotfill§
+session optional pam\_exec.so seteuid 
+    log=/tmp/makessh.log /usr/local/bin/makessh.sh
 \end{lstlisting}
+
