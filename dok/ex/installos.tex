@@ -3,7 +3,6 @@
 \includegraphics[width=400px]{cluster_layout.png}
 
 /home und /shared werden exportiert.
-
 \section{Betriebssysteminstallation}
 \begin{lstlisting}[style=Bash]
 # apt-get update 
@@ -29,13 +28,11 @@ $ cat <username>.key >> ~.ssh/authorized_keys
 # passwd -l root 
 \end{lstlisting}
 
-
 \section{SSH-Server}
 Install SSH-Server
 \begin{lstlisting}[style=Bash]
 # apt-get install openssh-server 
 \end{lstlisting}
-
 \begin{lstlisting}[style=Bash]
 # vim /etc/hosts.allow
 §\dotfill§
@@ -65,56 +62,52 @@ AllowUsers *@localhost
 # SSH server auf den nodes:
 UseDNS no
 \end{lstlisting}
-
-Für jeden User
+Für jeden User:
 \begin{lstlisting}[style=Bash]
 $ ssh-keygen -b 1024 -N ''
 $ cat ~.ssh/id_rsa.pub >> ~./ssh/authorized_keys
 \end{lstlisting}
-
-Ein Script zur automatischen Nutzererstellung:
-(dazu muss das paket whois installiert sein)
+Ein Script zur automatischen Nutzererstellung:(dazu muss das paket whois installiert sein)
 \lstinputlisting[style=Bash]{../aufgabe1/addusers.sh}
-
 \section{Parallel Distributed Shell}
-pdsh installieren
+pdsh installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install pdsh
 \end{lstlisting}
-/etc/genders
+/etc/genders:
 \begin{lstlisting}[style=Bash]
 localhost headnode
 node0 computenodes
 \end{lstlisting}
-~/.ssh/config
+~/.ssh/config:
 \begin{lstlisting}[style=Bash]
 StrictHostKeyChecking no
 \end{lstlisting}
 
 \section{Git Server}
-Git installieren und user git anlegen
+Git installieren und user git anlegen:
 \begin{lstlisting}[style=Bash]
 # apt-get install git
 # adduser git
 \end{lstlisting}
-configs Repo anlegen
+configs Repo anlegen:
 \begin{lstlisting}[style=Bash]
 # su git
 # mkdir configs
 # cd configs && git --bare init
 \end{lstlisting}
-Den ssh-key von allen usern zu /home/git/.ssh/autorized\_keys hinzufügen.
+Den ssh-key von allen usern zu /home/git/.ssh/autorized\_keys hinzufügen:
 \begin{lstlisting}[style=Bash]
 # su user
 # ssh-keygen
 # ssh-copy-id -i ~/.ssh/id\_rsa.pub git@localhost
 \end{lstlisting}
-Nun können alle user mit
+Nun können alle user mit:
 \begin{lstlisting}[style=Bash]
 # git clone git@localhost:configs
 \end{lstlisting}
 auf das Repository zugreifen.\\
-Der etc Baum ist als submodule eingebunden. Nach dem clone muss
+Der etc Baum ist als submodule eingebunden. Nach dem clone muss:
 \begin{lstlisting}[style=Bash]
 # git submodule init
 # git submodule update
@@ -126,15 +119,15 @@ Installieren und konfigurieren:
 # apt-get install etckeeper
 # cd /etc && git remote add git@localhost:current_etc
 \end{lstlisting}
-Hook installieren sodass beim commit automatisch gepuscht wird.
-/etc/.git/hooks/config
+Hook installieren sodass beim commit automatisch gepuscht wird.\\
+/etc/.git/hooks/config:
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
 git push origin master
 \end{lstlisting}
 
 \subsection{/var/log/* check in}
-/var/log/* wird mit einem Script in /root/chekin\_logs.sh nach git@localhost:configs gepusht
+/var/log/* wird mit einem Script in /root/chekin\_logs.sh nach git@localhost:configs gepusht:
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
 cd /root/configs
@@ -144,18 +137,18 @@ git add logs/*
 git commit -am "add daily logs"
 git push
 \end{lstlisting}
-Dieses script wird per cronjob jeden Tag um 18:05 ausgeführt
+Dieses Script wird per cronjob jeden Tag um 18:05 ausgeführt:
 \begin{lstlisting}[style=Bash]
 # m h  dom mon dow   command
 05 18 * * * /root/checkin_logs.sh
 \end{lstlisting}
 \section{BurnIn}
-cpuburn und lm-sensors installieren 
+cpuburn und lm-sensors installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install cpuburn lm-sensors
 \end{lstlisting}
 Der BurnIn wird mit einem Script in configs/BurnIn/stresstest.sh ausgeführt.\\
-burnP6 muss für jeden Core gestartet werden. Die While Schleife gibt periodisch den geparsden output von sensors mit einem Zeitstempel aus.
+burnP6 muss für jeden Core gestartet werden. Die While Schleife gibt periodisch den geparsten output von sensors mit einem Zeitstempel aus:
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
 burnP6 &
@@ -170,11 +163,11 @@ do
         sleep 80s
 done
 \end{lstlisting}
-Der Test wird mit screen gestartet. Dies stellt sicher dass das Script weiterläuft wenn der ssh-user sich ausloggt.
+Der Test wird mit screen gestartet. Dies stellt sicher dass das Script weiterläuft wenn der ssh-user sich ausloggt:
 \begin{lstlisting}[style=Bash]
 # screen -dm  `./stresstest.sh > sensors.txt`
 \end{lstlisting}
-Die Messwerte werden mit gnuplot graphisch dargestellt.
+Die Messwerte werden mit gnuplot graphisch dargestellt:
 \begin{lstlisting}[style=Bash]
 #!/usr/bin/gnuplot
 reset

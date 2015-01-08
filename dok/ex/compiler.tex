@@ -19,7 +19,8 @@ Entpacken:
 \end{lstlisting}
 Nach folgendem Schema werden die Compiler compiliert und installiert:
 \begin{lstlisting}[style=Bash]
-# ./configure --prefix=/shared/tools/gcc/4.x.x
+# mkdir build 
+# ../configure --prefix=/shared/tools/gcc/4.x.x
 # LIBRARY_PATH=/usr/lib32:$LIBRARY_PATH make -j2
 # make install
 \end{lstlisting}

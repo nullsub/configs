@@ -22,7 +22,7 @@ Auf dem jedem brick NeIN auf der Partition /dev/sdaX:
 \begin{lstlisting}[style=Bash]
 # apt-get install glusterfs-server
 \end{lstlisting}
-neue partition 20gb
+Neue 20G Partition:
 \begin{lstlisting}[style=Bash]
 # fdisk /dev/sda
 ---------------
@@ -66,7 +66,7 @@ Auf jedem Node:
 \begin{lstlisting}[style=Bash]
 192.168.2.10:/striped-volume /fastfs glusterfs defaults,_netdev 0 0
 \end{lstlisting}
-Striped weil fast(schnell), aber wenn ein Knoten kaputt, alles kaputt:\\
+Striped weil fast(schnell), aber wenn ein Knoten ausf"allt sind die Daten nicht mehr erreichbar:\\
 write speed /home: ~ 350MB/s\\
 write speed /fastfs: ~ 40MB/s\\
 write speed /shared: ~ 336MB/s\\

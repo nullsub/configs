@@ -3,6 +3,17 @@ OpenMPI installieren:
 \begin{lstlisting}[style=Bash]
 $ sudo apt-get install openmpi-bin libopenmpi-dbg libopenmpi-dev
 \end{lstlisting}
+Version 1.8.4 wird nach /shared/openmpi/1.8.4 installiert:
+\begin{lstlisting}[style=Bash]
+$ wget open-mpi.org/software/ompi/v1.8/downloads/openmpi-1.8.4.tar.bz2
+$ tar -xf openmpi-1.8.4.tar.bz2
+$ cd openmpi-1.8.4 && ./configure --prefix=/shared/tools/openmpi/1.8.4
+$ make -j2 && make install
+\end{lstlisting}
+Version 1.8.4 kann als Module geladen werden:
+\begin{lstlisting}[style=Bash]
+$ module load openmpi/1.8.4
+\end{lstlisting}
 Minimalbeispiel nach /shared installieren:
 \begin{lstlisting}[style=Bash]
 $ git clone https://github.com/freme/MatMulExamples.git
@@ -12,6 +23,7 @@ In /shared/mpi\_hosts werden alle MPI Hosts abgelegt welche über ssh erreichbar
 \begin{lstlisting}[style=Bash]
 headnode slots=2
 node0 slots=2
+node1 slots=2
 \end{lstlisting}
 Nun kann man auf dem headnode das Beispiel starten:
 \begin{lstlisting}[style=Bash]
@@ -22,5 +34,5 @@ Anschaulich ist auch das helloworld Beispiel:
 \begin{lstlisting}[style=Bash]
 $ cd /shared/hello_mpi/
 $ mpicc hello.c -o hello 
-$ mpirun -np 4 --hostfile /shared/mpi_hosts hello
+$ mpirun -np 6 --hostfile /shared/mpi_hosts hello
 \end{lstlisting}
