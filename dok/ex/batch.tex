@@ -11,6 +11,7 @@ auf den nodes den munge key /etc/munge/mung.key kopieren und die /etc/slurm-lnll
 und munge starten.
 
 partitions erstellen:
+\begin{lstlisting}[style=Bash]
 # scontrol create PartitionName=express MaxTime=1:0:0 Nodes=headnode,node0,node1
 # scontrol create PartitionName=small MaxTime=1:0:0 Nodes=headnode,node0,node1
 \end{lstlisting}
