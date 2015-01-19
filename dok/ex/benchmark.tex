@@ -1,7 +1,15 @@
 \chapter{Benchmark}
 gfortran installieren:
 \begin{lstlisting}[style=Bash]
-$ sudo apt-get install gfortran
+$ sudo apt-get install gfortran sysfsutils cpufrequtils
+\end{lstlisting}
+cpu throttling deaktivieren. Wird von atlas verlangt:
+\begin{lstlisting}[style=Bash]
+$ sudo cpufreq-set -g performance
+\end{lstlisting}
+ATLAS installieren:
+\begin{lstlisting}[style=Bash]
+$ ./configure && make
 \end{lstlisting}
 hpcc downloaden:
 \begin{lstlisting}[style=Bash]

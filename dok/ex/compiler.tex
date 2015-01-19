@@ -5,7 +5,6 @@ Sourcen downloaden:
 # wget http://gcc.cybermirror.org/releases/gcc-4.8.3/gcc-4.8.3.tar.bz2
 # wget http://gcc.cybermirror.org/releases/gcc-4.9.2/gcc-4.9.2.tar.bz2
 # git clone https://github.com/gcc-mirror/gcc.git
-# svn checkout http://llvm.org/svn/llvm-project/llvm/trunk llvm
 \end{lstlisting}
 Compiler installieren:
 \begin{lstlisting}[style=Bash]
@@ -23,4 +22,15 @@ Nach folgendem Schema werden die Compiler compiliert und installiert:
 # ../configure --prefix=/shared/tools/gcc/4.x.x
 # LIBRARY_PATH=/usr/lib32:$LIBRARY_PATH make -j2
 # make install
+\end{lstlisting}
+llvm mit clang llvm installieren:
+\begin{lstlisting}[style=Bash]
+# svn checkout http://llvm.org/svn/llvm-project/llvm/trunk llvm
+$ cd llvm/tools
+$ svn co http://llvm.org/svn/llvm-project/cfe/trunk clang
+$ cd ../projects
+$ svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
+# svn checkout http://llvm.org/svn/llvm-project/llvm/trunk llvm
+$ mkdir build && cd build && ../configure --prefix/shared/tools/llvm/head
+$ make -j2 && make install
 \end{lstlisting}
