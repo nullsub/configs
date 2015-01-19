@@ -1,5 +1,17 @@
 \chapter{Batchsystem}
 Slurm installieren:
 \begin{lstlisting}[style=Bash]
-$ sudo apt-get install slurm-llnl
+# apt-get install slurm-llnl
+$ /usr/sbin/create-munge-key
+# /etc/init.d/slurm-llnl start
+# /etc/init.d/munge start
+
 \end{lstlisting}
+auf den nodes den munge key /etc/munge/mung.key kopieren und die /etc/slurm-lnll/slurm.conf
+und munge starten.
+
+partitions erstellen:
+# scontrol create PartitionName=express MaxTime=1:0:0 Nodes=headnode,node0,node1
+# scontrol create PartitionName=small MaxTime=1:0:0 Nodes=headnode,node0,node1
+\end{lstlisting}
+
