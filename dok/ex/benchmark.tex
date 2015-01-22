@@ -24,7 +24,10 @@ Kompilieren:
 \begin{lstlisting}[style=Bash]
 $ make arch=Linux
 \end{lstlisting}
-
+Ausführen:
+\begin{lstlisting}[style=Bash]
+$ mpirun --prefix /shared/tools/openmpi/1.8.4  -n 6 --hostfile /shared/mpi_hosts ./hpcc 
+\end{lstlisting}
 \section{iozone}
 \begin{lstlisting}[style=Bash]
 /etc/apt/sources.list non-free
