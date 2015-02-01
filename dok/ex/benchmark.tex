@@ -30,17 +30,13 @@ $ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi_hosts ./hpcc
 \end{lstlisting}
 Die theoretische Peak Performance liegt bei ca 1.8GHz*2(Cores)*3(Nodes)*4(FLOPs per cycle) = 43.2 Gflops.
 Der unoptimierte Durchlauf erreicht 33.41 Gflops. Es werden 77\% der theoretischen Peak Performance erreicht.
-Gründe hierfür sind unter anderen die langsame Kommunikation zwischen den CPUs und die langsame Speicheranbindung.\\
-Ein mit icc kompilierter hpcc erreicht 33.41 Gflops.
-\begin{lstlisting}[style=Bash]
-$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi_hosts ./hpcc
-\end{lstlisting}
+Gründe hierfür sind unter anderem die langsame Kommunikation zwischen den CPUs, langsame Speicheranbindung und nicht optimierte Software.\\
 \section{iozone}
 \begin{lstlisting}[style=Bash]
 /etc/apt/sources.list non-free
 # apt-get update
 # apt-get install iozone3
 iozone -a -i 0 -g 512M -F /shared/iotmp > out.txt
-$ ./ GenGraph out.text
+$ ./GenGraph out.text
 \end{lstlisting}
 \includegraphics{read.pdf}
