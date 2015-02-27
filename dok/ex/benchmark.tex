@@ -37,7 +37,6 @@ Der unoptimierte Durchlauf erreicht 33.41 Gflops. Es werden 77\% der theoretisch
 Gründe hierfür sind unter anderem die langsame Kommunikation zwischen den CPUs, langsame Speicheranbindung und nicht optimierte Software.\\
 \section{Intel MPI Benchmarks}
 Mit dem Intel MPI Benchmark (IMB) wird die MPI Performance untersucht.\\
-Es wurde openmpi Version 1.8.4 verwendet.\\
 IMB installieren:
 \begin{lstlisting}[style=Bash]
 $ wget https://software.intel.com/sites/default/files/managed/\
@@ -53,6 +52,9 @@ $ /shared/tools/openmpi/1.8.4/bin/mpirun -n 2 -H headnode,node0 \
 \end{lstlisting}
 Ausgabe:
 \lstinputlisting[style=BASH]{../mpi_benchmark/mpi_pingpong}
+\includegraphics[scale=0.6]{../mpi_benchmark/pingpong_bandwidth.png} 
+\newline
+\includegraphics[scale=0.6]{../mpi_benchmark/pingpong_time.png}
 \subsection{Gruppenkommunikationen}
 Benchmark starten:
 \begin{lstlisting}[style=Bash]
@@ -61,6 +63,9 @@ $ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi \
 \end{lstlisting}
 Ausgabe:
 \lstinputlisting[style=BASH]{../mpi_benchmark/mpi_barrier_allreduce_alltoall}
+\includegraphics[scale=0.6]{../mpi_benchmark/allreduce_time.png}
+\newline
+\includegraphics[scale=0.6]{../mpi_benchmark/alltoall_time.png}
 \section{iozone}
 \begin{lstlisting}[style=Bash]
 /etc/apt/sources.list non-free

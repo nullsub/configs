@@ -1,0 +1,16 @@
+#!/usr/bin/gnuplot
+reset
+set terminal png size 1000,800
+
+set title "MPI pingpong time"
+set ylabel "µseconds"
+set xlabel "Message Size in Byte"
+set format x '%.0s%cB'
+set key reverse Left outside
+set grid
+set style data linespoints
+set logscale x 2
+set logscale y 2
+
+
+plot "mpi_pingpong" using 1:3 title "", 
