@@ -17,8 +17,6 @@
 # is expected to be exceeded. Time limit is defined by variable 
 # "SECS_PER_SAMPLE" (=> IMB_settings.h) 
 # or through the flag => -time 
-  
-
 
 # Calling sequence was: 
 
@@ -30,7 +28,6 @@
 # MPI_Datatype                   :   MPI_BYTE 
 # MPI_Datatype for reductions    :   MPI_FLOAT
 # MPI_Op                         :   MPI_SUM  
-#
 #
 
 # List of Benchmarks to run:

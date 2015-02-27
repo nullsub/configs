@@ -48,14 +48,16 @@ $ cd IMB_4.0.2/src && make
 \subsection{Punkt-zu-Punkt-Verbindungen}
 Benchmark starten:
 \begin{lstlisting}[style=Bash]
-$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi_hosts \
-	./IMB-MPI1 PingPong -off_cache -2048,64 > /shared/mpi_out
+$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 2 -H headnode,node0 \
+	./IMB-MPI1 PingPong -off_cache -2048,64
 \end{lstlisting}
+Ausgabe:
+\lstinputlisting[style=BASH]{../mpi_benchmark/mpi_pingpong}
 \subsection{Gruppenkommunikationen}
 Benchmark starten:
 \begin{lstlisting}[style=Bash]
-$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi_hosts \
-	./IMB-MPI1 barrier allreduce alltoall -off_cache -2048,64 > /shared/mpi_out
+$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi \
+    _hosts ./IMB-MPI1 barrier allreduce alltoall -off_cache -2048,64 -npmin 6
 \end{lstlisting}
 Ausgabe:
 \lstinputlisting[style=BASH]{../mpi_benchmark/mpi_barrier_allreduce_alltoall}
