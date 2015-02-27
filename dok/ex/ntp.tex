@@ -3,7 +3,7 @@ NTP installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install ntp
 \end{lstlisting}
-headnode Server /ect/ntp.conf:
+Headnode Server /ect/ntp.conf:
 \begin{lstlisting}[style=Bash]
 ...
 server time.zih.tu-dresden.de iburst
@@ -25,7 +25,6 @@ restrict 192.168.2.1
  
 # Zugriff vom localhost gestatten (ntpq -p)
 restrict 127.0.0.1
- 
 ...
 \end{lstlisting}
 \begin{lstlisting}[style=Bash]

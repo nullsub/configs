@@ -12,7 +12,6 @@ chmod 640 un_pw
 
 while read line
 do
-    
     _username=$line
 
     _username0=$_username
@@ -28,8 +27,6 @@ do
     do    
         baseid=$((baseid+1))
     done
-
-
 
     lf=$_username.ldif
     touch $lf
@@ -68,4 +65,3 @@ do
 
     baseid=$((baseid+1))
 done < $1
-

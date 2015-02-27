@@ -5,14 +5,14 @@ Slurm installieren:
 $ /usr/sbin/create-munge-key
 # /etc/init.d/slurm-llnl start
 # /etc/init.d/munge start
-
 \end{lstlisting}
-auf den nodes den munge key /etc/munge/mung.key kopieren und die /etc/slurm-lnll/slurm.conf
-und munge starten.
-
-partitions erstellen:
+Auf den Nodes den munge key /etc/munge/mung.key und die /etc/slurm-lnll/slurm.conf kopieren.\\
+Nun wird munge gestartet.
+Partitions erstellen:
 \begin{lstlisting}[style=Bash]
-# scontrol create PartitionName=express MaxTime=1:0:0 Nodes=headnode,node0,node1
-# scontrol create PartitionName=small MaxTime=1:0:0 Nodes=headnode,node0,node1
+# scontrol create PartitionName=express MaxTime=1:0:0 \
+	Nodes=headnode,node0,node1
+# scontrol create PartitionName=small MaxTime=1:0:0 \
+	Nodes=headnode,node0,node1
 \end{lstlisting}
 

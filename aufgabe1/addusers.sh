@@ -20,8 +20,6 @@ do
         let "counter++"
     done
 
-
-
     useradd ${_username} -d /home/${_username} -s \
 		/bin/bash -U -m -p `mkpasswd ${_username}`
     #cp -rf /etc/skel/. /home/${_username}

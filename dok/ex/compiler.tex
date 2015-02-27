@@ -1,5 +1,5 @@
 \chapter{Compiler}
-Compiler werden in /shared compiliert und nach /shared/tools installiert.
+Compiler werden in /shared compiliert und nach /shared/tools installiert.\\
 Sourcen downloaden:
 \begin{lstlisting}[style=Bash]
 # wget http://gcc.cybermirror.org/releases/gcc-4.8.3/gcc-4.8.3.tar.bz2
@@ -29,8 +29,10 @@ llvm mit clang llvm installieren:
 $ cd llvm/tools
 $ svn co http://llvm.org/svn/llvm-project/cfe/trunk clang
 $ cd ../projects
-$ svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
+$ svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk \
+	compiler-rt
 # svn checkout http://llvm.org/svn/llvm-project/llvm/trunk llvm
-$ mkdir build && cd build && ../configure --prefix/shared/tools/llvm/head
+$ mkdir build && cd build && ../configure --prefix \
+	/shared/tools/llvm/head
 $ make -j2 && make install
 \end{lstlisting}
