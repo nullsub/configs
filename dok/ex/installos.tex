@@ -14,7 +14,7 @@
 \begin{lstlisting}[style=Bash]
 # apt-get install sudo
 \end{lstlisting}
-(für alle user <username>)
+(für alle User <username>)
 \begin{lstlisting}[style=Bash]
 # vim /etc/sudoers
 §\dotfill§
@@ -67,7 +67,7 @@ Für jeden User:
 $ ssh-keygen -b 1024 -N ''
 $ cat ~.ssh/id_rsa.pub >> ~./ssh/authorized_keys
 \end{lstlisting}
-Ein Script zur automatischen Nutzererstellung:(dazu muss das paket whois installiert sein)
+Ein Script zur automatischen Nutzererstellung: (dazu muss das Paket whois installiert sein)
 \lstinputlisting[style=Bash]{../aufgabe1/addusers.sh}
 \section{Parallel Distributed Shell}
 pdsh installieren:
@@ -85,7 +85,7 @@ StrictHostKeyChecking no
 \end{lstlisting}
 
 \section{Git Server}
-Git installieren und user git anlegen:
+Git installieren und User git anlegen:
 \begin{lstlisting}[style=Bash]
 # apt-get install git
 # adduser git
@@ -96,18 +96,18 @@ configs Repo anlegen:
 # mkdir configs
 # cd configs && git --bare init
 \end{lstlisting}
-Den ssh-key von allen usern zu /home/git/.ssh/autorized\_keys hinzufügen:
+Den ssh-key von allen Usern zu /home/git/.ssh/autorized\_keys hinzufügen:
 \begin{lstlisting}[style=Bash]
 # su user
 # ssh-keygen
 # ssh-copy-id -i ~/.ssh/id\_rsa.pub git@localhost
 \end{lstlisting}
-Nun können alle user mit:
+Nun können alle User mit:
 \begin{lstlisting}[style=Bash]
 # git clone git@localhost:configs
 \end{lstlisting}
 auf das Repository zugreifen.\\
-Der etc Baum ist als submodule eingebunden. Nach dem clone muss:
+Der etc Baum ist als Submodule eingebunden. Nach dem clone muss:
 \begin{lstlisting}[style=Bash]
 # git submodule init
 # git submodule update
@@ -180,7 +180,6 @@ set xlabel "time"
 
 set ylabel "Temperature in C"
 set yrange [20:55]
-
 set title "cpuburn temperature"
 set key reverse Left outside
 set grid

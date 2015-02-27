@@ -3,7 +3,8 @@ gfortran installieren:
 \begin{lstlisting}[style=Bash]
 $ sudo apt-get install gfortran sysfsutils cpufrequtils libmpich2-dev
 \end{lstlisting}
-cpu throttling deaktivieren. Wird von atlas verlangt:
+Für ATLAS muss Cpu Throttling deaktiviert sein.\\
+Cpu Throttling deaktivieren: 
 \begin{lstlisting}[style=Bash]
 $ sudo cpufreq-set -g performance
 \end{lstlisting}
@@ -13,7 +14,8 @@ $ ./configure && make
 \end{lstlisting}
 hpcc downloaden:
 \begin{lstlisting}[style=Bash]
-$ wget http://icl.cs.utk.edu/projectsfiles/hpcc/download/hpcc-1.4.3.tar.gz
+$ wget http://icl.cs.utk.edu/projectsfiles/hpcc/download/ \
+	hpcc-1.4.3.tar.gz
 $ tar -xf hpcc-1.4.3.tar.gz
 \end{lstlisting}
 Make Konfiguration in hpl als Make.CoreI2 ablegen
@@ -26,11 +28,18 @@ $ make arch=CoreI2
 \end{lstlisting}
 Ausführen:
 \begin{lstlisting}[style=Bash]
-$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi_hosts ./hpcc
+$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile \
+	/shared/mpi_hosts ./hpcc
 \end{lstlisting}
 Die theoretische Peak Performance liegt bei ca 1.8GHz*2(Cores)*3(Nodes)*4(FLOPs per cycle) = 43.2 Gflops.
+Die 4 FLOPs ergeben sich durch die SSE Extension. SSE ist eine SIMD (Single Instruction Multiple Data) Erweiterung.
 Der unoptimierte Durchlauf erreicht 33.41 Gflops. Es werden 77\% der theoretischen Peak Performance erreicht.
 Gründe hierfür sind unter anderem die langsame Kommunikation zwischen den CPUs, langsame Speicheranbindung und nicht optimierte Software.\\
+\section{Intel MPI Benchmarks}
+\subsection{Punkt-zu-Punkt-Verbindungen}
+muss noch
+\subsection{Gruppenkommunikationen}
+muss noch
 \section{iozone}
 \begin{lstlisting}[style=Bash]
 /etc/apt/sources.list non-free

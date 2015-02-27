@@ -4,9 +4,9 @@
 # apt-get install nfs-kernel-server nfs-common
 \end{lstlisting}
 In /etc/exports muss das Verzeichnis freigegeben werden:
-\begin{lstlisting}[style=Bash]
-/home       192.168.2.0/255.255.255.0(rw,async,no_subtree_check,no_root_squash)
-/shared     192.168.2.0/255.255.255.0(rw,async,no_subtree_check)
+\begin{lstlisting}[style=Bash,basicstyle=\small]
+/home    192.168.2.0/255.255.255.0(rw,async,no_subtree_check,no_root_squash)
+/shared  192.168.2.0/255.255.255.0(rw,async,no_subtree_check)
 \end{lstlisting}
 Die Computenodes mounten das nfs mit folgendem /etc/fstab Eintrag:
 \begin{lstlisting}[style=Bash]
@@ -18,7 +18,7 @@ Jedem Nutzer wird der Zufgriff auf das Verzeichnis gewährt:
 $ sudo chmod a+rwx
 \end{lstlisting}
 \section{Paralleles Verteiltes Dateisystem}
-Auf dem jedem brick NeIN auf der Partition /dev/sdaX:
+Auf jedem Node wird glusterfs installiert:
 \begin{lstlisting}[style=Bash]
 # apt-get install glusterfs-server
 \end{lstlisting}

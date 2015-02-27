@@ -13,7 +13,6 @@ do
     delGroup="cn=$_username,ou=Groups,dc=cluster,dc=local"
     ldapdelete -cxD cn=admin,dc=cluster,dc=local -w secret "$delUser"
     ldapdelete -cxD cn=admin,dc=cluster,dc=local -w secret "$delGroup"
-    
 
     rm -r /home/${_username}
 done < $1
