@@ -36,10 +36,29 @@ Die 4 FLOPs ergeben sich durch die SSE Extension. SSE ist eine SIMD (Single Inst
 Der unoptimierte Durchlauf erreicht 33.41 Gflops. Es werden 77\% der theoretischen Peak Performance erreicht.
 Gründe hierfür sind unter anderem die langsame Kommunikation zwischen den CPUs, langsame Speicheranbindung und nicht optimierte Software.\\
 \section{Intel MPI Benchmarks}
+Mit dem Intel MPI Benchmark (IMB) wird die MPI Performance untersucht.\\
+Es wurde openmpi Version 1.8.4 verwendet.\\
+IMB installieren:
+\begin{lstlisting}[style=Bash]
+$ wget https://software.intel.com/sites/default/files/managed/\
+	d8/cf/IMB_4.0.2.tgz
+$ tar xf IMB_4.0.2.tgz
+$ cd IMB_4.0.2/src && make
+\end{lstlisting}
 \subsection{Punkt-zu-Punkt-Verbindungen}
-muss noch
+Benchmark starten:
+\begin{lstlisting}[style=Bash]
+$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi_hosts \
+	./IMB-MPI1 PingPong -off_cache -2048,64 > /shared/mpi_out
+\end{lstlisting}
 \subsection{Gruppenkommunikationen}
-muss noch
+Benchmark starten:
+\begin{lstlisting}[style=Bash]
+$ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi_hosts \
+	./IMB-MPI1 barrier allreduce alltoall -off_cache -2048,64 > /shared/mpi_out
+\end{lstlisting}
+Ausgabe:
+\lstinputlisting[style=BASH]{../mpi_benchmark/mpi_barrier_allreduce_alltoall}
 \section{iozone}
 \begin{lstlisting}[style=Bash]
 /etc/apt/sources.list non-free
