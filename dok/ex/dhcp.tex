@@ -30,7 +30,7 @@ In den Nodes wird /etc/network/interfaces angepasst:
 auto eth0
 iface eth0 inet dhcp
 \end{lstlisting}
-Damit der Headnode den lokalen DNS Server nutzt muss /etc/dhclient.conf angepasst werden.
+Damit der Headnode den lokalen DNS Server nutzt muss /etc/dhclient.conf angepasst werden:
 \begin{lstlisting}[style=Bash]
 prepend domain-name-servers 127.0.0.1;
 request subnet-mask, broadcast-address, time-offset, routers,

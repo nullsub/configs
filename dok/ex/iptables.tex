@@ -3,7 +3,7 @@
 Die Regeln werden in /etc/iptables.test.rules geschrieben:
 \lstinputlisting[style=Bash,basicstyle=\small,breaklines=true]{../current_etc/iptables.test.rules}
 \begin{lstlisting}[style=Bash]
-$ iptables-save>iptables.ip.rules
+$ iptables-save > iptables.ip.rules
 \end{lstlisting}
 Script in /etc/network/if-pre-up.d/iptables ausführbar machen.\\
 \begin{lstlisting}[style=Bash]
@@ -25,7 +25,7 @@ sysctl -p /etc/sysctl.conf
 \end{lstlisting}
 \section{Diagnose und Logging}
 Zur Diagnose werden alle blockierten Pakete geloggt.\\
-Dropped Pakete können im syslog eingesehen werden.
+Dropped Pakete können im syslog eingesehen werden:
 \begin{lstlisting}[style=Bash]
-sudo cat /var/log/messages | grep iptables
+# cat /var/log/messages | grep iptables
 \end{lstlisting}

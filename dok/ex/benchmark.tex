@@ -59,7 +59,8 @@ Ausgabe:
 Benchmark starten:
 \begin{lstlisting}[style=Bash]
 $ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi \
-    _hosts ./IMB-MPI1 barrier allreduce alltoall -off_cache -2048,64 -npmin 6
+    _hosts ./IMB-MPI1 barrier allreduce alltoall \
+	-off_cache -2048,64 -npmin 6
 \end{lstlisting}
 Ausgabe:
 \lstinputlisting[style=BASH]{../mpi_benchmark/mpi_barrier_allreduce_alltoall}
