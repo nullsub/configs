@@ -1,7 +1,6 @@
-\documentclass[10pt]{beamer}
+\documentclass[10pt,utf8]{beamer}
 
 %\usepackage[utf8x]{inputenc}
-\usepackage{ngerman}
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}
 \usepackage{bbm}
@@ -18,6 +17,7 @@
 \usepackage{colortbl}
 \usepackage{booktabs}
 \usepackage{setspace}
+\usepackage{color, float}
 
 \input{theme/theme}
 
@@ -50,50 +50,166 @@
 \end{frame}
 \begin{frame}
 	\frametitle{Einf\"uhrung}
+ 		\[ m(x) = \frac{\sum_{x_i \in N(x)} K(x_i - x) x_i }{\sum_{x_i \in N(x)} K(x_i - x)} \]
+		\vspace{-10pt}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.7]{../output/pics/gauss.png}
+			\caption{Normierter Gaußkern[B0]}
+		\end{figure}
 \end{frame}
 
 \section{Implementation}
-\begin{frame}
+\begin{frame}[fragile]
 	\frametitle{MPI Implementation}
 	\begin{itemize}
-		\item Insert your content
+		\item Einfach verkettete Liste
+		\item Punkte werden statisch auf Cores gleichverteilt
+		\item Hauptprozess führt Daten wieder zusammen
+	\end{itemize}
+	\lstset{language=C,
+		basicstyle=\ttfamily,
+		keywordstyle=\color{blue}\ttfamily,
+		stringstyle=\color{red}\ttfamily,
+		commentstyle=\color{green}\ttfamily,
+		morecomment=[l][\color{magenta}]{\#},
+		numbers=none
+        }
+	\begin{lstlisting}
+while(point) {
+  if(point_cntr % numprocs == rank)
+      point->cluster = meanshift(point->x, point->y);
+  point = point->next;
+  point_cntr++;
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}
+	\frametitle{MPI}
+	\begin{itemize}
+		\item Keine Zwischenergebnisse
+		\item Optimale Auslastung nicht sicher
+		\item Genauigkeit von Gleitkommazahlen muss beachtet werden
+		\item wenig Kommunikation
 	\end{itemize}
 \end{frame}
 
 \section{Beispiele}
+\begin{frame}  
+	\frametitle{Beispiel S2.txt}
+	\begin{tabular}{cl}  
+		\begin{tabular}{c}
+			\vspace{-5pt}
+			\hspace{-19pt}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\begin{itemize}
+					\item 5000 Punkte
+					\item 9 Minuten Laufzeit auf einem\\ Core
+					\item Kernelgröße 100000
+				\end{itemize}
+			}
+		\end{tabular}
+		& \begin{tabular}{l}
+			\vspace{-5pt}
+			\hspace{-35pt}
+			\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s2_colored.png}
+		\end{tabular}\\
+	\end{tabular}
+\end{frame}
+
 \begin{frame}
 	\frametitle{Beispiele}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s2_black.png}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s2_colored.png}
+	\vspace{-15pt}
+	\hspace{-16pt}
+	\includegraphics[scale=0.25, keepaspectratio]{../output/pics/sine.png} 
+	%nur 41 Sekunden Laufzeit auf 128 Cores
+\end{frame}
+
+\begin{frame}  
+	\frametitle{Beispiel Birch3.txt}
+	\begin{tabular}{cl}  
+		\begin{tabular}{c}
+			\vspace{-5pt}
+			\hspace{-19pt}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\begin{itemize}
+					\item 100000 Punkte
+					\item 6 Minuten Laufzeit auf 128\\ Cores
+					\item Kernelgröße 50000
+				\end{itemize}
+			}
+		\end{tabular}
+		& \begin{tabular}{l}
+			\vspace{-5pt}
+			\hspace{-35pt}
+			\includegraphics[scale=0.23, keepaspectratio]{../output/pics/birch3_colored.png}
+		\end{tabular}\\
+	\end{tabular}
 \end{frame}
 \begin{frame}
-	\frametitle{}
-	\includegraphics[scale=0.25, keepaspectratio]{../output/pics/sine.png}
-\end{frame}
-\begin{frame}
-	\frametitle{}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/birch3_black.png}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/birch3_colored.png}
-\end{frame}
-\begin{frame}
-	\frametitle{Einf\"uhrung}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s3_black.png}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s3_colored.png}
-\end{frame}
-\begin{frame}
-	\frametitle{Einf\"uhrung}
+	\frametitle{Beispiele}
 	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_black.png}
 	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_colored.png}
 \end{frame}
-
 \section{Benchmarks}
-\begin{frame}
+\begin{frame}  
 	\frametitle{Cluster Benchmark}
-	\includegraphics[scale=0.25, keepaspectratio]{../output/pics/benchmark.png}
+	\begin{tabular}{cl}  
+		\begin{tabular}{c}
+			\vspace{-5pt}
+			\hspace{-35pt}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\begin{itemize}
+					\item Taurus hat 2x8 Cores
+					\item Ab 16 Cores Kommunikation\\ über Netzwerk
+				\end{itemize}
+			}
+		\end{tabular}
+		& \begin{tabular}{l}
+			\vspace{-5pt}
+			\hspace{-45pt}
+			\includegraphics[scale=0.28, keepaspectratio]{../output/pics/benchmark.png}
+		\end{tabular}\\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}  
+	\frametitle{Cluster Benchmark}
+	\begin{tabular}{cl}  
+		\begin{tabular}{c}
+			\vspace{-5pt}
+			\hspace{-35pt}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\begin{itemize}
+					\item Speedup nimmt bei vielen\\ Cores ab
+					\item Dynamische Verteilung der Punkte für bessere Auslastung
+					\item Skaliert
+				\end{itemize}
+			}
+		\end{tabular}
+		& \begin{tabular}{l}
+			\vspace{-5pt}
+			\hspace{-45pt}
+			\includegraphics[scale=0.28, keepaspectratio]{../output/pics/speedup.png}
+		\end{tabular}\\
+	\end{tabular}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Cluster Benchmark}
-	\includegraphics[scale=0.25, keepaspectratio]{../output/pics/speedup.png}
+	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_black.png}
+	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_colored.png}
+\end{frame}
+\begin{frame}
+\frametitle{Quellen}
+\framesubtitle{}
+\tiny
+\subsection*{Textquellen}
+	\begin{itemize}[]
+		\bibitem [0] {} Meanshift \url{http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/TUZEL1/MeanShift.pdf}
+		\bibitem [1] {} Mean Shift: Construction and Convergence Proof \url{http://www.cse.yorku.ca/~kosta/CompVis_Notes/mean_shift_derivation.pdf}
+		\bibitem [2] {} Datasets \url{http://cs.joensuu.fi/sipu/datasets/}
+		\bibitem [3] {} Taurus TU Dresden \url{https://doc.zih.tu-dresden.de/hpc-wiki/bin/view/Compendium/SystemTaurus}
+		\bibitem [4] {} Meanshift \url{https://courses.csail.mit.edu/6.869/handouts/PAMIMeanshift.pdf}
+	\end{itemize}
 \end{frame}
 \end{document}
