@@ -11,6 +11,7 @@
 \usepackage{hyperref}
 \usepackage{eurosym}
 \usepackage{listings}
+\usepackage{tikz}
 
 \usepackage{multirow}
 \usepackage{colortbl}
@@ -49,11 +50,45 @@
 	        \includegraphics[scale=1.0, keepaspectratio]{grid5000.jpg}
             }
         \item{Basiert auf Datenbank (MySql oder Postgree) }
+        \item{Script Language Perl}
     \end{itemize}
 \end{frame}
 
 \section{Installation/Administration}
-\begin{frame}{INstallation/Administration}
+\begin{frame}{Installation/Administration}
+    OAR besteht aus vier Komponenten:
+    \begin{itemize}
+        \item{Server node}
+        \item{Frontend node}
+        \item{computing node(s)}
+        \item{Optional: Visiualisierungsserver}
+    \end{itemize}
+
+    LCTP Cluster:
+
+    \begin{tikzpicture}
+        %headnode
+        %\draw [rounded corners,fill=gray!20] (0,0) -- (2,0) -- (2,3) -- (0,3) -- (0,0)--cycle;
+        \draw [rounded corners,fill=orange!20](0,0) rectangle (2.5,3); 
+        \node at (1.25,2.5)[font=\bfseries] {headnode};
+        \draw (0,2) -- (2.5,2);
+        \node at (1.25,1.5) {Server node};
+        \node at (1.25,1) {Frontend node};
+        %node0
+        %\draw [rounded corners,fill=gray!20] (0,0) -- (2,0) -- (2,3) -- (0,3) -- (0,0)--cycle;
+        \draw [rounded corners,fill=gray!30](5,0) rectangle (7.5,2); 
+        \node at (6.25,1.5)[font=\bfseries] {node0};
+        \draw (5,1) -- (7.5,1);
+        \node at (6.25,0.5) {computing node};
+
+        %node1
+        %\draw [rounded corners,fill=gray!20] (0,0) -- (2,0) -- (2,3) -- (0,3) -- (0,0)--cycle;
+        \draw [rounded corners,fill=gray!30](5,3) rectangle (7.5,5); 
+        \node at (6.25,4.5)[font=\bfseries] {node1};
+        \draw (5,4) -- (7.5,4);
+        \node at (6.25,3.5) {server node};
+    \end{tikzpicture}
+
 \end{frame}
 
 \section{User}
