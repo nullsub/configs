@@ -41,22 +41,35 @@
 \frametitle{Inhalt}
 	\tableofcontents
 \end{frame}
+\Large
 
-\section{Mean Shift}
+\section{Einführung}
 \begin{frame}
 	\frametitle{Einf\"uhrung}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s1_black.png}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s1_colored.png}
+		\centering
+		\begin{figure}[p!]
+			\vspace{-10pt}
+			\hspace{-25pt}
+			\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s1_black.png}
+			\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s1_colored.png}
+			\caption{Mean Shift Eingabe und Ausgabe [B0,B1]}
+		\end{figure}
 \end{frame}
 \begin{frame}
 	\frametitle{Einf\"uhrung}
  		\[ m(x) = \frac{\sum_{x_i \in N(x)} K(x_i - x) x_i }{\sum_{x_i \in N(x)} K(x_i - x)} \]
-		\vspace{-10pt}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.7]{../output/pics/gauss.png}
-			\caption{Normierter Gaußkern[B0]}
-		\end{figure}
+\begin{figure}
+    \begin{columns}%
+        \begin{column}{0.5\textwidth}%
+	  \includegraphics[scale=0.7]{../output/pics/gauss.png}
+        \end{column}%
+        \begin{column}{0.7\textwidth}%
+			\vspace{-10pt}
+			\hspace{35pt}
+		\caption{Normierter Gaußkern[B2]}
+        \end{column}%
+    \end{columns}
+\end{figure}
 \end{frame}
 
 \section{Implementation}
@@ -67,6 +80,7 @@
 		\item Punkte werden statisch auf Cores gleichverteilt
 		\item Hauptprozess führt Daten wieder zusammen
 	\end{itemize}
+\normalsize
 	\lstset{language=C,
 		basicstyle=\ttfamily,
 		keywordstyle=\color{blue}\ttfamily,
@@ -84,6 +98,7 @@ while(point) {
 }
 	\end{lstlisting}
 \end{frame}
+\Large
 \begin{frame}
 	\frametitle{MPI}
 	\begin{itemize}
@@ -103,25 +118,36 @@ while(point) {
 			\hspace{-19pt}
 			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
 				\begin{itemize}
-					\item 5000 Punkte
-					\item 9 Minuten Laufzeit auf einem\\ Core
-					\item Kernelgröße 100000
+					\item 5.000 Punkte
+					\item 9 Minuten Laufzeit auf einem Core
+					\item Kernelgröße 100.000
 				\end{itemize}
 			}
 		\end{tabular}
 		& \begin{tabular}{l}
 			\vspace{-5pt}
 			\hspace{-35pt}
-			\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s2_colored.png}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\begin{figure}
+					\centering
+					\includegraphics[scale=0.24, keepaspectratio]{../output/pics/s2_colored.png}
+					\vspace{-5pt}
+					\caption{S2 Colored [B3]}
+				\end{figure}
+			}
 		\end{tabular}\\
 	\end{tabular}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Beispiele}
-	\vspace{-15pt}
 	\hspace{-16pt}
-	\includegraphics[scale=0.25, keepaspectratio]{../output/pics/sine.png} 
+	\begin{figure}
+		\centering
+		\vspace{-31pt}
+		\includegraphics[scale=0.25, keepaspectratio]{../output/pics/sine.png} 
+		\vspace{-14pt}
+		\caption{Birch3 Colored [B4]}
+	\end{figure}
 	%nur 41 Sekunden Laufzeit auf 128 Cores
 \end{frame}
 
@@ -133,8 +159,8 @@ while(point) {
 			\hspace{-19pt}
 			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
 				\begin{itemize}
-					\item 100000 Punkte
-					\item 6 Minuten Laufzeit auf 128\\ Cores
+					\item 100.000 Punkte
+					\item 6 Minuten Laufzeit auf 128 Cores
 					\item Kernelgröße 50000
 				\end{itemize}
 			}
@@ -142,14 +168,27 @@ while(point) {
 		& \begin{tabular}{l}
 			\vspace{-5pt}
 			\hspace{-35pt}
-			\includegraphics[scale=0.23, keepaspectratio]{../output/pics/birch3_colored.png}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\begin{figure}
+					\centering
+					\includegraphics[scale=0.264, keepaspectratio]{../output/pics/birch3_colored.png}
+					\vspace{-5pt}
+					\caption{Birch3 Colored [B5]}
+				\end{figure}
+			}
 		\end{tabular}\\
 	\end{tabular}
 \end{frame}
 \begin{frame}
 	\frametitle{Beispiele}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_black.png}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_colored.png}
+	\centering
+	\begin{figure}[p!]
+		\vspace{-10pt}
+		\hspace{-25pt}
+		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s4_black.png}
+		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s4_colored.png}
+		\caption{Mean Shift Eingabe und Ausgabe [B6,B7]}
+	\end{figure}
 \end{frame}
 \section{Benchmarks}
 \begin{frame}  
@@ -157,18 +196,25 @@ while(point) {
 	\begin{tabular}{cl}  
 		\begin{tabular}{c}
 			\vspace{-5pt}
-			\hspace{-35pt}
+			\hspace{-36pt}
 			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
 				\begin{itemize}
-					\item Taurus hat 2x8 Cores
-					\item Ab 16 Cores Kommunikation\\ über Netzwerk
+					\item Taurus Node hat 2x8 Cores
+					\item Ab 16 Cores Kommunikation über Netzwerk
 				\end{itemize}
 			}
 		\end{tabular}
 		& \begin{tabular}{l}
-			\vspace{-5pt}
-			\hspace{-45pt}
-			\includegraphics[scale=0.28, keepaspectratio]{../output/pics/benchmark.png}
+			\vspace{-15pt}
+			\hspace{-49pt}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\vspace{-15pt}
+				\begin{figure}[H!]
+					\includegraphics[scale=0.31, keepaspectratio]{../output/pics/benchmark.png}
+					\vspace{-10pt}
+					\caption{Laufzeit Benchmark [B8]}
+				\end{figure}
+			}
 		\end{tabular}\\
 	\end{tabular}
 \end{frame}
@@ -178,26 +224,42 @@ while(point) {
 	\begin{tabular}{cl}  
 		\begin{tabular}{c}
 			\vspace{-5pt}
-			\hspace{-35pt}
+			\hspace{-36pt}
 			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
 				\begin{itemize}
-					\item Speedup nimmt bei vielen\\ Cores ab
-					\item Dynamische Verteilung der Punkte für bessere Auslastung
-					\item Skaliert
+					\item Speedup nimmt bei vielen Cores ab
+					\item Overhead bei kleinen Problemen groß
 				\end{itemize}
 			}
 		\end{tabular}
 		& \begin{tabular}{l}
+			\vspace{-15pt}
+			\hspace{-49pt}
+			\parbox{0.5\linewidth}{%  change the parbox width as appropiate
+				\vspace{-15pt}
+				\begin{figure}[H!]
+					\includegraphics[scale=0.31, keepaspectratio]{../output/pics/speedup.png}
+					\vspace{-10pt}
+					\caption{Speedup [B9]}
+				\end{figure}
+			}
+		\end{tabular}\\
+		& \begin{tabular}{l}
 			\vspace{-5pt}
-			\hspace{-45pt}
-			\includegraphics[scale=0.28, keepaspectratio]{../output/pics/speedup.png}
+			\hspace{-49pt}
 		\end{tabular}\\
 	\end{tabular}
 \end{frame}
 
 \begin{frame}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_black.png}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/s4_colored.png}
+	\centering
+	\begin{figure}[p!]
+		\vspace{-10pt}
+		\hspace{-25pt}
+		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s4_black.png}
+		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s4_colored.png}
+		\caption{Mean Shift Eingabe und Ausgabe [B10,B11]}
+	\end{figure}
 \end{frame}
 \begin{frame}
 \frametitle{Quellen}
