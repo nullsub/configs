@@ -1,5 +1,5 @@
 \chapter{Abschlussaufgabe Mean Shift}
-Mean Shift ist ein parameterfreie Clusteralgorithmus bei welchem Punkte Clustern zugeordnet werden. Mean Shift findet Anwendung beim Clustering,
+Mean Shift ist ein parameterfreier Clusteralgorithmus, bei welchem Punkte Clustern zugeordnet werden. Mean Shift findet Anwendung beim Clustering,
 Tracking und bei Bildfiltern.\\
 Nach einer Einführung in die Funktionsweise des Algorithmus wird auf die sequentielle und parallele Implementation eingegangen.
 Abschließend werden Benchmarks zum Speedup und Laufzeit der Implementation betrachtet.\\
@@ -16,22 +16,24 @@ Abschließend werden Benchmarks zum Speedup und Laufzeit der Implementation betr
 	Die Punkte $ x_i $ werden in Abhängigkeit der Distanz zu $ x $ gewichtet. Hierfür wird in der Regel ein Gaußkern eingesetzt.
 		\[K(x_i - x) = \frac {1}{\sigma\sqrt{2\pi}} e^{-\frac {1}{2} \left(\frac{||x_i - x||}{\sigma}\right)^2}\]
 	$ m(x) $ wird nun solange zu $ x $ addiert bis $ x $ konvergiert. Das Clusterzentrum von $ x $ ist genau der Grenzwert von $ x $.[1]\\
+	Der Verschiebungsvektor zeigt immer in Richtung der größten Zunahme der Dichte. Im Clusterzentrum ist der Verschiebungsvektor für alle Punkte des Clusters 0.
+	Daher existiert genau ein Zentrum pro Cluster.\\
 	Da für jeden Punkt unabhängig das Clusterzentrum bestimmt wird, lässt sich der Algorithmus durch Verteilung der zu berechnenden Punkte parallelisieren.\\
 \section{Implementation}
 	Mean Shift wurde in C implementiert. 
 	Eingabe ist ein Menge von Koordinaten. Ausgabe ist eine Liste von Cluster Nummern. Die Visualisierung erfolgt mit Gnuplot.
 	Dadurch wird der Code auf das Wesentliche beschränkt.
 	Der sequentielle Algorithmus umfasst 100 LOC (Lines Of Code). Die Parallele MPI Version 170 LOC.\\
-	Zur Wichtung wird ein Gaußkern genutzt. Dieser muss normiert sein um ein Überspringen eines Maximums zu verhindern.\\
+	Zur Wichtung wird ein Gaußkern genutzt. Dieser muss normiert sein um ein Überspringen eines Clusterzentrums (Verschiebungsvektor $ m = 0 $) zu verhindern.\\
 	\vspace{-10pt}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.7]{../meanshift/output/pics/gauss.png} 
+		\includegraphics[scale=0.8]{../meanshift/output/pics/gauss.png} 
 		\caption{Normierter Gaußkern S1.txt}
 	\end{figure}
 	Für die Testdaten[2] wurde experimentell eine passende Varianz bestimmt.\\
-	Die Punkte werden in einer einfach verketteten Liste gespeichert. Durch speichern der Punkte in einer Baumstruktur welche den Ort der
-	Punkte berücksichtigt lässt sich die Implementation noch optimieren. Weit entfernte Punkte könnten so ausgelassen werden.\\
+	Die Punkte werden in einer einfach verketteten Liste gespeichert. Durch Speichern der Punkte in einer Baumstruktur, welche den Ort der
+	Punkte berücksichtigt, lässt sich die Implementation noch optimieren. Weit entfernte Punkte könnten so ausgelassen werden.\\
 	\subsection{MPI Parallelisierung}
 	Beim MPI Mean Shift werden die zu berechnenden Punkte auf die Prozesse gleichverteilt.
 	\lstset{language=C,
@@ -50,17 +52,17 @@ while(cur_point) {
 }
 	\end{lstlisting}
 	Anschließend werden die berechneten Cluster vom Hauptprozess (MPI Prozess mit Rank 0) wieder zusammengeführt und ausgegeben.\\
-	Da die Punkte statisch den Rechenknoten zugewiesen werden ist eine vollständige Auslastung der Cores nicht gewährleistet. 
-	Dies könnte durch eine dynamische Verteilung der Punkte optimiert werden. Hier muss überprüft werden bei welchen Eingaben
+	Da die Punkte statisch den Rechenknoten zugewiesen werden, ist eine vollständige Auslastung der Cores nicht gewährleistet. 
+	Dies könnte durch eine dynamische Verteilung der Punkte optimiert werden. Hier muss überprüft werden, bei welchen Eingaben
 	sich der höhere Verwaltungsaufwand lohnt.\\
 	Durch Ungenauigkeiten der Fließkommazahlen konvergiert der Verschiebungsvektor $ m(x) $ nicht immmer. Daher muss ein geeignetes $ \delta $
-	festgelegt werden ab welchem bei Unterschreitung $ x $ als Clusterzentrum übernommen wird. Bei Testdaten mit Punkten in einem 
+	festgelegt werden, ab welchem, bei Unterschreitung, $ x $ als Clusterzentrum übernommen wird. Bei Testdaten mit Punkten in einem 
 	$ 1e + 06 $ großen Quadrat wurde $ \delta = 0.01 $ gewählt. Durch Vergrößern von $ \delta $ kann die Laufzeit des Algorithmus verringert werden.
 	Die Anzahl der Fehlklassifikationen steigt jedoch mit $ \delta $ an.\\
 	\vspace{-10pt}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.46]{../meanshift/output/pics/birch3_colored.png} 
+		\includegraphics[scale=0.61]{../meanshift/output/pics/birch3_colored.png} 
 		\vspace{-5pt}
 		\caption{Birch3, 6 Minuten Laufzeit auf 128 Cores}
 	\end{figure}
@@ -75,7 +77,6 @@ while(cur_point) {
 	\end{figure}
 	Bei steigender Anzahl an Cores nimmt der Speedup ab. Grund hierfür ist zum größten Teil die statische Verteilung der Punkte und die dadurch
 	resultierende nicht optimale Auslastung.\\
-	Dazu kommt die 
 	\newpage
 	\begin{figure}[H]
 		\centering
@@ -89,6 +90,8 @@ while(cur_point) {
 	Es existieren viele Möglichkeiten zur Optimierung des parallelen Algorithmus. Zum Beispiel eine dynamische Verteilung der Punkte oder eine dynamische Anpassung
 	der Wichtung um die Anzahl der benötigten Mean Shifts zu verringern.\\
 	Die Kerngröße muss momentan noch manuell angegeben werden. Dies könnte auch automatisiert werden.\\
+	Die markierten Cluster stimmen weitestgehend mit einer intuitiven Markierung überein. Punkte an der Grenze zu zwei Clustern werden jedoch häufig einem 
+	dritten Cluster zugeordent (Birch3, (30k,30k)). Hier wäre eine Glättung möglich, um Cluster mit wenigen Punkten in anliegenden Cluster aufzuteilen.\\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.6]{../meanshift/output/pics/s4_colored.png} 
