@@ -8,7 +8,7 @@ Abschließend werden Benchmarks zum Speedup und Laufzeit der Implementation betr
 	\centering
 	\includegraphics[scale=0.61]{../meanshift/output/pics/s1_colored.png} 
 	\vspace{-10pt}
-	\caption{Mean Shift S1.txt}
+	\caption{Mean Shift S1[B0]}
 \end{figure}
 \section{Algorithmus}
 	Für jeden Punkt $ x $ der Eingabe wird ein Verschiebungsvektor $ m $ berechnet. 
@@ -28,8 +28,8 @@ Abschließend werden Benchmarks zum Speedup und Laufzeit der Implementation betr
 	\vspace{-10pt}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.8]{../meanshift/output/pics/gauss.png} 
-		\caption{Normierter Gaußkern S1.txt}
+		\includegraphics[scale=0.85]{../meanshift/output/pics/gauss.png} 
+		\caption{Normierter Gaußkern[B1]}
 	\end{figure}
 	Für die Testdaten[2] wurde experimentell eine passende Varianz bestimmt.\\
 	Die Punkte werden in einer einfach verketteten Liste gespeichert. Durch Speichern der Punkte in einer Baumstruktur, welche den Ort der
@@ -62,9 +62,12 @@ while(cur_point) {
 	\vspace{-10pt}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.61]{../meanshift/output/pics/birch3_colored.png} 
+		\includegraphics[scale=0.71]{../meanshift/output/pics/birch3_colored.png} 
 		\vspace{-5pt}
-		\caption{Birch3, 6 Minuten Laufzeit auf 128 Cores}
+		\caption{Birch3, 6 Minuten Laufzeit auf 128 Cores[B2]}
+			Die Clustererkennung funktioniert gut doch existieren einige aufällige Stellen.
+			Die hier angewandte Kernelgröße passt nicht auf alle vorhandenen Cluster. Es entstehen ungewünschte Artefakte (zum Beispiel (300k,200k)).
+			Der türkise Streifen (bei (900k,600k)) könnte mit einer nachträglichen Glättung entfernt werden.
 	\end{figure}
 	\newpage
 \section{Benchmark}
@@ -72,30 +75,32 @@ while(cur_point) {
 	5000 und 100000 Punkten auf 1, 2, 4, 8, 16, 32, 64, 128 und 256 Cores gestartet. Die gemessene Laufzeit des MPI Jobs wird mit der sequentiellen
 	Laufzeit verglichen.\\
 	\begin{figure}[H] \centering
-		\includegraphics[scale=0.61]{../meanshift/output/pics/speedup.png} 
-		\caption{Speedup}
+		\includegraphics[scale=0.69]{../meanshift/output/pics/speedup.png} 
+		\caption{Speedup[B3]}
 	\end{figure}
 	Bei steigender Anzahl an Cores nimmt der Speedup ab. Grund hierfür ist zum größten Teil die statische Verteilung der Punkte und die dadurch
 	resultierende nicht optimale Auslastung.\\
 	\newpage
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.61]{../meanshift/output/pics/benchmark.png} 
-		\caption{Laufzeit Benchmark}
+		\includegraphics[scale=0.69]{../meanshift/output/pics/benchmark.png} 
+		\caption{Laufzeit Benchmark[B4]}
 	\end{figure}
-	Taurus hat jeweils zwei 8 Core Prozessoren auf einem Board. Daher zeigt sich bei 8 und 16 Cores eine Verschlechterung. 
+	Ein Taurus Knoten hat jeweils zwei 8 Core Prozessoren auf einem Board. Daher zeigt sich bei 8 und 16 Cores eine Verschlechterung. 
 	Ab 16 Cores läuft die Kommunikation zusätzlich über das Netzwerk.\\
+	Ab 128 Cores ist bei 5.000 Punkten kein Speedup mehr vorhanden. Bei einer größeren Anzahl an Cores verschlechtert sich sogar die Laufzeit. Hier
+	überwiegt der Overhead der MPI Kommunikation und das Zusammenführen der berechneten Cluster.\\
 	\newpage
 \section{Fazit}
 	Es existieren viele Möglichkeiten zur Optimierung des parallelen Algorithmus. Zum Beispiel eine dynamische Verteilung der Punkte oder eine dynamische Anpassung
 	der Wichtung um die Anzahl der benötigten Mean Shifts zu verringern.\\
 	Die Kerngröße muss momentan noch manuell angegeben werden. Dies könnte auch automatisiert werden.\\
 	Die markierten Cluster stimmen weitestgehend mit einer intuitiven Markierung überein. Punkte an der Grenze zu zwei Clustern werden jedoch häufig einem 
-	dritten Cluster zugeordent (Birch3, (30k,30k)). Hier wäre eine Glättung möglich, um Cluster mit wenigen Punkten in anliegenden Cluster aufzuteilen.\\
+	dritten Cluster zugeordent (Birch3, (300k,300k)). Hier wäre eine Glättung möglich, in der Cluster mit wenigen Punkten in anliegenden Cluster aufgeteilt werden.\\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.6]{../meanshift/output/pics/s4_colored.png} 
-		\caption{S4, 5000 Points}
+		\caption{S4, 5.000 Punkte[B5]}
 	\end{figure}
 \begin{thebibliography}{999}
 	\bibitem [0] {} Meanshift \url{http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/TUZEL1/MeanShift.pdf}
