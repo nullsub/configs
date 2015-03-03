@@ -1,0 +1,63 @@
+\documentclass[10pt,utf8]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{bbm}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\usepackage{listings}
+
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{color, float}
+
+\input{theme/theme}
+
+\title{Linux Cluster in Theorie und Praxis}
+\subtitle{Das Oar Batchsystem}
+\author{Sebastian Knauer}
+\date{4. M\"arz 2015}
+\institute[ZIH TUD]{Zentrum f\"ur Informationsdienste und Hochleistungsrechnen -- TU Dresden}
+%\room{INF 1046}
+\address{N\"othnitzer Stra{\ss}e 46}
+\city{01189 Dresden}
+%\phone{+49 0351 - 463 38783}
+\email{s9284744@mail.zih.tu-dresden.de}
+
+\setbeamercovered{transparent}
+\begin{document}
+
+\zihmaketitle
+
+\begin{frame}
+\frametitle{Inhalt}
+	\tableofcontents
+\end{frame}
+
+\section{Job Submission}
+\begin{frame}{Job Submission - Slurm}
+	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/slurm.png}
+\end{frame}
+
+\begin{frame}{Job Submission - Oar}
+	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/oar.png}
+\end{frame}
+
+\begin{frame}{Job Submission - Oar und Slurm}
+	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/oar_slurm.png}
+\end{frame}
+
+\subsection*{Textquellen}
+\begin{frame}
+	\begin{itemize}[]
+	    \bibitem [0] {} Meanshift \url{https://oar.imag.fr}
+    \end{itemize}
+\end{frame}
+\end{document}
