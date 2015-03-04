@@ -22,7 +22,7 @@
 \input{theme/theme}
 
 \title{Linux Cluster in Theorie und Praxis}
-\subtitle{MeanShift - parameterfreier Clusteringalgorithmus}
+\subtitle{Mean Shift - parameterfreier Clusteringalgorithmus}
 \author{Christian Deussen}
 \date{4. M\"arz 2015}
 \institute[ZIH TUD]{Zentrum f\"ur Informationsdienste und Hochleistungsrechnen -- TU Dresden}
@@ -57,6 +57,13 @@
 \end{frame}
 \begin{frame}
 	\frametitle{Einf\"uhrung}
+\begin{figure}
+	\includegraphics[scale=0.6]{meanshift_basics.jpg}
+	\vspace{-10pt}
+	\caption{Mean Shift Basics[B0]}
+\end{figure}
+\end{frame}
+\begin{frame}
  		\[ m(x) = \frac{\sum_{x_i \in N(x)} K(x_i - x) x_i }{\sum_{x_i \in N(x)} K(x_i - x)} \]
 \begin{figure}
     \begin{columns}%
@@ -78,7 +85,6 @@
 	\begin{itemize}
 		\item Einfach verkettete Liste
 		\item Punkte werden statisch auf Cores gleichverteilt
-		\item Hauptprozess führt Daten wieder zusammen
 	\end{itemize}
 \normalsize
 	\lstset{language=C,
@@ -97,15 +103,18 @@ while(point) {
   point_cntr++;
 }
 	\end{lstlisting}
-\end{frame}
 \Large
+	\begin{itemize}
+		\item Hauptprozess führt Daten wieder zusammen
+	\end{itemize}
+\end{frame}
 \begin{frame}
 	\frametitle{MPI}
 	\begin{itemize}
-		\item Keine Zwischenergebnisse
 		\item Optimale Auslastung nicht sicher
-		\item Genauigkeit von Gleitkommazahlen muss beachtet werden
+		\item Keine Zwischenergebnisse
 		\item wenig Kommunikation
+		\item Genauigkeit von Gleitkommazahlen muss beachtet werden
 	\end{itemize}
 \end{frame}
 
@@ -161,7 +170,8 @@ while(point) {
 				\begin{itemize}
 					\item 100.000 Punkte
 					\item 6 Minuten Laufzeit auf 128 Cores
-					\item Kernelgröße 50000
+					\item Kernelgröße 50.000
+					\item Kleine Artefakte 
 				\end{itemize}
 			}
 		\end{tabular}
@@ -185,8 +195,8 @@ while(point) {
 	\begin{figure}[p!]
 		\vspace{-10pt}
 		\hspace{-25pt}
-		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s4_black.png}
-		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s4_colored.png}
+		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s3_black.png}
+		\includegraphics[scale=0.23, keepaspectratio]{../output/pics/s3_colored.png}
 		\caption{Mean Shift Eingabe und Ausgabe [B6,B7]}
 	\end{figure}
 \end{frame}
@@ -267,11 +277,12 @@ while(point) {
 \tiny
 \subsection*{Textquellen}
 	\begin{itemize}[]
-		\bibitem [0] {} Meanshift \url{http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/TUZEL1/MeanShift.pdf}
+		\bibitem [0] {} Mean Shift \url{http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/TUZEL1/MeanShift.pdf}
 		\bibitem [1] {} Mean Shift: Construction and Convergence Proof \url{http://www.cse.yorku.ca/~kosta/CompVis_Notes/mean_shift_derivation.pdf}
 		\bibitem [2] {} Datasets \url{http://cs.joensuu.fi/sipu/datasets/}
 		\bibitem [3] {} Taurus TU Dresden \url{https://doc.zih.tu-dresden.de/hpc-wiki/bin/view/Compendium/SystemTaurus}
-		\bibitem [4] {} Meanshift \url{https://courses.csail.mit.edu/6.869/handouts/PAMIMeanshift.pdf}
+		\bibitem [4] {} Mean Shift \url{https://courses.csail.mit.edu/6.869/handouts/PAMIMeanshift.pdf}
+		\bibitem [B0] {} Mean Shift Basics \url{http://docs.opencv.org/trunk/_images/meanshift_basics.jpg}
 	\end{itemize}
 \end{frame}
 \end{document}
