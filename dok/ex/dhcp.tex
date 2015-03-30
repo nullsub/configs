@@ -20,7 +20,7 @@ host node1 {
 	option host-name "node1";
 }
 \end{lstlisting}
-In /etc/default/isc-dhcp-server muss eth1 eingetragen werden damit der DHCP Server nur auf eth1 läuft.\\
+In /etc/default/isc-dhcp-server muss eth1 eingetragen werden, damit der DHCP Server nur auf eth1 läuft.\\
 DHCP Server neu starten:
 \begin{lstlisting}[style=Bash]
 # /etc/init.d/isc-dhcp-server restart
@@ -30,7 +30,7 @@ In den Nodes wird /etc/network/interfaces angepasst:
 auto eth0
 iface eth0 inet dhcp
 \end{lstlisting}
-Damit der Headnode den lokalen DNS Server nutzt muss /etc/dhclient.conf angepasst werden:
+Damit der Headnode den lokalen DNS Server nutzt, muss /etc/dhclient.conf angepasst werden:
 \begin{lstlisting}[style=Bash]
 prepend domain-name-servers 127.0.0.1;
 request subnet-mask, broadcast-address, time-offset, routers,

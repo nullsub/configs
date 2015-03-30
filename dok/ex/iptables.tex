@@ -15,7 +15,7 @@ fail2ban installieren:
 \end{lstlisting}
 Bei 3 mal wiederholtem einloggen mit falschen Zugangsdaten wird die IP für 10 Minuten gesperrt.
 \section{Forwarding und Masquerading}
-Um das forwarding zu aktivieren muss dies in sysctl.conf aktiviert werden:
+Forwarding wird in sysctl.conf aktiviert:
 \begin{lstlisting}[style=Bash]
 /etc/sysctl.conf:
 net.ipv4.ip_forward = 1

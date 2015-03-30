@@ -1,6 +1,10 @@
 \chapter{Installation des Betriebssystem}
 \section{Cluster-Layout}
-\includegraphics[width=400px]{cluster_layout.png}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=400px]{cluster_layout.png}
+	\caption{Cluster Layout}
+\end{figure}
 
 /home und /shared werden exportiert.
 \section{Betriebssysteminstallation}
@@ -29,7 +33,7 @@ $ cat <username>.key >> ~.ssh/authorized_keys
 \end{lstlisting}
 
 \section{SSH-Server}
-Install SSH-Server
+SSH-Server installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install openssh-server 
 \end{lstlisting}
@@ -67,7 +71,7 @@ Für jeden User:
 $ ssh-keygen -b 1024 -N ''
 $ cat ~.ssh/id_rsa.pub >> ~./ssh/authorized_keys
 \end{lstlisting}
-Ein Script zur automatischen Nutzererstellung: (dazu muss das Paket whois installiert sein)
+Script zur automatischen Nutzererstellung:
 \lstinputlisting[style=Bash]{../aufgabe1/addusers.sh}
 \section{Parallel Distributed Shell}
 pdsh installieren:
@@ -96,7 +100,7 @@ configs Repo anlegen:
 # mkdir configs
 # cd configs && git --bare init
 \end{lstlisting}
-Den ssh-key von allen Usern zu /home/git/.ssh/autorized\_keys hinzufügen:
+ssh-key von allen Usern zu /home/git/.ssh/autorized\_keys hinzufügen:
 \begin{lstlisting}[style=Bash]
 # su user
 # ssh-keygen
@@ -188,4 +192,8 @@ set style data linespoints
 plot "sensors.txt" using 1:6 title "Core 0", \
 "" using 1:7 title "Core 1"
 \end{lstlisting}
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../aufgabe1/BurnIn/plot.png}
+\newpage
+\begin{figure}[H]
+	\includegraphics[scale=0.27]{../aufgabe1/BurnIn/plot.png}
+	\caption{BurnIn plot}
+\end{figure}

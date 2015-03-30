@@ -52,9 +52,16 @@ $ /shared/tools/openmpi/1.8.4/bin/mpirun -n 2 -H headnode,node0 \
 \end{lstlisting}
 Ausgabe:
 \lstinputlisting[style=BASH]{../mpi_benchmark/mpi_pingpong}
-\includegraphics[scale=0.6]{../mpi_benchmark/pingpong_bandwidth.png} 
-\newline
-\includegraphics[scale=0.6]{../mpi_benchmark/pingpong_time.png}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.65]{../mpi_benchmark/pingpong_bandwidth.png} 
+	\caption{Pingpong Bandbreite}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.65]{../mpi_benchmark/pingpong_time.png}
+	\caption{Pingpong Zeit}
+\end{figure}
 \subsection{Gruppenkommunikationen}
 Benchmark starten:
 \begin{lstlisting}[style=Bash]
@@ -64,9 +71,16 @@ $ /shared/tools/openmpi/1.8.4/bin/mpirun -n 6 -hostfile /shared/mpi \
 \end{lstlisting}
 Ausgabe:
 \lstinputlisting[style=BASH]{../mpi_benchmark/mpi_barrier_allreduce_alltoall}
-\includegraphics[scale=0.6]{../mpi_benchmark/allreduce_time.png}
-\newline
-\includegraphics[scale=0.6]{../mpi_benchmark/alltoall_time.png}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.65]{../mpi_benchmark/allreduce_time.png}
+	\caption{Allreduce Zeit}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.65]{../mpi_benchmark/alltoall_time.png}
+	\caption{Alltoall Zeit}
+\end{figure}
 \section{iozone}
 \begin{lstlisting}[style=Bash]
 /etc/apt/sources.list non-free
@@ -75,4 +89,8 @@ Ausgabe:
 iozone -a -i 0 -g 512M -F /shared/iotmp > out.txt
 $ ./GenGraph out.text
 \end{lstlisting}
-\includegraphics[scale=0.7]{read.pdf}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{read.pdf}
+	\caption{IOZone Performance}
+\end{figure}
