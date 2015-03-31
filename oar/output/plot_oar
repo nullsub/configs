@@ -10,12 +10,12 @@ set yrange [0:10000]
 set ylabel "time to submit one job in ms"
 set yrange [0:1000]
 
-set title "Slurm job submission"
+set title "OAR job submission"
 set key reverse Left outside
 set grid
 
 #set style data linespoints
 
-plot "../data/om1.txt" using 1:2 every 1
+plot "../data/om1.txt" using 1:2 every 1 title "OAR submission time"
 
 

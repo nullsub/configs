@@ -22,8 +22,37 @@
 \input{theme/theme}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
 \title{Linux Cluster in Theorie und Praxis}
-\subtitle{Das Oar Batchsystem}
+\subtitle{Das OAR Batchsystem}
 \author{Sebastian Knauer}
 \date{4. M\"arz 2015}
 \institute[ZIH TUD]{Zentrum f\"ur Informationsdienste und Hochleistungsrechnen -- TU Dresden}
@@ -43,32 +72,57 @@
 	\tableofcontents
 \end{frame}
 
-\section{Oar}
+\section{OAR}
 \begin{frame}{\includegraphics[scale=0.22, keepaspectratio]{oar-logo.png}  OAR}
     \begin{itemize}
         \item{Open source Batchsystem}
         \item{Wird benutzt auf Grid 5000 (1000 Nodes, 8000 Cores)
+            \begin{figure}
+            \centering
 	        \includegraphics[scale=1.0, keepaspectratio]{grid5000.jpg}
+            \caption{Grid'5000}
+            \end{figure}
             }
-        \item{Basiert auf Datenbank (MySql oder Postgree) }
-        \item{Script Language Perl}
+        \item{Basiert auf Datenbank (MySql oder PostgreSql) }
+        \item{Scriptsprache Perl}
     \end{itemize}
 \end{frame}
 
-\section{Installation/Administration}
-\begin{frame}{Installation/Administration}
+\section{Architekur / Installation}
+\begin{frame}{Architektur / Installation}
+    \begin{itemize}
+        \item{OAR Installation vier Komponenten}
+        \item{alle Debian repository: OAR 2.5.4-2}
+    \end{itemize}
     Komponenten:
+    \begin{itemize}
+        \item{Server node}
+        \item{Frontend node}
+        \item{Computing node}
+        \item{Optional: Visualisierungsserver}
+    \end{itemize}
+    Debian Pakete:
+    \begin{itemize}
+        \item{oar-server}
+        \item{oar-user}
+        \item{oar-node}
+    \end{itemize}
+%
+%    \begin{tabular}{l|r}
+%    ~ & debian package name\\ \hline
+%    \tabitem Server node & oar-server \\
+%    \tabitem Frontend node & oar-user \\
+%    \tabitem Computing node & oar-node \\
+%    \tabitem Optional: Visiualisierungsserver & ~ \\
+%    \end{tabular}
+\end{frame}
 
-    \begin{tabular}{l r}
-    ~ & Oar 2.5.4-2 Debian Repository \\
-    \tabitem Server node & oar-server \\
-    \tabitem Frontend node & oar-user \\
-    \tabitem Computing node & oar-node \\
-    \tabitem Optional: Visiualisierungsserver & ~ \\
-    \end{tabular}
+\begin{frame}{Installation/Administration}
 
     LCTP Cluster:
 
+    \begin{figure}
+    \centering
     \begin{tikzpicture}
         %headnode
         \draw [rounded corners,fill=orange!20](0,1) rectangle (2.5,4); 
@@ -90,38 +144,82 @@
         \draw (2.5,2.5) -- (5,1);
         \draw (2.5,2.5) -- (5,4);
     \end{tikzpicture}
+    \caption{Architekturskizze von OAR auf LCTP G1 Cluster}
+    \end{figure}
 
 \end{frame}
 
-\section{User}
-\begin{frame}{User}
-    \begin{tabular}{c c}
-          Slurm & Oar \\
-          sbatch & oarsubmit \\
-          scancel & oardelete \\
-          squeue & oarstat \\
+\section{Benutzerinteraktion}
+\begin{frame}{Benutzerinteraktion}
+
+    \begin{itemize}
+        \item{Userinteraktion auf dem Frontend node (oar-user)}
+    \item{Ähnliche Befehle wie Slurm:
+    \begin{table}
+    \begin{tabular}{l|l}
+          OAR command & Slurm command \\ \hline
+        oarsub & sbatch  \\
+        oardel  & scancel  \\
+        oarstat & squeue  \\
+        oarhold & scontrol suspend  \\
+          oarresume & scontrol resume \\
     \end{tabular}
+\end{table}
+}
+    \item{Beispiel job submission: \lstinline{frontend:~> oarsub -l /cpu=2,walltime=00:30:00 ./script.sh}
+}
+    \end{itemize}
+\end{frame}
+\begin{frame}{Features}
+\begin{itemize}
+    \item{CPUSet: Nodes sind sauber nach Beendigung der Jobs}
+    \item{Besteffort Jobs: Besteffort Job wird gelöscht, wenn nicht-besteffort Job Ressourcen benötigt. \lstinline{oarsub -t besteffort}}
+    \item{Kein Daemon auf den Nodes (Slurm ein Daemon pro node)}
+\end{itemize}
 \end{frame}
 
-\section{Job Submission}
-\begin{frame}{Job Submission - Slurm}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/slurm.png}
+\section{Performance - Job Submission}
+\begin{frame}{Performance - Job Submission - Slurm}
+    \begin{figure}
+    \centering
+	\includegraphics[scale=0.18, keepaspectratio]{../output/pics/slurm.png}
+    \caption{Submission Performance Slurm}
+    \end{figure}
+    \begin{itemize}
+        \item{Submission time ca. 15ms bis 2000 jobs}
+        \item{ab 2000 Jobs steigt submission time stetig (600 ms bei 30k jobs)}
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Job Submission - Oar}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/oar.png}
+\begin{frame}{Performance - Job Submission - OAR}
+    \begin{figure}
+    \centering
+	\includegraphics[scale=0.20, keepaspectratio]{../output/pics/oar.png}
+    \caption{Submission Performance OAR}
+    \end{figure}
+    \begin{itemize}
+        \item{Submission time konstant bei ca. 400ms }
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Job Submission - Oar und Slurm}
-	\includegraphics[scale=0.22, keepaspectratio]{../output/pics/oar_slurm.png}
+\begin{frame}{Performance Job Submission - OAR und Slurm}
+    \begin{figure}
+    \centering
+	\includegraphics[scale=0.20, keepaspectratio]{../output/pics/oar_slurm.png}
+    \caption{Submission Performance OAR}
+    \end{figure}
+    \begin{itemize}
+        \item{ab ca. 20k jobs überholt Slurm OAR}
+    \end{itemize}
 \end{frame}
 
 \subsection*{Textquellen}
 \begin{frame}
 	\begin{itemize}[]
 	    \bibitem [0] {} Oar Official Website \url{https://oar.imag.fr}
-	    \bibitem [0] {} Oar Universitys of Luxemburg \url{https://hpc.uni.lu/users/docs/oar.html}
-	    \bibitem [0] {} Grid5000 Official Website \url{https://www.grid5000.fr}
+	    \bibitem [1] {} Oar Universitys of Luxemburg \url{https://hpc.uni.lu/users/docs/oar.html}
+	    \bibitem [2] {} Grid5000 Official Website \url{https://www.grid5000.fr}
+	    \bibitem [3] {} Slurm Official Website \url{https://computing.llnl.gov/linux/slurm/}
     \end{itemize}
 \end{frame}
 \end{document}
