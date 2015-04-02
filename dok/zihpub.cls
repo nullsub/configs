@@ -770,7 +770,6 @@ Wissenschaftlichen Hochleistungsrechnen''}
 	  \huge
 	  \@title
 	  \vspace{2cm}
-      \includegraphics[scale=.666]{tuxcluster.png}	
 	  % Zweck der Arbeit
 	  \Large
 	  {\Large \@author }\\\@subauthor\\[2cm]
