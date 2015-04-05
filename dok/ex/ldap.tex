@@ -1,5 +1,9 @@
 \chapter{LDAP}
-Als Grundlage dient http://wiki.ubuntuusers.de/OpenLDAP.\\
+Lightweight Directory Access Protocol (LDAP) ist ein Verzeichnisdienst welcher für die Zugriffssteuerung des Clusters genutzt werden soll.\\
+Nutzernamen und Passwörter werden in einer zentralen Datenbank gespeichert. Somit brauchen keine Nutzerkennungen und Passwörter auf den Rechenknoten gespeichert werden. 
+Auf den Rechenknoten müssen nur die Zugangsdaten für die zentrale Verzeichnisdatenbank hinterlegt werden.\\
+Als Grundlage zur Installation dient http://wiki.ubuntuusers.de/OpenLDAP.\\
+Die Verzeichnisdatenbank (LDAP Server) wird auf dem Headnode installiert.
 Ldap, Utils und Migrationstools installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install slapd smbldap-tools ldap-utils
@@ -136,7 +140,7 @@ TLSCertificateFile    /etc/ssl/certs/ldap\_slapd\_cert.pem
 TLSCertificateKeyFile /etc/ssl/private/ldap\_slapd\_key.pem
 TLSCACertificateFile  /etc/ssl/certs/ldap\_slapd\_cacert.pem
 \end{lstlisting}
-Damit slapd nun weiterhin startet muss sichergestellt sein dass der User openldap Zugriffsrechte auf /etc/ssl/* hat.\\
+Damit slapd nun weiterhin startet, muss sichergestellt sein, dass der User openldap Zugriffsrechte auf /etc/ssl/* hat.\\
 Der ldap Client wird nun konfiguriert um ssl zu verwenden:
 \begin{lstlisting}[style=Bash]
 uri ldaps://cluster.local/:636
@@ -187,7 +191,8 @@ ldapdelete -D "cn=admin,dc=cluster,dc=local" \
 	uid=root,ou=Users,dc=cluster,dc=local -W
 \end{lstlisting}
 \section{Client}
-LDAP auf dem Computenode einrichten:
+LDAP wird auf dem Computenode installiert und die Zugangsdaten werden hinterlegt.\\
+ldap installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install ldap-tools libpam-ldap
 \end{lstlisting}
@@ -198,8 +203,8 @@ Nachdem die ldap Authentication ausreichend getestet worden ist, werden die unix
 # userdel userN
 \end{lstlisting}
 \section{Anlegen neuer Benutzer}
-Beim login über shh in den Headnode wird das Script makessh.sh aufgerufen.
-Dort werden die keys und das home directory erzeugt:
+Beim login über ssh in den Headnode wird das Script makessh.sh aufgerufen.
+Dort werden die Keys und das home Directory erzeugt:
 \begin{lstlisting}[style=Bash]
 @headnode:# vim /etc/pam.d/sshd
 §\dotfill§
@@ -211,8 +216,8 @@ Script zum anelgen neuer Benutzer:
 \begin{lstlisting}[style=Bash]
 # ./addusers.sh userliste.txt 
 \end{lstlisting}
-Legt Datei ldapusers\_new und un\_pw an.
-In un\_pw sind Username und Passwort gespeichert. Dies kann nur von root gelesen werden. In ldapusers\_new sind die (falls veränderten) Usernamen gespeichert.\\
+Es wird die Datei ldapusers\_new und un\_pw angelegt.
+In un\_pw sind Username und Passwort gespeichert. un\_pw kann nur von root gelesen werden. Falls die Usernamen verändert wurden, werden sie in ldapusers\_new gespeichert.\\
 Script zum entfernen der Benutzer:
 \lstinputlisting[style=BASH]{../aufgabe_ldap/delusers.sh}
 Usage:
