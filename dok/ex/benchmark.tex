@@ -1,10 +1,7 @@
 \chapter{Benchmark}
-gfortran installieren:
-\begin{lstlisting}[style=Bash]
-$ sudo apt-get install gfortran sysfsutils cpufrequtils libmpich2-dev
-\end{lstlisting}
-Für ATLAS muss Cpu Throttling deaktiviert sein.\\
-Cpu Throttling deaktivieren: 
+Mit dem High Performance Linpack kann die Gleitkomma Performance des Clusters untersucht werden. Dafür werden große Gleitkomma Matrizen berechnet.\\
+Zunächst muss die Algebra Bibliothek ATLAS installiert werden.\\
+Cpu Throttling muss für ATLAS deaktiviert sein:
 \begin{lstlisting}[style=Bash]
 $ sudo cpufreq-set -g performance
 \end{lstlisting}
@@ -18,11 +15,8 @@ $ wget http://icl.cs.utk.edu/projectsfiles/hpcc/download/ \
 	hpcc-1.4.3.tar.gz
 $ tar -xf hpcc-1.4.3.tar.gz
 \end{lstlisting}
-Make Konfiguration in hpl als Make.CoreI2 ablegen:
-\begin{lstlisting}[style=Bash]
-...
-\end{lstlisting}
-Kompilieren:
+Die Make Konfiguration wird in hpl/ als Make.CoreI2 abgelegt.\\
+Kompilation mit der CoreI2 Konfiguration starten:
 \begin{lstlisting}[style=Bash]
 $ make arch=CoreI2
 \end{lstlisting}
@@ -81,6 +75,7 @@ Ausgabe:
 	\includegraphics[scale=0.65]{../mpi_benchmark/alltoall_time.png}
 	\caption{Alltoall Zeit}
 \end{figure}
+\newpage
 \section{iozone}
 \begin{lstlisting}[style=Bash]
 /etc/apt/sources.list non-free

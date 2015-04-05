@@ -1,6 +1,8 @@
 \chapter{Aufgabe 3 - DHCP \& DNS}
 \section{DHCP}
-Config ist in /etc/dhcp/dhcp.conf:
+Mit dem dhcp Server wird automatisch den Nodes ein Hostname und eine IP Adresse zugewiesen. Bei einem Nachträglichen hinzufügen von Nodes muss so nur
+die Konfiguration des DHCP Servers geändert werden. Für alle Nodes kann somit das gleiche Filesystem Image genutzt werden.\\
+Die Konfiguration ist in /etc/dhcp/dhcp.conf:
 \begin{lstlisting}[style=Bash]
 subnet 192.168.2.0 netmask 255.255.255.0 {
 	range 192.168.2.240 192.168.2.250;
@@ -33,20 +35,15 @@ iface eth0 inet dhcp
 Damit der Headnode den lokalen DNS Server nutzt, muss /etc/dhclient.conf angepasst werden:
 \begin{lstlisting}[style=Bash]
 prepend domain-name-servers 127.0.0.1;
-request subnet-mask, broadcast-address, time-offset, routers,
-	domain-name, domain-search, host-name,
-	dhcp6.domain-search,
-	netbios-scope, interface-mtu,
-	rfc3442-classless-static-routes, ntp-servers;
 \end{lstlisting}
-Der Hostname der Nodes wird noch nicht automatisch gesetzt. Dies wird mit einem Script in /etc/dhcp/dhclient-exit-hooks.d/ gemacht.
+Da der Hostname der Nodes nicht automatisch gesetzt wird, erledigt dies ein Script in /etc/dhcp/dhclient-exit-hooks.d/.
 \section{DNS}
-Domans: cluster.local. headnode.cluster.local, nodeN.cluster.local\\
-bind9 wird genutzt:
+Der DNS Server wird zum Auflösen von lokalen Domains genutzt. bind9 ist der am meistverbreitete DNS Server im Internet, daher wird auch bind9 verwendet.\\
+Alle Rechner sollen über einen Fully Qualified Domain Name erreichbar sein:
 \begin{lstlisting}[style=Bash]
-# apt-get install bind9
+Domains: cluster.local headnode.cluster.local nodeN.cluster.local
 \end{lstlisting}
-Folgende Dateien müssen angepasst werden:
+In folgende Dateien müssen die IPs und Domainnamen geschrieben werden:
 \begin {itemize}
 \item /etc/bind/db.cluster.local
 \item /etc/bind/db.192

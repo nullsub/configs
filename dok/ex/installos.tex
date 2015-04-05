@@ -5,38 +5,24 @@
 	\includegraphics[width=400px]{cluster_layout.png}
 	\caption{Cluster Layout}
 \end{figure}
-
-/home und /shared werden exportiert.
+Als externe IP wurde die 141.76.90.101 zugewiesen. Die Knoten werden fortlaufen von 192.168.2.10 addressiert. Knoten N bekommt die IP 192.168.2.n+10.
+So lässt sich leicht erkennen zu welchem Knoten eine IP gehört.
+/home und /shared befinden sich auf dem Headnode und werden auf alle Nodes exportiert. In /shared werden Tools, Compiler und Enviroment Modules gespeichert.\\
 \section{Betriebssysteminstallation}
-\begin{lstlisting}[style=Bash]
-# apt-get update 
-# apt-get upgrade 
-\end{lstlisting}
-\begin{lstlisting}[style=Bash]
-# adduser --geco GECO <username>
-\end{lstlisting}
-\begin{lstlisting}[style=Bash]
-# apt-get install sudo
-\end{lstlisting}
-(für alle User <username>)
-\begin{lstlisting}[style=Bash]
-# vim /etc/sudoers
-§\dotfill§
-<username> ALL=(ALL)NOPASSWD:ALL
-\end{lstlisting}
+Es wurden alle User per Hand hinzugefügt. In /etc/sudoers wurden Superuserrechte vergeben.\\
+ssh-keys wurden mit wget runtergeladen und in authorized\_keys geschrieben. Nun können sich alle Nutzer mit ihrem ssh Private Key ohne Passwort auf dem Headnode einloggen.
 \begin{lstlisting}[style=Bash]
 $ wget http://lctp.zih.tu-dresden.de/key/<username>.key
 $ cat <username>.key >> ~.ssh/authorized_keys
 \end{lstlisting}
-\begin{lstlisting}[style=Bash]
-# passwd -l root 
-\end{lstlisting}
-
 \section{SSH-Server}
-SSH-Server installieren:
+Es wurde sich für den SSH-Server Open-ssh entschieden. Um unauthorisierten Zugang zu verhindern, werden zunächst alle hosts für den login gesperrt:
 \begin{lstlisting}[style=Bash]
-# apt-get install openssh-server 
+# vim /etc/hosts.deny
+§\dotfill§
+sshd: ALL
 \end{lstlisting}
+Loginversuche aus dem Uninetz werden erlaubt:
 \begin{lstlisting}[style=Bash]
 # vim /etc/hosts.allow
 §\dotfill§
@@ -45,13 +31,8 @@ sshd: 141.30.0.0/255.255.0.0
 sshd: 192.168.2.0/255.255.255.0
 sshd: LOCAL 
 \end{lstlisting}
-\begin{lstlisting}[style=Bash]
-# vim /etc/hosts.deny
-§\dotfill§
-sshd: ALL
-\end{lstlisting}
 
-SSH-Server konfigureren:
+Im SSH-Server wird dies auch konfiguriert:
 \begin{lstlisting}[style=Bash]
 # vim /etc/ssh/sshd_config
 §\dotfill§
@@ -66,35 +47,22 @@ AllowUsers *@localhost
 # SSH server auf den nodes:
 UseDNS no
 \end{lstlisting}
-Für jeden User:
+Für ein passwortloses einloggen auf den Nodes wird für jeden User ein ssh Key erstellt. Da das /home Verzeichnis mit den Nodes geteilt wird, muss der Schlüssel 
+nicht weiter verteilt werden:
 \begin{lstlisting}[style=Bash]
 $ ssh-keygen -b 1024 -N ''
 $ cat ~.ssh/id_rsa.pub >> ~./ssh/authorized_keys
 \end{lstlisting}
-Script zur automatischen Nutzererstellung:
+Die Nutzererstellung wurde per Script automatisiert:
 \lstinputlisting[style=Bash]{../aufgabe1/addusers.sh}
 \section{Parallel Distributed Shell}
-pdsh installieren:
-\begin{lstlisting}[style=Bash]
-# apt-get install pdsh
-\end{lstlisting}
-/etc/genders:
-\begin{lstlisting}[style=Bash]
-localhost headnode
-node0 computenodes
-\end{lstlisting}
-~/.ssh/config:
-\begin{lstlisting}[style=Bash]
-StrictHostKeyChecking no
-\end{lstlisting}
-
+PDSH ist eine verteilte Shell mit welcher Befehle auf beliebig vielen Rechnern ausgeführt werden können. So kann mit einem Befehl auf allen Nodes
+Updates installiert werden.\\
+Konfigurationsunterschiede zwischen den Nodes können so vermieden werden.\\
 \section{Git Server}
-Git installieren und User git anlegen:
-\begin{lstlisting}[style=Bash]
-# apt-get install git
-# adduser git
-\end{lstlisting}
-configs Repo anlegen:
+Zur Projektverwaltung und zum dokumentieren von /etc Änderungen wird Git genutzt.
+Im Home Verzeichnis des Users git wird ein Repository erstellt in welchem alle Logs, Konfigurationen und Aufgabenlösungen gespeichert werden.\\
+configs Repository anlegen:
 \begin{lstlisting}[style=Bash]
 # su git
 # mkdir configs
@@ -106,31 +74,29 @@ ssh-key von allen Usern zu /home/git/.ssh/autorized\_keys hinzufügen:
 # ssh-keygen
 # ssh-copy-id -i ~/.ssh/id\_rsa.pub git@localhost
 \end{lstlisting}
-Nun können alle User mit:
+Nun können alle User das Repository clonen:\\
 \begin{lstlisting}[style=Bash]
 # git clone git@localhost:configs
 \end{lstlisting}
-auf das Repository zugreifen.\\
-Der etc Baum ist als Submodule eingebunden. Nach dem clone muss:
+Der etc Baum ist als Submodule in configs eingebunden. Nach dem clone muss dieses initialisiert und geupdated werden:
 \begin{lstlisting}[style=Bash]
 # git submodule init
 # git submodule update
 \end{lstlisting}
-ausgeführt werden um das current\_etc Verzeichniss zu befüllen.
 \subsection{etckeeper}
-Installieren und konfigurieren:
+Mit etckeeper werden alle Änderungen in /etc in einem git Repository eingecheckt.\\
+Konfigurieren:
 \begin{lstlisting}[style=Bash]
-# apt-get install etckeeper
 # cd /etc && git remote add git@localhost:current_etc
 \end{lstlisting}
-Hook installieren sodass beim commit automatisch gepuscht wird.\\
+Mit Hilfe eines Hooks wird bei einem Commit automatisch gepuscht.\\
 /etc/.git/hooks/config:
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
 git push origin master
 \end{lstlisting}
-
 \subsection{/var/log/* check in}
+Logs werden periodisch in das git Repository eingecheckt.\\
 /var/log/* wird mit einem Script in /root/chekin\_logs.sh nach git@localhost:configs gepusht:
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
@@ -147,12 +113,11 @@ Dieses Script wird per cronjob jeden Tag um 18:05 ausgeführt:
 05 18 * * * /root/checkin_logs.sh
 \end{lstlisting}
 \section{BurnIn}
-cpuburn und lm-sensors installieren:
-\begin{lstlisting}[style=Bash]
-# apt-get install cpuburn lm-sensors
-\end{lstlisting}
+Der BurnIn wird als Hardwarestresstest genutzt. Um Lüftungs und Kühlungsprobleme zu erkennen werden beide Cores für 24 Stunden unter Vollast betrieben.\\
+Der Temperaturverlauf wird während des Tests aufgezeichnet und anschließend per Script graphisch dargestellt.\\
 Der BurnIn wird mit einem Script in configs/BurnIn/stresstest.sh ausgeführt.\\
-burnP6 muss für jeden Core gestartet werden. Die While Schleife gibt periodisch den geparsten output von sensors mit einem Zeitstempel aus:
+Da die genutzte CPU 2 Kerne hat, wird burnP6 zweimal gestartet.\\
+Die While Schleife gibt periodisch den geparsten output von sensors mit einem Zeitstempel aus:
 \begin{lstlisting}[style=Bash]
 #!/bin/sh
 burnP6 &
@@ -195,5 +160,5 @@ plot "sensors.txt" using 1:6 title "Core 0", \
 \newpage
 \begin{figure}[H]
 	\includegraphics[scale=0.27]{../aufgabe1/BurnIn/plot.png}
-	\caption{BurnIn plot}
+	\caption{BurnIn Temperaturverlauf}
 \end{figure}

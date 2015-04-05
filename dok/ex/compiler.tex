@@ -1,12 +1,12 @@
 \chapter{Compiler}
-Compiler werden in /shared compiliert und nach /shared/tools installiert.\\
+Compiler werden in /shared kompiliert und nach /shared/tools installiert.\\
 Sourcen downloaden:
 \begin{lstlisting}[style=Bash]
 # wget http://gcc.cybermirror.org/releases/gcc-4.8.3/gcc-4.8.3.tar.bz2
 # wget http://gcc.cybermirror.org/releases/gcc-4.9.2/gcc-4.9.2.tar.bz2
 # git clone https://github.com/gcc-mirror/gcc.git
 \end{lstlisting}
-Compiler installieren:
+Zur Kompilation von C/C++ Anwendungen werden einige Tools, Compiler und Bibliotheken benötigt:
 \begin{lstlisting}[style=Bash]
 $ apt-get install subversion libgmp-dev libmpfr-dev libmpc-dev \
 	gcc-multilib g++ g++-multilib zip bison build-essential
@@ -16,7 +16,9 @@ Entpacken:
 # tar -xf gcc-4.8.3.tar.bz2
 # tar -xf gcc-4.9.2.tar.bz2
 \end{lstlisting}
-Nach folgendem Schema werden die Compiler compiliert und installiert:
+Beim configure muss der LIBRARY\_PATH der 32-Bit Bibliotheken extra angegeben werden.
+Mit -j2 wird die Kompilation auf 2 Kernen parallel ausgeführt.\\
+Nach folgendem Schema werden die Compiler kompiliert und installiert:
 \begin{lstlisting}[style=Bash]
 # mkdir build 
 # ../configure --prefix=/shared/tools/gcc/4.x.x
