@@ -1,5 +1,12 @@
 \chapter{Netzwerkdateisysteme}
 \section{NFS}
+Mit einem NFS (Network File System) können mehrere Clienten auf Dateien
+in einem Netzwerk zugreifen und diese so behandeln, als wären sie
+auf der eigenen Festplatte.
+Dies hat hier vorallem den Vorteil, dass man das home-Verzeichnis
+exportieren und somit auf jedem Knoten einem User sein User-Verzeichnis
+bereitstellen kann. Ausserdem wird ein shared-Verzeichnis exportiert, in dem 
+alle Programme installiert werden, die von allen Knoten aus benutzt werden.
 \begin{lstlisting}[style=Bash]
 # apt-get install nfs-kernel-server nfs-common
 \end{lstlisting}
@@ -18,11 +25,21 @@ Jedem Nutzer wird der Zufgriff auf das Verzeichnis gewährt:
 $ sudo chmod a+rwx
 \end{lstlisting}
 \section{Paralleles Verteiltes Dateisystem}
-Auf jedem Node wird glusterfs installiert:
+Bei einem parallelen verteiltem Dateisystem gibt es verschieden Anwendungsfälle.
+Zum einen kann es als Verteiltes Dateisystem genutzt werden,
+sodass die Speichergröße mit der Anzahl der Knoten skaliert.
+Desweiteren kann es als Repliziertes Dateisystem benutzt werden,
+um Ausfallsicherheit zu erhöhen.
+Schließlich kann damit auch der Datendurchsatz erhäht werden, sowie eine Kombination aus allen 3 Varianten.
+Für unser Cluster ist der möglichst große Datendurchsatz interessant.
+Das parallele verteilte Dateisystem wurde mit GlusterFS realisiert,
+da es einfach in der Installation ist und für unsere Zwecke völlig ausreicht.\\
+
+Auf jedem Node wird nun glusterfs installiert und eine 20G Partition mit
+XFS erstellt:
 \begin{lstlisting}[style=Bash]
 # apt-get install glusterfs-server
 \end{lstlisting}
-Neue 20G Partition:
 \begin{lstlisting}[style=Bash]
 # fdisk /dev/sda
 ---------------
@@ -38,7 +55,6 @@ w
 \begin{lstlisting}[style=Bash]
 # apt-get install xfsprogs
 \end{lstlisting}
-Filesystem auf sdaX xfs:
 \begin{lstlisting}[style=Bash]
 # mkfs.xfs -i size=512 /dev/sdX
 # mkdir -p /data/bricki
@@ -50,14 +66,14 @@ Filesystem auf sdaX xfs:
 \begin{lstlisting}[style=Bash]
 mount -a && mount
 \end{lstlisting}
-Nur auf einem Node:
+Nun wird ein Striped-Volume(hoher Datendurchsatz) mit 2 Knoten erstellt
 \begin{lstlisting}[style=Bash]
 # gluster peer probe 192.168.2.10
 # gluster volume create striped-volume stripe 2 
     192.168.2.1:/data/brick0 192.168.2.10:/data/brick1
 # gluster volume start striped-volume
 \end{lstlisting}
-Auf jedem Node:
+Auf jedem Node wird nun das Volume unter /fastfs gemountet:
 \begin{lstlisting}[style=Bash]
 # mkdir /fastfs 
 %# mount.glusterfs 192.168.2.10:/striped-volumefastfs
@@ -66,7 +82,10 @@ Auf jedem Node:
 \begin{lstlisting}[style=Bash]
 192.168.2.10:/striped-volume /fastfs glusterfs defaults,_netdev 0 0
 \end{lstlisting}
-Striped bietet die beste Perfomance. Wenn ein Knoten ausf"allt sind keine Daten mehr erreichbar:\\
+Die Nachteile des Striped-Volume liegen auf der Hand. Fällt ein Knoten aus,
+ist das ganze Volume unbrauchbar.\\
 write speed /home: ~ 350MB/s\\
 write speed /fastfs: ~ 40MB/s\\
 write speed /shared: ~ 336MB/s\\
+Obwohl das GlusterFS, welches unter /fastfs eingebunden wurde
+die beste Performance liefern sollte, schneidet es als Schlechtestes ab.
