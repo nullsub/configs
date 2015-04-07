@@ -1,9 +1,9 @@
 \chapter{Netzwerkdateisysteme}
 \section{NFS}
-Mit einem NFS (Network File System) können mehrere Clienten auf Dateien
+Mit einem NFS (Network File System) können mehrere Klienten auf Dateien
 in einem Netzwerk zugreifen und diese so behandeln, als wären sie
 auf der eigenen Festplatte.
-Dies hat hier vorallem den Vorteil, dass man das home-Verzeichnis
+Dies hat hier vor allem den Vorteil, dass man das home-Verzeichnis
 exportieren und somit auf jedem Knoten einem User sein User-Verzeichnis
 bereitstellen kann. Ausserdem wird ein shared-Verzeichnis exportiert, in dem 
 alle Programme installiert werden, die von allen Knoten aus benutzt werden.
@@ -20,7 +20,7 @@ Die Computenodes mounten das nfs mit folgendem /etc/fstab Eintrag:
 192.168.2.1:/home /home nfs rw 0 0
 192.168.2.1:/shared /shared nfs rw 0 0
 \end{lstlisting}
-Jedem Nutzer wird der Zufgriff auf das Verzeichnis gewährt:
+Jedem Nutzer wird der Zugriff auf das Verzeichnis gewährt:
 \begin{lstlisting}[style=Bash]
 $ sudo chmod a+rwx
 \end{lstlisting}

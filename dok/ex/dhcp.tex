@@ -38,7 +38,7 @@ prepend domain-name-servers 127.0.0.1;
 \end{lstlisting}
 Da der Hostname der Nodes nicht automatisch gesetzt wird, erledigt dies ein Script in /etc/dhcp/dhclient-exit-hooks.d/.
 \section{DNS}
-Der DNS Server wird zum Auflösen von lokalen Domains genutzt. bind9 ist der am meistverbreitete DNS Server im Internet, daher wird auch bind9 verwendet.\\
+Der DNS Server wird zum Auflösen von lokalen Domains genutzt. bind9 ist der am weitesten verbreitete DNS Server im Internet, daher wird auch bind9 verwendet.\\
 Alle Rechner sollen über einen Fully Qualified Domain Name erreichbar sein:
 \begin{lstlisting}[style=Bash]
 Domains: cluster.local headnode.cluster.local nodeN.cluster.local

@@ -1,5 +1,5 @@
 \chapter{Abschlussaufgabe OAR}
-OAR ist ein opensource Batchsystem. Es findet vorallem Anwendung im HPC Bereich.
+OAR ist ein opensource Batchsystem. Es findet vor allem Anwendung im HPC Bereich.
 Dass OAR bereit ist produktiv eingesetzt zu werden, beweist seine Benutzung in Projekten wie Grid'5000 (1000 Nodes, 8000 Cores).
 \begin{figure}[H]
 	\centering
@@ -68,7 +68,8 @@ zu finden:
     Auf dem headnode:
     \begin{lstlisting}[style=Bash]
     # apt-get install oar-server oar-server-mysql
-    # oar-database --create --db-admin-user <user> -db-admin-pass <passwd>
+    # oar-database --create --db-admin-user <user> 
+        --db-admin-pass <passwd>
     add nodes:
     # oarnodesetting -a -h node0
     # oarnodesetting -a -h node1
@@ -106,7 +107,7 @@ Der User interagiert mit dem Batchsystem auf dem Frontend Node auf ähnliche Wei
 		\includegraphics[scale=0.8]{../oar/output/pics/oar.png} 
 		\caption{Laufzeit Benchmark[B4]}
 	\end{figure}
-    Bei OAR liegt die Zeit konstat bei ca. 400 ms unabhängig der Größe
+    Bei OAR liegt die Zeit konstant bei ca. 400 ms unabhängig der Größe
     der Queue, jedoch mit einer relativ großen Streuung.
     \newpage 
 
@@ -115,13 +116,13 @@ Der User interagiert mit dem Batchsystem auf dem Frontend Node auf ähnliche Wei
 		\includegraphics[scale=0.75]{../oar/output/pics/oar_slurm.png} 
 		\caption{Laufzeit Benchmark[B4]}
 	\end{figure}
-    Ab ca. 20000 wartender Jobs ist Slurm bei Submitten neuer Jobs langsamer als 
+    Ab ca. 20000 wartender Jobs ist Slurm beim Submit neuer Jobs langsamer als 
     OAR. 
     \newpage 
 
 \section{Fazit}
 Hinsichtlich der Handhabung für einen durchschnittlichen Benutzer
-unterscheiden sich beide Systeme kaum. Slurm und OAR lassen sich mit ählichen
+unterscheiden sich beide Systeme kaum. Slurm und OAR lassen sich mit ähnlichen
 Befehlen bedienen.
 Für einen Administrator ist Slurm in den meisten Fällen jedoch 
 die geeignetere Wahl.
@@ -133,7 +134,7 @@ jedoch entweder bei anderen Batchsystemen ebenfalls vorhanden sind,
 sich durch zusätzliche Plugins verfügbar machen lassen oder aber nur in bestimmten Einzelfällen nützlich sind.
 Bei einer oberflächlichen Betrachtung und gewöhnlichen Benutzung kommen diese nicht zum Tragen.
 
-Wenn jedoch sehr viele Jobs auf ihre Ausführung warten müssen, hat OAR mit seiner konstaten submission time einen 
+Wenn jedoch sehr viele Jobs auf ihre Ausführung warten müssen, hat OAR mit seiner konstanten submission time einen 
 sehr großen Vorteil gegenüber Slurm. Bei einer Jobanzahl von über 100000 wird die Zeitdifferenz signifikant sein und OAR sollte bevorzugt werden.
 
 

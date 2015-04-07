@@ -5,9 +5,9 @@
 	\includegraphics[width=400px]{cluster_layout.png}
 	\caption{Cluster Layout}
 \end{figure}
-Als externe IP wurde die 141.76.90.101 zugewiesen. Die Knoten werden fortlaufen von 192.168.2.10 addressiert. Knoten N bekommt die IP 192.168.2.n+10.
+Als externe IP wurde die 141.76.90.101 zugewiesen. Die Knoten werden fortlaufen von 192.168.2.10 adressiert. Knoten N bekommt die IP 192.168.2.n+10.
 So lässt sich leicht erkennen zu welchem Knoten eine IP gehört.
-/home und /shared befinden sich auf dem Headnode und werden auf alle Nodes exportiert. In /shared werden Tools, Compiler und Enviroment Modules gespeichert.\\
+/home und /shared befinden sich auf dem Headnode und werden auf alle Nodes exportiert. In /shared werden Tools, Compiler und Environment Modules gespeichert.\\
 \section{Betriebssysteminstallation}
 Es wurden alle User per Hand hinzugefügt. In /etc/sudoers wurden Superuserrechte vergeben.\\
 ssh-keys wurden mit wget runtergeladen und in authorized\_keys geschrieben. Nun können sich alle Nutzer mit ihrem ssh Private Key ohne Passwort auf dem Headnode einloggen.
@@ -16,7 +16,7 @@ $ wget http://lctp.zih.tu-dresden.de/key/<username>.key
 $ cat <username>.key >> ~.ssh/authorized_keys
 \end{lstlisting}
 \section{SSH-Server}
-Es wurde sich für den SSH-Server Open-ssh entschieden. Um unauthorisierten Zugang zu verhindern, werden zunächst alle hosts für den login gesperrt:
+Es wurde sich für den SSH-Server Open-ssh entschieden. Um unautorisierten Zugang zu verhindern, werden zunächst alle hosts für den login gesperrt:
 \begin{lstlisting}[style=Bash]
 # vim /etc/hosts.deny
 §\dotfill§
