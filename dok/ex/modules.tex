@@ -1,5 +1,13 @@
 \chapter{Environment-Modules}
-Environment Modules installieren:
+Damit ein User verschiedene Versionen einer Software,
+zB. eine Compilers benutzen kann, wurde Environment Modules installiert.
+Für jedes Programm, zu dem es mehrere Versionen geben soll,
+muss ein spezielles Modulefile erstellt werden,
+das Informationen zu Pfaden und Ähnlichem enthält. Diese werden in /shared
+gespeichert.
+\\
+Environment Modules installieren und Konfiguration des Pfades in dem die modulefiles
+gespeichert sind.
 \begin{lstlisting}[style=Bash]
 $ pdsh -a sudo apt-get install environment-modules -y
 $ pdsh -a "echo /shared/modulefiles | \
