@@ -1,10 +1,10 @@
 \chapter{Netfilter und Iptables}
 \section{Grundkonfiguration}
-Um im Netzwerk ein- und ausgehde Pakete unter kontrollieren zu können 
-und sich somit vor unerwünschten Netzwerkzugriffen zu schützen, wurde die 
+Um im Netzwerk ein- und ausgehende Pakete kontrollieren zu können 
+und sich vor unerwünschten Netzwerkzugriffen zu schützen, wurde die 
 Userspace Implementierung iptables benutzt, die auf die Firewall im Linux-Kernel zurückgreift.
-Um schließlich Internetzugriff auf den Nodes zu realisieren,
-müssen NAT-regeln implementiert und forwarding im Linux-Kernel aktiviert werden.
+Um den ausgehenden Internetzugriff der Nodes zu realisieren,
+müssen NAT-regeln implementiert und forwarding im Linux-Kernel aktiviert werden.\\
 Die Regeln werden in /etc/iptables.test.rules geschrieben:
 \lstinputlisting[style=Bash,basicstyle=\small,breaklines=true]{../current_etc/iptables.test.rules}
 \begin{lstlisting}[style=Bash]

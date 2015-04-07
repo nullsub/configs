@@ -25,7 +25,7 @@ Jedem Nutzer wird der Zufgriff auf das Verzeichnis gewährt:
 $ sudo chmod a+rwx
 \end{lstlisting}
 \section{Paralleles Verteiltes Dateisystem}
-Bei einem parallelen verteiltem Dateisystem gibt es verschieden Anwendungsfälle.
+Bei einem parallelen verteiltem Dateisystem gibt es verschiedene Anwendungsfälle.
 Zum einen kann es als Verteiltes Dateisystem genutzt werden,
 sodass die Speichergröße mit der Anzahl der Knoten skaliert.
 Desweiteren kann es als Repliziertes Dateisystem benutzt werden,
@@ -66,7 +66,7 @@ w
 \begin{lstlisting}[style=Bash]
 mount -a && mount
 \end{lstlisting}
-Nun wird ein Striped-Volume(hoher Datendurchsatz) mit 2 Knoten erstellt
+Nun wird ein Striped-Volume (hoher Datendurchsatz) mit 2 Knoten erstellt
 \begin{lstlisting}[style=Bash]
 # gluster peer probe 192.168.2.10
 # gluster volume create striped-volume stripe 2 
@@ -82,7 +82,7 @@ Auf jedem Node wird nun das Volume unter /fastfs gemountet:
 \begin{lstlisting}[style=Bash]
 192.168.2.10:/striped-volume /fastfs glusterfs defaults,_netdev 0 0
 \end{lstlisting}
-Die Nachteile des Striped-Volume liegen auf der Hand. Fällt ein Knoten aus,
+Die Nachteile des Striped-Volume liegen in der Ausfallsicherheit. Fällt ein Knoten aus,
 ist das ganze Volume unbrauchbar.\\
 write speed /home: ~ 350MB/s\\
 write speed /fastfs: ~ 40MB/s\\
