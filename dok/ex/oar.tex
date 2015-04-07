@@ -1,6 +1,6 @@
 \chapter{Abschlussaufgabe OAR}
-OAR ist ein opensource Batchsystem. Es findet vorallem Anwendung im HPC Bereich,
-Dass OAR bereit ist produktiv eingesetzt zu werden, beweist seine Benutzung in Projekten wie Grid'5000.
+OAR ist ein opensource Batchsystem. Es findet vorallem Anwendung im HPC Bereich.
+Dass OAR bereit ist produktiv eingesetzt zu werden, beweist seine Benutzung in Projekten wie Grid'5000 (1000 Nodes, 8000 Cores).
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1.5]{grid5000.jpg} 
@@ -9,9 +9,9 @@ Dass OAR bereit ist produktiv eingesetzt zu werden, beweist seine Benutzung in P
 \end{figure}
 Zuerst wird die zugrundeliegende Architektur erklärt und die dazugehörigen Installationsschritte auf dem Debiansystem beschrieben,
 da diese nicht trivial sind.
-Anschließend werden Unterschiede zum Batchsystem Slurm verdeutlich.
+Anschließend werden Unterschiede zum Batchsystem Slurm verdeutlicht.
 Zuletzt werden noch Benchmarks beider Batchsysteme gezeigt und verglichen.\pagebreak
-\section{Architekur}
+\section{Architektur}
 Eine typische OAR Installation besteht aus vier Komponenten. All diese sind im Debian Repository in der (aktuellen) Version 2.5.4-2 
 zu finden:
     \begin{itemize}
@@ -73,14 +73,32 @@ zu finden:
     # oarnodesetting -a -h node0
     # oarnodesetting -a -h node1
 	\end{lstlisting}
+\section{Benutzerinteraktion}
+Der User interagiert mit dem Batchsystem auf dem Frontend Node auf ähnliche Weise wie mit Slurm. Die grundlegenden Befehle sind vergleichbar
+            \begin{table}[h]
+        \begin{tabular}{l|l}
+          OAR command & Slurm command \\ \hline
+        oarsub & sbatch  \\
+        oardel  & scancel  \\
+        oarstat & squeue  \\
+        oarhold & scontrol suspend  \\
+          oarresume & scontrol resume \\
+    \end{tabular}
+\end{table}\\
+    Beispiel job submission: \lstinline{frontend:~> oarsub -l /cpu=2,walltime=00:30:00 ./script.sh}
 	\newpage
 \section{Benchmark}
-	Zum Benchmarking wurden die Zeit gemessen, die das jeweilige Batchsystem benötigt
-    einen Job in die Queue einzureihen, in Abhängigkeit der ANzahl schon wartender Jobs.\\
+	Zum Benchmarking wurde die Zeit in Abhängigkeit der Anzahl
+    der schon wartenden Jobs gemessen,
+    die das jeweilige Batchsystem benötigt um einen Job in die Queue einzureihen.\\
 	\begin{figure}[H] \centering
 		\includegraphics[scale=0.8]{../oar/output/pics/slurm.png} 
-		\caption{Speedup[B3]}
+		\caption{Slurm submission time}
 	\end{figure}
+    Bei Slurm ist zu erkennen, dass bis ca. 2000 wartender Jobs die Zeit, die 
+    benötigt wird einen Job in die Queue einzureihen bei ~15ms liegt. 
+    Ab 2000 Jobs steigt diese Zeit jedoch. Bei 30000 Jobs liegt die Zeit schon
+    über 600ms
 	\newpage
 
 	\begin{figure}[H]
@@ -88,35 +106,41 @@ zu finden:
 		\includegraphics[scale=0.8]{../oar/output/pics/oar.png} 
 		\caption{Laufzeit Benchmark[B4]}
 	\end{figure}
+    Bei OAR liegt die Zeit konstat bei ca. 400 ms unabhängig der Größe
+    der Queue, jedoch mit einer relativ großen Streuung.
     \newpage 
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.8]{../oar/output/pics/oar_slurm.png} 
+		\includegraphics[scale=0.75]{../oar/output/pics/oar_slurm.png} 
 		\caption{Laufzeit Benchmark[B4]}
 	\end{figure}
+    Ab ca. 20000 wartender Jobs ist Slurm bei Submitten neuer Jobs langsamer als 
+    OAR. 
     \newpage 
 
-
-	Ein Taurus Knoten hat jeweils zwei 8 Core Prozessoren auf einem Board. Daher zeigt sich bei 8 und 16 Cores eine Verschlechterung. 
-	Ab 16 Cores läuft die Kommunikation zusätzlich über das Netzwerk.\\
-	Ab 128 Cores ist bei 5.000 Punkten kein Speedup mehr vorhanden. Bei einer größeren Anzahl an Cores verschlechtert sich sogar die Laufzeit. Hier
-	überwiegt der Overhead der MPI Kommunikation und das Zusammenführen der berechneten Cluster.\\
-	\newpage
 \section{Fazit}
-	Es existieren viele Möglichkeiten zur Optimierung des parallelen Algorithmus. Zum Beispiel eine dynamische Verteilung der Punkte oder eine dynamische Anpassung
-	der Wichtung um die Anzahl der benötigten Mean Shifts zu verringern.\\
-	Die Kerngröße muss momentan noch manuell angegeben werden. Dies könnte auch automatisiert werden.\\
-	Die markierten Cluster stimmen weitestgehend mit einer intuitiven Markierung überein. Punkte an der Grenze zu zwei Clustern werden jedoch häufig einem 
-	dritten Cluster zugeordent (Birch3, (300k,300k)). Hier wäre eine Glättung möglich, in der Cluster mit wenigen Punkten in anliegenden Cluster aufgeteilt werden.\\
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.6]{../meanshift/output/pics/s4_colored.png} 
-		\caption{S4, 5.000 Punkte[B5]}
-	\end{figure}
+Hinsichtlich der Handhabung für einen durchschnittlichen Benutzer
+unterscheiden sich beide Systeme kaum. Slurm und OAR lassen sich mit ählichen
+Befehlen bedienen.
+Für einen Administrator ist Slurm in den meisten Fällen jedoch 
+die geeignetere Wahl.
+Da Slurm weiter verbreitet ist als OAR, lassen sich häufiger 
+Lösungen zu Problemen finden.
+
+OAR wirbt mit einigen interessanten Features, wie z.B CPUSet, Besteffort queues, etc. , die
+jedoch entweder bei anderen Batchsystemen ebenfalls vorhanden sind,
+sich durch zusätzliche Plugins verfügbar machen lassen oder aber nur in bestimmten Einzelfällen nützlich sind.
+Bei einer oberflächlichen Betrachtung und gewöhnlichen Benutzung kommen diese nicht zum Tragen.
+
+Wenn jedoch sehr viele Jobs auf ihre Ausführung warten müssen, hat OAR mit seiner konstaten submission time einen 
+sehr großen Vorteil gegenüber Slurm. Bei einer Jobanzahl von über 100000 wird die Zeitdifferenz signifikant sein und OAR sollte bevorzugt werden.
+
+
+
 \begin{thebibliography}{999}
 	    \bibitem [0] {} Oar Official Website \url{https://oar.imag.fr}
-	    \bibitem [1] {} Oar Universitys of Luxemburg \url{https://hpc.uni.lu/users/docs/oar.html}
+	    \bibitem [1] {} Oar University of Luxemburg \url{https://hpc.uni.lu/users/docs/oar.html}
 	    \bibitem [2] {} Grid5000 Official Website \url{https://www.grid5000.fr}
 	    \bibitem [3] {} Slurm Official Website \url{https://computing.llnl.gov/linux/slurm/}
 	\newline
