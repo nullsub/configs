@@ -1,9 +1,15 @@
 \chapter{NTP}
+Um alle Uhren auf den Nodes zu synchronisieren, benutzt man das NTP
+(Network Time Protokol).
+Der Headnode synchronisiert sich dabei mit dem NTP-Server der TU Dresden.
+Computenodes synchronisieren sich mit dem Headnode. Es gilt darauf zu achten,
+dass der NTP-Server auf dem Headnode nur im lokalen Netz erreichbar ist.
+
 NTP installieren:
 \begin{lstlisting}[style=Bash]
 # apt-get install ntp
 \end{lstlisting}
-Headnode Server /ect/ntp.conf:
+Konfiguration des NTP-Servers auf dem Headnode in /ect/ntp.conf:
 \begin{lstlisting}[style=Bash]
 ...
 server time.zih.tu-dresden.de iburst
@@ -17,7 +23,7 @@ restrict 192.168.2.0 mask 255.255.255.0 nomodify nopeer
 \begin{lstlisting}[style=Bash]
 # service ntp restart
 \end{lstlisting}
-Computenode Client /ect/ntp.conf:
+Konfiguration der Clients auf den Computenodes in /etc/ntp.conf:
 \begin{lstlisting}[style=Bash]
 ...
 # Zugriff durch NTP-Server gestatten
